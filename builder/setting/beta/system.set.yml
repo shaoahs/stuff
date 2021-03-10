@@ -1,0 +1,15 @@
+---
+
+# config
+config:
+  map:
+    nuts: depend:nuts/nuts.1.6.0.js
+
+#build
+build:
+  globalDefs:
+    ALPHA: false
+    BETA: true
+    DEMO: false
+    TEST: false
+    DEBUG: false

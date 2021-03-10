@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>game 2.0 {{{name}}}</title>
+
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+      {{#importmap}}
+        {{{importmapName}}}
+      {{/importmap}}
+      }
+    }
+  </script>
+  <script type="systemjs-module" src="import:{{{app}}}"></script>
+
+</head>
+<body>
+<script src="/systemjs/6.3.1/system.min.js" crossorigin></script>
+</body>
+</html>

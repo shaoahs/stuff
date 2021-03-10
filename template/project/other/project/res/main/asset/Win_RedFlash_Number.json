@@ -1,0 +1,95 @@
+{"frames": {
+
+"Win_RedFlash_NumberX":
+{
+    "frame": {"x":150,"y":0,"w":15,"h":21},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":15,"h":21},
+    "sourceSize": {"w":15,"h":21}
+},
+"Win_RedFlash_Number9":
+{
+    "frame": {"x":136,"y":0,"w":13,"h":21},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":13,"h":21},
+    "sourceSize": {"w":13,"h":21}
+},
+"Win_RedFlash_Number8":
+{
+    "frame": {"x":121,"y":0,"w":13,"h":21},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":13,"h":21},
+    "sourceSize": {"w":13,"h":21}
+},
+"Win_RedFlash_Number7":
+{
+    "frame": {"x":106,"y":0,"w":13,"h":21},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":13,"h":21},
+    "sourceSize": {"w":13,"h":21}
+},
+"Win_RedFlash_Number6":
+{
+    "frame": {"x":91,"y":0,"w":13,"h":21},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":13,"h":21},
+    "sourceSize": {"w":13,"h":21}
+},
+"Win_RedFlash_Number5":
+{
+    "frame": {"x":76,"y":0,"w":13,"h":21},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":13,"h":21},
+    "sourceSize": {"w":13,"h":21}
+},
+"Win_RedFlash_Number4":
+{
+    "frame": {"x":61,"y":0,"w":13,"h":21},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":13,"h":21},
+    "sourceSize": {"w":13,"h":21}
+},
+"Win_RedFlash_Number3":
+{
+    "frame": {"x":46,"y":0,"w":13,"h":21},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":13,"h":21},
+    "sourceSize": {"w":13,"h":21}
+},
+"Win_RedFlash_Number2":
+{
+    "frame": {"x":31,"y":0,"w":13,"h":21},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":13,"h":21},
+    "sourceSize": {"w":13,"h":21}
+},
+"Win_RedFlash_Number1":
+{
+    "frame": {"x":17,"y":0,"w":12,"h":21},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":12,"h":21},
+    "sourceSize": {"w":12,"h":21}
+},
+"Win_RedFlash_Number0":
+{
+    "frame": {"x":0,"y":0,"w":13,"h":21},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":13,"h":21},
+    "sourceSize": {"w":13,"h":21}
+}},
+"meta": {
+  "app": "GIMP",
+  "image": "Win_RedFlash_Number.png"
+}
+}

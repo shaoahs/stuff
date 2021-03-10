@@ -1,0 +1,7 @@
+spines:
+  demo:
+    spine:
+      jpTransitionIn: res/main/spine/jp_transition_in_zhtw.json
+      jpTransitionOut: res/main/spine/jp_transition_out_zhtw.json
+      jpYouwonIn: res/main/spine/jp_youwon_in_zhtw.json
+      jpYouwonOut: res/main/spine/jp_youwon_out_zhtw.json

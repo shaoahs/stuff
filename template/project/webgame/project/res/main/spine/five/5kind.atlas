@@ -1,0 +1,108 @@
+star.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+star
+  rotate: false
+  xy: 0, 0
+  size: 104, 90
+  orig: 104, 90
+  offset: 0, 0
+  index: -1
+
+gradient2.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+gradient2
+  rotate: false
+  xy: 0, 0
+  size: 396, 208
+  orig: 396, 208
+  offset: 0, 0
+  index: -1
+
+gradient1.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+gradient1
+  rotate: false
+  xy: 0, 0
+  size: 274, 126
+  orig: 274, 126
+  offset: 0, 0
+  index: -1
+
+a5.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+5
+  rotate: false
+  xy: 0, 0
+  size: 252, 282
+  orig: 252, 282
+  offset: 0, 0
+  index: -1
+
+kind.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+kind
+  rotate: false
+  xy: 0, 0
+  size: 296, 124
+  orig: 296, 124
+  offset: 0, 0
+  index: -1
+
+of.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+of
+  rotate: false
+  xy: 0, 0
+  size: 142, 78
+  orig: 142, 78
+  offset: 0, 0
+  index: -1
+
+aa.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+a
+  rotate: false
+  xy: 0, 0
+  size: 66, 66
+  orig: 66, 66
+  offset: 0, 0
+  index: -1
+
+shadow_5.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shadow_5
+  rotate: false
+  xy: 0, 0
+  size: 208, 54
+  orig: 208, 54
+  offset: 0, 0
+  index: -1
+
+shadow_kind.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+shadow_kind
+  rotate: false
+  xy: 0, 0
+  size: 304, 62
+  orig: 304, 62
+  offset: 0, 0
+  index: -1
+

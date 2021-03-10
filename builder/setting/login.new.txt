@@ -1,0 +1,7 @@
+{
+  "server": {
+    "host" : "ws://127.0.0.1:4320/protobuf",
+    "roomID"  : "manager",
+    "token"  : "key1"
+  }
+}

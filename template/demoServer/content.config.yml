@@ -1,0 +1,32 @@
+---
+name: demoServer
+title: 
+group: nodejs
+company: com
+description: nodeapp nodejs demoServer
+isRoot: true
+template:
+  format: nodejs
+  debug:
+    appInLibMap: false
+    format: cjs
+  release:
+    appInLibMap: false
+    format: cjs
+framework:
+  name: stuff
+  version: 3.5.0
+  builder: rollup
+version: 0.0.1
+author:
+  name: astro
+  email: www@astrocorp.com.tw
+  url: www.astrocorp.com.tw
+licenses:
+  -
+    type: MIT
+    url: undefined/blob/master/LICENSE-MIT
+keywords:
+  - nodejs
+  - typescript
+  - app

@@ -1,0 +1,32 @@
+---
+name: {%= name %}
+title: {%= title %}
+group: {%= group %}
+company: com
+description: nodeapp {%= group %} {%= name %}
+isRoot: true
+template:
+  format: nodejs
+  debug:
+    appInLibMap: false
+    format: cjs
+  release:
+    appInLibMap: false
+    format: cjs
+framework:
+  name: stuff
+  version: 6.2.0
+  builder: rollup
+version: 1.0.0
+author:
+  name: astro
+  email: www@astrocorp.com.tw
+  url: www.astrocorp.com.tw
+licenses:
+  -
+    type: MIT
+    url: undefined/blob/master/LICENSE-MIT
+keywords:
+  - nodejs
+  - typescript
+  - app

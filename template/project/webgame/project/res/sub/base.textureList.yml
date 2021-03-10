@@ -1,0 +1,17 @@
+images:
+  demo: #群組
+    button: #系統按鈕
+      system:
+        enter: res/sub/image/SYSTEM_256.png
+        press: res/sub/image/SYSTEM_256_on.png
+        leave: res/sub/image/SYSTEM_256_70.png
+        disable: res/sub/image/SYSTEM_256_70.png
+    bones: #動畫
+      demon:
+        texture: res/sub/bones/demon/texture.png
+      ubbie:
+        texture: res/sub/bones/ubbie/texture.png
+    particle:
+      cartoonSmoke: res/sub/image/CartoonSmoke.png
+      test: res/sub/image/SYSTEM_256.png
+

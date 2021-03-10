@@ -1,0 +1,55 @@
+---
+# package
+package:
+  main: src/main.js
+  defaultExtension: js
+
+# config
+config:
+  paths:
+    nuts: /dependence/nuts/nuts.2.0.0.js
+    data/: {%= group %}/{%= name %}/data/
+    res/: {%= group %}/{%= name %}/res/
+    src/: {%= group %}/{%= name %}/src/
+    component/: {%= group %}/{%= name %}/src/components/
+    event/: {%= group %}/{%= name %}/src/event/
+    entity/: {%= group %}/{%= name %}/src/entities/
+    language/: {%= group %}/{%= name %}/src/strings/
+    loading/: {%= group %}/{%= name %}/src/loading/
+    net/: {%= group %}/{%= name %}/src/net/
+    makeres/: {%= group %}/{%= name %}/src/makeres/v2/
+    scene/: {%= group %}/{%= name %}/src/scenes/
+    style/: {%= group %}/{%= name %}/style/
+  map:
+    stats: depend:stats/stats.min.0.17.0.js
+    # loader: depend:loader/resource-loader.min.3.0.1.js
+    # mithril: depend:mithril/mithril.min.2.0.4.js
+    # js-yaml: depend:yaml/js-yaml.min.3.14.0.js
+    # nuts: depend:nuts/nuts.1.10.0.js
+    tweenjs: depend:createjs/tweenjs.min.1.0.2.js
+    pixi: depend:pixi/pixi.min.4.8.10.js
+    pixi-spine: depend:pixi/pixi-spine.1.5.22.js
+    pixi-particles: depend:pixi/pixi-particles.2.0.0.js
+
+#build
+build:
+  globalDefs:
+    ALPHA: false
+    BETA: false
+    DEMO: false
+    TEST: false
+    DEBUG: true
+  externals:
+    - stats
+    # - nuts
+    # - loader
+    # - mithril
+    # - js-yaml
+    - mustache
+    - howler
+    - io
+    - pixi
+    - pixi-spine
+    - pixi-particles
+    - tweenjs
+    - style

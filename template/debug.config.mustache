@@ -1,0 +1,71 @@
+{{#globalDefs}}
+{{{def}}}
+{{/globalDefs}}
+
+SystemJS.config({
+  baseURL: "{{{baseURL}}}",
+  paths: {
+{{#paths}}
+    {{{pathName}}}
+{{/paths}}
+  },
+  map: {
+{{#map}}
+    {{{mapName}}}
+{{/map}}
+  },
+  transpiler: "{{{transpiler}}}",
+  packages:{
+    "{{{packageName}}}": {
+      "main":"{{{main}}}",
+      "defaultExtension": "{{{defaultExtension}}}",
+      "meta": {
+        "*.js": {
+          "loader": "plugin-babel",
+          "babelOptions": {
+            "plugins": [
+              "transform-merge-sibling-variables",
+              "transform-minify-booleans",
+              "transform-undefined-to-void"
+            ]
+          }
+        },
+        "*.ts": {
+          "typescriptOptions":{
+            "tsconfig": "{{{current}}}/tsconfig.json"
+          },
+          "loader": "ts"
+        },
+        "*.yml": {
+          "loader": "yml"
+        },
+        "*.css": {
+          "loader": "css"
+        }
+      }
+    }
+  }
+});
+SystemJS.config({
+  packages: {
+    "typescript": {
+      "main": "lib/typescript.js",
+      "meta": {
+        "lib/typescript.js": {
+          "exports": "ts"
+        }
+      }
+    }
+  },
+  map: {
+    "ts": "sys:plugin/typescript.js",
+    "typescript": "node:typescript",
+    "transform-merge-sibling-variables": "node:babel-plugin-transform-merge-sibling-variables/lib/index.js",
+    "transform-minify-booleans": "node:babel-plugin-transform-minify-booleans/lib/index.js",
+    "transform-undefined-to-void": "node:babel-plugin-transform-undefined-to-void/lib/index.js",
+    'yml': 'sys:plugin/yml.js',
+    'css': 'sys:plugin/css.js',
+    'plugin-babel': 'sys:plugin/plugin-babel.js',
+    'systemjs-babel-build': 'sys:plugin/systemjs-babel-browser.js'
+  }
+});

@@ -1,0 +1,13 @@
+SystemJS.config({
+  baseURL: "{{{baseURL}}}",
+  paths: {
+{{#paths}}
+    {{{pathName}}}
+{{/paths}}
+  },
+  map: {
+{{#map}}
+    {{{mapName}}}
+{{/map}}
+  }
+});

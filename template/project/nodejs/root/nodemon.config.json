@@ -1,0 +1,22 @@
+{
+  "watch": [
+    "project/{%= group %}/{%= name %}/dist/"
+  ],
+  "ignore": [
+    "project/{%= group %}/{%= name %}/*.js",
+    "project/{%= group %}/{%= name %}/src/*",
+    ".git/*",
+    ".idea/*",
+    "builder/*",
+    "dependence/*",
+    "developer/*",
+    "node_modules/*",
+    "public/*",
+    "schema/*",
+    "systemjs/*",
+    "tasks/*",
+    "template/*",
+    "tmp/*"
+  ],
+  "delay": "1000"
+}

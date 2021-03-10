@@ -1,0 +1,39 @@
+---
+name: agent
+title: Agent
+company: com
+description: com agent
+isRoot: true
+framework:
+  name: stuff
+  version: 6.7.0
+  custom: 1
+  builder: rollup
+  skipCommandTerser: true
+  useCodeSplitting: true
+template:
+  format: html
+  debug:
+    appInLibMap: true
+    format: esm
+    src: template/debug.esm.html
+    dest: index.html
+  release:
+    appInLibMap: true
+    format: esm
+    src: template/release.esm.html
+    dest: index.html
+version: 6.5.8
+author:
+  name: astro
+  email: www@astrocorp.com.tw
+  url: www.astrocorp.com.tw
+licenses:
+  -
+    type: MIT
+    url: undefined/blob/master/LICENSE-MIT
+keywords:
+  - HTML5
+  - game
+  - es6
+  - app

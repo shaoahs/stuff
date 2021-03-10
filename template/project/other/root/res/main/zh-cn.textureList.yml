@@ -1,0 +1,21 @@
+images:
+  demo:
+    background: res/main/images/jp_interface_bg.png
+    t02: res/main/images/jp_interface_bg.png
+    words:
+      balance: res/main/images_tw/jp_interface_word_balance_zhtw.png
+      jp1: res/main/images_tw/jp_interface_word_jp1_zhtw.png
+      jp2: res/main/images_tw/jp_interface_word_jp2_zhtw.png
+      jp3: res/main/images_tw/jp_interface_word_jp3_zhtw.png
+      jp4: res/main/images_tw/jp_interface_word_jp4_zhtw.png
+      jp5: res/main/images_tw/jp_interface_word_jp5_zhtw.png
+      jp6: res/main/images_tw/jp_interface_word_jp6_zhtw.png
+      times: res/main/images_tw/jp_interface_word_times_zhtw.png
+      win: res/main/images_tw/jp_interface_word_win_zhtw.png
+assets:
+  - res/main/asset/cnum.json
+  - res/main/asset/Win_Red_Number.json
+  - res/main/asset/Win_RedFlash_Number.json
+  - res/main/asset/winNum.json
+
+

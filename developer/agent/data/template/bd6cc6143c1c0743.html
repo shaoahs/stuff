@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <title>game 2.0 {{{name}}}</title>
+  <script crossorigin>
+  if(!window.globalThis) {
+    window.globalThis = window;
+  }
+  </script>
+  <script type="systemjs-importmap">
+  </script>
+
+</head>
+<body id="{{{id}}}" style="height:100%;width:100%;overflow-x:hidden;overflow-y:hidden">
+<script>
+  let isInitCache = false;
+  function initCache () {
+    if(isInitCache) {
+      return;
+    }
+    isInitCache = true;
+    navigator.serviceWorker
+    if (navigator.serviceWorker) {
+      console.log('[initCache]');
+      let registration = navigator.serviceWorker.register('/lib.sw.js', {
+        scope: '/'
+      }).then(registration => {
+        console.log('[serviceWorker]');
+        console.log(registration);
+      });
+    }
+  }
+  window.onload = function() {
+    initCache();
+  };
+  document.addEventListener('readystatechange', event => {
+    if (event.target.readyState === 'interactive') {
+      initCache();
+    }
+  });
+
+
+</script>
+<script src="/systemjs/6.2.6/system.min.js" crossorigin></script>
+
+</body>
+</html>

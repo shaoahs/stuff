@@ -1,0 +1,15 @@
+stages:
+- deploy
+  
+打包正式版:
+  stage: deploy
+  variables:
+    STUFF_DEBUG: 1
+    STUFF_MODE: release
+    STUFF_UPLOAD: review
+  script:
+  - pwd
+  environment:
+    name: release/$CI_COMMIT_REF_NAME
+  only:
+  - tags

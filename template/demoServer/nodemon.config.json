@@ -1,0 +1,22 @@
+{
+  "watch": [
+    "project/nodejs/demoServer/dist/"
+  ],
+  "ignore": [
+    "project/nodejs/demoServer/*.js",
+    "project/nodejs/demoServer/src/*",
+    ".git/*",
+    ".idea/*",
+    "builder/*",
+    "dependence/*",
+    "developer/*",
+    "node_modules/*",
+    "public/*",
+    "schema/*",
+    "systemjs/*",
+    "tasks/*",
+    "template/*",
+    "tmp/*"
+  ],
+  "delay": "1000"
+}

@@ -1,0 +1,95 @@
+{"frames": {
+
+"winNum0":
+{
+    "frame": {"x":0,"y":0,"w":18,"h":17},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":18,"h":17},
+    "sourceSize": {"w":18,"h":17}
+},
+"winNum1":
+{
+    "frame": {"x":21,"y":0,"w":14,"h":17},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":14,"h":17},
+    "sourceSize": {"w":14,"h":17}
+},
+"winNum2":
+{
+    "frame": {"x":38,"y":0,"w":18,"h":17},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":18,"h":17},
+    "sourceSize": {"w":18,"h":17}
+},
+"winNum3":
+{
+    "frame": {"x":57,"y":0,"w":18,"h":17},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":18,"h":17},
+    "sourceSize": {"w":18,"h":17}
+},
+"winNum4":
+{
+    "frame": {"x":76,"y":0,"w":18,"h":17},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":18,"h":17},
+    "sourceSize": {"w":18,"h":17}
+},
+"winNum5":
+{
+    "frame": {"x":95,"y":0,"w":18,"h":17},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":18,"h":17},
+    "sourceSize": {"w":18,"h":17}
+},
+"winNum6":
+{
+    "frame": {"x":114,"y":0,"w":18,"h":17},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":18,"h":17},
+    "sourceSize": {"w":18,"h":17}
+},
+"winNum7":
+{
+    "frame": {"x":133,"y":0,"w":18,"h":17},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":18,"h":17},
+    "sourceSize": {"w":18,"h":17}
+},
+"winNum8":
+{
+    "frame": {"x":152,"y":0,"w":18,"h":17},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":18,"h":17},
+    "sourceSize": {"w":18,"h":17}
+},
+"winNum9":
+{
+    "frame": {"x":172,"y":0,"w":18,"h":17},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":18,"h":17},
+    "sourceSize": {"w":18,"h":17}
+},
+"winNumX":
+{
+    "frame": {"x":192,"y":3,"w":17,"h":13},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":17,"h":13},
+    "sourceSize": {"w":17,"h":13}
+}},
+"meta": {
+  "app": "GIMP",
+  "image": "winNum.png"
+}
+}

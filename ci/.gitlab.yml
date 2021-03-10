@@ -1,0 +1,72 @@
+stages:
+- deploy
+  
+打包alpha版至review機:
+  stage: deploy
+  variables:
+    STUFF_DEBUG: 0
+    STUFF_MODE: alpha
+    STUFF_UPLOAD: review
+  script:
+  - stuff deploy
+  environment:
+    name: alpha/$CI_COMMIT_REF_NAME
+  when: manual
+  only:
+  - tags
+
+打包beta版至review機:
+  stage: deploy
+  variables:
+    STUFF_DEBUG: 0
+    STUFF_MODE: beta
+    STUFF_UPLOAD: review
+  script:
+  - stuff deploy
+  environment:
+    name: beta/$CI_COMMIT_REF_NAME
+  when: manual
+  only:
+  - tags
+
+打包demo版至review機:
+  stage: deploy
+  variables:
+    STUFF_DEBUG: 0
+    STUFF_MODE: demo
+    STUFF_UPLOAD: review
+  script:
+  - stuff deploy
+  environment:
+    name: demo/$CI_COMMIT_REF_NAME
+  when: manual
+  only:
+  - tags
+
+打包test版至review機:
+  stage: deploy
+  variables:
+    STUFF_DEBUG: 0
+    STUFF_MODE: test
+    STUFF_UPLOAD: review
+  script:
+  - stuff deploy
+  environment:
+    name: test/$CI_COMMIT_REF_NAME
+  when: manual
+  only:
+  - tags
+
+打包release至review機:
+  stage: deploy
+  variables:
+    STUFF_DEBUG: 0
+    STUFF_MODE: release
+    STUFF_UPLOAD: review
+  script:
+  - stuff deploy
+  environment:
+    name: release/$CI_COMMIT_REF_NAME
+  when: manual
+  only:
+  - tags

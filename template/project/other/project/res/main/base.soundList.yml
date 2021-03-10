@@ -1,0 +1,146 @@
+sounds:
+    demo: #群組
+    - #點擊
+      objName: click
+      config:
+        src:
+        - /project/demo/Jackpot/res/main/sound/pbg_click.wav
+        - /project/demo/Jackpot/res/main/sound/pbg_click.mp3
+        - /project/demo/Jackpot/res/main/sound/pbg_click.ogg
+        loop: false
+
+    - #得分
+      objName: winBonus
+      config:
+        src:
+        - /project/demo/Jackpot/res/main/sound/pbg_winbonus.wav
+        - /project/demo/Jackpot/res/main/sound/pbg_winbonus.mp3
+        - /project/demo/Jackpot/res/main/sound/pbg_winbonus.ogg
+        loop: false
+
+    - #下注
+      objName: countDown
+      config:
+        src:
+        - /project/demo/Jackpot/res/main/sound/pbg_countdown.wav
+        - /project/demo/Jackpot/res/main/sound/pbg_countdown.mp3
+        - /project/demo/Jackpot/res/main/sound/pbg_countdown.ogg
+      loop: false
+    - #背景音樂
+      objName: music
+      config: 
+        src: 
+        - /project/demo/Jackpot/res/main/sound/bgm.wav
+        loop: true
+    - #爆炸
+      objName: bomb
+      config: 
+        src: 
+        - /project/demo/Jackpot/res/main/sound/bomb.wav
+        loop: false
+    
+    - #連線獎
+      objName: light
+      config: 
+        src: 
+        - /project/demo/Jackpot/res/main/sound/light.wav
+        loop: false
+    
+    - #啟動
+      objName: no0
+      config: 
+        src: 
+        - /project/demo/Jackpot/res/main/sound/no-0.wav
+        loop: false
+    
+    - #啟動
+      objName: no1
+      config: 
+        src: 
+        - /project/demo/Jackpot/res/main/sound/no-1.wav
+        loop: false
+    
+    - #啟動
+      objName: no2
+      config: 
+        src: 
+        - /project/demo/Jackpot/res/main/sound/no-2.wav
+        loop: false
+    
+    - #啟動
+      objName: no3
+      config: 
+        src: 
+        - /project/demo/Jackpot/res/main/sound/no-3.wav
+        loop: false
+    
+    - #啟動
+      objName: no4
+      config: 
+        src: 
+        - /project/demo/Jackpot/res/main/sound/no-4.wav
+        loop: false
+    
+    - #啟動
+      objName: no5
+      config: 
+        src: 
+        - /project/demo/Jackpot/res/main/sound/no-5.wav
+        loop: false
+    
+    - #啟動
+      objName: no6
+      config: 
+        src: 
+        - /project/demo/Jackpot/res/main/sound/no-6.wav
+        loop: false
+    
+    - #啟動
+      objName: no7
+      config: 
+        src: 
+        - /project/demo/Jackpot/res/main/sound/no-7.wav
+        loop: false
+    
+    - #啟動
+      objName: no8
+      config: 
+        src: 
+        - /project/demo/Jackpot/res/main/sound/no-8.wav
+        loop: false
+    
+    - #啟動
+      objName: no9
+      config: 
+        src: 
+        - /project/demo/Jackpot/res/main/sound/no-9.wav
+        loop: false
+    
+    - #翻轉(翻面)
+      objName: sndReverse
+      config: 
+        src: 
+        - /project/demo/Jackpot/res/main/sound/reverse.wav
+        loop: true
+    
+    - #旋轉
+      objName: sndRotate
+      config: 
+        src: 
+        - /project/demo/Jackpot/res/main/sound/rotate.wav
+        loop: false
+    
+    - #星星獎
+      objName: star
+      config: 
+        src: 
+        - /project/demo/Jackpot/res/main/sound/star.wav
+        loop: false
+    
+    - #圖騰獎
+      objName: totem
+      config: 
+        src: 
+        - /project/demo/Jackpot/res/main/sound/totem.wav
+        loop: false
+    

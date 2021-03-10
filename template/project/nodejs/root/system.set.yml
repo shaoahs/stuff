@@ -1,0 +1,36 @@
+---
+# package
+package:
+  main: src/main.ts
+  defaultExtension: ts
+
+generate:
+  baseURL: ''
+
+# config
+config:
+  paths:
+    src/: {%= group %}/{%= name %}/src/
+    proxy/: {%= group %}/{%= name %}/src/proxy/
+    net/: {%= group %}/{%= name %}/src/net/
+    component/: {%= group %}/{%= name %}/src/components/
+    event/: {%= group %}/{%= name %}/src/event/
+    schema/: {%= group %}/{%= name %}/schema/
+
+  map:
+    #loader: depend:loader/resource-loader.min.2.2.4.js
+    #mithril: depend:mithril/mithril.min.2.0.4.js
+    #js-yaml: depend:yaml/js-yaml.min.3.13.1.js
+
+#build
+build:
+  globalDefs:
+    ALPHA: true
+    BETA: true
+    DEMO: true
+    TEST: true
+    DEBUG: true
+  externals:
+    - avro
+    - ws
+    - js-yaml

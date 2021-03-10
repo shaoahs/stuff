@@ -1,0 +1,42 @@
+---
+baseURL: /project/{%= group %}/{%= name %}/
+id: {%= name %} # 遊戲代號 遊戲代號
+name:   # 遊戲名稱 (多語設定)
+  en-us: game {%= name %}
+  zh-tw: 遊戲 {%= name %}
+  zh-cn: 游戏 {%= name %}
+sysTray: # 是否顯示系統選單
+  left: 40px         # 左邊界座標
+  top: 40px          # 上邊界座標
+  flags: # 選單功能項目開關設定
+    fullscreen: false   # 全螢幕
+    lock: false         # 鎖定顯示比例
+    music: false        # 音樂
+    sound: false        # 音效
+app: release/{%= group %}.{%= name %}.js   # 程式 (自動產生)
+group: {%= group %}                # 群組
+appConfig: {%= name %}             # 程式設定檔
+pixiConfig: #PIXI 設定
+  width: &WIDTH 960
+  height: &HEIGHT 540
+  resolution: 1.0
+  antialias: false
+  transparent: true
+screen:   # 螢幕設定
+  isLock: false             # 是否鎖定
+  orientation: landscape    # portrait = 垂直 , landscape = 水平, 沒有的話是不檢查
+  width: *WIDTH               # 寬
+  height: *HEIGHT              # 高
+resize: # 畫面尺寸改變用
+  horizontal:
+    width: *WIDTH   # 寬
+    height: *HEIGHT   # 高
+  vertical:
+    width: *HEIGHT    # 寬
+    height: *WIDTH  # 高
+images:   # 圖檔設定
+  icon: gamecard/icon.png
+  logo: gamecard/logo.png
+  background: gamecard/background.png
+type: sports               # 目前沒使用
+doc: slotTest 說明         # 目前沒使用

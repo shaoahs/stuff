@@ -1,0 +1,65 @@
+﻿syntax = "proto3";
+package Game.{%= Group %}.{%= Name %};
+
+import "jackpot.proto";
+import "setting.proto";
+import "info.proto";
+
+// 命令種類
+enum ActionType {
+  BET = 0;                     // 下注
+  RESULT = 1;                  // 遊戲結果
+  CREATE_REQUEST = 2;          // 請求建立遊戲
+  CREATE_RESPONSE = 3;         // 收到建立遊戲
+  BROADCAST = 4;               // 廣播
+}
+
+/************************************************/
+// 確認命令種類
+message CheckAction {
+  ActionType actionType = 1;   // 命令種類
+  reserved 2;
+}
+
+/************************************************/
+message UserInfo {
+  uint32 subbet = 1;
+  uint32 ppl = 2;
+}
+// (請求) bet 
+message BetRequest {
+  ActionType actionType = 1;    // 命令種類
+  reserved 2;                   // 保留
+  uint32 bet = 3;               // 下注
+  UserInfo userinfo = 4;        // 玩家資訊
+}
+
+// (請求) create
+message CreateRequest {
+  ActionType actionType = 1;    // 命令種類
+  reserved 2;                   // 保留
+}
+
+// (回應) create
+message CreateResponse {
+  ActionType actionType = 1;    // 命令種類
+  reserved 2;                   // 保留
+  uint32 betCoin = 3;
+  repeated uint32 betForm = 4;
+  uint32 betFormAmount = 5;
+  uint32 cmdResult = 6;
+  uint64 credit = 7;
+}
+
+// (回應) Result
+message ResultResponse {
+  ActionType actionType = 1;    // 命令種類
+  reserved 2;                // 保留
+  uint32 a = 3;          // 
+  string b = 4;         // 
+  uint32 c = 5;          // 
+  uint32 bet = 6;        // 
+  uint64 score = 7;      // 
+  string state = 8;      // 
+}
+

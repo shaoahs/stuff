@@ -1,0 +1,123 @@
+'use strict';
+const fs = require('fs');
+const logger = require('pino')({
+  prettyPrint: {
+    translateTime: true,
+    colorize: true,
+  }
+});
+
+const path = require('path');
+const Fastify = require('fastify');
+
+
+
+async function build () {
+  let corsOptions = {
+    origin: false,
+    credentials: true,
+    // allowedHeaders: [
+    //   'Content-Type', 'Authorization'
+    // ],
+    origin: [
+      'http://time.google.com/',
+      'http://ip-api.com/',
+      'http://127.0.0.1:3000',
+      'http://172.16.65.22:3000',
+      // 'http://127.0.0.1:4000'
+    ],
+    methods:['GET', 'POST', 'PUT', 'OPTIONS']
+  };
+  var cabinet = require('cabinet');
+  const fastify = Fastify({
+    // logger: true,
+    // http2: true,
+    // https:{
+    //   allowHTTP1: true,
+    //   key: fs.readFileSync('server/keys/test/server.key'),
+    //   cert: fs.readFileSync('server/keys/test/server.crt')
+    // }
+  });
+  await fastify.register(require('middie'));
+
+  fastify.use(cabinet(path.join(__dirname+'/../', '/'), 
+  {
+    ignore: ['.git', 'node_modules'],
+    gzip:false,
+    maxAge:180000,
+    cache:{
+      maxSize: 8192, 
+      maxObjects:16384
+    }
+  }));
+  return fastify;
+}
+
+
+build()
+  .then(fastify => {
+    fastify.listen(3000);
+    logger.info('!!!! start web server !!!!');
+    logger.info('http://localhost:3000/developer/agent/');
+  })
+  .catch(console.log) 
+/* =========================================================
+////////////////////////////////////////////////////////////
+   ========================================================= */
+let io = require('socket.io').listen(11102, {
+  perMessageDeflate:{
+    threshold: 100
+  },
+//  transports:['polling'],
+  allowUpgrades: false,
+  pingTimeout: 15000,
+  pingInterval: 30000
+});
+
+//----
+let net = {};
+net.users = {};
+
+/**
+ * 建立未登入的使用者（有連線的使用者清單）
+ * @param socket {Object} socket.io 網路物件
+ */
+function createUser(socket) {
+  let command = require("./command/command.js");
+  let user = {};
+  user.socket = socket;
+  user.game = {};
+  //  user.token;
+
+  //--------------
+  // 設定命令對照表
+  user.cmdList = command.list;
+  user.cmdList.forEach(function(cmd){
+    logger.debug("register command : " + cmd.id);
+    let conf = {
+      user:user,
+      net : net,
+      io : io
+    };
+    let event = cmd.init(conf);
+    socket.on(cmd.id, event.proc);
+  });
+  //--------------
+  //---建立新使用者
+  return user;
+}
+net.eventConnect = function(socket){
+  logger.info('eventConnect');
+//  console.log(socket);
+  let user = createUser(socket);
+  net.users[socket] = user;
+};
+//--------------
+//---啟動服務
+io.of('/1.00.0').on('connection', net.eventConnect);
+io.of('/develop').on('connection', net.eventConnect);
+//io.on('connection', net.eventConnect);
+
+logger.info('!!!! start server !!!!');
+logger.info('==============================================');
+require('../test/launcher');

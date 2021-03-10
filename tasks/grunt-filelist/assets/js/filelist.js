@@ -1,0 +1,1 @@
+var imgs = ["assets/imgs/BqIdGgVCcAESyWj.jpg","assets/imgs/hoge/BqLK6JCCEAAC5wW.jpg"];

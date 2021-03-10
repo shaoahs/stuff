@@ -1,0 +1,141 @@
+{
+  "nested": {
+    "Game": {
+      "nested": {
+        "Server": {
+          "nested": {
+            "CustomFormat": {
+              "values": {
+                "JSON": 0,
+                "RAW": 1,
+                "PROTOBUF": 2
+              }
+            },
+            "GameRequest": {
+              "fields": {
+                "format": {
+                  "type": "CustomFormat",
+                  "id": 1
+                },
+                "funcIndex": {
+                  "type": "int32",
+                  "id": 2
+                },
+                "command": {
+                  "type": "string",
+                  "id": 3
+                },
+                "data": {
+                  "type": "bytes",
+                  "id": 4
+                }
+              },
+              "reserved": [
+                [
+                  6,
+                  6
+                ]
+              ]
+            },
+            "GameResponse": {
+              "fields": {
+                "format": {
+                  "type": "CustomFormat",
+                  "id": 1
+                },
+                "funcIndex": {
+                  "type": "int32",
+                  "id": 2
+                },
+                "command": {
+                  "type": "string",
+                  "id": 3
+                },
+                "data": {
+                  "type": "bytes",
+                  "id": 4
+                },
+                "jackpot": {
+                  "type": "Jackpot",
+                  "id": 6
+                },
+                "info": {
+                  "type": "Info",
+                  "id": 7
+                },
+                "setting": {
+                  "type": "Setting",
+                  "id": 8
+                },
+                "errorCode": {
+                  "type": "string",
+                  "id": 9
+                }
+              },
+              "reserved": [
+                [
+                  5,
+                  5
+                ]
+              ]
+            },
+            "Jackpot": {
+              "fields": {
+                "format": {
+                  "type": "CustomFormat",
+                  "id": 1
+                },
+                "data": {
+                  "type": "bytes",
+                  "id": 3
+                }
+              },
+              "reserved": [
+                [
+                  2,
+                  2
+                ]
+              ]
+            },
+            "Setting": {
+              "fields": {
+                "format": {
+                  "type": "CustomFormat",
+                  "id": 1
+                },
+                "data": {
+                  "type": "bytes",
+                  "id": 3
+                }
+              },
+              "reserved": [
+                [
+                  2,
+                  2
+                ]
+              ]
+            },
+            "Info": {
+              "fields": {
+                "format": {
+                  "type": "CustomFormat",
+                  "id": 1
+                },
+                "data": {
+                  "type": "bytes",
+                  "id": 3
+                }
+              },
+              "reserved": [
+                [
+                  2,
+                  2
+                ]
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}

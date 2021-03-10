@@ -1,0 +1,17 @@
+syntax = "proto3";
+package Game.{%= Group %}.{%= Name %}.Jackpot;
+
+// 命令種類
+enum ActionType {
+  NORMAL = 0;          // 一般紅利獎項
+}
+
+// JP
+message BaseResponse {
+  ActionType actionType = 1;    // 命令種類
+  reserved 2;                   // 保留
+  uint32 mJpOutIdx = 3;
+  uint64 mJpOutValue = 4;
+  repeated uint64 mJpValue = 5;
+  uint32 resultCode = 6;
+}

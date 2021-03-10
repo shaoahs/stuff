@@ -1,0 +1,76 @@
+---
+# app
+app:
+  - tmp/resLoading.json
+  - tmp/resjs.json
+
+removePath: res
+removeKey: project/{%= group %}/{%= name %}/
+
+#===================================================
+# 資源設定
+res: # 絕對路徑
+  src:
+    - res/main/**/*.{jpg,png,wav,ogg,mp3}
+    - res/ui/**/*.{jpg,png,wav,ogg,mp3}
+    - res/sub/**/*.{jpg,png,wav,ogg,mp3}
+
+resFlat: # 相對路徑
+  src:
+    - res/main/asset/**/*.{jpg,png}
+    - res/ui/asset/**/*.{jpg,png}
+    - res/sub/asset/**/*.{jpg,png}
+
+resSpine: # 相對路徑 spine
+  src:
+    - res/main/spine/**/*.{jpg,png}
+    - res/ui/spine/**/*.{jpg,png}
+    - res/sub/spine/**/*.{jpg,png}
+
+resBones: # 相對路徑 bones
+  src:
+    - res/main/bones/**/*.{jpg,png}
+    - res/ui/bones/**/*.{jpg,png}
+    - res/sub/bones/**/*.{jpg,png}
+
+#===================================================
+# 材質設定
+textureAsset: # pixi.js asset
+  src:
+    - res/main/asset/**/*.json
+    - res/ui/asset/**/*.json
+    - res/sub/asset/**/*.json
+
+textureSpine: # spine
+  src:
+    - res/main/spine/**/*.atlas
+    - res/ui/spine/**/*.atlas
+    - res/sub/spine/**/*.atlas
+
+textureBones: # bones
+  src:
+    - res/main/bones/**/*.atlas
+    - res/ui/bones/**/*.atlas
+    - res/sub/bones/**/*.atlas
+
+#===================================================
+# spine 動畫
+spine:
+  src:
+    - res/main/spine/**/*.json
+    - res/ui/spine/**/*.json
+    - res/sub/spine/**/*.json
+
+#===================================================
+# bones 動畫
+bones:
+  src:
+    - res/main/bones/**/*.json
+    - res/ui/bones/**/*.json
+    - res/sub/bones/**/*.json
+
+#===================================================
+# 資源檔
+yml:
+  src:
+    - res/**/*.{yml,js}

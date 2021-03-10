@@ -1,0 +1,114 @@
+---
+# app
+app:
+  - tmp/resLoading.json
+  - tmp/resjs.json
+  - tmp/res.json
+  - tmp/textureAsset.json
+  - tmp/spine.json
+
+# 遊戲卡片
+gamecard:
+  - tmp/resGamecard.json
+  - tmp/spine.json
+
+# 需要移除的字串
+removePath: res
+removeKey: project/{%= group %}/{%= name %}/
+
+# 最佳化用
+vendor:
+  custom:
+    - en-us
+    - zh-tw
+    - zh-cn
+    - vi-vn
+    - th-th
+
+  source: src/resource.js
+  resource: res/vendor.yml
+  output: res/vendor.js
+  
+# 資源設定
+resVendor:
+  src:
+    - res/vendor/**/*.js
+
+#===================================================
+# 資源設定
+res: # 絕對路徑
+  src:
+    - res/main/**/*.{jpg,png,wav,ogg,mp3}
+    - res/ui/**/*.{jpg,png,wav,ogg,mp3}
+    - res/sub/**/*.{jpg,png,wav,ogg,mp3}
+    - res/background/**/*.{jpg,png,wav,ogg,mp3}
+    - res/overview/**/*.{jpg,png,wav,ogg,mp3}
+
+resGamecard:
+  src:
+    - gamecard/**/*.{jpg,png}
+
+resFlat: # 相對路徑
+  src:
+    - res/main/asset/**/*.{jpg,png}
+    - res/main/ui/asset/**/*.{jpg,png}
+    - res/ui/asset/**/*.{jpg,png}
+    - res/sub/asset/**/*.{jpg,png}
+
+resSpine: # 相對路徑 spine
+  src:
+    - res/main/spine/**/*.{jpg,png}
+    - res/ui/spine/**/*.{jpg,png}
+    - res/sub/spine/**/*.{jpg,png}
+    - gamecard/overview/**/*.{jpg,png}
+
+resBones: # 相對路徑 bones
+  src:
+    - res/main/bones/**/*.{jpg,png}
+    - res/ui/bones/**/*.{jpg,png}
+    - res/sub/bones/**/*.{jpg,png}
+
+#===================================================
+# 材質設定
+textureAsset: # pixi.js asset
+  src:
+    - res/main/asset/**/*.json
+    - res/main/ui/asset/**/*.json
+    - res/ui/asset/**/*.json
+    - res/sub/asset/**/*.json
+
+textureSpine: # spine
+  src:
+    - res/main/spine/**/*.atlas
+    - res/ui/spine/**/*.atlas
+    - res/sub/spine/**/*.atlas
+    - gamecard/overview/**/*.atlas
+
+textureBones: # bones
+  src:
+    - res/main/bones/**/*.atlas
+    - res/ui/bones/**/*.atlas
+    - res/sub/bones/**/*.atlas
+
+#===================================================
+# spine 動畫
+spine:
+  src:
+    - res/main/spine/**/*.json
+    - res/ui/spine/**/*.json
+    - res/sub/spine/**/*.json
+    - gamecard/overview/**/*.json
+
+#===================================================
+# bones 動畫
+bones:
+  src:
+    - res/main/bones/**/*.json
+    - res/ui/bones/**/*.json
+    - res/sub/bones/**/*.json
+
+#===================================================
+# 資源檔
+yml:
+  src:
+    - res/**/*.{yml}

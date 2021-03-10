@@ -1,0 +1,117 @@
+texasholdem:
+  six: #六人桌
+    config:
+      limit: #有限注
+        scrollVisible: false
+      free:  #無限注
+        scrollVisible: true
+      record: #播放遊戲紀錄
+        showRecord: true  
+      hide : false #顯示模式
+    position:
+      community: #公牌
+        coin: #小計金額位置
+        - {x: 980,y: 639}
+        - {x: 832,y: 565}
+        - {x: 1128,y: 565}
+        - {x: 758,y: 663}
+        - {x: 1212,y: 663}
+        poker: #撲克牌位置
+        - {x: 725,y: 463}
+        - {x: 820,y: 463}
+        - {x: 915,y: 463}
+        - {x: 1010,y: 463}
+        - {x: 1105,y: 463}
+      counter: #籌碼
+      - {x: 843, y: 728}
+      - {x: 531, y: 687}
+      - {x: 529, y: 353}
+      - {x: 936, y: 343}
+      - {x: 1406, y: 353}
+      - {x: 1406, y: 687}
+      player: #玩家
+      - {x: 742, y: 819, type: center}
+      - {x: 20, y: 560, type: right}
+      - {x: 20, y: 211, type: right}
+      - {x: 742, y: 95, type: right}
+      - {x: 1465, y: 211, type: left}
+      - {x: 1465, y: 560, type: left}
+particle:
+  bubbles:
+    "alpha": {
+      "start": 1,
+      "end": 0.22}
+    "scale": {
+      "start": 0.25,
+      "end": 0.75,
+      "minimumScaleMultiplier":0.5
+    }
+    "color": {
+      "start": "ffffff",
+      "end": "ffffff"
+    }
+    "speed": {
+      "start": 200,
+      "end": 50
+    }
+    "startRotation": {
+      "min": 0,
+      "max": 360
+    }
+    "rotationSpeed": {
+      "min": 0,
+      "max": 10
+    }
+    "lifetime": {
+      "min": 4,
+      "max": 4
+    }
+    "blendMode": "normal"
+    "frequency": 0.016
+    "emitterLifetime": 0
+    "maxParticles": 100
+    "pos": {
+      "x": 0,
+      "y": 0
+    }
+    "addAtBack": false
+    "spawnType": "point"
+  cartoonSmoke:
+    "alpha": {
+      "start": 0.74,
+      "end": 0
+    }
+    "scale": {
+      "start": 0.1,
+      "end": 1.2
+    }
+    "color": {
+      "start": "eb8b58",
+      "end": "575757"
+    }
+    "speed": {
+      "start": 700,
+      "end": 50
+    }
+    "startRotation": {
+      "min": 0,
+      "max": 360
+    }
+    "rotationSpeed": {
+      "min": 0,
+      "max": 200
+    }
+    "lifetime": {
+      "min": 0.4,
+      "max": 0.7
+    }
+    "blendMode": "normal"
+    "frequency": 0.001
+    "emitterLifetime": 0.2
+    "maxParticles": 100
+    "pos": {
+      "x": 0,
+      "y": 0
+    }
+    "addAtBack": true
+    "spawnType": "point"

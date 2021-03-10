@@ -1,0 +1,24 @@
+{
+  "ignore": [
+    "Gruntfile.js",
+    ".git/*",
+    ".idea/*",
+    "builder/*",
+    "dependence/*",
+    "developer/*",
+    "node_modules/*",
+    "project/*",
+    "public/*",
+    "schema/*",
+    "systemjs/*",
+    "tasks/*",
+    "tools/*",
+    "webogram/*",
+    "template/*",
+    "editor/*",
+    "templates/*",
+    "PhaserEditor2D",
+    "tmp/*"
+  ],
+  "delay": "1000"
+}

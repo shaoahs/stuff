@@ -1,0 +1,7 @@
+spines:
+  demo: #群組
+    fiveofkind: #五連線
+      text: res/main/spine/five/5kind.anim.json
+      light01: res/main/spine/five/5kind.light1.json
+      light02: res/main/spine/five/5kind.light2.json
+      star: res/main/spine/five/5kind.star.json

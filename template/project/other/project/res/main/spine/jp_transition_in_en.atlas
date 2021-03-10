@@ -1,0 +1,156 @@
+jp_item_choice_eff_05.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+jp_item_choice_eff_05
+  rotate: false
+  xy: 0, 0
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+
+jp_transition_word_congratulations_en.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+jp_transition_word_congratulations_en
+  rotate: false
+  xy: 0, 0
+  size: 960, 540
+  orig: 960, 540
+  offset: 0, 0
+  index: -1
+
+jp_transition_word_jpgame_en.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+jp_transition_word_jpgame_en
+  rotate: false
+  xy: 0, 0
+  size: 960, 540
+  orig: 960, 540
+  offset: 0, 0
+  index: -1
+
+jp_transition_word_youwon_en.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+jp_transition_word_youwon_en
+  rotate: false
+  xy: 0, 0
+  size: 960, 540
+  orig: 960, 540
+  offset: 0, 0
+  index: -1
+
+jp_transition_word_continue_en.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+jp_transition_word_continue_en
+  rotate: false
+  xy: 0, 0
+  size: 960, 540
+  orig: 960, 540
+  offset: 0, 0
+  index: -1
+
+jp_item_choice_eff_08.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+jp_item_choice_eff_08
+  rotate: false
+  xy: 0, 0
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+
+jp_transition_eff_02.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+jp_transition_eff_02
+  rotate: false
+  xy: 0, 0
+  size: 400, 340
+  orig: 400, 340
+  offset: 0, 0
+  index: -1
+
+jp_item_choice_eff_04.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+jp_item_choice_eff_04
+  rotate: false
+  xy: 0, 0
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+
+jp_transition_eff_01.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+jp_transition_eff_01
+  rotate: false
+  xy: 0, 0
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+
+jp_item_choice_eff_09.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+jp_item_choice_eff_09
+  rotate: false
+  xy: 0, 0
+  size: 400, 400
+  orig: 400, 400
+  offset: 0, 0
+  index: -1
+
+jp_item_choice_eff_07.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+jp_item_choice_eff_07
+  rotate: false
+  xy: 0, 0
+  size: 200, 200
+  orig: 200, 200
+  offset: 0, 0
+  index: -1
+
+jp_transition_eff_03.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+jp_transition_eff_03
+  rotate: false
+  xy: 0, 0
+  size: 160, 180
+  orig: 160, 180
+  offset: 0, 0
+  index: -1
+
+jp_transition_door_left.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+jp_transition_door_left
+  rotate: false
+  xy: 0, 0
+  size: 480, 540
+  orig: 480, 540
+  offset: 0, 0
+  index: -1
+

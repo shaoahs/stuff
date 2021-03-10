@@ -1,0 +1,94 @@
+stages:
+- check
+- deploy
+
+檢查程式碼:
+  stage: check
+  environment:
+    name: check
+  variables:
+    STUFF_DEBUG: 1
+  script:
+  - stuff source
+
+打包展示版:
+  stage: deploy
+  environment:
+    name: demo/$CI_COMMIT_REF_NAME
+  variables:
+    STUFF_DEBUG: 0
+    STUFF_MODE: demo
+    STUFF_UPLOAD: review
+  script:
+  - stuff deploy
+  when: manual
+  only:
+  - tags
+
+打包除錯版:
+  stage: deploy
+  environment:
+    name: test/$CI_COMMIT_REF_NAME
+  variables:
+    STUFF_DEBUG: 0
+    STUFF_MODE: test
+    STUFF_UPLOAD: review
+  script:
+  - stuff deploy
+  when: manual
+  only:
+  - tags
+
+打包正式版:
+  stage: deploy
+  environment:
+    name: release/$CI_COMMIT_REF_NAME
+  variables:
+    STUFF_DEBUG: 0
+    STUFF_MODE: release
+    STUFF_UPLOAD: review
+  script:
+  - stuff deploy
+  only:
+  - tags
+
+beta:
+  stage: deploy
+  environment:
+    name: beta/$CI_COMMIT_REF_NAME
+  variables:
+    STUFF_DEBUG: 0
+    STUFF_MODE: release
+    STUFF_UPLOAD: beta
+  script:
+  - stuff deploy
+  only:
+  - beta
+
+beta(log):
+  stage: deploy
+  environment:
+    name: beta/$CI_COMMIT_REF_NAME
+  variables:
+    STUFF_DEBUG: 0
+    STUFF_MODE: test
+    STUFF_UPLOAD: beta
+  when: manual
+  script:
+  - stuff deploy
+  only:
+  - beta
+
+beta(demo):
+  stage: deploy
+  environment:
+    name: beta/$CI_COMMIT_REF_NAME
+  variables:
+    STUFF_DEBUG: 0
+    STUFF_MODE: demo
+    STUFF_UPLOAD: beta
+  when: manual
+  script:
+  - stuff deploy
+  only:
+  - beta

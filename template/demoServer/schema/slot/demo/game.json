@@ -1,0 +1,295 @@
+{
+  "nested": {
+    "Game": {
+      "nested": {
+        "Slot": {
+          "nested": {
+            "Sample": {
+              "nested": {
+                "ActionType": {
+                  "values": {
+                    "BET": 0,
+                    "RESULT": 1,
+                    "CREATE_REQUEST": 2,
+                    "CREATE_RESPONSE": 3,
+                    "BROADCAST": 4
+                  }
+                },
+                "CheckAction": {
+                  "fields": {
+                    "actionType": {
+                      "type": "ActionType",
+                      "id": 1
+                    }
+                  },
+                  "reserved": [
+                    [
+                      2,
+                      2
+                    ]
+                  ]
+                },
+                "UserInfo": {
+                  "fields": {
+                    "subbet": {
+                      "type": "uint32",
+                      "id": 1
+                    },
+                    "ppl": {
+                      "type": "uint32",
+                      "id": 2
+                    }
+                  }
+                },
+                "BetRequest": {
+                  "fields": {
+                    "actionType": {
+                      "type": "ActionType",
+                      "id": 1
+                    },
+                    "bet": {
+                      "type": "uint32",
+                      "id": 3
+                    },
+                    "userinfo": {
+                      "type": "UserInfo",
+                      "id": 4
+                    }
+                  },
+                  "reserved": [
+                    [
+                      2,
+                      2
+                    ]
+                  ]
+                },
+                "CreateRequest": {
+                  "fields": {
+                    "actionType": {
+                      "type": "ActionType",
+                      "id": 1
+                    }
+                  },
+                  "reserved": [
+                    [
+                      2,
+                      2
+                    ]
+                  ]
+                },
+                "CreateResponse": {
+                  "fields": {
+                    "actionType": {
+                      "type": "ActionType",
+                      "id": 1
+                    },
+                    "betCoin": {
+                      "type": "uint32",
+                      "id": 3
+                    },
+                    "betForm": {
+                      "rule": "repeated",
+                      "type": "uint32",
+                      "id": 4
+                    },
+                    "betFormAmount": {
+                      "type": "uint32",
+                      "id": 5
+                    },
+                    "cmdResult": {
+                      "type": "uint32",
+                      "id": 6
+                    },
+                    "credit": {
+                      "type": "uint64",
+                      "id": 7
+                    }
+                  },
+                  "reserved": [
+                    [
+                      2,
+                      2
+                    ]
+                  ]
+                },
+                "ResultResponse": {
+                  "fields": {
+                    "actionType": {
+                      "type": "ActionType",
+                      "id": 1
+                    },
+                    "a": {
+                      "type": "uint32",
+                      "id": 3
+                    },
+                    "b": {
+                      "type": "string",
+                      "id": 4
+                    },
+                    "c": {
+                      "type": "uint32",
+                      "id": 5
+                    },
+                    "bet": {
+                      "type": "uint32",
+                      "id": 6
+                    },
+                    "score": {
+                      "type": "uint64",
+                      "id": 7
+                    },
+                    "state": {
+                      "type": "string",
+                      "id": 8
+                    }
+                  },
+                  "reserved": [
+                    [
+                      2,
+                      2
+                    ]
+                  ]
+                },
+                "Jackpot": {
+                  "nested": {
+                    "ActionType": {
+                      "values": {
+                        "NORMAL": 0
+                      }
+                    },
+                    "BaseResponse": {
+                      "fields": {
+                        "actionType": {
+                          "type": "ActionType",
+                          "id": 1
+                        },
+                        "mJpOutIdx": {
+                          "type": "uint32",
+                          "id": 3
+                        },
+                        "mJpOutValue": {
+                          "type": "uint64",
+                          "id": 4
+                        },
+                        "mJpValue": {
+                          "rule": "repeated",
+                          "type": "uint64",
+                          "id": 5
+                        },
+                        "resultCode": {
+                          "type": "uint32",
+                          "id": 6
+                        }
+                      },
+                      "reserved": [
+                        [
+                          2,
+                          2
+                        ]
+                      ]
+                    }
+                  }
+                },
+                "Setting": {
+                  "nested": {
+                    "ActionType": {
+                      "values": {
+                        "NORMAL": 0
+                      }
+                    },
+                    "BaseResponse": {
+                      "fields": {
+                        "actionType": {
+                          "type": "ActionType",
+                          "id": 1
+                        },
+                        "betForm": {
+                          "rule": "repeated",
+                          "type": "uint32",
+                          "id": 3
+                        },
+                        "betFormIndex": {
+                          "type": "uint32",
+                          "id": 4
+                        },
+                        "decimalPosition": {
+                          "type": "uint32",
+                          "id": 5
+                        },
+                        "enableJP": {
+                          "type": "bool",
+                          "id": 6
+                        },
+                        "isDemo": {
+                          "type": "bool",
+                          "id": 7
+                        },
+                        "lastBet": {
+                          "type": "uint32",
+                          "id": 8
+                        },
+                        "lineAmount": {
+                          "type": "uint32",
+                          "id": 9
+                        }
+                      },
+                      "reserved": [
+                        [
+                          2,
+                          2
+                        ]
+                      ]
+                    }
+                  }
+                },
+                "Info": {
+                  "nested": {
+                    "ActionType": {
+                      "values": {
+                        "NORMAL": 0
+                      }
+                    },
+                    "BaseResponse": {
+                      "fields": {
+                        "actionType": {
+                          "type": "ActionType",
+                          "id": 1
+                        },
+                        "aPIVersion": {
+                          "type": "string",
+                          "id": 3
+                        },
+                        "chanceVersion": {
+                          "type": "string",
+                          "id": 4
+                        },
+                        "libVersion": {
+                          "type": "string",
+                          "id": 5
+                        },
+                        "packageVersion": {
+                          "type": "string",
+                          "id": 6
+                        },
+                        "slotServerVersion": {
+                          "type": "string",
+                          "id": 7
+                        }
+                      },
+                      "reserved": [
+                        [
+                          2,
+                          2
+                        ]
+                      ]
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,93 @@
+stages:
+- test
+- build
+- deploy
+
+最佳化程式碼:
+  stage: build
+  environment:
+    name: minify
+  variables:
+    STUFF_DEBUG: 1
+  script:
+  - stuff build
+  only:
+  - tags
+  
+檢查程式碼:
+  stage: test
+  environment:
+    name: check
+  variables:
+    STUFF_DEBUG: 1
+  script:
+  - stuff source
+
+打包alpha版至審查機組:
+  stage: deploy
+  environment:
+    name: alpha/$CI_COMMIT_REF_NAME
+  variables:
+    STUFF_DEBUG: 1
+    STUFF_MODE: alpha
+    STUFF_UPLOAD: review
+  script:
+  - stuff deploy
+  when: manual
+  only:
+  - tags
+
+打包beta版至審查機組:
+  stage: deploy
+  environment:
+    name: beta/$CI_COMMIT_REF_NAME
+  variables:
+    STUFF_DEBUG: 1
+    STUFF_MODE: beta
+    STUFF_UPLOAD: review
+  script:
+  - stuff deploy
+  when: manual
+  only:
+  - tags  
+
+打包demo版至審查機組:
+  stage: deploy
+  environment:
+    name: demo/$CI_COMMIT_REF_NAME
+  variables:
+    STUFF_DEBUG: 1
+    STUFF_MODE: demo
+    STUFF_UPLOAD: review
+  script:
+  - stuff deploy
+  when: manual
+  only:
+  - tags
+  
+打包test版至審查機組:
+  stage: deploy
+  environment:
+    name: test/$CI_COMMIT_REF_NAME
+  variables:
+    STUFF_DEBUG: 1
+    STUFF_MODE: test
+    STUFF_UPLOAD: review
+  script:
+  - stuff deploy
+  when: manual
+  only:
+  - tags
+  
+打包release版至審查機組:
+  stage: deploy
+  environment:
+    name: release/$CI_COMMIT_REF_NAME
+  variables:
+    STUFF_DEBUG: 1
+    STUFF_MODE: release
+    STUFF_UPLOAD: review
+  script:
+  - stuff deploy
+  only:
+  - tags

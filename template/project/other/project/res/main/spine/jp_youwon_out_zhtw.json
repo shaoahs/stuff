@@ -1,0 +1,741 @@
+{
+"bones": [
+	{ "name": "root" },
+	{ "name": "jp_youwon_score_position", "parent": "root", "x": 480, "y": -335 },
+	{ "name": "jp_transition_word_congratulations_zhtw_1", "parent": "root", "x": 480, "y": -270 },
+	{ "name": "jp_transition_word_congratulations_zhtw_2", "parent": "root", "x": 480, "y": -270 },
+	{ "name": "jp_transition_word_congratulations_zhtw_3", "parent": "root", "x": 480, "y": -270 },
+	{ "name": "comp_11_00012.png_4", "parent": "root", "x": 480, "y": -270 },
+	{ "name": "comp_11_00012.png_3", "parent": "root", "x": 480, "y": -270 },
+	{ "name": "comp_11_00012.png_6", "parent": "root", "x": 480, "y": -270, "rotation": -180 },
+	{ "name": "comp_11_00012.png_7", "parent": "root", "x": 480, "y": -270 },
+	{ "name": "comp_11_00012.png_5", "parent": "root", "x": 480, "y": -270 },
+	{ "name": "flare02.png_3", "parent": "root", "x": 480, "y": -270 },
+	{ "name": "jp_transition_eff_03_1", "parent": "root", "x": 598, "y": -270 },
+	{ "name": "jp_transition_eff_03_2", "parent": "root", "x": 598, "y": -270 },
+	{ "name": "jp_transition_eff_03_3", "parent": "root", "x": 359, "y": -270 },
+	{ "name": "jp_transition_eff_03_4", "parent": "root", "x": 359, "y": -270 },
+	{ "name": "card01.png_3", "parent": "root", "x": 480, "y": -270 },
+	{ "name": "card02.png_3", "parent": "root", "x": 480, "y": -270 },
+	{ "name": "card01.png_4", "parent": "root", "x": 480, "y": -270 },
+	{ "name": "card02.png_4", "parent": "root", "x": 480, "y": -270 },
+	{ "name": "card01.png_2", "parent": "root", "x": 480, "y": -270 },
+	{ "name": "card02.png_2", "parent": "root", "x": 480, "y": -270 },
+	{ "name": "jp_transition_door_left_1", "parent": "root", "x": 480, "y": -270 },
+	{ "name": "jp_transition_door_left_2", "parent": "root", "x": 480, "y": -270 },
+	{ "name": "jp_transition_word_youwon_zhtw_1", "parent": "jp_transition_word_congratulations_zhtw_1" },
+	{ "name": "jp_transition_word_continue_zhtw_1", "parent": "jp_transition_word_congratulations_zhtw_1" },
+	{ "name": "jp_transition_word_youwon_zhtw_2", "parent": "jp_transition_word_congratulations_zhtw_2" },
+	{ "name": "jp_transition_word_continue_zhtw_2", "parent": "jp_transition_word_congratulations_zhtw_2" },
+	{ "name": "jp_transition_word_youwon_zhtw_3", "parent": "jp_transition_word_congratulations_zhtw_3" },
+	{ "name": "jp_transition_word_continue_zhtw_3", "parent": "jp_transition_word_congratulations_zhtw_3" }
+],
+"slots": [
+	{ "name": "jp_transition_door_left_2", "bone": "jp_transition_door_left_2", "attachment": "jp_transition_door_left_2" },
+	{ "name": "jp_transition_door_left_1", "bone": "jp_transition_door_left_1", "attachment": "jp_transition_door_left_1" },
+	{ "name": "card02.png_2", "bone": "card02.png_2", "color": "FFFFFF4C" },
+	{ "name": "card01.png_2", "bone": "card01.png_2", "color": "FFFFFF4C" },
+	{ "name": "card02.png_4", "bone": "card02.png_4", "color": "FFFFFF7F" },
+	{ "name": "card01.png_4", "bone": "card01.png_4", "color": "FFFFFF7F" },
+	{ "name": "card02.png_3", "bone": "card02.png_3" },
+	{ "name": "card01.png_3", "bone": "card01.png_3" },
+	{ "name": "jp_transition_eff_03_4", "bone": "jp_transition_eff_03_4", "blend": "additive" },
+	{ "name": "jp_transition_eff_03_3", "bone": "jp_transition_eff_03_3", "blend": "additive" },
+	{ "name": "jp_transition_eff_03_2", "bone": "jp_transition_eff_03_2", "blend": "additive" },
+	{ "name": "jp_transition_eff_03_1", "bone": "jp_transition_eff_03_1", "blend": "additive" },
+	{ "name": "flare02.png_3", "bone": "flare02.png_3", "attachment": "flare02.png_3", "blend": "additive", "color": "FFFFFF3A" },
+	{ "name": "comp_11_00012.png_5", "bone": "comp_11_00012.png_5", "blend": "additive", "color": "FFEA0066" },
+	{ "name": "comp_11_00012.png_7", "bone": "comp_11_00012.png_7", "blend": "additive", "color": "FFEA0066" },
+	{ "name": "comp_11_00012.png_6", "bone": "comp_11_00012.png_6", "blend": "additive", "color": "FFEA0066" },
+	{ "name": "comp_11_00012.png_3", "bone": "comp_11_00012.png_3", "blend": "additive", "color": "FFFFFF33" },
+	{ "name": "comp_11_00012.png_4", "bone": "comp_11_00012.png_4", "blend": "additive", "color": "FFFFFF33" },
+	{ "name": "jp_transition_word_continue_zhtw_3", "bone": "jp_transition_word_continue_zhtw_3", "attachment": "jp_transition_word_continue_zhtw_3" },
+	{ "name": "jp_transition_word_youwon_zhtw_3", "bone": "jp_transition_word_youwon_zhtw_3", "attachment": "jp_transition_word_youwon_zhtw_3" },
+	{ "name": "jp_transition_word_congratulations_zhtw_3", "bone": "jp_transition_word_congratulations_zhtw_3", "attachment": "jp_transition_word_congratulations_zhtw_3" },
+	{ "name": "jp_transition_word_continue_zhtw_2", "bone": "jp_transition_word_continue_zhtw_2", "attachment": "jp_transition_word_continue_zhtw_2", "color": "FFFFFF00" },
+	{ "name": "jp_transition_word_youwon_zhtw_2", "bone": "jp_transition_word_youwon_zhtw_2", "attachment": "jp_transition_word_youwon_zhtw_2", "color": "FFFFFF00" },
+	{ "name": "jp_transition_word_congratulations_zhtw_2", "bone": "jp_transition_word_congratulations_zhtw_2", "attachment": "jp_transition_word_congratulations_zhtw_2", "color": "FFFFFF00" },
+	{ "name": "jp_transition_word_continue_zhtw_1", "bone": "jp_transition_word_continue_zhtw_1", "attachment": "jp_transition_word_continue_zhtw_1", "color": "FFFFFF00" },
+	{ "name": "jp_transition_word_youwon_zhtw_1", "bone": "jp_transition_word_youwon_zhtw_1", "attachment": "jp_transition_word_youwon_zhtw_1", "color": "FFFFFF00" },
+	{ "name": "jp_transition_word_congratulations_zhtw_1", "bone": "jp_transition_word_congratulations_zhtw_1", "attachment": "jp_transition_word_congratulations_zhtw_1", "color": "FFFFFF00" },
+	{ "name": "jp_youwon_score_position", "bone": "jp_youwon_score_position", "attachment": "jp_youwon_score_position" }
+],
+"skins": {
+	"default": {
+		"jp_youwon_score_position": {
+			"jp_youwon_score_position": { "width": 2, "height": 2 }
+		},
+		"jp_transition_word_congratulations_zhtw_1": {
+			"jp_transition_word_congratulations_zhtw_1": { "width": 960, "height": 540, "name": "jp_transition_word_congratulations_zhtw" }
+		},
+		"jp_transition_word_youwon_zhtw_1": {
+			"jp_transition_word_youwon_zhtw_1": { "width": 960, "height": 540, "name": "jp_transition_word_youwon_zhtw" }
+		},
+		"jp_transition_word_continue_zhtw_1": {
+			"jp_transition_word_continue_zhtw_1": { "width": 960, "height": 540, "name": "jp_transition_word_continue_zhtw" }
+		},
+		"jp_transition_word_congratulations_zhtw_2": {
+			"jp_transition_word_congratulations_zhtw_2": { "width": 960, "height": 540, "name": "jp_transition_word_congratulations_zhtw" }
+		},
+		"jp_transition_word_youwon_zhtw_2": {
+			"jp_transition_word_youwon_zhtw_2": { "width": 960, "height": 540, "name": "jp_transition_word_youwon_zhtw" }
+		},
+		"jp_transition_word_continue_zhtw_2": {
+			"jp_transition_word_continue_zhtw_2": { "width": 960, "height": 540, "name": "jp_transition_word_continue_zhtw" }
+		},
+		"jp_transition_word_congratulations_zhtw_3": {
+			"jp_transition_word_congratulations_zhtw_3": { "width": 960, "height": 540, "name": "jp_transition_word_congratulations_zhtw" }
+		},
+		"jp_transition_word_youwon_zhtw_3": {
+			"jp_transition_word_youwon_zhtw_3": { "width": 960, "height": 540, "name": "jp_transition_word_youwon_zhtw" }
+		},
+		"jp_transition_word_continue_zhtw_3": {
+			"jp_transition_word_continue_zhtw_3": { "width": 960, "height": 540, "name": "jp_transition_word_continue_zhtw" }
+		},
+		"comp_11_00012.png_4": {
+			"comp_11_00012.png_4": { "width": 400, "height": 400, "name": "jp_item_choice_eff_03" }
+		},
+		"comp_11_00012.png_3": {
+			"comp_11_00012.png_3": { "width": 400, "height": 400, "name": "jp_item_choice_eff_03" }
+		},
+		"comp_11_00012.png_6": {
+			"comp_11_00012.png_6": { "width": 400, "height": 400, "name": "jp_item_choice_eff_08" }
+		},
+		"comp_11_00012.png_7": {
+			"comp_11_00012.png_7": { "width": 400, "height": 400, "name": "jp_item_choice_eff_08" }
+		},
+		"comp_11_00012.png_5": {
+			"comp_11_00012.png_5": { "width": 400, "height": 400, "name": "jp_item_choice_eff_08" }
+		},
+		"flare02.png_3": {
+			"flare02.png_3": { "width": 200, "height": 200, "name": "jp_item_choice_eff_07" }
+		},
+		"jp_transition_eff_03_1": {
+			"jp_transition_eff_03_1": { "width": 160, "height": 180, "x": -80, "name": "jp_transition_eff_03" }
+		},
+		"jp_transition_eff_03_2": {
+			"jp_transition_eff_03_2": { "width": 160, "height": 180, "x": -80, "name": "jp_transition_eff_03" }
+		},
+		"jp_transition_eff_03_3": {
+			"jp_transition_eff_03_3": { "width": 160, "height": 180, "x": -80, "name": "jp_transition_eff_03" }
+		},
+		"jp_transition_eff_03_4": {
+			"jp_transition_eff_03_4": { "width": 160, "height": 180, "x": -80, "name": "jp_transition_eff_03" }
+		},
+		"card01.png_3": {
+			"card01.png_3": { "width": 480, "height": 540, "x": -240, "name": "jp_transition_door_left" }
+		},
+		"card02.png_3": {
+			"card02.png_3": { "width": 480, "height": 540, "x": -240, "name": "jp_transition_door_left" }
+		},
+		"card01.png_4": {
+			"card01.png_4": { "width": 480, "height": 540, "x": -240, "name": "jp_transition_door_left" }
+		},
+		"card02.png_4": {
+			"card02.png_4": { "width": 480, "height": 540, "x": -240, "name": "jp_transition_door_left" }
+		},
+		"card01.png_2": {
+			"card01.png_2": { "width": 480, "height": 540, "x": -240, "name": "jp_transition_door_left" }
+		},
+		"card02.png_2": {
+			"card02.png_2": { "width": 480, "height": 540, "x": -240, "name": "jp_transition_door_left" }
+		},
+		"jp_transition_door_left_1": {
+			"jp_transition_door_left_1": { "width": 480, "height": 540, "x": -240, "name": "jp_transition_door_left" }
+		},
+		"jp_transition_door_left_2": {
+			"jp_transition_door_left_2": { "width": 480, "height": 540, "x": -240, "name": "jp_transition_door_left" }
+		}
+	}
+},
+"animations": {
+	"demo": {
+		"bones": {
+			"jp_youwon_score_position": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"jp_transition_word_congratulations_zhtw_1": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.1, "angle": 0 },
+					{ "time": 0.233, "angle": -15 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.1, "x": 1, "y": 1 },
+					{ "time": 0.167, "x": 2.5, "y": 2.5 }
+				]
+			},
+			"jp_transition_word_youwon_zhtw_1": {
+				"scale": [
+					{ "time": 0, "x": 1.429, "y": 1.429 }
+				]
+			},
+			"jp_transition_word_continue_zhtw_1": {
+				"scale": [
+					{ "time": 0, "x": 1.429, "y": 1.429 }
+				]
+			},
+			"jp_transition_word_congratulations_zhtw_2": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.067, "angle": 0 },
+					{ "time": 0.2, "angle": -15 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.067, "x": 1, "y": 1 },
+					{ "time": 0.133, "x": 2.5, "y": 2.5 }
+				]
+			},
+			"jp_transition_word_youwon_zhtw_2": {
+				"scale": [
+					{ "time": 0, "x": 1.429, "y": 1.429 }
+				]
+			},
+			"jp_transition_word_continue_zhtw_2": {
+				"scale": [
+					{ "time": 0, "x": 1.429, "y": 1.429 }
+				]
+			},
+			"jp_transition_word_congratulations_zhtw_3": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.033, "angle": 0 },
+					{ "time": 0.167, "angle": -15 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.033, "x": 1, "y": 1 },
+					{ "time": 0.1, "x": 2.5, "y": 2.5 }
+				]
+			},
+			"jp_transition_word_youwon_zhtw_3": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"jp_transition_word_continue_zhtw_3": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"comp_11_00012.png_4": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.167, "x": 1, "y": 1 },
+					{ "time": 0.333, "x": 2, "y": 2 }
+				]
+			},
+			"comp_11_00012.png_3": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.067, "x": 1, "y": 1 },
+					{ "time": 0.133, "x": 2, "y": 2 },
+					{ "time": 0.267, "x": 2.2, "y": 2.2 }
+				]
+			},
+			"comp_11_00012.png_6": {
+				"scale": [
+					{ "time": 0, "x": 1.5, "y": 1.5 },
+					{ "time": 0.333, "x": 1.5, "y": 1.5 },
+					{ "time": 0.533, "x": 2.5, "y": 2.5 }
+				]
+			},
+			"comp_11_00012.png_7": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.233, "x": 1, "y": 1 },
+					{ "time": 0.3, "x": 2.2, "y": 2.2 },
+					{ "time": 0.533, "x": 3, "y": 3 }
+				]
+			},
+			"comp_11_00012.png_5": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.233, "x": 1, "y": 1 },
+					{ "time": 0.3, "x": 2.2, "y": 2.2 },
+					{ "time": 0.533, "x": 3, "y": 3 }
+				]
+			},
+			"flare02.png_3": {
+				"scale": [
+					{ "time": 0, "x": 2.5, "y": 2.5 },
+					{ "time": 0.367, "x": 6, "y": 6 }
+				]
+			},
+			"jp_transition_eff_03_1": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.033, "x": 0, "y": 0 },
+					{ "time": 0.133, "x": -172, "y": 0 },
+					{ "time": 0.267, "x": -405, "y": 0 },
+					{ "time": 0.433, "x": -476, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2.5, "y": 2.5 },
+					{ "time": 0.033, "x": 2.5, "y": 2.5 },
+					{ "time": 0.4, "x": 1.2, "y": 2 }
+				]
+			},
+			"jp_transition_eff_03_2": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.033, "x": 0, "y": 0 },
+					{ "time": 0.133, "x": -172, "y": 0 },
+					{ "time": 0.267, "x": -405, "y": 0 },
+					{ "time": 0.433, "x": -476, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2.5, "y": 2.5 },
+					{ "time": 0.033, "x": 2.5, "y": 2.5 },
+					{ "time": 0.4, "x": 1.2, "y": 2 }
+				]
+			},
+			"jp_transition_eff_03_3": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.033, "x": 0, "y": 0 },
+					{ "time": 0.133, "x": 175, "y": 0 },
+					{ "time": 0.267, "x": 417, "y": 0 },
+					{ "time": 0.433, "x": 488, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": -2.5, "y": 2.5 },
+					{ "time": 0.033, "x": -2.5, "y": 2.5 },
+					{ "time": 0.4, "x": -1.2, "y": 2 }
+				]
+			},
+			"jp_transition_eff_03_4": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.033, "x": 0, "y": 0 },
+					{ "time": 0.133, "x": 175, "y": 0 },
+					{ "time": 0.267, "x": 417, "y": 0 },
+					{ "time": 0.433, "x": 488, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": -2.5, "y": 2.5 },
+					{ "time": 0.033, "x": -2.5, "y": 2.5 },
+					{ "time": 0.4, "x": -1.2, "y": 2 }
+				]
+			},
+			"card01.png_3": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.2, "x": 0, "y": 0 },
+					{ "time": 0.233, "x": -185.905, "y": 126 },
+					{ "time": 0.333, "x": -504, "y": 168 }
+				],
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.2, "angle": 0 },
+					{ "time": 0.267, "angle": 19 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.2, "x": 1, "y": 1 },
+					{ "time": 0.233, "x": 2, "y": 2 },
+					{ "time": 0.333, "x": 2.5, "y": 2.5 }
+				]
+			},
+			"card02.png_3": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.2, "x": 0, "y": 0 },
+					{ "time": 0.233, "x": 371.72, "y": 130 },
+					{ "time": 0.333, "x": 553, "y": 170 }
+				],
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.2, "angle": 0 },
+					{ "time": 0.267, "angle": -21 }
+				],
+				"scale": [
+					{ "time": 0, "x": -1, "y": 1 },
+					{ "time": 0.2, "x": -1, "y": 1 },
+					{ "time": 0.233, "x": -2, "y": 2 },
+					{ "time": 0.333, "x": -2.5, "y": 2.5 }
+				]
+			},
+			"card01.png_4": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.233, "x": 0, "y": 0 },
+					{ "time": 0.267, "x": -185.905, "y": 126 },
+					{ "time": 0.367, "x": -504, "y": 168 }
+				],
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.233, "angle": 0 },
+					{ "time": 0.3, "angle": 19 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.233, "x": 1, "y": 1 },
+					{ "time": 0.267, "x": 2, "y": 2 },
+					{ "time": 0.367, "x": 2.5, "y": 2.5 }
+				]
+			},
+			"card02.png_4": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.233, "x": 0, "y": 0 },
+					{ "time": 0.267, "x": 371.72, "y": 130 },
+					{ "time": 0.367, "x": 553, "y": 170 }
+				],
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.233, "angle": 0 },
+					{ "time": 0.3, "angle": -21 }
+				],
+				"scale": [
+					{ "time": 0, "x": -1, "y": 1 },
+					{ "time": 0.233, "x": -1, "y": 1 },
+					{ "time": 0.267, "x": -2, "y": 2 },
+					{ "time": 0.367, "x": -2.5, "y": 2.5 }
+				]
+			},
+			"card01.png_2": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.267, "x": 0, "y": 0 },
+					{ "time": 0.3, "x": -185.905, "y": 126 },
+					{ "time": 0.4, "x": -504, "y": 168 }
+				],
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.267, "angle": 0 },
+					{ "time": 0.333, "angle": 19 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.267, "x": 1, "y": 1 },
+					{ "time": 0.3, "x": 2, "y": 2 },
+					{ "time": 0.4, "x": 2.5, "y": 2.5 }
+				]
+			},
+			"card02.png_2": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.267, "x": 0, "y": 0 },
+					{ "time": 0.3, "x": 371.72, "y": 130 },
+					{ "time": 0.4, "x": 553, "y": 170 }
+				],
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.267, "angle": 0 },
+					{ "time": 0.333, "angle": -21 }
+				],
+				"scale": [
+					{ "time": 0, "x": -1, "y": 1 },
+					{ "time": 0.267, "x": -1, "y": 1 },
+					{ "time": 0.3, "x": -2, "y": 2 },
+					{ "time": 0.4, "x": -2.5, "y": 2.5 }
+				]
+			},
+			"jp_transition_door_left_1": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"jp_transition_door_left_2": {
+				"scale": [
+					{ "time": 0, "x": -1, "y": 1 }
+				]
+			}
+		},
+		"slots": {
+			"jp_youwon_score_position": {
+				"color": [
+					{ "time": 0, "color": "FFFFFFFF" },
+					{ "time": 0.033, "color": "FFFFFFFF" },
+					{ "time": 0.067, "color": "FFFFFF00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "jp_youwon_score_position" },
+					{ "time": 0.067, "name": null }
+				]
+			},
+			"jp_transition_word_congratulations_zhtw_1": {
+				"color": [
+					{ "time": 0, "color": "FFFFFF00" },
+					{ "time": 0.067, "color": "FFFFFF00" },
+					{ "time": 0.1, "color": "FFFFFF66" },
+					{ "time": 0.2, "color": "FFFFFF00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "jp_transition_word_congratulations_zhtw_1" },
+					{ "time": 0.233, "name": null }
+				]
+			},
+			"jp_transition_word_youwon_zhtw_1": {
+				"color": [
+					{ "time": 0, "color": "FFFFFF00" },
+					{ "time": 0.067, "color": "FFFFFF00" },
+					{ "time": 0.1, "color": "FFFFFF66" },
+					{ "time": 0.2, "color": "FFFFFF00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "jp_transition_word_youwon_zhtw_1" },
+					{ "time": 0.233, "name": null }
+				]
+			},
+			"jp_transition_word_continue_zhtw_1": {
+				"color": [
+					{ "time": 0, "color": "FFFFFF00" },
+					{ "time": 0.067, "color": "FFFFFF00" },
+					{ "time": 0.1, "color": "FFFFFF66" },
+					{ "time": 0.2, "color": "FFFFFF00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "jp_transition_word_continue_zhtw_1" },
+					{ "time": 0.233, "name": null }
+				]
+			},
+			"jp_transition_word_congratulations_zhtw_2": {
+				"color": [
+					{ "time": 0, "color": "FFFFFF00" },
+					{ "time": 0.033, "color": "FFFFFF00" },
+					{ "time": 0.067, "color": "FFFFFF66" },
+					{ "time": 0.167, "color": "FFFFFF00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "jp_transition_word_congratulations_zhtw_2" },
+					{ "time": 0.2, "name": null }
+				]
+			},
+			"jp_transition_word_youwon_zhtw_2": {
+				"color": [
+					{ "time": 0, "color": "FFFFFF00" },
+					{ "time": 0.033, "color": "FFFFFF00" },
+					{ "time": 0.067, "color": "FFFFFF66" },
+					{ "time": 0.167, "color": "FFFFFF00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "jp_transition_word_youwon_zhtw_2" },
+					{ "time": 0.2, "name": null }
+				]
+			},
+			"jp_transition_word_continue_zhtw_2": {
+				"color": [
+					{ "time": 0, "color": "FFFFFF00" },
+					{ "time": 0.033, "color": "FFFFFF00" },
+					{ "time": 0.067, "color": "FFFFFF66" },
+					{ "time": 0.167, "color": "FFFFFF00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "jp_transition_word_continue_zhtw_2" },
+					{ "time": 0.2, "name": null }
+				]
+			},
+			"jp_transition_word_congratulations_zhtw_3": {
+				"color": [
+					{ "time": 0, "color": "FFFFFFFF" },
+					{ "time": 0.033, "color": "FFFFFFFF" },
+					{ "time": 0.133, "color": "FFFFFF00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "jp_transition_word_congratulations_zhtw_3" },
+					{ "time": 0.167, "name": null }
+				]
+			},
+			"jp_transition_word_youwon_zhtw_3": {
+				"color": [
+					{ "time": 0, "color": "FFFFFFFF" },
+					{ "time": 0.033, "color": "FFFFFFFF" },
+					{ "time": 0.133, "color": "FFFFFF00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "jp_transition_word_youwon_zhtw_3" },
+					{ "time": 0.167, "name": null }
+				]
+			},
+			"jp_transition_word_continue_zhtw_3": {
+				"color": [
+					{ "time": 0, "color": "FFFFFFFF" },
+					{ "time": 0.033, "color": "FFFFFFFF" },
+					{ "time": 0.133, "color": "FFFFFF00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "jp_transition_word_continue_zhtw_3" },
+					{ "time": 0.167, "name": null }
+				]
+			},
+			"comp_11_00012.png_4": {
+				"color": [
+					{ "time": 0, "color": "FFFFFF33" },
+					{ "time": 0.167, "color": "FFFFFF33" },
+					{ "time": 0.233, "color": "FFFFFF4C" },
+					{ "time": 0.367, "color": "FFFFFF00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.167, "name": "comp_11_00012.png_4" },
+					{ "time": 0.4, "name": null }
+				]
+			},
+			"comp_11_00012.png_3": {
+				"color": [
+					{ "time": 0, "color": "FFFFFF33" },
+					{ "time": 0.067, "color": "FFFFFF33" },
+					{ "time": 0.133, "color": "FFFFFF99" },
+					{ "time": 0.3, "color": "FFFFFF00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.067, "name": "comp_11_00012.png_3" },
+					{ "time": 0.3, "name": null }
+				]
+			},
+			"comp_11_00012.png_6": {
+				"color": [
+					{ "time": 0, "color": "FFEA0066" },
+					{ "time": 0.333, "color": "FFEA0066" },
+					{ "time": 0.4, "color": "FFEA00CC" },
+					{ "time": 0.533, "color": "FFEA0000" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.333, "name": "comp_11_00012.png_6" }
+				]
+			},
+			"comp_11_00012.png_7": {
+				"color": [
+					{ "time": 0, "color": "FFEA0066" },
+					{ "time": 0.233, "color": "FFEA0066" },
+					{ "time": 0.3, "color": "FFEA004C" },
+					{ "time": 0.5, "color": "FFEA0000" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.233, "name": "comp_11_00012.png_7" }
+				]
+			},
+			"comp_11_00012.png_5": {
+				"color": [
+					{ "time": 0, "color": "FFEA0066" },
+					{ "time": 0.233, "color": "FFEA0066" },
+					{ "time": 0.3, "color": "FFEA00CC" },
+					{ "time": 0.5, "color": "FFEA0000" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.233, "name": "comp_11_00012.png_5" }
+				]
+			},
+			"flare02.png_3": {
+				"color": [
+					{ "time": -0.067, "color": "FFFFFF00" },
+					{ "time": 0.167, "color": "FFFFFFCC" },
+					{ "time": 0.367, "color": "FFFFFF00" }
+				]
+			},
+			"jp_transition_eff_03_1": {
+				"color": [
+					{ "time": 0, "color": "FFFFFFFF" },
+					{ "time": 0.167, "color": "FFFFFFFF" },
+					{ "time": 0.433, "color": "FFFFFF00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.033, "name": "jp_transition_eff_03_1" },
+					{ "time": 0.433, "name": null }
+				]
+			},
+			"jp_transition_eff_03_2": {
+				"color": [
+					{ "time": 0, "color": "FFFFFFFF" },
+					{ "time": 0.167, "color": "FFFFFFFF" },
+					{ "time": 0.433, "color": "FFFFFF00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.033, "name": "jp_transition_eff_03_2" },
+					{ "time": 0.433, "name": null }
+				]
+			},
+			"jp_transition_eff_03_3": {
+				"color": [
+					{ "time": 0, "color": "FFFFFFFF" },
+					{ "time": 0.167, "color": "FFFFFFFF" },
+					{ "time": 0.433, "color": "FFFFFF00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.033, "name": "jp_transition_eff_03_3" },
+					{ "time": 0.433, "name": null }
+				]
+			},
+			"jp_transition_eff_03_4": {
+				"color": [
+					{ "time": 0, "color": "FFFFFFFF" },
+					{ "time": 0.167, "color": "FFFFFFFF" },
+					{ "time": 0.433, "color": "FFFFFF00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.033, "name": "jp_transition_eff_03_4" },
+					{ "time": 0.433, "name": null }
+				]
+			},
+			"card01.png_3": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.033, "name": "card01.png_3" },
+					{ "time": 0.367, "name": null }
+				]
+			},
+			"card02.png_3": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.033, "name": "card02.png_3" },
+					{ "time": 0.367, "name": null }
+				]
+			},
+			"card01.png_4": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.033, "name": "card01.png_4" },
+					{ "time": 0.4, "name": null }
+				]
+			},
+			"card02.png_4": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.033, "name": "card02.png_4" },
+					{ "time": 0.4, "name": null }
+				]
+			},
+			"card01.png_2": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.033, "name": "card01.png_2" },
+					{ "time": 0.433, "name": null }
+				]
+			},
+			"card02.png_2": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.033, "name": "card02.png_2" },
+					{ "time": 0.433, "name": null }
+				]
+			},
+			"jp_transition_door_left_1": {
+				"attachment": [
+					{ "time": 0, "name": "jp_transition_door_left_1" },
+					{ "time": 0.033, "name": null }
+				]
+			},
+			"jp_transition_door_left_2": {
+				"attachment": [
+					{ "time": 0, "name": "jp_transition_door_left_2" },
+					{ "time": 0.033, "name": null }
+				]
+			}
+		}
+	}
+}
+,"atlas_file":"jp_youwon_out_zhtw.atlas"}

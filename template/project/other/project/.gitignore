@@ -1,0 +1,16 @@
+.directory
+.idea
+.vscode
+Thumbs.db
+index.html
+statistics.html
+/node_modules/
+/app/
+/tmp/
+/config/
+/debug/
+/release/
+/data/
+/raw/
+/res/vendor/
+/src/nameMap.js

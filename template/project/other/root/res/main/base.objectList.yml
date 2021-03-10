@@ -1,0 +1,399 @@
+objects:
+- #群組範例
+  objName: demo
+  name: 群組範例
+  type: group
+  isInScene: false
+  pos: {x: 0, y: 0}
+  init: null
+  childList:
+  - #背景
+    objName: background
+    name: 背景
+    type: image
+    isInScene: true
+    resource:
+      group: demo
+      name: background
+    pos: {x: 0,y: 0}
+    width: 960
+    height: 540
+    init: null
+
+  - #帳戶餘額
+    objName: balance
+    name: 帳戶餘額
+    type: group
+    isInScene: true
+    pos: {x: 720, y: 415}
+    init: null
+    childList:
+    - #名稱
+      objName: title
+      name: 名稱
+      type: image
+      isInScene: true
+      resource:
+        group: demo.words
+        name: balance
+      pos: {x: 5,y: 0}
+      width: 140
+      height: 50
+      init: null
+    - #金額
+      objName: cash
+      name: 金額
+      type: number
+      isInScene: true
+      resource:
+        texture: cnum
+      charMap: '0123456789,.'
+      pos: {x: -45,y: 48}
+      anchor: {x: 0,y: 0.5}
+      width: 250
+      height: 53
+      numCounts: 8
+      offset: 18
+      debug: true
+      autoHide: true
+      init: setCash
+
+  - #jp1
+    objName: jp1
+    name: jp1
+    type: group
+    isInScene: true
+    pos: {x: 10, y: 90}
+    init: null
+    childList:
+    - #名稱
+      objName: title
+      name: 名稱
+      type: image
+      isInScene: true
+      resource:
+        group: demo.words
+        name: jp1
+      pos: {x: 27,y: 53}
+      width: 140
+      height: 50
+      init: null
+    - #金額
+      objName: cash
+      name: 金額
+      type: number
+      isInScene: true
+      resource:
+        texture: winRedNumber
+      charMap: '0123456789X'
+      pos: {x: 8,y: 83}
+      anchor: {x: 0,y: 0.5}
+      width: 154
+      height: 32
+      numCounts: 8
+      offset: 16
+      debug: true
+      autoHide: true
+      init: setCash
+
+  - #jp2
+    objName: jp2
+    name: jp2
+    type: group
+    isInScene: true
+    pos: {x: 192, y: 90}
+    init: null
+    childList:
+    - #名稱
+      objName: title
+      name: 名稱
+      type: image
+      isInScene: true
+      resource:
+        group: demo.words
+        name: jp2
+      pos: {x: 27,y: 53}
+      width: 140
+      height: 50
+      init: null
+    - #金額
+      objName: cash
+      name: 金額
+      type: number
+      isInScene: true
+      resource:
+        texture: winRedNumber
+      charMap: '0123456789X'
+      pos: {x: 8,y: 83}
+      anchor: {x: 0,y: 0.5}
+      width: 154
+      height: 32
+      numCounts: 8
+      offset: 16
+      debug: true
+      autoHide: true
+      init: setCash
+
+  - #jp3
+    objName: jp3
+    name: jp3
+    type: group
+    isInScene: true
+    pos: {x: 10, y: 202}
+    init: null
+    childList:
+    - #名稱
+      objName: title
+      name: 名稱
+      type: image
+      isInScene: true
+      resource:
+        group: demo.words
+        name: jp3
+      pos: {x: 27,y: 53}
+      width: 140
+      height: 50
+      init: null
+    - #金額
+      objName: cash
+      name: 金額
+      type: number
+      isInScene: true
+      resource:
+        texture: winRedNumber
+      charMap: '0123456789X'
+      pos: {x: 8,y: 83}
+      anchor: {x: 0,y: 0.5}
+      width: 154
+      height: 32
+      numCounts: 8
+      offset: 16
+      debug: true
+      autoHide: true
+      init: setCash
+
+  - #jp4
+    objName: jp4
+    name: jp4
+    type: group
+    isInScene: true
+    pos: {x: 192, y: 202}
+    init: null
+    childList:
+    - #名稱
+      objName: title
+      name: 名稱
+      type: image
+      isInScene: true
+      resource:
+        group: demo.words
+        name: jp4
+      pos: {x: 27,y: 53}
+      width: 140
+      height: 50
+      init: null
+    - #金額
+      objName: cash
+      name: 金額
+      type: number
+      isInScene: true
+      resource:
+        texture: winRedNumber
+      charMap: '0123456789X'
+      pos: {x: 8,y: 83}
+      anchor: {x: 0,y: 0.5}
+      width: 154
+      height: 32
+      numCounts: 8
+      offset: 16
+      debug: true
+      autoHide: true
+      init: setCash
+
+  - #jp5
+    objName: jp5
+    name: jp5
+    type: group
+    isInScene: true
+    pos: {x: 10, y: 312}
+    init: null
+    childList:
+    - #名稱
+      objName: title
+      name: 名稱
+      type: image
+      isInScene: true
+      resource:
+        group: demo.words
+        name: jp5
+      pos: {x: 27,y: 53}
+      width: 140
+      height: 50
+      init: null
+    - #金額
+      objName: cash
+      name: 金額
+      type: number
+      isInScene: true
+      resource:
+        texture: winRedNumber
+      charMap: '0123456789X'
+      pos: {x: 8,y: 83}
+      anchor: {x: 0,y: 0.5}
+      width: 154
+      height: 32
+      numCounts: 8
+      offset: 16
+      debug: true
+      autoHide: true
+      init: setCash
+
+  - #jp6
+    objName: jp6
+    name: jp6
+    type: group
+    isInScene: true
+    pos: {x: 192, y: 312}
+    init: null
+    childList:
+    - #名稱
+      objName: title
+      name: 名稱
+      type: image
+      isInScene: true
+      resource:
+        group: demo.words
+        name: jp6
+      pos: {x: 27,y: 53}
+      width: 140
+      height: 50
+      init: null
+    - #金額
+      objName: cash
+      name: 金額
+      type: number
+      isInScene: true
+      resource:
+        texture: winRedNumber
+      charMap: '0123456789X'
+      pos: {x: 8,y: 83}
+      anchor: {x: 0,y: 0.5}
+      width: 154
+      height: 32
+      numCounts: 8
+      offset: 16
+      debug: true
+      autoHide: true
+      init: setCash
+
+  - #剩餘次數
+    objName: times
+    name: 剩餘次數
+    type: group
+    isInScene: true
+    pos: {x: 45, y: 430}
+    init: null
+    childList:
+    - #名稱
+      objName: title
+      name: 名稱
+      type: image
+      isInScene: true
+      resource:
+        group: demo.words
+        name: times
+      pos: {x: 80,y: 8}
+      width: 140
+      height: 50
+      init: null
+    - #金額
+      objName: cash
+      name: 金額
+      type: number
+      isInScene: true
+      resource:
+        texture: winRedNumber
+      charMap: '0123456789X'
+      pos: {x: 70,y: 40}
+      anchor: {x: 0,y: 0.5}
+      width: 134
+      height: 50
+      numCounts: 8
+      offset: 16
+      debug: true
+      autoHide: true
+      init: setCash
+
+  - #贏取
+    objName: win
+    name: 贏取
+    type: group
+    isInScene: true
+    pos: {x: 443, y: 415}
+    init: null
+    childList:
+    - #名稱
+      objName: title
+      name: 名稱
+      type: image
+      isInScene: true
+      resource:
+        group: demo.words
+        name: win
+      pos: {x: 32,y: 0}
+      width: 140
+      height: 50
+      init: null
+    - #金額
+      objName: cash
+      name: 金額
+      type: number
+      isInScene: true
+      resource:
+        texture: cnum
+      charMap: '0123456789,.'
+      pos: {x: -45,y: 48}
+      anchor: {x: 0,y: 0.5}
+      width: 250
+      height: 53
+      numCounts: 8
+      offset: 18
+      debug: true
+      autoHide: true
+      init: setCash
+
+#--------------------------------------------------
+- #動畫-進入
+  objName: in
+  name: 動畫-進入
+  type: spine
+  isInScene: false
+  resource:
+    spineData: demo.spine             # spine data 群組
+    texture: null                    # texture    群組
+  configList: #動畫設定用
+  - #動畫之一
+    name: transition                  #物件名稱
+    dataName: jpTransitionIn              #資源名稱
+    timeScale: 1.0              #播放速度
+    loop: false
+    animationName: demo         #播放名稱
+  pos: {x: 0,y: 0}
+  init: null
+- #動畫-離開
+  objName: out
+  name: 動畫-離開
+  type: spine
+  isInScene: false
+  resource:
+    spineData: demo.spine             # spine data 群組
+    texture: null                    # texture    群組
+  configList: #動畫設定用
+  - #動畫之一 (文字)
+    name: transition                 #物件名稱
+    dataName: jpTransitionOut              #資源名稱
+    timeScale: 1.0              #播放速度
+    loop: false
+    animationName: demo         #播放名稱
+  pos: {x: 0,y: 0}
+  init: null

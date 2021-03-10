@@ -1,0 +1,42 @@
+---
+# package
+package:
+  main: src/main.ts
+  defaultExtension: ts
+
+generate:
+  baseURL: ''
+
+# config
+config:
+  paths:
+    src/: nodejs/demoServer/src/
+    proxy/: nodejs/demoServer/src/proxy/
+    net/: nodejs/demoServer/src/net/
+    component/: nodejs/demoServer/src/components/
+    event/: nodejs/demoServer/src/event/
+    games/: nodejs/demoServer/test/games/
+    schema/: nodejs/demoServer/schema/
+
+  map:
+    #loader: depend:loader/resource-loader.min.2.2.4.js
+    #mithril: depend:mithril/mithril.min.2.0.4.js
+    #js-yaml: depend:yaml/js-yaml.min.3.13.1.js
+
+#build
+build:
+  globalDefs:
+    ALPHA: true
+    BETA: true
+    DEMO: true
+    TEST: true
+    DEBUG: true
+  externals:
+    - pino
+    - avro
+    - ws
+    - loader
+    - mithril
+    - js-yaml
+    - protobufjs
+    - uWebSockets.js

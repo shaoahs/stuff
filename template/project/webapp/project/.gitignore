@@ -1,0 +1,15 @@
+.directory
+.idea
+.vscode
+Thumbs.db
+statistics.html
+index.html
+index.json
+/app/
+/tmp/
+/config/
+/debug/
+/release/
+/data/
+/raw/
+/node_modules/

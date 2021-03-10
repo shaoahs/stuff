@@ -1,0 +1,43 @@
+---
+name: {%= name %}
+title: {%= title %}
+group: {%= group %}
+company: com
+description: webapp {%= group %} {%= name %}
+isRoot: true
+framework:
+  name: stuff
+  version: 6.2.0
+  builder: rollup
+  skipCommandTerser: true
+  useCodeSplitting: true
+  custom: 0
+template:
+  format: html
+  debug:
+    appInLibMap: true
+    format: esm
+    src: template/debug.esm.html
+    dest: index.html
+  release:
+    appInLibMap: true
+    format: esm
+    src: template/release.esm.html
+    dest: index.html
+version: 1.0.0
+author:
+  name: astro
+  email: www@astrocorp.com.tw
+  url: www.astrocorp.com.tw
+licenses:
+  -
+    type: MIT
+    url: undefined/blob/master/LICENSE-MIT
+keywords:
+  - HTML5
+  - game
+  - es6
+  - app
+#excluded:
+#  autoTest: true
+

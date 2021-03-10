@@ -1,0 +1,49 @@
+syntax = "proto3";
+package Game.Server;
+
+/************************************************/
+// 自定義的格式
+enum CustomFormat {
+  JSON = 0;             // json
+  RAW = 1;              // 原始資料
+  PROTOBUF = 2;         // protocol buffers
+}
+
+// (請求) 遊戲內容
+message GameRequest {
+  CustomFormat format = 1;          // data 欄位格式
+  reserved 6;                       // 保留
+  int32 funcIndex = 2;              // game client used
+  string command = 3;               // 命令名稱
+  bytes data = 4;                   // 命令內容
+}
+
+// (回應) 遊戲內容
+message GameResponse {
+  CustomFormat format = 1;          // data 欄位的格式
+  reserved 5;                       // 保留
+  int32 funcIndex = 2;              // game client used
+  string command = 3;               // 命令名稱
+  bytes data = 4;                   // 命令內容
+  // int32 credit = 5;              // credit (沒有被使用)
+  Jackpot jackpot = 6;              // JP 資訊
+  Info info = 7;                    // 遊戲資訊
+  Setting setting = 8;              // 遊戲設定
+  string errorCode = 9;             // 錯誤訊息 
+}
+
+message Jackpot {
+  CustomFormat format = 1;          // data 欄位的格式
+  reserved 2;                       // 保留
+  bytes data = 3;                   // 內容
+}
+message Setting {
+  CustomFormat format = 1;          // data 欄位的格式
+  reserved 2;                       // 保留
+  bytes data = 3;                   // 內容
+}
+message Info {
+  CustomFormat format = 1;          // data 欄位的格式
+  reserved 2;                       // 保留
+  bytes data = 3;                   // 內容
+}
