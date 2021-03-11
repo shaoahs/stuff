@@ -51,13 +51,13 @@ game  framework 根目錄說明
 ````bash
 .
 ├── builder               [產生設定檔用]
-├── CHANGELOG.md          [更動歷程]]
-├── dependence            [共用的第三方程式庫]
+├── CHANGELOG.md          [更動歷程]
+├── dependence            [程式庫]
 ├── developer             [專案測試用工具程式]
 ├── favicon.ico
 ├── Gruntfile.js          [專案開發流程設定檔]
 ├── node_modules
-├── package.json         
+├── package.json          [使用的程式庫與工具程式的清單]
 ├── package-lock.json
 ├── project               [專案存放路徑]
 ├── README.md             [說明]
@@ -265,12 +265,6 @@ $> grunt public
 
 ### 當專案為附屬專案或子專案時
 
-例如
-
-- JP 遊戲
-- 小遊戲
-- 需要遊戲大廳的遊戲
-
 需要修改專案的 context.config.yml  檔 , 將 下面的註解取消
 
 ````bash
@@ -285,32 +279,5 @@ excluded:
   autoTest: true
 ````
 
-## 建立附屬專案
-
-在game framework 根目錄下 步驟如下所示
-
-````bash
-$> grunt create:other
-
-"webgame" template notes:
-新專案
-
-Please answer the following:
-[?] group (slot) [輸入群組名稱,如果是 slot 則可直接按下 <enter鍵>]
-[?] Project name (other) [輸入專案名稱後按下 <enter鍵>]
-[?] package [直接按下 <enter鍵>]
-[?] Do you need to make any changes to the above before continuing? (y/N) [直接按下 <enter鍵>]
-````
-
-完成後, 可看到如下面所示
-
-````bash
-Initialized from template "other".
-專案建立完成
-
-Done, without errors.
-
-Done.
-````
 
 
