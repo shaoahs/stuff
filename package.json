@@ -1,6 +1,6 @@
 {
   "name": "stuff.framework",
-  "version": "6.10.1",
+  "version": "6.10.2",
   "description": "",
   "scripts": {
     "install": "grunt copy:setup",
@@ -28,7 +28,7 @@
     "delay": "1000"
   },
   "devDependencies": {
-    "@auto-it/exec": "^10.20.1",
+    "@auto-it/exec": "^10.20.4",
     "@babel/core": "^7.12.17",
     "@babel/plugin-transform-arrow-functions": "^7.12.13",
     "@babel/plugin-transform-async-to-generator": "^7.12.13",
@@ -51,8 +51,8 @@
     "@swc/cli": "^0.1.35",
     "@swc/core": "^1.2.50",
     "@types/ms": "^0.7.31",
-    "@typescript-eslint/eslint-plugin": "^4.17.0",
-    "@typescript-eslint/parser": "^4.17.0",
+    "@typescript-eslint/eslint-plugin": "^4.18.0",
+    "@typescript-eslint/parser": "^4.18.0",
     "bytenode": "^1.1.8",
     "clean-css": "^5.1.0",
     "colorette": "^1.2.2",
@@ -86,7 +86,7 @@
     "sass": "^1.32.8",
     "send": "^0.17.1",
     "shelljs": "^0.8.4",
-    "socket.io": "~4.0.0",
+    "socket.io": "~2.4.0",
     "socket.io-client": "~4.0.0",
     "socket.io-msgpack-parser": "~3.0.1",
     "string-kit": "^0.12.0",
