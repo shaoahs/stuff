@@ -31,7 +31,7 @@ config:
     tweenjs: depend:createjs/tweenjs.min.1.0.2.js
 #    js-yaml: depend:yaml/js-yaml.min.3.14.0.js
     # nuts: depend:nuts/nuts.1.10.0.js
-    pixi: depend:pixi/pixi.min.5.3.8.js
+    pixi: depend:pixi/pixi.min.6.0.0.js
     pixi-spine: depend:pixi/pixi-spine.2.0.5.js
     pixi-particles: depend:pixi/pixi-particles.2.0.0.js
 

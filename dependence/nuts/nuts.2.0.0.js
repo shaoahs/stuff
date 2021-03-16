@@ -5537,7 +5537,7 @@ function createTexture (data, callback) {
   // 材質建立完成
   let complete = (loader) => {
     let resource = loader.resources;
-
+    console.log('材質建立完成');
     //    console.info(resource);
 
     // 建立材質名稱對照表
@@ -5763,7 +5763,6 @@ function createTexture (data, callback) {
         } else        {
           console.log('  no found : ' + name);
         }
-
       });
 
       filenames = Object.getOwnPropertyNames(filenameMap);
@@ -5780,6 +5779,7 @@ function createTexture (data, callback) {
       filenames.forEach(filename => {
         loader.add(filename, filename);
       });
+
       loader.onProgress.add(progress);
       loader.load(complete);
     } else {
