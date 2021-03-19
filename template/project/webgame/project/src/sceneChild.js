@@ -147,6 +147,15 @@ export function init () {
       let cmd = await import('net/command/create');
       cmd.send();
 
+      getLogo().then(texture => {
+        let sprite = new PIXI.Sprite(texture);
+        sprite.x = 100;
+        sprite.y = 100;
+        sprite.anchor.x = 0.5;
+        sprite.anchor.y = 0.5;
+        game.layer.foreground.addChild(sprite);
+      });
+
       game.disconnect = () => {
         console.log('!!!! game.disconnect !!!!');
       };
