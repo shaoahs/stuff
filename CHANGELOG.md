@@ -1,3 +1,5 @@
+# 更新紀錄
+
 ## [Unreleased]
 ### Added
 - 更新第三方程式庫版本
@@ -8,6 +10,10 @@
 ### Fixed
 
 ### Removed
+
+## [6.11.0] - 2021-03-19
+### Added
+- (game template)新增 動態讀取 logo 範例
 
 ## [6.10.0] - 2021-03-05
 ### Added
