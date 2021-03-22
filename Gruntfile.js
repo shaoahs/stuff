@@ -17,7 +17,7 @@ module.exports = function(grunt) {
     DEVELOPER: 'developer',
     RELEASE:'release'
   };
-  console.log('[stuff version 6.11.0]');
+  console.log('[stuff version 6.12.0]');
   console.log(__dirname);
   grunt.file.setBase(__dirname);
   
@@ -25,8 +25,8 @@ module.exports = function(grunt) {
   let pkg = {};
   let resConfig = {};
   let buffer = {};  // game card used
-  // let agentPath = 'project/agent';    // 除錯用
-  let agentPath = 'developer/agent';     // 遊戲專案測試用
+  let agentPath = 'project/agent';    // 除錯用
+  // let agentPath = 'developer/agent';     // 遊戲專案測試用
   let workspace = {
     basePath: 'project',
     hasConfig: false,
