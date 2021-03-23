@@ -25,8 +25,8 @@ module.exports = function(grunt) {
   let pkg = {};
   let resConfig = {};
   let buffer = {};  // game card used
-  let agentPath = 'project/agent';    // 除錯用
-  // let agentPath = 'developer/agent';     // 遊戲專案測試用
+  // let agentPath = 'project/agent';    // 除錯用
+  let agentPath = 'developer/agent';     // 遊戲專案測試用
   let workspace = {
     basePath: 'project',
     hasConfig: false,
