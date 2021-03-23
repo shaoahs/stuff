@@ -2,14 +2,20 @@
 
 ## [Unreleased]
 ### Added
-- 更新第三方程式庫版本
-- 更新 agent 版本
 
 ### Changed
+- 更新第三方程式庫版本
+- 更新 agent 版本
 
 ### Fixed
 
 ### Removed
+
+## [6.12.0] - 2021-03-22
+### Changed
+- 更新第三方程式庫版本
+- 更新 agent 版本
+- 修改 game template 範例
 
 ## [6.11.0] - 2021-03-19
 ### Added
