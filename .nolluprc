@@ -1,0 +1,5 @@
+{
+    "port": 9001,
+    "hot": true,
+    "contentBase": "../"
+}
