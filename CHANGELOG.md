@@ -6,6 +6,7 @@
 ### Changed
 - 更新第三方程式庫版本
 - 更新 agent 版本
+- 修改 app template 範例
 
 ### Fixed
 
