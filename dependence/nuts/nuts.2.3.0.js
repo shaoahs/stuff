@@ -7180,7 +7180,6 @@ class Base {
     self.idle = (seconds) => {
       return new Promise((resolve/*, reject*/) => {
         function done () {
-          console.log('done');
           resolve();
         }
         self.setTimeout(done, seconds);

@@ -1,18 +1,19 @@
+---
 env:
   browser: true
   worker: true
   es2021: true
 extends: 
-  # - 'eslint:recommended'
+  - 'eslint:recommended'
   # - 'plugin:@typescript-eslint/recommended'
   - 'prettier'
-  - 'prettier/@typescript-eslint'
+  # - 'prettier/@typescript-eslint'
 parser: '@typescript-eslint/parser' # babel-eslint
 plugins: 
   - '@typescript-eslint'
 parserOptions:
   ecmaVersion: 2021
-  allowImportExportEverywhere: false
+  allowImportExportEverywhere: true
   codeFrame: false
   sourceType: module
 globals:
@@ -23,9 +24,10 @@ globals:
   DEBUG: true
   console: true
   PIXI: true
+  System: true
   m: true
-  SystemJS: true
   createjs: true
+  isMobile: true
 rules:
   space-before-function-paren:
     - 2

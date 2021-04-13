@@ -17,7 +17,7 @@ module.exports = function(grunt) {
     DEVELOPER: 'developer',
     RELEASE:'release'
   };
-  console.log('[stuff version 6.12.0]');
+  console.log('[stuff version 6.13.0]');
   console.log(__dirname);
   grunt.file.setBase(__dirname);
   
