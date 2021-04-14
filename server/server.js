@@ -20,8 +20,8 @@ let corsOptions = {
     'https://g05bn.nrmhp.com/',
     'http://ip-api.com/',
     'http://127.0.0.1:3000',
-    'http://172.16.65.22:3000',
-    // 'http://127.0.0.1:4000'
+    'http://172.16.65.127:3000',
+    'http://127.0.0.1:4000'
   ],
   methods:['GET', 'POST', 'PUT', 'OPTIONS']
 };
@@ -104,8 +104,8 @@ fastify.get('/avro',{ websocket: true }, (connection, req) => {
   })
 });
 
-/*
-const testServer = require('fastify')();
+
+/* const testServer = require('fastify')();
 testServer.register(cors, corsOptions);
 testServer
   .register(require('fastify-static'), {
@@ -119,8 +119,8 @@ testServer
     if (err) throw err;
     logger.info('!!!! start web server !!!!');
     logger.info('http://localhost:4000/');
-  });
-*/
+  }); */
+
 
 //test auth
 /*fastify.after(() => {
