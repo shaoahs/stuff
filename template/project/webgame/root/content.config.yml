@@ -18,13 +18,13 @@ templateVersion: game.5.0
 #   standalone: true
 #   debug:
 #     appInLibMap: true
-#     format: system
-#     src: template/debug.system.html
+#     format: esm
+#     src: template/debug.esm.html
 #     dest: index.html
 #   release:
 #     appInLibMap: true
-#     format: system
-#     src: template/release.system.html
+#     format: esm
+#     src: template/release.esm.html
 #     dest: index.html
 author:
   name: astro
