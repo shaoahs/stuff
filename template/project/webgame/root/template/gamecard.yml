@@ -16,7 +16,8 @@ sysTray: # 是否顯示系統選單
     music: false        # 音樂
     sound: false        # 音效
 manual: # 指定需要手動控制的項目
-  overview: true # 讀取畫面
+  overview: true     # 讀取畫面
+  disableNet: false  # 是否關閉網路功能  
 options: # 功能開關設定
   overview:       # 預覽畫面相關設定
     logo: true           # 是否顯示 公版的 logo

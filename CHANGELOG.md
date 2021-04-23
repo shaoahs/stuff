@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 ### Added
+- game template 新增網路功能開關
 
 ### Changed
 

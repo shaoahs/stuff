@@ -334,10 +334,7 @@ Player.prototype.updateForStreaming = function() {
 	}
 
 	if (this.audio) {
-		var decoded = false;
-		do {
-			decoded = this.audio.decode();
-		} while (decoded);
+		this.audio.decode();
 	}
 };
 
@@ -352,7 +349,6 @@ Player.prototype.nextFrame = function() {
 
 return Player;
 })();
-
 JSMpeg.BitBuffer = (function(){ "use strict";
 
 var BitBuffer = function(bufferOrLength, mode) {

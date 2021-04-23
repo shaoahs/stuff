@@ -2730,6 +2730,7 @@ module.exports = function(grunt) {
 
     grunt.task.run(cmdList);
   });
+  
   grunt.registerTask('cache', '產生快取', function(mode) {
     //let done = this.async();
     
@@ -2817,7 +2818,7 @@ module.exports = function(grunt) {
     }
     workspace.vendor.custom[lang] = name;
   });
-  
+
   grunt.registerTask('resource', '資源', function(mode) {
     let done = this.async();
     //    console.log(resources);
@@ -3067,7 +3068,7 @@ module.exports = function(grunt) {
       build();
     }
   });
-  
+
   // CI 用
   grunt.registerTask('tag', '新增標籤', function(txt) {
     let cmdList = [];
@@ -3149,7 +3150,6 @@ module.exports = function(grunt) {
     done();
   });
 
-
   // nodejs 專案用
   grunt.registerTask('run', '執行', function(mode) {
     let cmdList = [];
@@ -3161,7 +3161,7 @@ module.exports = function(grunt) {
     cmdList.push(cmd);
     grunt.task.run(cmdList);
   });
-  
+
   grunt.registerTask('default', '預設任務', function() {
     let cmdList = [];
     cmdList.push('shell:default');
@@ -3185,7 +3185,7 @@ module.exports = function(grunt) {
     cmdList.push('shell:bytenode');
     grunt.task.run(cmdList);
   });
-  
+
   grunt.registerTask('report', '產生報告', function(mode) {
     let cmdList = [];
     cmdList.push(`shell:report:${mode}`);

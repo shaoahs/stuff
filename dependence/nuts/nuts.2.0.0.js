@@ -10,7 +10,7 @@
 
 let socketio = null;
 
-function init (config) {
+function init$i (config) {
   socketio = config.io;
 }
 
@@ -165,7 +165,7 @@ class Network {
 
 var client = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  init: init,
+  init: init$i,
   Network: Network
 });
 
@@ -181,9 +181,9 @@ var client = /*#__PURE__*/Object.freeze({
 //import {CMD, RESULT, STATE} from 'src/client/lobby';
 
 
-let CMD;
-let RESULT;
-let STATE;
+let CMD$1;
+let RESULT$1;
+let STATE$1;
 
 /**
  * 網路命令
@@ -191,9 +191,9 @@ let STATE;
 class CommandList {
 
   static init (config) {
-    CMD = config.CMD;
-    RESULT = config.RESULT;
-    STATE = config.STATE;
+    CMD$1 = config.CMD;
+    RESULT$1 = config.RESULT;
+    STATE$1 = config.STATE;
   }
 
   /**
@@ -227,11 +227,11 @@ class CommandList {
        */
       proc.checkData = (cmdName, data, buf, cb) => {
         console.log(cmdName);
-        let state = STATE.OK;
+        let state = STATE$1.OK;
 
-        if (data.resultCode !== RESULT.OK) {
+        if (data.resultCode !== RESULT$1.OK) {
           console.log('command "' + cmdName + '" check data error ! result code : ' + data.resultCode);
-          state = STATE.ERROR;
+          state = STATE$1.ERROR;
 
           // 錯誤處理
           if (cb && cb.error) {
@@ -279,7 +279,7 @@ class CommandList {
          * 連線
          */
         connect (data) {
-          console.log(CMD.CONNECT);
+          console.log(CMD$1.CONNECT);
           let event = eMap && eMap.connect;
 
           // 處理 callback
@@ -292,7 +292,7 @@ class CommandList {
          * 重新連線
          */
         reconnect (data) {
-          console.log(CMD.RECONNECT);
+          console.log(CMD$1.RECONNECT);
           let event = eMap && eMap.reconnect;
 
           // 處理 callback
@@ -306,7 +306,7 @@ class CommandList {
          */
         login (data) {
           let event = eMap && eMap.login;
-          if (!proc.checkData(CMD.LOGIN, data, lobbyBuf, event)) {
+          if (!proc.checkData(CMD$1.LOGIN, data, lobbyBuf, event)) {
             return;
           }
 
@@ -318,7 +318,7 @@ class CommandList {
          */
         relogin (data) {
           let event = eMap && eMap.relogin;
-          if (!proc.checkData(CMD.RELOGIN, data, lobbyBuf, event)) {
+          if (!proc.checkData(CMD$1.RELOGIN, data, lobbyBuf, event)) {
             return;
           }
 
@@ -330,7 +330,7 @@ class CommandList {
          */
         inGame (data) {
           let event = eMap && eMap.inGame;
-          proc.checkData(CMD.IN_GAME, data, lobbyBuf, event);
+          proc.checkData(CMD$1.IN_GAME, data, lobbyBuf, event);
         },
 
         /**
@@ -338,7 +338,7 @@ class CommandList {
          */
         exitGame (data) {
           let event = eMap && eMap.exitGame;
-          proc.checkData(CMD.EXIT_GAME, data, lobbyBuf, event);
+          proc.checkData(CMD$1.EXIT_GAME, data, lobbyBuf, event);
         },
 
         /**
@@ -346,7 +346,7 @@ class CommandList {
          */
         toGame (data) {
           let event = eMap && eMap.toGame;
-          proc.checkData(CMD.TO_GAME, data, gameBuf, event);
+          proc.checkData(CMD$1.TO_GAME, data, gameBuf, event);
 
           proc.gameProc(data);
         },
@@ -386,7 +386,7 @@ class CommandList {
          * 斷線錯誤訊息
          */
         disconnectMsg (data) {
-          console.log(CMD.DISCONNECT_MSG);
+          console.log(CMD$1.DISCONNECT_MSG);
           let event = eMap && eMap.disconnectMsg;
           if (event && event.handle) {
             event.handle(data);
@@ -397,7 +397,7 @@ class CommandList {
          * 斷線
          */
         disconnect (data) {
-          console.log(CMD.DISCONNECT);
+          console.log(CMD$1.DISCONNECT);
           let event = eMap && eMap.disconnect;
           if (event && event.handle) {
             event.handle(data);
@@ -477,7 +477,7 @@ function remove (obj) {
 function setTimeout (func, seconds) {
   let t = {
     currentTime: 0.0,
-    func: func
+    func
   };
   t.update = (offsetTime) => {
     if (t.currentTime >= seconds) {
@@ -490,6 +490,20 @@ function setTimeout (func, seconds) {
   };
   add(t);
   return t;
+}
+
+/**
+ * 執行一次
+ * @param seconds
+ * @returns {Promise}
+ */
+function idle (seconds) {
+  return new Promise((resolve/*, reject*/) => {
+    function done () {
+      resolve();
+    }
+    setTimeout(done, seconds);
+  });
 }
 
 /**
@@ -573,7 +587,7 @@ let lastTime = -1;
  * 刷新遊戲畫面
  * @param time {Integer} 經過總時間
  */
-function refresh (event)  {
+function refresh$1 (event)  {
   let currentTime = performance.now() * 0.001;
   let offsetTime;
   if (event.paused) {
@@ -589,22 +603,21 @@ function refresh (event)  {
     lastTime = currentTime;
   }
 
-  //  console.log('refresh offsetTime : ' + offsetTime);
   update(offsetTime);
 }
 
 //------------------------------------------------------
 let isPlay = false;
-let isInit = false;
-function init$1 () {
-  if (isInit) {
+let isInit$2 = false;
+function init$h () {
+  if (isInit$2) {
     return;
   }
-  isInit = true;
+  isInit$2 = true;
   Ticker = globalThis.createjs.Ticker;
   Ticker.timingMode = Ticker.TIMEOUT;
   Ticker.interval = 1000 / 60;
-  Ticker.addEventListener('tick', refresh);
+  Ticker.addEventListener('tick', refresh$1);
   reset();
 }
 
@@ -634,11 +647,12 @@ var updateManager = /*#__PURE__*/Object.freeze({
   add: add,
   remove: remove,
   setTimeout: setTimeout,
+  idle: idle,
   setInterval: setInterval,
   clearInterval: clearInterval,
   once: once,
   reset: reset,
-  init: init$1,
+  init: init$h,
   play: play,
   pause: pause
 });
@@ -658,7 +672,7 @@ const BROADCAST = 'broadCastMsg';       // 廣播用
 const DISCONNECT = 'disconnect';        // 斷線
 const DISCONNECT_MSG = 'disconnectMsg'; // 斷線訊息
 
-const CMD$1 = {
+const CMD = {
   ERROR,
   CONNECT,
   RECONNECT,
@@ -675,7 +689,7 @@ const CMD$1 = {
 /**
  * result id 對照表
  */
-const RESULT$1 = {
+const RESULT = {
   ERROR: 0,
   OK: 1
 };
@@ -683,7 +697,7 @@ const RESULT$1 = {
 /**
  * state id 對照表
  */
-const STATE$1 = {
+const STATE = {
   SEND_LOCK: -3,
   CONNECT_TIMEOUT: -2,
   BUFFER_FULL: -1,
@@ -733,9 +747,9 @@ class Lobby extends Network {
     let self = this;
 
     CommandList.init({
-      CMD: CMD$1,
-      RESULT: RESULT$1,
-      STATE: STATE$1
+      CMD,
+      RESULT,
+      STATE
     });
 
     /***************************************************************/
@@ -934,7 +948,7 @@ class Lobby extends Network {
         name: name,
         data: data
       });
-      return STATE$1.OK;
+      return STATE.OK;
     };
 
     /**
@@ -960,7 +974,7 @@ class Lobby extends Network {
         gid: gid,
         packet: packet
       });
-      return  STATE$1.OK;
+      return  STATE.OK;
     };
 
     /**
@@ -988,7 +1002,7 @@ class Lobby extends Network {
    */
 
   static get STATE () {
-    return STATE$1;
+    return STATE;
   }
 
   /**
@@ -997,7 +1011,7 @@ class Lobby extends Network {
    */
 
   static get CMD () {
-    return CMD$1;
+    return CMD;
   }
 
   /**
@@ -1006,7 +1020,7 @@ class Lobby extends Network {
    */
 
   static get RESULT () {
-    return RESULT$1;
+    return RESULT;
   }
 }
 
@@ -1045,7 +1059,7 @@ function debug (obj, PIXI) {
  * @param groupName {String} 群組名稱
  * @return {Object} 群組
  */
-function getTextureGroup (textures, groupName) {
+function getTextureGroup$1 (textures, groupName) {
 
   let group = textures;
   if (group) {
@@ -1092,7 +1106,7 @@ function make (SuperClass) {
       let textures = self._game.textures;
       let res = self.conf.resource;
 
-      let group = getTextureGroup(textures, res.group);
+      let group = getTextureGroup$1(textures, res.group);
       if (group) {
         self.texture = group[res.name] || PIXI.Texture.EMPTY;
       }
@@ -1124,16 +1138,16 @@ class BaseOld {
 var base = /*#__PURE__*/Object.freeze({
   __proto__: null,
   debug: debug,
-  getTextureGroup: getTextureGroup,
+  getTextureGroup: getTextureGroup$1,
   make: make,
   'default': BaseOld
 });
 
-const TYPE = 'animation';
+const TYPE$9 = 'animation';
 
 let Animation = null;
 
-function init$2 () {
+function init$g () {
   let PIXI = globalThis.PIXI;
   let AnimatedSprite = null;
   if (PIXI.AnimatedSprite) {
@@ -1143,7 +1157,7 @@ function init$2 () {
   }
   Animation = class Anim extends make(AnimatedSprite) {
 
-    static get TYPE () {return TYPE;}
+    static get TYPE () {return TYPE$9;}
 
     /**
      * constructor
@@ -1154,7 +1168,7 @@ function init$2 () {
       let self = this;
       self._game = info.game;
       self.conf = info.conf;
-      self.type = TYPE;
+      self.type = TYPE$9;
       self.name = info.name;
       self.objName = info.objName || null;
       self.isInScene = info.isInScene;
@@ -1231,7 +1245,7 @@ function init$2 () {
       let conf = this.conf;
       let res = this.conf.resource;
 
-      let group = getTextureGroup(textures, res.group);
+      let group = getTextureGroup$1(textures, res.group);
       if (group) {
         this.textures = group[res.name] || [ PIXI.Texture.EMPTY ];
       }
@@ -1247,11 +1261,11 @@ function init$2 () {
  * 動畫
  */
 
-const TYPE$1 = 'button';
+const TYPE$8 = 'button';
 
 let Button = null;
 
-function init$3 () {
+function init$f () {
   let PIXI = globalThis.PIXI;
   Button = class B extends make(PIXI.Sprite) {
 
@@ -1259,7 +1273,7 @@ function init$3 () {
      * 取得物件類型
      * @return {string}
      */
-    static get TYPE () { return TYPE$1;}
+    static get TYPE () { return TYPE$8;}
 
     /**
      * constructor
@@ -1269,7 +1283,7 @@ function init$3 () {
       super((info.texture && info.texture.leave) || PIXI.Texture.EMPTY);
       let self = this;
       self._game = info.game;
-      self.type = TYPE$1;
+      self.type = TYPE$8;
       self.conf = info.conf;
       self.objName = info.objName || null;
       self.name = info.name;
@@ -1575,7 +1589,7 @@ function init$3 () {
       let textures = this._game.textures;
       let res = this.conf.resource;
 
-      let group = getTextureGroup(textures, res.group);
+      let group = getTextureGroup$1(textures, res.group);
       if (group) {
         this.setTextures(group[res.name]);
       }
@@ -1600,10 +1614,10 @@ function init$3 () {
 
 //import * as sceneManager from 'src/scene/sceneManager';
 
-const TYPE$2 = 'group';
+const TYPE$7 = 'group';
 let Group = null;
 
-function init$4 (config) {
+function init$e (config) {
   let PIXI = globalThis.PIXI;
   let sceneManager = config.sceneManager;
   Group = class G extends make(PIXI.Container) {
@@ -1613,7 +1627,7 @@ function init$4 (config) {
      * @return {string}
      */
     static get TYPE () {
-      return TYPE$2;
+      return TYPE$7;
     }
 
     /**
@@ -1625,7 +1639,7 @@ function init$4 (config) {
       let self = this;
       self._game = info.game;
       self.conf = info.conf;
-      self.type = TYPE$2;
+      self.type = TYPE$7;
       self.name = info.name;
       self.objName = info.objName || null;
       self.isInScene = info.isInScene;
@@ -1702,10 +1716,10 @@ function init$4 (config) {
 
 ************************************************************************ */
 
-const TYPE$3 = 'image';
+const TYPE$6 = 'image';
 let Image = null;
 
-function init$5 () {
+function init$d () {
   let PIXI = globalThis.PIXI;
   Image = class I extends make(PIXI.Sprite) {
 
@@ -1713,7 +1727,7 @@ function init$5 () {
      * 取得物件類型
      * @return {string}
      */
-    static get TYPE () {return TYPE$3;}
+    static get TYPE () {return TYPE$6;}
 
     /**
      * constructor
@@ -1724,7 +1738,7 @@ function init$5 () {
       let self = this;
       self._game = info.game;
       self.conf = info.conf;
-      self.type = TYPE$3;
+      self.type = TYPE$6;
       self.name = info.name;
       self.objName = info.objName;
       self.isInScene = info.isInScene;
@@ -1775,11 +1789,11 @@ function init$5 () {
 
 ************************************************************************ */
 
-const TYPE$4 = 'spine';
+const TYPE$5 = 'spine';
 
 let Spine = null;
 
-function init$6 () {
+function init$c () {
   let PIXI = globalThis.PIXI;
   Spine = class S extends make(PIXI.Container) {
 
@@ -1788,7 +1802,7 @@ function init$6 () {
      * @return {string}
      */
     static get TYPE () {
-      return TYPE$4;
+      return TYPE$5;
     }
 
     static getChild (spine, name) {
@@ -1867,7 +1881,7 @@ function init$6 () {
       let textureGroup = info.textureGroup;
       self._game = info.game;
       self.conf = info.conf;
-      self.type = TYPE$4;
+      self.type = TYPE$5;
       self.name = info.name;
       self.objName = info.objName || null;
       self.isInScene = info.isInScene;
@@ -2367,11 +2381,11 @@ function init$6 () {
 
 ************************************************************************ */
 
-const TYPE$5 = 'bone';
+const TYPE$4 = 'bone';
 let factory = null;
 let Bone = null;
 
-function init$7 () {
+function init$b () {
   let PIXI = globalThis.PIXI;
   Bone = class Bones extends make(PIXI.Sprite) {
 
@@ -2380,7 +2394,7 @@ function init$7 () {
      * @return {string}
      */
     static get TYPE () {
-      return TYPE$5;
+      return TYPE$4;
     }
 
     static setFactory (f) {
@@ -2400,7 +2414,7 @@ function init$7 () {
       let self = this;
       self._game = info.game;
       self.conf = info.conf;
-      self.type = TYPE$5;
+      self.type = TYPE$4;
       self.name = info.name;
       self.objName = info.objName || null;
       self.resource = {};
@@ -2525,7 +2539,7 @@ function init$7 () {
 
 //import * as sceneManager from 'src/scene/sceneManager';
 
-const TYPE$6 = 'digit';
+const TYPE$3 = 'digit';
 
 /**
  * 數字
@@ -2577,7 +2591,7 @@ const NUM =
 let Digit = null;
 
 
-function init$8 () {
+function init$a () {
   let PIXI = globalThis.PIXI;
   Digit = class D extends make(PIXI.Sprite) {
 
@@ -2585,7 +2599,7 @@ function init$8 () {
      * 取得物件類型
      * @return {string}
      */
-    static get TYPE () {return TYPE$6;}
+    static get TYPE () {return TYPE$3;}
 
     /***
      * 取得
@@ -2600,7 +2614,7 @@ function init$8 () {
       let te;
       self._game = info.game;
       self.conf = info.conf;
-      self.type = TYPE$6;
+      self.type = TYPE$3;
       self.name = info.name;
       self.objName = info.objName;
       self.isInScene = info.isInScene;
@@ -3298,7 +3312,7 @@ function init$8 () {
       this.setTextures(res.texture);
 
       if (res.group) {
-        let group = getTextureGroup(textures, res.group);
+        let group = getTextureGroup$1(textures, res.group);
         if (group) {
           self.texture = group[res.background] || PIXI.Texture.EMPTY;
         }
@@ -3322,7 +3336,7 @@ function init$8 () {
 
 ************************************************************************ */
 
-const TYPE$7 = 'scrollbar';
+const TYPE$2 = 'scrollbar';
 
 let Scrollbar = null;
 
@@ -3334,14 +3348,14 @@ function init$9 () {
      * 取得物件類型
      * @return {string}
      */
-    static get TYPE () { return TYPE$7;}
+    static get TYPE () { return TYPE$2;}
 
     constructor (info) {
       super(info.background || PIXI.Texture.EMPTY);
       let self = this;
       self._game = info.game;
       self.conf = info.conf;
-      self.type = TYPE$7;
+      self.type = TYPE$2;
       self.name = info.name;
       self.objName = info.objName;
       self.isInScene = info.isInScene;
@@ -3581,11 +3595,11 @@ function init$9 () {
 
 ************************************************************************ */
 
-const TYPE$8 = 'text';
+const TYPE$1 = 'text';
 
 let Text = null;
 
-function init$a () {
+function init$8 () {
   let PIXI = globalThis.PIXI;
   Text = class T extends make(PIXI.Text)  {
 
@@ -3593,7 +3607,7 @@ function init$a () {
      * 取得物件類型
      * @return {string}
      */
-    static get TYPE () {return TYPE$8;}
+    static get TYPE () {return TYPE$1;}
 
     /**
      * constructor
@@ -3604,7 +3618,7 @@ function init$a () {
       let self = this;
       self._game = info.game;
       self.conf = info.conf;
-      self.type = TYPE$8;
+      self.type = TYPE$1;
       self.name = info.name;
       self.objName = info.objName;
       self.isInScene = info.isInScene;
@@ -3672,7 +3686,7 @@ function init$a () {
 
 ************************************************************************ */
 
-const TYPE$9 = 'particle';
+const TYPE = 'particle';
 
 let configMap = {
   demo: {
@@ -3718,7 +3732,7 @@ let configMap = {
 };
 let Particle = null;
 
-function init$b () {
+function init$7 () {
   let PIXI = globalThis.PIXI;
   let ParticleContainer = null;
   if (PIXI.ParticleContainer) {
@@ -3736,7 +3750,7 @@ function init$b () {
      * 取得物件類型
      * @return {string}
      */
-    static get TYPE () {return TYPE$9;}
+    static get TYPE () {return TYPE;}
 
     static setConfigMap (conf) {
       configMap = conf || configMap;
@@ -3758,7 +3772,7 @@ function init$b () {
       self.custom = custom;
       self._game = info.game;
       self.conf = info.conf;
-      self.type = TYPE$9;
+      self.type = TYPE;
       self.name = info.name;
       self.objName = info.objName;
       self.isInScene = info.isInScene;
@@ -4106,7 +4120,7 @@ let property = {
  * @param groupName {String} 群組名稱
  * @return {Object} 群組
  */
-let getTextureGroup$1 = getTextureGroup;
+let getTextureGroup = getTextureGroup$1;
 
 // let getTextureGroup = (groupName) => {
 //   let group = property.textures;
@@ -4224,7 +4238,7 @@ let createParticle = (info, game) => {
   let groupName = info.resource.group,
     teName = info.resource.name,
     pos = info.pos || { x: 0, y: 0},
-    group = getTextureGroup$1(property.textures, groupName);
+    group = getTextureGroup(property.textures, groupName);
 
   let art = group && group[teName];
 
@@ -4268,7 +4282,7 @@ let createSpine = (info, game) => {
   let spine = null,
     pos = info.pos || { x: 0, y: 0 },
     spineDataGroup = getSpineDataGroup(info.resource.spineData),
-    textureGroup = getTextureGroup$1(property.textures, info.resource.texture);
+    textureGroup = getTextureGroup(property.textures, info.resource.texture);
 
   //--
   if (spineDataGroup) {
@@ -4397,7 +4411,7 @@ let createText = (info, game) => {
 let createScrollbar = (info, game) => {
   let res = info.resource;
   let groupName = res.group;
-  let group = getTextureGroup$1(property.textures, groupName);
+  let group = getTextureGroup(property.textures, groupName);
   let scrollbar;
   let textureSlider = PIXI.Texture.EMPTY;
   let textureBackground = PIXI.Texture.EMPTY;
@@ -4436,7 +4450,7 @@ let createBackground = (info, game) => {
     teName = info.resource.name,
     pos = info.pos || { x: 0, y: 0},
     anchor = info.anchor || { x: 0.0, y: 0.0 },
-    group = getTextureGroup$1(property.textures, groupName),
+    group = getTextureGroup(property.textures, groupName),
     image;
   if (typeof teName === 'number') {
     if (teName < 0) {
@@ -4472,7 +4486,7 @@ let createImage = (info, game) => {
     teName = info.resource.name,
     pos = info.pos || {x: 0, y: 0},
     anchor = info.anchor || {x: 0.0, y: 0.0},
-    group = getTextureGroup$1(property.textures, groupName),
+    group = getTextureGroup(property.textures, groupName),
     blendMode = info.blend,
     image;
 
@@ -4525,7 +4539,7 @@ let createAnimation = (info, game) => {
     anchor = info.anchor || { x: 0.0, y: 0.0 },
     speed = info.speed || 0.33,
     loop = info.loop,
-    group = getTextureGroup$1(property.textures, groupName),
+    group = getTextureGroup(property.textures, groupName),
     anim;
   let teList = (group && group[teName]) || [ PIXI.Texture.EMPTY ];
 
@@ -4556,7 +4570,7 @@ let createAnimation = (info, game) => {
 let createNumber = (info, game) => {
   let res = info.resource;
   let teName = info.resource.texture,
-    group = getTextureGroup$1(property.textures, res.group),
+    group = getTextureGroup(property.textures, res.group),
     cnts = info.numCounts || 4,
     offset = info.offset,
     symbolOffset = info.symbolOffset,
@@ -4609,7 +4623,7 @@ let createButton = (info, game) => {
   let res = info.resource,
     groupName = res.group,
     teName = res.name,
-    group = getTextureGroup$1(property.textures, groupName),
+    group = getTextureGroup(property.textures, groupName),
     teBtn,
     btn;
   let te = {
@@ -4650,7 +4664,7 @@ let createButton = (info, game) => {
 /**
  * 初始化
  */
-function init$c (conf) {
+function init$6 (conf) {
   property.objectFactory[OBJ_TYPE.INFO]         = createInfo;
   property.objectFactory[OBJ_TYPE.GROUP]        = createGroup;
   property.objectFactory[OBJ_TYPE.SCROLLBAR]    = createScrollbar;
@@ -4967,7 +4981,7 @@ function setEvent (event)  {
  * 設定
  * @param state
  */
-function setState (state) {
+function setState$1 (state) {
   property.state = state;
 }
 
@@ -5325,7 +5339,7 @@ function createBonesData (data, callback) {
       let res = resource[info.atlas] && resource[info.atlas].data;
       res = JSON.parse(res);
       if (factory) {
-        let textures = getTextureGroup$1(property.textures, info.texture.group);
+        let textures = getTextureGroup(property.textures, info.texture.group);
         let te = textures && textures[info.texture.name];
         if (te) {
           factory.parseTextureAtlasData(res, te);
@@ -5537,18 +5551,12 @@ function createTexture (data, callback) {
   // 材質建立完成
   let complete = (loader) => {
     let resource = loader.resources;
-    console.log('材質建立完成');
+
     //    console.info(resource);
 
     // 建立材質名稱對照表
     let completeImage = (info) => {
       return resource[info].texture;
-
-      // return PIXI.utils.TextureCache[property.baseURL + info];
-
-      // let te = PIXI.Texture.from(property.baseURL + info, true);
-      // te.baseTexture.scaleMode = PIXI.SCALE_MODES.NEAREST;
-      // return te;
     };
 
     let completeArray = (infoList, teList, create) => {
@@ -5763,6 +5771,7 @@ function createTexture (data, callback) {
         } else        {
           console.log('  no found : ' + name);
         }
+
       });
 
       filenames = Object.getOwnPropertyNames(filenameMap);
@@ -5779,7 +5788,6 @@ function createTexture (data, callback) {
       filenames.forEach(filename => {
         loader.add(filename, filename);
       });
-
       loader.onProgress.add(progress);
       loader.load(complete);
     } else {
@@ -6305,12 +6313,12 @@ var sceneManager = /*#__PURE__*/Object.freeze({
   OBJ_TYPE: OBJ_TYPE,
   createDebugTxeture: createDebugTxeture,
   createGroup: createGroup,
-  init: init$c,
+  init: init$6,
   registerFactory: registerFactory,
   loadScene: loadScene,
   loadSceneEx: loadSceneEx,
   setEvent: setEvent,
-  setState: setState,
+  setState: setState$1,
   createRawData: createRawData,
   createSpineData: createSpineData,
   createBonesData: createBonesData,
@@ -6340,7 +6348,7 @@ var sceneManager = /*#__PURE__*/Object.freeze({
 /**
  * 讀取事件管理
  */
-let properties = {
+let properties$1 = {
   isBusy: false,
   game: null,
   loading: null,
@@ -6357,13 +6365,13 @@ let properties = {
  * @param finish {function} 設定讀取完成後需要做的事情
  * @return {boolean} 是否開始載入資料
  */
-function go (configList, finish) {
-  if (properties.isBusy || !properties.game || !Array.isArray(configList)) {
+function go$2 (configList, finish) {
+  if (properties$1.isBusy || !properties$1.game || !Array.isArray(configList)) {
     return false;
   }
 
-  let game = properties.game;
-  let loading = properties.loading;
+  let game = properties$1.game;
+  let loading = properties$1.loading;
   let currentIndex = 0;
   let totals = configList.length;
   let checkScene;
@@ -6373,7 +6381,7 @@ function go (configList, finish) {
 
   console.log('go sceneConfigList : ');
   console.log(sceneConfigList);
-  setState(properties.state);
+  setState$1(properties$1.state);
 
   checkScene = () => {
     console.log('================================================');
@@ -6389,8 +6397,8 @@ function go (configList, finish) {
         checkScene();
       }
     } else {
-      properties.isBusy = false;
-      if (!properties.useLobbyState) {
+      properties$1.isBusy = false;
+      if (!properties$1.useLobbyState) {
         if (loading) {
           loading.setState(true);
         }
@@ -6406,8 +6414,8 @@ function go (configList, finish) {
   };
 
   proc = (scene) => {
-    properties.state.currentIndex = currentIndex;
-    properties.state.totals = totals;
+    properties$1.state.currentIndex = currentIndex;
+    properties$1.state.totals = totals;
     let state = false;
     if (!scene.isCreate() && scene.createScene) {
       state = true;
@@ -6419,8 +6427,8 @@ function go (configList, finish) {
   };
 
   //--
-  properties.isBusy = true;
-  if (!properties.useLobbyState) {
+  properties$1.isBusy = true;
+  if (!properties$1.useLobbyState) {
     loading.go({
       game: game,
       layer: game.layer && game.layer.overlay,
@@ -6440,14 +6448,14 @@ function go (configList, finish) {
  * @param enable {Boolean} 是否使用
  */
 function setUseLobbyState (enable) {
-  properties.useLobbyState = enable;
+  properties$1.useLobbyState = enable;
 
-  if (enable && properties.game && properties.game.scene) {
+  if (enable && properties$1.game && properties$1.game.scene) {
     console.log('setUseLobbyState');
 
-    setEvent(properties.game.scene.loadingEvent);
+    setEvent(properties$1.game.scene.loadingEvent);
   } else {
-    properties.useLobbyState = false;
+    properties$1.useLobbyState = false;
     setEvent(null);
   }
 }
@@ -6457,7 +6465,7 @@ function setUseLobbyState (enable) {
  * @param game {Object} game
  */
 function setGame (game) {
-  properties.game = game;
+  properties$1.game = game;
 }
 
 /**
@@ -6465,12 +6473,12 @@ function setGame (game) {
  * @param loading {Loading} 指定顯示讀取進度物件
  */
 function setDisplayLoading (loading)    {
-  properties.loading = loading;
+  properties$1.loading = loading;
 }
 
 var loadingManager = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  go: go,
+  go: go$2,
   setUseLobbyState: setUseLobbyState,
   setGame: setGame,
   setDisplayLoading: setDisplayLoading
@@ -6491,7 +6499,7 @@ var loadingManager = /*#__PURE__*/Object.freeze({
  *
  *
  */
-let scene = {
+let scene$1 = {
   init: null,
   release: null,
   resource: null,
@@ -6508,7 +6516,7 @@ let eventFinish = null;
 /**
  *
  */
-function refresh$1 (offsetTime) {
+function refresh (offsetTime) {
   if (currentUpdate) {
     currentUpdate(offsetTime);
   }
@@ -6520,8 +6528,8 @@ class Loading {
    *
    */
   static resCreate (offsetTime) {
-    if (scene.resource) {
-      scene.resource(offsetTime);
+    if (scene$1.resource) {
+      scene$1.resource(offsetTime);
     }
   }
 
@@ -6529,8 +6537,8 @@ class Loading {
    *
    */
   static frameStart (offsetTime) {
-    if (scene.eventStart) {
-      scene.eventStart(offsetTime);
+    if (scene$1.eventStart) {
+      scene$1.eventStart(offsetTime);
     }
 
     currentUpdate = Loading.frameEnter;
@@ -6540,8 +6548,8 @@ class Loading {
    *
    */
   static frameFinish (offsetTime) {
-    if (scene.release) {
-      scene.release(offsetTime);
+    if (scene$1.release) {
+      scene$1.release(offsetTime);
     }
 
     currentUpdate = null;
@@ -6558,8 +6566,8 @@ class Loading {
    */
   static frameEnter (offsetTime) {
     let state = true;
-    if (scene.eventEnter) {
-      state = scene.eventEnter(offsetTime);
+    if (scene$1.eventEnter) {
+      state = scene$1.eventEnter(offsetTime);
     }
 
     if (state) {
@@ -6572,8 +6580,8 @@ class Loading {
    */
   static frameLeave (offsetTime) {
     let state = true;
-    if (scene.eventLeave) {
-      state = scene.eventLeave(offsetTime);
+    if (scene$1.eventLeave) {
+      state = scene$1.eventLeave(offsetTime);
     }
 
     if (state) {
@@ -6585,8 +6593,8 @@ class Loading {
    *
    */
   static resBegin (offsetTime) {
-    if (scene.eventResBegin) {
-      scene.eventResBegin(offsetTime);
+    if (scene$1.eventResBegin) {
+      scene$1.eventResBegin(offsetTime);
     }
 
     Loading.resCreate();
@@ -6597,8 +6605,8 @@ class Loading {
    *
    */
   static resLoading (offsetTime) {
-    if (scene.eventResCheck) {
-      if (scene.eventResCheck(offsetTime)) {
+    if (scene$1.eventResCheck) {
+      if (scene$1.eventResCheck(offsetTime)) {
         currentUpdate = Loading.resEnd;
       }
     } else {
@@ -6610,8 +6618,8 @@ class Loading {
    *
    */
   static resEnd (offsetTime) {
-    if (scene.eventResEnd) {
-      scene.eventResEnd(offsetTime);
+    if (scene$1.eventResEnd) {
+      scene$1.eventResEnd(offsetTime);
     }
 
     currentUpdate = Loading.frameLeave;
@@ -6629,20 +6637,20 @@ function go$1 (event) {
     return true;
   }
   if (typeof event === 'object')  {
-    scene.init = event.init;
-    scene.release = event.release;
-    scene.resource = event.resource;
-    scene.eventResBegin = event.resBegin;
-    scene.eventResCheck = event.resCheck;
-    scene.eventResEnd = event.resEnd;
-    scene.eventStart = event.start;
-    scene.eventEnter = event.enter;
-    scene.eventLeave = event.leave;
+    scene$1.init = event.init;
+    scene$1.release = event.release;
+    scene$1.resource = event.resource;
+    scene$1.eventResBegin = event.resBegin;
+    scene$1.eventResCheck = event.resCheck;
+    scene$1.eventResEnd = event.resEnd;
+    scene$1.eventStart = event.start;
+    scene$1.eventEnter = event.enter;
+    scene$1.eventLeave = event.leave;
     eventFinish = event.finish;
   }
 
-  if (scene.init) {
-    scene.init();
+  if (scene$1.init) {
+    scene$1.init();
   }
 
   currentUpdate = Loading.frameStart;
@@ -6656,7 +6664,7 @@ function go$1 (event) {
 
 var loading = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  refresh: refresh$1,
+  refresh: refresh,
   go: go$1
 });
 
@@ -6675,7 +6683,7 @@ var loading = /*#__PURE__*/Object.freeze({
  *
  */
 
-let properties$1 = {
+let properties = {
   event: null,
   scene: {
     anim: null,
@@ -6690,15 +6698,15 @@ let properties$1 = {
 let sceneEvent = null;
 
 
-function init$d (/*conf*/) {
+function init$5 (/*conf*/) {
 }
 
 /**
  * 設定讀取狀態是否完成
  * @param state
  */
-function setState$1 (state) {
-  properties$1.state = state;
+function setState (state) {
+  properties.state = state;
 }
 
 /**
@@ -6706,20 +6714,20 @@ function setState$1 (state) {
  * @param state
  */
 function setStrings (strings) {
-  properties$1.strings = strings;
+  properties.strings = strings;
 }
 
 function setPosition (pos) {
-  let anim = properties$1.scene.anim;
+  let anim = properties.scene.anim;
   if (anim) {
     anim.x = pos.x;
     anim.y = pos.y;
   }
-  if (properties$1.pos) {
-    properties$1.pos.x = pos.x;
-    properties$1.pos.y = pos.y;
+  if (properties.pos) {
+    properties.pos.x = pos.x;
+    properties.pos.y = pos.y;
   } else {
-    properties$1.pos = {
+    properties.pos = {
       x: pos.x,
       y: pos.y
     };
@@ -6731,8 +6739,8 @@ function setPosition (pos) {
  * @param resList {PIXI.Texture} 材質清單
  */
 function setScene (resList) {
-  properties$1.resList = resList;
-  properties$1.isInit = false;
+  properties.resList = resList;
+  properties.isInit = false;
 }
 
 /**
@@ -6751,7 +6759,7 @@ export function setMessage (str) {
  * @param conf {Object} 讀取事件設定檔
  * @return {boolean} 是否啟動成功
  */
-function go$2 (conf) {
+function go (conf) {
   if (!globalThis.PIXI) {
     return false;
   }
@@ -6759,7 +6767,7 @@ function go$2 (conf) {
 
   let loadingEvent = conf.loadingEvent || {};
   let game = conf.game;
-  let strings = properties$1.strings;
+  let strings = properties.strings;
   let event = {
     resBegin (index) {
       if (loadingEvent.resBegin) {
@@ -6797,8 +6805,8 @@ function go$2 (conf) {
         loadingEvent.sceneResLoading(value);
       }
 
-      if (properties$1.percent) {
-        properties$1.percent.text = str;
+      if (properties.percent) {
+        properties.percent.text = str;
       }
     },
 
@@ -6830,11 +6838,11 @@ function go$2 (conf) {
     load: conf.load
   };
   e.init = () => {
-    if (!properties$1.isInit) {
-      properties$1.isInit = true;
+    if (!properties.isInit) {
+      properties.isInit = true;
 
       //---- 讀取事件用
-      let loadingRes = properties$1.resList;
+      let loadingRes = properties.resList;
       let te, textureList = [];
       loadingRes.forEach(res => {
         te = PIXI.Texture.from(res);
@@ -6850,7 +6858,7 @@ function go$2 (conf) {
       anim.animationSpeed = 0.33;
       anim.anchor.x = 0.5;
       anim.anchor.y = 0.5;
-      properties$1.scene.anim = anim;
+      properties.scene.anim = anim;
 
       //--
       let message = new PIXI.Text('message');
@@ -6861,7 +6869,7 @@ function go$2 (conf) {
       message.anchor.y = 0.5;
       message.x = 0;
       message.y = -44;
-      properties$1.message = message;
+      properties.message = message;
 
       //--
       let percent = new PIXI.Text('init');
@@ -6872,7 +6880,7 @@ function go$2 (conf) {
       percent.anchor.y = 0.5;
       percent.x = 0;
       percent.y = 24;
-      properties$1.percent = percent;
+      properties.percent = percent;
 
       /*
        //--
@@ -6890,22 +6898,22 @@ function go$2 (conf) {
       //        e.movieClip.addChild(e.net);
       anim.addChild(message);
       anim.addChild(percent);
-      if (!properties$1.pos) {
-        properties$1.pos = {
+      if (!properties.pos) {
+        properties.pos = {
           x: e.screen.width / 2,
           y: e.screen.height / 2
         };
       }
-      properties$1.anchor = new PIXI.Point(0.5, 0.5);
+      properties.anchor = new PIXI.Point(0.5, 0.5);
     }
 
     //--
-    game.addRefresh(e.name, refresh$1);
+    game.addRefresh(e.name, refresh);
   };
 
   e.release = (/*offsetTime*/) => {
-    if (e.layer !== null && properties$1.scene.anim !== null) {
-      e.layer.removeChild(properties$1.scene.anim);
+    if (e.layer !== null && properties.scene.anim !== null) {
+      e.layer.removeChild(properties.scene.anim);
     }
 
     //--
@@ -6923,7 +6931,7 @@ function go$2 (conf) {
   };
 
   e.resCheck = (/*offsetTime*/) => {
-    return properties$1.state;
+    return properties.state;
   };
 
   e.resEnd = (/*offsetTime*/) => {
@@ -6931,17 +6939,17 @@ function go$2 (conf) {
   };
 
   e.start = (/*offsetTime*/) => {
-    if (e.layer !== null && properties$1.scene.anim !== null) {
-      if (properties$1.percent) {
-        properties$1.percent.text = 'start';
+    if (e.layer !== null && properties.scene.anim !== null) {
+      if (properties.percent) {
+        properties.percent.text = 'start';
       }
 
       //                e.net.text = e.game.strings.checkNet;
-      let anim = properties$1.scene.anim;
-      anim.x = properties$1.pos.x;
-      anim.y = properties$1.pos.y;
-      anim.anchor.x = properties$1.anchor.x;
-      anim.anchor.y = properties$1.anchor.y;
+      let anim = properties.scene.anim;
+      anim.x = properties.pos.x;
+      anim.y = properties.pos.y;
+      anim.anchor.x = properties.anchor.x;
+      anim.anchor.y = properties.anchor.y;
       anim.alpha = 0.0;
       anim.gotoAndPlay(0);
       e.layer.addChild(anim);
@@ -6950,7 +6958,7 @@ function go$2 (conf) {
 
   e.enter = (/*offsetTime*/) => {
     let state = false;
-    let anim = properties$1.scene.anim;
+    let anim = properties.scene.anim;
     if (anim !== null) {
       if (anim.alpha >= 1.00)      {
         anim.alpha = 1.0;
@@ -6967,7 +6975,7 @@ function go$2 (conf) {
 
   e.leave = (/*offsetTime*/) => {
     let state = false;
-    let anim = properties$1.scene.anim;
+    let anim = properties.scene.anim;
     if (anim !== null)    {
       if (anim.alpha <= 0.00)      {
         anim.alpha = 0.0;
@@ -6988,19 +6996,19 @@ function go$2 (conf) {
   e.finish = (/*offsetTime*/) => {
   };
 
-  properties$1.event = e;
-  properties$1.state = false;
-  return go$1(properties$1.event);
+  properties.event = e;
+  properties.state = false;
+  return go$1(properties.event);
 }
 
 var uiLoading = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  init: init$d,
-  setState: setState$1,
+  init: init$5,
+  setState: setState,
   setStrings: setStrings,
   setPosition: setPosition,
   setScene: setScene,
-  go: go$2
+  go: go
 });
 
 /* ************************************************************************
@@ -7014,12 +7022,12 @@ var uiLoading = /*#__PURE__*/Object.freeze({
  ************************************************************************ */
 
 
-class Base {
+class Base$1 {
   constructor () {
-
     let self = this;
     let stats = null;
     let property = {
+      autoUpdate: true,
       debug: false,
       timeBase: 1.0,
       currentTime: -1,
@@ -7038,8 +7046,16 @@ class Base {
     self.setEngine = obj => {
       engine = obj;
     };
+
     self.setElement = element => {
       property.element = element;
+    };
+
+    self.getElement = () => {
+      return property.element;
+    };
+    self.getCanvas = () => {
+      return property.canvas;
     };
 
     //-------------------------------------------------------------
@@ -7049,7 +7065,6 @@ class Base {
      */
     self.update = offsetTime => {
 
-      //
       if (property.debug && stats) {
         stats.begin();
       }
@@ -7077,7 +7092,7 @@ class Base {
         }
       });
 
-      if (!property.pause && engine) {
+      if (property.autoUpdate && engine) {
         engine.render(offsetTime);
       }
 
@@ -7166,6 +7181,7 @@ class Base {
         currentTime: 0.0,
         func: func
       };
+
       t.update = (offsetTime) => {
         if (t.currentTime.toFixed(2) >= seconds) {
           self.removeUpdate(t);
@@ -7179,6 +7195,7 @@ class Base {
 
       return t;
     };
+
     self.idle = (seconds) => {
       return new Promise((resolve/*, reject*/) => {
         function done () {
@@ -7206,6 +7223,7 @@ class Base {
       self.addUpdate(t);
       return t;
     };
+
     self.clearInterval = (t) => {
       self.removeUpdate(t);
     };
@@ -7294,9 +7312,11 @@ class Base {
     self.reset = () => {
       property.timeBase = 1.00;
     };
+
     self.getTimeBase = () => {
       return property.timeBase;
     };
+
     self.setTimeBase = value => {
       property.timeBase = value;
       if (property.timeBase < 0.10) {
@@ -7305,7 +7325,6 @@ class Base {
         property.timeBase = 4.00;
       }
     };
-
 
     /**
      * 初始化遊戲引擎
@@ -7320,6 +7339,7 @@ class Base {
       property.isInit = true;
 
       property.element = conf.element;
+      property.canvas = conf.view;
       property.currentTime = -1.0;
       let screen = {
         width: conf.width,
@@ -7329,12 +7349,14 @@ class Base {
       self.pause();
       self.screen = screen;
       console.log('init ok');
-
       return true;
     };
 
     self.getRenderer = () => {
       return engine && engine.renderer;
+    };
+    self.setAutoUpdate = (enable) => {
+      property.autoUpdate = enable;
     };
 
     //--
@@ -7343,11 +7365,12 @@ class Base {
         return engine && engine.layer;
       }
     });
+
     Object.defineProperty(self, 'debug', {
       set (state) {
         if (!stats) {
-          if (Base.Stats) {
-            stats = new Base.Stats();
+          if (Base$1.Stats) {
+            stats = new Base$1.Stats();
             self.stats = stats;
           }
         }
@@ -7373,28 +7396,28 @@ class Base {
   }
 }
 
-Base.Stats = null;
-Base.isInitial = false;
+Base$1.Stats = null;
+Base$1.isInitial = false;
 
 /**
  * 初始化
  * @param conf
  */
-function init$e (conf) {
-  if (Base.isInitial) {
+function init$4 (conf) {
+  if (Base$1.isInitial) {
     return false;
   }
   if (conf.Stats) {
-    Base.Stats = conf.Stats.default || conf.Stats;
+    Base$1.Stats = conf.Stats.default || conf.Stats;
   }
 
-  Base.isInitial = true;
+  Base$1.isInitial = true;
   return true;
 }
 
 let isInit$1 = false;
 
-function init$f (/*config*/) {
+function init$3 (/*config*/) {
 
   if (isInit$1) {
     return;
@@ -7436,6 +7459,7 @@ function create (config) {
   } else {
     renderer = new PIXI.WebGLRenderer(options);
   }
+
   //--
   stage = new PIXI.Container();
   layer.stage = stage;
@@ -7464,9 +7488,9 @@ function create (config) {
 }
 
 let m = null;
-function init$g (config) {
+function init$2 (config) {
   m = config.m;
-  init$f();
+  init$3();
 }
 
 let canvasStyle = {
@@ -7506,7 +7530,7 @@ let Component = {
 
     let game = self.game;
     if (!game) {
-      game = new Base();
+      game = new Base$1();
       self.game = game;
     }
     game.init(config);
@@ -7547,9 +7571,9 @@ let Component = {
 
  ************************************************************************ */
 
-function init$h (conf) {
-  init$e(conf);
-  init$g(conf);
+function init$1 (conf) {
+  init$4(conf);
+  init$2(conf);
 }
 
 /**
@@ -7561,7 +7585,7 @@ function run (config) {
   console.log('!!!! game.run !!!!');
 
   let game;
-  game = new Base();
+  game = new Base$1();
 
   //--
   if (window.parent && (window.parent !== window)) {
@@ -7701,7 +7725,7 @@ function run (config) {
 
 var game = /*#__PURE__*/Object.freeze({
   __proto__: null,
-  init: init$h,
+  init: init$1,
   run: run
 });
 
@@ -7719,7 +7743,7 @@ var game = /*#__PURE__*/Object.freeze({
  * 場景基底物件
  *
  */
-class Base$1 {
+class Base {
 
   /**
    * 建立
@@ -8438,9 +8462,9 @@ class Base$1 {
 
 //import 'src/vendor';
 
-let scene$1 = {
+let scene = {
   utils: utils,
-  Base: Base$1,
+  Base: Base,
   sceneManager: sceneManager,
   loadingManager: loadingManager,
   loading: loading
@@ -8455,9 +8479,9 @@ let components = {
     pixi: Component
   }
 };
-let isInit$2 = false;
+let isInit = false;
 
-function init$i (conf) {
+function init (conf) {
   let config = conf || {};
   let pluginList = config.plugin || [];
   if (!Array.isArray(pluginList)) {
@@ -8469,7 +8493,7 @@ function init$i (conf) {
   }
 
   return new Promise((resolve) => {
-    if (isInit$2) {
+    if (isInit) {
       resolve('!! init finish again !!');
     }
     function checkPlugin (lib) {
@@ -8490,16 +8514,16 @@ function init$i (conf) {
         config.sceneManager = sceneManager;
 
         if (globalThis.PIXI) {
-          init$2();
-          init$3();
-          init$4(config);
-          init$5();
-          init$8();
-          init$9();
-          init$6();
-          init$7();
+          init$g();
+          init$f();
+          init$e(config);
+          init$d();
           init$a();
+          init$9();
+          init$c();
           init$b();
+          init$8();
+          init$7();
 
           ui.Animation = Animation;
           ui.Button = Button;
@@ -8511,16 +8535,16 @@ function init$i (conf) {
           ui.Bone = Bone;
           ui.Text = Text;
           ui.Particle = Particle;
-          init$c(config);
+          init$6(config);
         }
-        init$h(config);
-        init$1();
+        init$1(config);
+        init$h();
         play();
 
-        init(config);
+        init$i(config);
 
         // finish
-        isInit$2 = true;
+        isInit = true;
         resolve('!! init finish !!');
       }
     }
@@ -8541,5 +8565,5 @@ console.log('!!!! nuts !!!!');
 //   client
 // };
 
-export { Lobby, client, components, game, init$i as init, scene$1 as scene, ui, updateManager };
+export { Lobby, client, components, game, init, scene, ui, updateManager };
 //# sourceMappingURL=nuts.js.map
