@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 ### Added
+- game template 新增網路功能開關
 
 ### Changed
 
@@ -9,9 +10,18 @@
 
 ### Removed
 
+## [6.14.0] - 2021-04-23
+### Added
+- 新增 standalone 範例
+
+### Changed
+- 更新 agent 版本
+- 更新第三方程式庫版本
+
 ## [6.13.1] - 2021-04-14
 ### Changed
 - 更新 agent 版本
+
 
 ## [6.13.0] - 2021-04-13
 ### Added

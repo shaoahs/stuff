@@ -1134,7 +1134,7 @@ const TYPE = 'animation';
 let Animation = null;
 
 function init$2 () {
-  // let PIXI = globalThis.PIXI;
+  let PIXI = globalThis.PIXI;
   let AnimatedSprite = null;
   if (PIXI.AnimatedSprite) {
     AnimatedSprite = PIXI.AnimatedSprite;
@@ -1252,7 +1252,7 @@ const TYPE$1 = 'button';
 let Button = null;
 
 function init$3 () {
-  // let PIXI = globalThis.PIXI;
+  let PIXI = globalThis.PIXI;
   Button = class B extends make(PIXI.Sprite) {
 
     /***
@@ -1604,7 +1604,7 @@ const TYPE$2 = 'group';
 let Group = null;
 
 function init$4 (config) {
-  // let PIXI = globalThis.PIXI;
+  let PIXI = globalThis.PIXI;
   let sceneManager = config.sceneManager;
   Group = class G extends make(PIXI.Container) {
 
@@ -1661,6 +1661,7 @@ function init$4 (config) {
       };
       return sceneManager.createGroup(info, this._game);
     }
+
     removeFromScene () {
       super.removeFromScene();
       this.stop();
@@ -1705,7 +1706,7 @@ const TYPE$3 = 'image';
 let Image = null;
 
 function init$5 () {
-  // let PIXI = globalThis.PIXI;
+  let PIXI = globalThis.PIXI;
   Image = class I extends make(PIXI.Sprite) {
 
     /***
@@ -1779,7 +1780,7 @@ const TYPE$4 = 'spine';
 let Spine = null;
 
 function init$6 () {
-  // let PIXI = globalThis.PIXI;
+  let PIXI = globalThis.PIXI;
   Spine = class S extends make(PIXI.Container) {
 
     /***
@@ -1801,10 +1802,10 @@ function init$6 () {
         }
         return false;
       });
-      
+
       if (idx >= 0) {
         child = spine.children[idx];
-        if(child && child.children[0]) {
+        if (child && child.children[0]) {
           child = child.children[0];
         }
       }
@@ -2371,7 +2372,7 @@ let factory = null;
 let Bone = null;
 
 function init$7 () {
-  // let PIXI = globalThis.PIXI;
+  let PIXI = globalThis.PIXI;
   Bone = class Bones extends make(PIXI.Sprite) {
 
     /***
@@ -2577,7 +2578,7 @@ let Digit = null;
 
 
 function init$8 () {
-  // let PIXI = globalThis.PIXI;
+  let PIXI = globalThis.PIXI;
   Digit = class D extends make(PIXI.Sprite) {
 
     /***
@@ -3326,7 +3327,7 @@ const TYPE$7 = 'scrollbar';
 let Scrollbar = null;
 
 function init$9 () {
-  // let PIXI = globalThis.PIXI;
+  let PIXI = globalThis.PIXI;
   Scrollbar = class S extends make(PIXI.Sprite) {
 
     /***
@@ -3585,7 +3586,7 @@ const TYPE$8 = 'text';
 let Text = null;
 
 function init$a () {
-  // let PIXI = globalThis.PIXI;
+  let PIXI = globalThis.PIXI;
   Text = class T extends make(PIXI.Text)  {
 
     /***
@@ -3718,9 +3719,11 @@ let configMap = {
 let Particle = null;
 
 function init$b () {
-  // let PIXI = globalThis.PIXI;
+  let PIXI = globalThis.PIXI;
   let ParticleContainer = null;
-  if (PIXI.particles && PIXI.particles.ParticleContainer) {
+  if (PIXI.ParticleContainer) {
+    ParticleContainer = PIXI.ParticleContainer;
+  } else if (PIXI.particles && PIXI.particles.ParticleContainer) {
     ParticleContainer = PIXI.particles.ParticleContainer;
   }
   if (!ParticleContainer) {
@@ -5534,7 +5537,7 @@ function createTexture (data, callback) {
   // 材質建立完成
   let complete = (loader) => {
     let resource = loader.resources;
-
+    console.log('材質建立完成');
     //    console.info(resource);
 
     // 建立材質名稱對照表
@@ -5760,7 +5763,6 @@ function createTexture (data, callback) {
         } else        {
           console.log('  no found : ' + name);
         }
-
       });
 
       filenames = Object.getOwnPropertyNames(filenameMap);
@@ -5777,6 +5779,7 @@ function createTexture (data, callback) {
       filenames.forEach(filename => {
         loader.add(filename, filename);
       });
+
       loader.onProgress.add(progress);
       loader.load(complete);
     } else {
@@ -6752,7 +6755,7 @@ function go$2 (conf) {
   if (!globalThis.PIXI) {
     return false;
   }
-  // let PIXI = globalThis.PIXI;
+  let PIXI = globalThis.PIXI;
 
   let loadingEvent = conf.loadingEvent || {};
   let game = conf.game;
@@ -7179,7 +7182,6 @@ class Base {
     self.idle = (seconds) => {
       return new Promise((resolve/*, reject*/) => {
         function done () {
-          console.log('done');
           resolve();
         }
         self.setTimeout(done, seconds);
@@ -7398,7 +7400,7 @@ function init$f (/*config*/) {
     return;
   }
   isInit$1 = true;
-  // let PIXI = globalThis.PIXI;
+  let PIXI = globalThis.PIXI;
 
   if (PIXI) {
 
@@ -7426,7 +7428,7 @@ function create (config) {
   }
   let stage, renderer, layer = {};
   let options = config;
-  // let PIXI = globalThis.PIXI;
+  let PIXI = globalThis.PIXI;
 
   // create a renderer instance
   if (PIXI.Renderer) {
@@ -7434,7 +7436,6 @@ function create (config) {
   } else {
     renderer = new PIXI.WebGLRenderer(options);
   }
-
   //--
   stage = new PIXI.Container();
   layer.stage = stage;
@@ -8150,9 +8151,8 @@ class Base$1 {
     let set = {};
 
     // 群組
-    let setupGroup = group => {
-
-      // 群組子物件名稱設定
+    // 群組子物件名稱設定
+    let setChildsName = (group) => {
       group.childList.forEach(obj => {
         if (obj) {
           obj._game = properties.game || obj._game;
@@ -8162,29 +8162,13 @@ class Base$1 {
             let msg = 'set group child name"' + obj.objName + '"';
             console.log(msg);
           }
-        }
-      });
 
-      // 群組子物件初始化用
-      group.childList.forEach(obj => {
-        if (obj) {
-          let conf = obj.conf;
           if (OBJ_TYPE$1.GROUP === obj.type) {
-            set.setupGroup(obj, conf);
-          }
-          if (conf && Object.prototype.hasOwnProperty.call(set, conf.init)) {
-            console.log((obj.name || obj.objName) + ' init : ' + conf.init);
-            set[conf.init](obj);
+            setChildsName(obj);
           }
         }
       });
     };
-
-    if (config) {
-      set = config.set || {};
-    }
-
-    set.setupGroup = set.setupGroup || setupGroup;
 
     // 物件設定
     center.objs.forEach(obj => {
@@ -8196,8 +8180,37 @@ class Base$1 {
           msg = 'set entity name"' + obj.objName + '"';
           console.log(msg);
         }
+        if (OBJ_TYPE$1.GROUP === obj.type) {
+          setChildsName(obj);
+        }
       }
     });
+
+
+    if (config) {
+      set = config.set || {};
+    } else {
+      return;
+    }
+
+    // 群組子物件初始化用
+    let setupGroup = (group) => {
+      group.childList.forEach(obj => {
+        if (obj) {
+          let conf = obj.conf;
+          if (OBJ_TYPE$1.GROUP === obj.type) {
+            set.setupGroup(obj);
+          }
+          if (conf && Object.prototype.hasOwnProperty.call(set, conf.init)) {
+            console.log((obj.name || obj.objName) + ' init : ' + conf.init);
+            set[conf.init](obj);
+          }
+        }
+      });
+    };
+
+    set.setupGroup = set.setupGroup || setupGroup;
+
     console.log('----');
     center.objs.forEach(obj => {
       let conf;
@@ -8205,7 +8218,7 @@ class Base$1 {
       if (obj) {
         conf = obj.conf;
         if (OBJ_TYPE$1.GROUP === obj.type) {
-          set.setupGroup(obj, conf);
+          set.setupGroup(obj);
         }
 
         if (conf && Object.prototype.hasOwnProperty.call(set, conf.init)) {
