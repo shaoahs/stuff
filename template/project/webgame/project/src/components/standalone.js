@@ -4,8 +4,6 @@ import m from 'mithril';
 import * as nuts from 'nuts';
 import app from 'entity/app';
 import gamecard from 'template/gamecard';
-import * as sceneStandalone from 'scene/standalone';
-import * as sceneSub from 'scene/sub';
 import * as component from 'src/component';
 import * as strings from 'language/strings';
 
@@ -37,7 +35,6 @@ let Component = {
     };
     this.config = config;
     config.game = nuts.game.run();
-
   },
   oncreate (/*vnode*/) {
   },
@@ -51,24 +48,26 @@ let Component = {
         config,
         async ready (game) {
           game.play();
+          app.game = game;
 
           // game.debug = true;
 
-          await sceneStandalone.create(game);
+          let main = await import('scene/main');
+          let scene = await main.create(game);
 
+          let mainSet = await import('scene/mainSet');
+          mainSet.normal();
+          scene.show();
+
+          // 背景讀取資源
           await game.idle(0.01);
-          let lib = await import('entity/main');
-          let Main = lib.default;
-          let main = Main.getSingleton();
-          if (main) {
-            let mainSet = await import('entity/mainSet');
-            main.setInitMap(mainSet.normal);
-            main.eventFinish();
-            main.addToScene();
-          }
+          let load = await import('scene/load');
+          load.create();
 
           await game.idle(5.0);
-          await sceneSub.play(game);
+
+          let sub = await import('scene/sub');
+          await sub.play(game);
         }
       })
     );
@@ -84,6 +83,10 @@ async function init () {
   app.langID = strings.ID.EN_US;
   app.baseURL = gamecard.baseURL;
   app.nuts = nuts;
+
+  if (!app.scenes) {
+    app.scenes = {};
+  }
 
   // 設定 base URL
   let baseURL = app.baseURL;

@@ -1,14 +1,26 @@
 # 更新紀錄
 
 ## [Unreleased]
-### Added
-- game template 新增網路功能開關
 
 ### Changed
 
 ### Fixed
 
 ### Removed
+
+## [6.15.0] - 2021-05-07
+### Added
+- game template 新增網路功能開關
+
+### Changed
+- 更新 agent 版本
+- 更新第三方程式庫版本
+- game template 增加 async await 範例
+
+### Removed
+- 移除部份 class 寫法 (entities/main.js entities/mainSet.js)
+- 移除 scenes/standalone.js
+
 
 ## [6.14.0] - 2021-04-23
 ### Added

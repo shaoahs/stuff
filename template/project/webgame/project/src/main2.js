@@ -10,10 +10,6 @@
 
 import * as scene from 'src/scene';
 
-
-// let a = 123_456_789.00_234;
-// console.log(a);
-
 export {
   scene
 };

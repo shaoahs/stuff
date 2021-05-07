@@ -27,7 +27,7 @@ objects:
 
 - #動畫-連續圖
   objName: ring
-  name: 前景
+  name: 動畫-連續圖
   type: animation
   isInScene: true
   resource:
@@ -154,7 +154,7 @@ objects:
     pos: {x: 618,y: 0}
     width: 88
     height: 82
-    init: null
+    init: setAuto
   - #下注
     objName: btnBet
     name: 下注

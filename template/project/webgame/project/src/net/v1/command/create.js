@@ -9,19 +9,10 @@ let Command = {
     console.log('[收到] create :' + JSON.stringify(obj));
 
     app.game.play();
-
     app.decimal = 2;
-    let lib = await import('entity/main');
-    let Main = lib.default;
-    let main = Main.getSingleton();
-    if (main) {
-      let mainSet = await import('entity/mainSet');
-      console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-      console.log(app.game);
-      main.setInitMap(mainSet.normal);
-      main.eventFinish();
-      main.addToScene();
-    }
+    let mainSet = await import('scene/mainSet');
+    mainSet.normal();
+    app.scenes.main.show();
 
     if (app.game.scene.setOverviewVisible) {
       app.game.scene.setOverviewVisible(false);

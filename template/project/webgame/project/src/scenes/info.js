@@ -4,12 +4,7 @@ let isCreate = false;
 let scene = null;
 export async function create () {
   let sceneManager = app.nuts.scene.sceneManager;
-  let lib = await import('entity/main');
-  let Main = lib.default;
-  let main = Main.getSingleton();
-  let center = main.getCenter();
-  console.log(center.game);
-  console.log(app.game);
+  let main = app.scenes.main;
   let game = app.game;
 
   // 是否需要建立
@@ -27,26 +22,23 @@ export async function create () {
         { eventName: 'texture', obj: res}
       ]
     };
-    console.log('ZZZZ');
+    console.log('[info 讀取資源檔] 開始');
     scene = await sceneManager.createScene(config);
+    console.log('[info 讀取資源檔] 完成');
     isCreate = true;
     if (scene && scene.textures) {
-      if (center.rule) {
-        center.rule.reload(scene);
+      if (main.rule) {
+        main.rule.reload(scene);
       }
     }
-    console.log('XXXX');
-
   }
   console.log('等待 0.1 秒');
   await game.idle(0.1);
   console.log('0.1 秒後');
   console.log(scene);
-  if (scene && center.rule) {
-    center.rule.show();
+  if (scene && main.rule) {
+    main.rule.show();
   }
-
-
 }
 
 
