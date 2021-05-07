@@ -1886,7 +1886,7 @@ module.exports = function(grunt) {
           ]
         },
         files: [
-          {expand: true, flatten: true, src: '<%= pkg.workspace %>/release/*.*.js', dest: '<%= pkg.workspace %>/app/'}
+          {expand: true, flatten: true, src: '<%= pkg.workspace %>/release/*.*.js', dest: '<%= pkg.workspace %>/app/'},
 //          {expand: true, flatten: true, src: '<%= pkg.workspace %>/release/<%= pkg.output %>.js', dest: '<%= pkg.workspace %>/app/'}
         ]
       },

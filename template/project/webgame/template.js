@@ -16,7 +16,8 @@ exports.after = '專案建立完成';
 exports.notes = '新專案';
 
 // Any existing file or directory matching this wildcard will cause a warning.
-//exports.warnOn = 'gruntfile.js';
+// exports.warnOn = 'gruntfile.js';
+// exports.warnOn = '*';
 
 function upperOne(str) {
   return str[0].toUpperCase() + str.substr(1, str.length-1);
