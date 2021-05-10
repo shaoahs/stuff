@@ -7,7 +7,7 @@ package:
 # config
 config:
   paths:
-    nuts: /dependence/nuts/nuts.2.0.0.js
+    nuts: /dependence/nuts/nuts.2.6.0.js
     data/: {%= group %}/{%= name %}/data/
     res/: {%= group %}/{%= name %}/res/
     src/: {%= group %}/{%= name %}/src/

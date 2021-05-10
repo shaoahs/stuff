@@ -39,6 +39,7 @@ export async function getLogo () {
     });
   });
 }
+
 /**
  * 初始化事件 (接收大廳傳送的命令用)
  * @returns {Object} 傳回物件事件
@@ -52,6 +53,10 @@ export function init () {
   // 遊戲管理用
   let gameRoot = null;
   let gamecard = null;
+
+  if (!app.scenes) {
+    app.scenes = {};
+  }
 
   eventList = {
 

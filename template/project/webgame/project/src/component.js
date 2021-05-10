@@ -11,7 +11,9 @@
 import m from 'mithril';
 
 // import * as comGame from 'component/standalone';
+
 import * as comGame from 'component/gamePIXI';
+
 let objList = [];
 
 export function add (obj, index = 0) {

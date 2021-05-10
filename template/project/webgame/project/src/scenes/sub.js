@@ -9,9 +9,10 @@ export function reset () {
   isPlay = false;
 }
 
-export async function play (game, result) {
+export async function play (result) {
   let sceneManager = app.nuts.scene.sceneManager;
   let ui = app.nuts.ui;
+  let game = app.game;
 
   let loading = ui.loading;
   const NUM = ui.Number.NUM;
@@ -38,8 +39,9 @@ export async function play (game, result) {
         { eventName: 'sound',   obj: res}
       ]
     };
-    console.log('[讀取資源檔]');
+    console.log('[sub 讀取資源檔] 開始');
     scene = await sceneManager.createScene(config);
+    console.log('[sub 讀取資源檔] 完成');
     isCreate = true;
 
     let container = new PIXI.Container();

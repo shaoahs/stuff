@@ -57,6 +57,12 @@ export async function init (config) {
   app.baseURL = baseURL;
   app.langID = langID;
 
+  if (!app.scenes) {
+    app.scenes = {};
+  }
+
+  let nuts = app.nuts;
+
   if (eventList) {
     return eventList;
   }
@@ -71,15 +77,16 @@ export async function init (config) {
     async create (/* conf */)  {
       let game = app.game;
       let loadingEvent = game.scene.loadingEvent;
-
-      // 建立場景
-      let scene = await import('scene/main');
-      let nuts = app.nuts;
-
       nuts.scene.sceneManager.setBaseURL(baseURL);
       nuts.scene.sceneManager.setEvent(loadingEvent);
 
-      await scene.create(game, loadingEvent);
+      // 建立場景
+      let main = await import('scene/main');
+
+      // 開始
+      await main.create(game, loadingEvent);
+
+      // 完成
       nuts.scene.sceneManager.setEvent(null);
     },
 
@@ -111,7 +118,7 @@ export async function init (config) {
 
       // 背景讀取資源
       let scene = await import('scene/load');
-      scene.create(game);
+      scene.create();
 
       // 初始化網路
       let net = await import('net/network');

@@ -2,14 +2,11 @@ import app from 'entity/app';
 
 let isCreate = false;
 let sceneSounds = null;
-let scene = null;
+let sceneTextures = null;
 
-export async function create (game) {
+export async function create () {
   let sceneManager = app.nuts.scene.sceneManager;
-  let lib = await import('entity/main');
-  let Main = lib.default;
-  let main = Main.getSingleton();
-  let center = main.getCenter();
+  let game = app.game;
 
   // 是否需要建立
   if (!isCreate) {
@@ -31,7 +28,7 @@ export async function create (game) {
     console.log(sceneSounds);
 
     // 設定音效物件
-    center.sounds = sceneSounds.sounds;
+    app.sounds = sceneSounds.sounds;
 
     config = {
       game,
@@ -41,19 +38,22 @@ export async function create (game) {
     };
 
     console.log('[讀取資源] 圖檔');
-    scene = await sceneManager.createScene(config);
+    sceneTextures = await sceneManager.createScene(config);
     console.log('[讀取資源] 完成');
-    console.log(scene);
-    isCreate = true;
+    console.log(sceneTextures);
 
-    await main.reload(scene);
+    let mainSet = await import('scene/mainSet');
+    await mainSet.reload(sceneTextures);
+    isCreate = true;
   }
 
   //----------------------------------------
   // 播放背景音樂
-  let sound = center.sounds.demo;
-  if (sound && sound.music && sound.music.play) {
-    sound.music.volume(0.2);
-    sound.music.play();
+  if(app.sounds) {
+    let sound = app.sounds.demo;
+    if (sound && sound.music && sound.music.play) {
+      sound.music.volume(0.2);
+      sound.music.play();
+    }
   }
 }

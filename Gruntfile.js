@@ -17,7 +17,7 @@ module.exports = function(grunt) {
     DEVELOPER: 'developer',
     RELEASE:'release'
   };
-  console.log('[stuff version 6.14.1]');
+  console.log('[stuff version 6.15.1]');
   console.log(__dirname);
   grunt.file.setBase(__dirname);
   
@@ -1886,7 +1886,7 @@ module.exports = function(grunt) {
           ]
         },
         files: [
-          {expand: true, flatten: true, src: '<%= pkg.workspace %>/release/*.*.js', dest: '<%= pkg.workspace %>/app/'}
+          {expand: true, flatten: true, src: '<%= pkg.workspace %>/release/*.*.js', dest: '<%= pkg.workspace %>/app/'},
 //          {expand: true, flatten: true, src: '<%= pkg.workspace %>/release/<%= pkg.output %>.js', dest: '<%= pkg.workspace %>/app/'}
         ]
       },
