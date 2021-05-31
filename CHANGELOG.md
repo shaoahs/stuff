@@ -1,12 +1,21 @@
 # 更新紀錄
 
 ## [Unreleased]
+### Added
 
 ### Changed
 
 ### Fixed
 
 ### Removed
+
+## [6.16.0] - 2021-05-28
+### Added
+- 新增支援 typescript 4.3
+
+### Changed
+- 更新 agent 版本
+- 更新第三方程式庫版本
 
 ## [6.15.2] - 2021-05-11
 ### Changed
