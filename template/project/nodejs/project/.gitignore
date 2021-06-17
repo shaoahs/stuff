@@ -1,7 +1,6 @@
 .directory
 .idea
 .vscode
-.gitlab-ci.yml
 Thumbs.db
 /app/
 /release/

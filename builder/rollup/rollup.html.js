@@ -98,6 +98,7 @@ if(content.framework.useCodeSplitting) {
   output.file = `${workspace.root}/debug/${workspace.output}.js`;
 }
 
+
 let plugins = [
   yaml(),
   json(),
@@ -116,6 +117,7 @@ let plugins = [
   globals(),
   builtins()
 ];
+
 if(process.env.BUILD === 'production'){
   output = {
     format: (content.template && content.template.release && content.template.release.format) || 'iife',
@@ -171,8 +173,8 @@ if(output.format === 'iife') {
 } else {
   output.name = null;
 }
-let treeshake = null;
-if(output.format === 'es') {
+let treeshake = {};
+if(output.format === 'esm') {
   treeshake = {
     moduleSideEffects: 'no-external'
   };
