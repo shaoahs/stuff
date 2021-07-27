@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 6.16.0]');
+  console.log('[stuff version 6.17.0]');
   console.log(__dirname);
   grunt.file.setBase(__dirname);
   
@@ -406,7 +406,7 @@ module.exports = function(grunt) {
     return true;
   }
   function cbStatus(err, stdout, stderr, cb) {
-//    console.log(stdout);
+    //    console.log(stdout);
     if (stdout.indexOf('use "git push"') >= 0 || stdout.indexOf('Changes not staged for commit') >= 0) {
       cb(Error('請確認 git 狀態是否正確 (在命令列輸入 git status)'));
       return;
