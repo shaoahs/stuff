@@ -1,0 +1,30 @@
+images:
+  demo: #群組
+    coin: #籌碼
+      50: res/sub/base/chip_50.png
+      100: res/sub/base/chip_100.png
+      500: res/sub/base/chip_500.png
+      1000: res/sub/base/chip_1k.png
+      5000: res/sub/base/chip_5k.png
+      10000: res/sub/base/chip_10k.png
+      50000: res/sub/base/chip_50k.png
+      100000: res/sub/base/chip_100k.png
+      500000: res/sub/base/chip_500k.png
+      1000000: res/sub/base/chip_1m.png
+    button: #系統按鈕
+      system:
+        enter: res/sub/image/SYSTEM_256.png
+        press: res/sub/image/SYSTEM_256_on.png
+        leave: res/sub/image/SYSTEM_256_70.png
+        disable: res/sub/image/SYSTEM_256_70.png
+    bones: #動畫
+      demon:
+        texture: res/sub/bones/demon/texture.png
+      ubbie:
+        texture: res/sub/bones/ubbie/texture.png
+    particle:
+      cartoonSmoke: res/sub/image/CartoonSmoke.png
+      test: res/sub/image/SYSTEM_256.png
+assets: #註解
+- res/main/asset/numBW.json
+- res/main/asset/NumMPurple.json

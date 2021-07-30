@@ -15,6 +15,9 @@ import yaml from '@rollup/plugin-yaml';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 
+import dynamicImportVars from '@rollup/plugin-dynamic-import-vars';
+
+
 let filename;
 if(process.env.WORKSPACE){
   filename = path.resolve(process.env.WORKSPACE + '/content.config.yml');
@@ -139,6 +142,11 @@ export default {
     }),
     postcss(),
     alias(paths),
+    dynamicImportVars({
+      include: [
+        `${workspace.root}/src/strings/**/*`
+      ]
+    }),
     // typescript(),
     sucrase({
       exclude: ['node_modules/**'],
