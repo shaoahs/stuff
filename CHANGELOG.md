@@ -2,12 +2,22 @@
 
 ## [Unreleased]
 ### Added
+- 新增動態載入程式碼功能
 
 ### Changed
 
 ### Fixed
 
 ### Removed
+
+## [6.18.0] - 2021-07-30
+### Added
+- 新增動態載入程式碼功能
+- game template 新增多語範例
+
+### Changed
+- 更新 agent 版本
+- 更新第三方程式庫版本
 
 ## [6.17.0] - 2021-07-27
 ### Changed

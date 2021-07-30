@@ -30,28 +30,7 @@ export function get (name) {
  */
 export async function setLanguage (id) {
   currentID = id;
-
-  switch (id) {
-    case ID.EN_US:
-      lang = await import('language/en-us');
-      break;
-    case ID.ZH_TW:
-      lang = await import('language/zh-tw');
-      break;
-    case ID.ZH_CN:
-      lang = await import('language/zh-cn');
-      break;
-    case ID.TH_TH:
-      lang = await import('language/th-th');
-      break;
-    case ID.VI_VN:
-      lang = await import('language/vi-vn');
-      break;
-    default:
-      currentID = ID.EN_US;
-      lang = await import('language/en-us');
-  }
-
+  lang = await import(`./locales/${currentID}.js`);
 }
 
 /**

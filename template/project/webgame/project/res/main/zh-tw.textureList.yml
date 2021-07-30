@@ -11,10 +11,6 @@ images:
       100000: res/sub/base/chip_100k.png
       500000: res/sub/base/chip_500k.png
       1000000: res/sub/base/chip_1m.png
-    background: #背景圖
-      back: res/main/bg/background.png
-      fore: res/main/bg/foreground.png
-      t03: res/main/bg/foreground.png
     button: #群組
       # auto: #自動
       #   enter: res/main/button/auto/enter.png

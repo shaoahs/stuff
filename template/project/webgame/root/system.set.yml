@@ -17,7 +17,7 @@ config:
     language/: {%= group %}/{%= name %}/src/strings/
     loading/: {%= group %}/{%= name %}/src/loading/
     net/: {%= group %}/{%= name %}/src/net/v1/
-    makeres/: {%= group %}/{%= name %}/src/makeres/v2/
+    makeres/: {%= group %}/{%= name %}/src/makeres/
     scene/: {%= group %}/{%= name %}/src/scenes/
     style/: {%= group %}/{%= name %}/style/
     schema/: {%= group %}/{%= name %}/schema/

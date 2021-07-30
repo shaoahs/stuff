@@ -15,6 +15,9 @@ import globals from 'rollup-plugin-node-globals';
 import builtins from 'rollup-plugin-node-builtins';
 import {terser} from 'rollup-plugin-terser';
 
+import dynamicImportVars from '@rollup/plugin-dynamic-import-vars';
+
+
 let drop_console = false;
 if(process.env.DROP_CONSOLE === 'true') {
   drop_console = true;
@@ -109,6 +112,11 @@ let plugins = [
   }),
   postcss(),
   alias(paths),
+  dynamicImportVars({
+    include: [
+      `${workspace.root}/src/strings/**/*`
+    ]
+  }),  
   // typescript(),
   sucrase({
     exclude: ['node_modules/**'],
@@ -142,6 +150,11 @@ if(process.env.BUILD === 'production'){
     }),
     postcss(),
     alias(paths),
+    dynamicImportVars({
+      include: [
+        `${workspace.root}/src/strings/**/*`
+      ]
+    }),
     // typescript(),
     sucrase({
       exclude: ['node_modules/**'],

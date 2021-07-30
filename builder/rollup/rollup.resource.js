@@ -14,6 +14,7 @@ import resolve from '@rollup/plugin-node-resolve';
 // import virtual from '@rollup/plugin-virtual';
 import {terser} from 'rollup-plugin-terser';
 import globImport from 'rollup-plugin-glob-import';
+import dynamicImportVars from '@rollup/plugin-dynamic-import-vars';
 
 
 let filename;
@@ -173,6 +174,11 @@ if(process.env.GENERATOR_VENDOR) {
           json(),
           // atlas(),
           alias(paths),
+          dynamicImportVars({
+            include: [
+              `${workspace.root}/src/makeres/**/*`
+            ]
+          }),
           // typescript(),
         ]
       };

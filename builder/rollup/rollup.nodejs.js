@@ -11,6 +11,7 @@ import yaml from '@rollup/plugin-yaml';
 import sucrase from '@rollup/plugin-sucrase';
 import resolve from '@rollup/plugin-node-resolve';
 
+import dynamicImportVars from '@rollup/plugin-dynamic-import-vars';
 
 let filename;
 if(process.env.WORKSPACE) {
@@ -111,6 +112,11 @@ if(process.env.BUILD === 'development') {
     // commonjs({
     // }),
     alias(paths),
+    dynamicImportVars({
+      include: [
+        `${workspace.root}/src/strings/**/*`
+      ]
+    }),
     // typescript(),
     sucrase({
       exclude: ['node_modules/**'],
@@ -137,6 +143,11 @@ else if(process.env.BUILD === 'production') {
     // commonjs({
     // }),
     alias(paths),
+    dynamicImportVars({
+      include: [
+        `${workspace.root}/src/strings/**/*`
+      ]
+    }),
     // typescript(),
     sucrase({
       exclude: ['node_modules/**'],
