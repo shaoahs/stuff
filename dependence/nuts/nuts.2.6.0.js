@@ -5214,6 +5214,10 @@ function createSpineData (data, callback) {
       loader.load((loader) => {
         console.log('[atlas texture] finish !!');
 
+        let TextureAtlas = PIXI.spine.TextureAtlas || PIXI.spine.core.TextureAtlas;
+        let AtlasAttachmentLoader = PIXI.spine.AtlasAttachmentLoader || PIXI.spine.core.AtlasAttachmentLoader;
+        let SkeletonJson = PIXI.spine.SkeletonJson || PIXI.spine.core.SkeletonJson;
+
         names.forEach(name => {
           let atlas = atlasMap[name];
           let info = filenameInfo(name);
@@ -5221,7 +5225,7 @@ function createSpineData (data, callback) {
             return;
           }
 
-          let textureAtlas = new PIXI.spine.core.TextureAtlas(atlas, (line, callback) => {
+          let textureAtlas = new TextureAtlas(atlas, (line, callback) => {
             let filename = info.dir + line;
             let res = loader.resources[filename];
             let texture;
@@ -5233,8 +5237,8 @@ function createSpineData (data, callback) {
             callback(texture.baseTexture);
           });
 
-          let spineAtlasLoader = new PIXI.spine.core.AtlasAttachmentLoader(textureAtlas);
-          let spineJsonParser = new PIXI.spine.core.SkeletonJson(spineAtlasLoader);
+          let spineAtlasLoader = new AtlasAttachmentLoader(textureAtlas);
+          let spineJsonParser = new SkeletonJson(spineAtlasLoader);
 
           let filename = `${info.dir}${info.name}.json`;
           let json = data.spines[filename];
