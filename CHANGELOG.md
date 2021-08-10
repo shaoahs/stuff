@@ -2,7 +2,6 @@
 
 ## [Unreleased]
 ### Added
-- 新增動態載入程式碼功能
 
 ### Changed
 
