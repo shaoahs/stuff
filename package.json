@@ -1,6 +1,6 @@
 {
   "name": "stuff.framework",
-  "version": "6.18.0",
+  "version": "6.18.1",
   "description": "",
   "scripts": {
     "install": "grunt copy:setup",
@@ -78,7 +78,7 @@
     "nodemon": "~2.0.12",
     "nollup": "^0.18.2",
     "prettier": "^2.3.2",
-    "rollup": "~2.56.1",
+    "rollup": "~2.56.2",
     "rollup-plugin-analyzer": "^4.0.0",
     "rollup-plugin-glob-import": "^0.5.0",
     "rollup-plugin-graph": "^2.0.0",
