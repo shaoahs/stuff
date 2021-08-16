@@ -23,9 +23,17 @@ export function useNetV2 () {
   return currentVersion = NET_VERSION.V2;
 }
 
+const language = {
+  'en-us': 1,
+  'zh-tw': 1,
+  'zh-cn': 1
+};
 let langID = 'enus';
+
 export function setLang (id) {
-  langID = id.replace('-', '');
+  if (language[id]) {
+    langID = id.replace('-', '');
+  }
 }
 
 let baseURL = '.';

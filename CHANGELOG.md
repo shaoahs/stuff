@@ -9,6 +9,13 @@
 
 ### Removed
 
+## [6.19.0] - 2021-08-16
+### Added
+- game template 新增多語資源檔錯誤處理
+
+### Removed
+- game template 多語資源檔預設語言為 (英文,中文-簡體,中文-正體)
+
 ## [6.18.2] - 2021-08-16
 ### Changed
 - 更新 agent 版本
