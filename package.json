@@ -1,6 +1,6 @@
 {
   "name": "stuff.framework",
-  "version": "6.18.2",
+  "version": "6.19.0",
   "description": "",
   "scripts": {
     "install": "grunt copy:setup",
