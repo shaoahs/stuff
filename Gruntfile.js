@@ -1888,7 +1888,6 @@ module.exports = function(grunt) {
         },
         files: [
           {expand: true, flatten: true, src: '<%= pkg.workspace %>/release/*.*.js', dest: '<%= pkg.workspace %>/app/'},
-//          {expand: true, flatten: true, src: '<%= pkg.workspace %>/release/<%= pkg.output %>.js', dest: '<%= pkg.workspace %>/app/'}
         ]
       },
       resVendor: {
@@ -1900,7 +1899,6 @@ module.exports = function(grunt) {
         },
         files: [
           {expand: true, flatten: true, src: '<%= pkg.workspace %>/src/nameMap.js', dest: '<%= pkg.workspace %>/src/'}
-//          {expand: true, flatten: true, src: '<%= pkg.workspace %>/app/*.*.js', dest: '<%= pkg.workspace %>/app/'}
         ]
       },
       gamecard: {
@@ -2699,13 +2697,48 @@ module.exports = function(grunt) {
   grunt.registerTask('eslint', '檢查程式碼', function(/*mode*/) {
     let cmdList = [];
     let cmd = 'shell:eslint';
-    // if(mode) {
-    //   cmd += ':' + mode;
-    // }
-    // console.log('command : ' + cmd);
     cmdList.push(cmd);
     grunt.task.run(cmdList);
   });
+
+  grunt.registerTask('checkres', '檢查資源檔', function() {
+
+    //=====================================================================
+    let files = {};
+    let srcPath;
+    let destPath;
+    // let rootPath = '/project/' + props.group + '/'+ props.name + '/';
+
+    //----
+    grunt.log.writeln('檢查遊戲資料');
+    srcPath = `${workspace.root}/res/**/*.{yml,yaml}`;
+    // grunt.file.setBase(srcPath);
+    files = grunt.file.expand(srcPath);
+    console.log(files);
+    for(let i = 0; i < files.length; i++) {
+      let filename = files[i];
+      let obj = grunt.file.readYAML(filename);
+      if(obj && obj.images) {
+        console.log(`filename : ${filename}`);
+        console.log(obj.images);
+      }
+    }
+//     grunt.file.recurse( srcPath, function( abspath, rootdir, subdir, filename ) {
+//       // let dest;
+//       // if ( subdir === undefined ) {
+//       //   dest = destPath + filename;
+//       // } else {
+//       //   dest = destPath + subdir + '/' + filename;
+//       // }
+//       if('.directory' !== filename){
+//        grunt.log.writeln('abspath:' + abspath);
+// //        grunt.log.writeln('  dest:' + dest);
+//         // grunt.file.copy( abspath, dest );
+//       }
+//     });
+
+  });
+
 
   grunt.registerTask('source', '建立除錯版本', function(mode) {
     if(isFramework){
