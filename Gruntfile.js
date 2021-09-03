@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 6.19.0]');
+  console.log('[stuff version 6.20.0]');
   console.log(__dirname);
   grunt.file.setBase(__dirname);
   
@@ -2710,7 +2710,7 @@ module.exports = function(grunt) {
     // let rootPath = '/project/' + props.group + '/'+ props.name + '/';
 
     //----
-    grunt.log.writeln('檢查遊戲資料');
+    grunt.log.writeln('檢查資源檔');
     srcPath = `${workspace.root}/res/**/*.{yml,yaml}`;
     // grunt.file.setBase(srcPath);
     files = grunt.file.expand(srcPath);
@@ -2721,6 +2721,11 @@ module.exports = function(grunt) {
       if(obj && obj.images) {
         console.log(`filename : ${filename}`);
         console.log(obj.images);
+
+        filename = `${workspace.root}/${obj.images.demo.message.loading}`;
+        console.log(filename);
+        let state = fs.statSync(filename);
+        console.log(state);
       }
     }
 //     grunt.file.recurse( srcPath, function( abspath, rootdir, subdir, filename ) {
