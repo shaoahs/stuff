@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import jsyaml from 'js-yaml';
+import grunt from 'grunt';
 
 import atlas from '../../tasks/plugin/rollup-plugin-atlas.js';
 
@@ -119,8 +120,11 @@ keys.forEach(key => {
 let jobs = [];
 
 
+// console.log('======================');
+// console.log(process.env);
 
 if(process.env.GENERATOR_VENDOR) {
+
   if(process.env.GENERATOR_VENDOR === 'v1') {
     let input = `${workspace.root}/${res.vendor.source}`;
     let output = [
@@ -150,11 +154,11 @@ if(process.env.GENERATOR_VENDOR) {
 
   } else if (process.env.GENERATOR_VENDOR === 'v2') {
     function a() {
-
       let input = `${workspace.root}/${res.vendor.source}`;
       let output = [
         {
-//          chunkFileNames: "[name]-[hash].js",
+
+          // chunkFileNames: "[name]-[hash].js",
           dir: `${workspace.root}/tmp/vendor`,
           format: 'cjs',
           // intro: '/*eslint-disable camelcase max-len*/',
@@ -163,7 +167,7 @@ if(process.env.GENERATOR_VENDOR) {
         }
       ];
       console.log(`input : ${input}`);
-//      console.log(`output : ${output[0].dir}`);
+      // console.log(`output : ${output[0].dir}`);
     
       let job = {
         input: input,
@@ -172,14 +176,12 @@ if(process.env.GENERATOR_VENDOR) {
         plugins: [
           yaml(),
           json(),
-          // atlas(),
           alias(paths),
           dynamicImportVars({
             include: [
               `${workspace.root}/src/makeres/**/*`
             ]
           }),
-          // typescript(),
         ]
       };
       jobs.push(job);
@@ -207,7 +209,6 @@ if(process.env.GENERATOR_VENDOR) {
         json(),
         atlas(),
         alias(paths),
-        // typescript()
       ]
     };
     jobs.push(job);
@@ -225,6 +226,16 @@ if(process.env.GENERATOR_VENDOR) {
         {
           dir: `${workspace.root}/res/vendor/${langID}`,
           format: templateFormat,
+          plugins: [
+            terser({
+              mangle: true,
+              compress:{
+                passes: 1,
+                ecma: '2015',
+                drop_console: true
+              }
+            })
+          ],
           sourcemap: false
         },
       ];
@@ -239,16 +250,7 @@ if(process.env.GENERATOR_VENDOR) {
           yaml(),
           json(),
           atlas(),
-          alias(paths),
-          // typescript(),
-          terser({
-            mangle: true,
-            compress:{
-              passes: 1,
-              ecma: '2015',
-              drop_console: true
-            }
-          })
+          alias(paths)
         ]
       };
       jobs.push(job);
@@ -263,11 +265,6 @@ if(process.env.GENERATOR_VENDOR) {
       plugins: [
         yaml(),
         json(),
-        // typescript(),
-        // sucrase({
-        //   exclude: ['node_modules/**'],
-        //   transforms: ['typescript']
-        // }),
         globImport({
           // rename(name, id) {
           //   console.log(id);

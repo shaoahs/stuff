@@ -43,6 +43,11 @@ export default function atlas(options = {}) {
   return {
   name: 'atlas',
 
+  augmentChunkHash(chunkInfo) {
+    console.log(chunkInfo);
+  },
+  
+
   transform(atlas, id) {
     if (!ext.test(id)) return null;
     if (!filter(id)) return null;

@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 6.19.0]');
+  console.log('[stuff version 6.20.0]');
   console.log(__dirname);
   grunt.file.setBase(__dirname);
   
@@ -1888,7 +1888,6 @@ module.exports = function(grunt) {
         },
         files: [
           {expand: true, flatten: true, src: '<%= pkg.workspace %>/release/*.*.js', dest: '<%= pkg.workspace %>/app/'},
-//          {expand: true, flatten: true, src: '<%= pkg.workspace %>/release/<%= pkg.output %>.js', dest: '<%= pkg.workspace %>/app/'}
         ]
       },
       resVendor: {
@@ -1900,7 +1899,6 @@ module.exports = function(grunt) {
         },
         files: [
           {expand: true, flatten: true, src: '<%= pkg.workspace %>/src/nameMap.js', dest: '<%= pkg.workspace %>/src/'}
-//          {expand: true, flatten: true, src: '<%= pkg.workspace %>/app/*.*.js', dest: '<%= pkg.workspace %>/app/'}
         ]
       },
       gamecard: {
@@ -2658,6 +2656,7 @@ module.exports = function(grunt) {
         mode = 'en-us';
       }
       let cmdList = [];
+      cmdList.push(`checkres`);
       cmdList.push(`shell:generatorvendor:${mode}`);
       cmdList.push(`resource:${mode}`);
       cmdList.push(`shell:makeres:${mode}`);
@@ -2699,12 +2698,69 @@ module.exports = function(grunt) {
   grunt.registerTask('eslint', '檢查程式碼', function(/*mode*/) {
     let cmdList = [];
     let cmd = 'shell:eslint';
-    // if(mode) {
-    //   cmd += ':' + mode;
-    // }
-    // console.log('command : ' + cmd);
     cmdList.push(cmd);
     grunt.task.run(cmdList);
+  });
+
+  grunt.registerTask('checkres', '檢查資源檔', function() {
+
+    //=====================================================================
+    let files = {};
+    let srcPath;
+    let destPath;
+    let isOK = true;
+    // let rootPath = '/project/' + props.group + '/'+ props.name + '/';
+
+    function checkImage(str) {
+      let filename = `${workspace.root}/${str}`;
+      let state = fs.statSync(filename);
+      if(state.size < 16384) {
+        isOK = false;
+        grunt.log.writeln(`${filename}, size=${state.size}`);
+        grunt.log.error('單一圖檔小於 16KB,需要合併圖檔');
+      }
+    }
+
+    function checkArray(array) {
+      let length = array.length;
+      for(let i=0; i<length; i++) {
+        let str = array[i];
+        checkImage(str);
+      }
+    }
+
+    function checkGroup(group) {
+      let names = Object.getOwnPropertyNames(group);
+      let length = names.length;
+      for(let i = 0; i<length; i++) {
+        let name = names[i];
+        let child = group[name];
+        if(typeof child === 'string') {
+          checkImage(child);
+        } else if(Array.isArray(child)) {
+          checkArray(child);
+        } else if(typeof child === 'object') {
+          checkGroup(child);
+        }
+      }
+    }
+    //----
+    grunt.log.writeln('檢查資源檔');
+    srcPath = `${workspace.root}/res/**/*.{yml,yaml}`;
+    // grunt.file.setBase(srcPath);
+    files = grunt.file.expand(srcPath);
+    console.log(files);
+    for(let i = 0; i < files.length; i++) {
+      let filename = files[i];
+      let obj = grunt.file.readYAML(filename);
+      if(obj && obj.images) {
+        console.log('----');
+        console.log(`filename : ${filename}`);
+        checkGroup(obj.images);
+      }
+    }
+
+    return isOK;
   });
 
   grunt.registerTask('source', '建立除錯版本', function(mode) {

@@ -593,6 +593,9 @@ WSSource.prototype.start = function() {
 	this.shouldAttemptReconnect = !!this.reconnectInterval;
 	this.progress = 0;
 	this.established = false;
+	if(this.socket) {
+		delete this.socket;
+	}
 	
 	this.socket = new WebSocket(this.url, this.options.protocols || null);
 	this.socket.binaryType = 'arraybuffer';
