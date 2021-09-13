@@ -2656,6 +2656,7 @@ module.exports = function(grunt) {
         mode = 'en-us';
       }
       let cmdList = [];
+      cmdList.push(`checkres`);
       cmdList.push(`shell:generatorvendor:${mode}`);
       cmdList.push(`resource:${mode}`);
       cmdList.push(`shell:makeres:${mode}`);
@@ -2707,8 +2708,42 @@ module.exports = function(grunt) {
     let files = {};
     let srcPath;
     let destPath;
+    let isOK = true;
     // let rootPath = '/project/' + props.group + '/'+ props.name + '/';
 
+    function checkImage(str) {
+      let filename = `${workspace.root}/${str}`;
+      let state = fs.statSync(filename);
+      if(state.size < 16384) {
+        isOK = false;
+        grunt.log.writeln(`${filename}, size=${state.size}`);
+        grunt.log.error('單一圖檔小於 16KB,需要合併圖檔');
+      }
+    }
+
+    function checkArray(array) {
+      let length = array.length;
+      for(let i=0; i<length; i++) {
+        let str = array[i];
+        checkImage(str);
+      }
+    }
+
+    function checkGroup(group) {
+      let names = Object.getOwnPropertyNames(group);
+      let length = names.length;
+      for(let i = 0; i<length; i++) {
+        let name = names[i];
+        let child = group[name];
+        if(typeof child === 'string') {
+          checkImage(child);
+        } else if(Array.isArray(child)) {
+          checkArray(child);
+        } else if(typeof child === 'object') {
+          checkGroup(child);
+        }
+      }
+    }
     //----
     grunt.log.writeln('檢查資源檔');
     srcPath = `${workspace.root}/res/**/*.{yml,yaml}`;
@@ -2719,31 +2754,14 @@ module.exports = function(grunt) {
       let filename = files[i];
       let obj = grunt.file.readYAML(filename);
       if(obj && obj.images) {
+        console.log('----');
         console.log(`filename : ${filename}`);
-        console.log(obj.images);
-
-        filename = `${workspace.root}/${obj.images.demo.message.loading}`;
-        console.log(filename);
-        let state = fs.statSync(filename);
-        console.log(state);
+        checkGroup(obj.images);
       }
     }
-//     grunt.file.recurse( srcPath, function( abspath, rootdir, subdir, filename ) {
-//       // let dest;
-//       // if ( subdir === undefined ) {
-//       //   dest = destPath + filename;
-//       // } else {
-//       //   dest = destPath + subdir + '/' + filename;
-//       // }
-//       if('.directory' !== filename){
-//        grunt.log.writeln('abspath:' + abspath);
-// //        grunt.log.writeln('  dest:' + dest);
-//         // grunt.file.copy( abspath, dest );
-//       }
-//     });
 
+    return isOK;
   });
-
 
   grunt.registerTask('source', '建立除錯版本', function(mode) {
     if(isFramework){
