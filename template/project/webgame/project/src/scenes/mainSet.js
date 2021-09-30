@@ -22,7 +22,6 @@ export async function reload (scene) {
   let ent = main.entity;
 
   // 指定要更新的資源
-  let newTextures = scene.textures.ui;
   let textures    = main.textures;
 
   textures.demo.ring = scene.textures.demo.ring;
@@ -57,11 +56,6 @@ export async function reload (scene) {
     obj.setTextures('numBW');
   }
 
-  obj = ent.coin;
-  if (obj) {
-    await game.idle(1.0);
-    obj.texture = newTextures.pageInfoText.a;
-  }
   console.log('!!!!!!!! 完成處理 reload !!!!!!!!!');
 }
 
