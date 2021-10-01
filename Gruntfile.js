@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 6.20.0]');
+  console.log('[stuff version 6.21.0]');
   console.log(__dirname);
   grunt.file.setBase(__dirname);
   
@@ -2656,7 +2656,6 @@ module.exports = function(grunt) {
         mode = 'en-us';
       }
       let cmdList = [];
-      cmdList.push(`checkres`);
       cmdList.push(`shell:generatorvendor:${mode}`);
       cmdList.push(`resource:${mode}`);
       cmdList.push(`shell:makeres:${mode}`);
@@ -2716,8 +2715,8 @@ module.exports = function(grunt) {
       let state = fs.statSync(filename);
       if(state.size < 16384) {
         isOK = false;
-        grunt.log.writeln(`${filename}, size=${state.size}`);
-        grunt.log.error('單一圖檔小於 16KB,需要合併圖檔');
+        // grunt.log.writeln(`image:${filename}`);
+        grunt.log.error(`image:${filename} 圖檔小於16KB,需要合併`);
       }
     }
 
@@ -2754,12 +2753,10 @@ module.exports = function(grunt) {
       let filename = files[i];
       let obj = grunt.file.readYAML(filename);
       if(obj && obj.images) {
-        console.log('----');
-        console.log(`filename : ${filename}`);
+        console.log(`[check] ${filename}`);
         checkGroup(obj.images);
       }
     }
-
     return isOK;
   });
 
@@ -3496,6 +3493,8 @@ module.exports = function(grunt) {
     cmdList.push('clean:tmp');
     cmdList.push('clean:app');
     cmdList.push('clean:debug');
+    cmdList.push(`checkres`);
+
 //    cmdList.push('clean:release');
     if(!resConfig.excluded) {
       cmdList.push('clean:data');
