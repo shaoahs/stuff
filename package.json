@@ -28,7 +28,7 @@
     "delay": "1000"
   },
   "devDependencies": {
-    "@auto-it/exec": "^10.32.0",
+    "@auto-it/exec": "^10.32.1",
     "@babel/core": "^7.15.5",
     "@babel/plugin-transform-arrow-functions": "^7.14.5",
     "@babel/plugin-transform-async-to-generator": "^7.14.5",
@@ -50,7 +50,7 @@
     "@rollup/plugin-yaml": "~3.1.0",
     "@rollup/pluginutils": "~4.1.1",
     "@swc/cli": "^0.1.50",
-    "@swc/core": "^1.2.90",
+    "@swc/core": "^1.2.92",
     "@types/ms": "^0.7.31",
     "@typescript-eslint/eslint-plugin": "^4.32.0",
     "@typescript-eslint/parser": "^4.32.0",
@@ -123,7 +123,7 @@
     "env-schema": "^3.4.0",
     "es-module-shims": "^1.1.0",
     "fast-json-stringify": "^2.7.10",
-    "fastify": "^3.21.6",
+    "fastify": "^3.22.0",
     "fastify-accepts": "^2.1.0",
     "fastify-basic-auth": "^2.1.0",
     "fastify-compress": "^3.6.0",
