@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 6.21.0]');
+  console.log('[stuff version 6.22.0]');
   console.log(__dirname);
   grunt.file.setBase(__dirname);
   
@@ -2132,7 +2132,7 @@ module.exports = function(grunt) {
 
       tslint: {
         command() {
-//          return 'tslint --help';
+          // return 'tslint --help';
           let cmd = 'tslint --fix -c project/';
           if(!pkg.current && pkg.current.length > 0){
             return 'echo 未設定專案名稱';
