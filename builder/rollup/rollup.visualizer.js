@@ -8,13 +8,13 @@ import postcss from 'rollup-plugin-postcss';
 
 // import typescript from '@rollup/plugin-typescript';
 import sucrase from '@rollup/plugin-sucrase';
-
 import alias from '@rollup/plugin-alias';
 import json from '@rollup/plugin-json';
 import yaml from '@rollup/plugin-yaml';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 
+import nodePolyfills from 'rollup-plugin-polyfill-node';
 import dynamicImportVars from '@rollup/plugin-dynamic-import-vars';
 
 
@@ -128,6 +128,7 @@ export default {
   output: output,
   inlineDynamicImports: true,
   plugins: [
+    alias(paths),
     visualizer({
       template: visualTemplate,
       filename: `${workspace.root}/statistics.html`,
@@ -141,7 +142,6 @@ export default {
     commonjs({
     }),
     postcss(),
-    alias(paths),
     dynamicImportVars({
       include: [
         `${workspace.root}/src/strings/**/*`

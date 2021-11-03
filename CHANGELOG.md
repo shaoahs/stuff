@@ -2,12 +2,15 @@
 
 ## [Unreleased]
 ### Added
+- 使用 rollup-plugin-polyfill-node
 
 ### Changed
+- 修改動態模組設定,是否強制合併成單一檔案(不使用分割程式碼功能)
 
 ### Fixed
 
 ### Removed
+- 不使用 rollup-plugin-node-globals 與 rollup-plugin-node-builtins
 
 ## [6.22.0] - 2021-10-06
 ### Added

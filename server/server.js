@@ -17,7 +17,8 @@ let corsOptions = {
   //   'Content-Type', 'Authorization'
   // ],
   origin: [
-    'https://g05bn.nrmhp.com/',
+    'https://c01bn.sdrcbgg.com/',
+    'https://g01bn.nrmhp.com/',
     'http://ip-api.com/',
     'http://127.0.0.1:3000',
     'http://172.16.65.127:3000',
