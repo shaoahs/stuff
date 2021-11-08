@@ -15,6 +15,7 @@ import globals from 'rollup-plugin-node-globals';
 import builtins from 'rollup-plugin-node-builtins';
 import {terser} from 'rollup-plugin-terser';
 
+import nodePolyfills from 'rollup-plugin-polyfill-node';
 import dynamicImportVars from '@rollup/plugin-dynamic-import-vars';
 
 
@@ -103,15 +104,17 @@ if(content.framework.useCodeSplitting) {
 
 
 let plugins = [
+  alias(paths),
   yaml(),
   json(),
-  resolve({
-    browser:true
-  }),
   commonjs({
   }),
   postcss(),
-  alias(paths),
+  nodePolyfills(),
+  resolve({
+    preferBuiltins: false,
+    browser:true
+  }),
   dynamicImportVars({
     include: [
       `${workspace.root}/src/strings/**/*`
@@ -122,8 +125,6 @@ let plugins = [
     exclude: ['node_modules/**'],
     transforms: ['typescript']
   }),
-  globals(),
-  builtins()
 ];
 
 if(process.env.BUILD === 'production'){
@@ -141,15 +142,17 @@ if(process.env.BUILD === 'production'){
   }
   
   plugins = [
+    alias(paths),
     yaml(),
     json(),
-    resolve({
-      browser:true
-    }),
     commonjs({
     }),
     postcss(),
-    alias(paths),
+    nodePolyfills(),
+    resolve({
+      preferBuiltins: false,
+      browser:true
+    }),
     dynamicImportVars({
       include: [
         `${workspace.root}/src/strings/**/*`
@@ -160,8 +163,6 @@ if(process.env.BUILD === 'production'){
       exclude: ['node_modules/**'],
       transforms: ['typescript']
     }),
-    globals(),
-    builtins()
   ];
 
   output.plugins = [];
@@ -181,8 +182,10 @@ if(process.env.BUILD === 'production'){
   }
 }
 
+output.inlineDynamicImports = !!content.framework.inlineDynamicImports;
 if(output.format === 'iife') {
   output.name = content.name;
+  output.inlineDynamicImports = true;
 } else {
   output.name = null;
 }
@@ -192,14 +195,12 @@ if(output.format === 'esm') {
     moduleSideEffects: 'no-external'
   };
 }
-let inlineDynamicImports = !!content.framework.inlineDynamicImports;
 
 export default {
   // watch: {
   //   include: [`${workspace.root}/src/**`,`${workspace.root}/res/**/*.yml`]
   // },
   preserveEntrySignatures: 'strict',
-  inlineDynamicImports,
   input: input,
   external: external,
   output: output,

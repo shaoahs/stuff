@@ -107,10 +107,6 @@ if(process.env.BUILD === 'development') {
   plugins = [
     yaml(),
     json(),
-    // resolve({
-    // }),
-    // commonjs({
-    // }),
     alias(paths),
     dynamicImportVars({
       include: [
@@ -138,10 +134,6 @@ else if(process.env.BUILD === 'production') {
   plugins = [
     yaml(),
     json(),
-    // resolve({
-    // }),
-    // commonjs({
-    // }),
     alias(paths),
     dynamicImportVars({
       include: [

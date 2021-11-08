@@ -142,6 +142,7 @@ export default [
     external: external,
     output: output,
     plugins: [
+      alias(paths),
       yaml(),
       json(),
       resolve({
@@ -149,7 +150,6 @@ export default [
       commonjs({
       }),
       postcss(),
-      alias(paths),
       // typescript(),
       sucrase({
         exclude: ['node_modules/**'],

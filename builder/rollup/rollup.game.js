@@ -11,8 +11,8 @@ import resolve from '@rollup/plugin-node-resolve';
 // import typescript from '@rollup/plugin-typescript';
 import sucrase from '@rollup/plugin-sucrase';
 import {terser} from 'rollup-plugin-terser';
-// import babel, { getBabelOutputPlugin } from '@rollup/plugin-babel';
 
+import nodePolyfills from 'rollup-plugin-polyfill-node';
 import dynamicImportVars from '@rollup/plugin-dynamic-import-vars';
 
 
@@ -171,14 +171,17 @@ if(content.framework.useCodeSplitting) {
 }
 
 let plugins = [
+  alias(paths),
   yaml(),
   json(),
-  resolve({
-  }),
   commonjs({
   }),
   postcss(),
-  alias(paths),
+  nodePolyfills(),
+  resolve({
+    preferBuiltins: false,
+    browser:true
+  }),
   dynamicImportVars({
     include: [
       `${workspace.root}/src/strings/**/*`
@@ -206,14 +209,17 @@ if(process.env.BUILD === 'production') {
   }
 
   plugins = [
+    alias(paths),
     yaml(),
     json(),
-    resolve({
-    }),
     commonjs({
     }),
     postcss(),
-    alias(paths),
+    nodePolyfills(),
+    resolve({
+      preferBuiltins: false,
+      browser:true
+    }),
     dynamicImportVars({
       include: [
         `${workspace.root}/src/strings/**/*`
@@ -257,16 +263,16 @@ if(process.env.BUILD === 'production') {
   }
 }
 
+output.inlineDynamicImports = !!content.framework.inlineDynamicImports;
 if(output.format === 'iife') {
   output.name = content.name;
+  output.inlineDynamicImports = true;
 } else {
   output.name = null;
 }
-let inlineDynamicImports = !!content.framework.inlineDynamicImports;
 
 export default {
   preserveEntrySignatures: 'strict',
-  inlineDynamicImports,
   input: input,
   external: external,
   output: output,

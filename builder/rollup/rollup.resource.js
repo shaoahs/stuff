@@ -1,7 +1,6 @@
 import fs from 'fs';
 import path from 'path';
 import jsyaml from 'js-yaml';
-import grunt from 'grunt';
 
 import atlas from '../../tasks/plugin/rollup-plugin-atlas.js';
 
