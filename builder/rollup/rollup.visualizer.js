@@ -14,7 +14,6 @@ import yaml from '@rollup/plugin-yaml';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 
-import nodePolyfills from 'rollup-plugin-polyfill-node';
 import dynamicImportVars from '@rollup/plugin-dynamic-import-vars';
 
 

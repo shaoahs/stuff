@@ -3493,9 +3493,9 @@ module.exports = function(grunt) {
     cmdList.push('clean:tmp');
     cmdList.push('clean:app');
     cmdList.push('clean:debug');
-    cmdList.push(`checkres`);
-
-//    cmdList.push('clean:release');
+    
+    // cmdList.push(`checkres`);
+    // cmdList.push('clean:release');
     if(!resConfig.excluded) {
       cmdList.push('clean:data');
       cmdList.push('hash:res');
