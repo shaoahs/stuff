@@ -2,8 +2,11 @@
 
 ## [Unreleased]
 ### Added
+- 新增支援 typescript 4.5
 
 ### Changed
+- 更新 agent 版本
+- 更新第三方程式庫版本
 
 ### Fixed
 
