@@ -3,6 +3,7 @@
 ## [Unreleased]
 ### Added
 - 新增支援 typescript 4.5
+- 新增 snappy 壓縮
 
 ### Changed
 - 更新 agent 版本
