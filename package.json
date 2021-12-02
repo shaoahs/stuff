@@ -110,6 +110,7 @@
     "@bull-board/fastify": "^3.7.0",
     "@msgpack/msgpack": "^2.7.1",
     "@types/mithril": "^2.0.8",
+    "aes-js": "^3.1.2",
     "avsc": "^5.7.3",
     "axios": "^0.24.0",
     "babylonjs": "^4.2.0",
