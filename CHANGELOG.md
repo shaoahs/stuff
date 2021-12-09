@@ -2,16 +2,23 @@
 
 ## [Unreleased]
 ### Added
+
+### Changed
+
+### Fixed
+
+### Removed
+
+## [6.24.0] - 2021-12-09
+### Added
+- 新增網路模組打包
 - 新增支援 typescript 4.5
 - 新增 snappy 壓縮
 
 ### Changed
 - 更新 agent 版本
-- 更新第三方程式庫版本
-
-### Fixed
-
-### Removed
+- 更新 第三方程式庫版本
+- 更新 測試用 server
 
 ## [6.23.0] - 2021-11-08
 ### Added
