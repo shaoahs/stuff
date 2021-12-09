@@ -11,8 +11,6 @@ import resolve from '@rollup/plugin-node-resolve';
 import sucrase from '@rollup/plugin-sucrase';
 
 import postcss from 'rollup-plugin-postcss';
-import globals from 'rollup-plugin-node-globals';
-import builtins from 'rollup-plugin-node-builtins';
 import {terser} from 'rollup-plugin-terser';
 
 import nodePolyfills from 'rollup-plugin-polyfill-node';

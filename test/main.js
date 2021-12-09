@@ -304,10 +304,13 @@ var server = {
 var logger$1 = pino({
     redact: ['key', 'token'],
     remove: true,
-    prettyPrint: {
-        colorize: true,
-        translateTime: 'SYS:yyyy-mm-dd HH:MM:ss.l o'
-    }
+    transport: {
+        target: 'pino-pretty',
+        options: {
+          translateTime: true,
+          colorize: true
+        }
+      }
 });
 var PORT = 3500;
 var App = uws.App;

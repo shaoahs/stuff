@@ -3013,10 +3013,13 @@ var _a;
 var logger$6 = pino({
     redact: ['key', 'token'],
     remove: true,
-    prettyPrint: {
-        colorize: true,
-        translateTime: 'SYS:yyyy-mm-dd HH:MM:ss.l o'
-    }
+    transport: {
+        target: 'pino-pretty',
+        options: {
+          translateTime: true,
+          colorize: true
+        }
+      }
 });
 var currentIndex = 0;
 var currentDay = lightFormat(new Date(), 'dd');
