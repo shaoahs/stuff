@@ -191,4 +191,4 @@ io.of('/develop').on('connection', net.eventConnect);
 
 logger.info('!!!! start server !!!!');
 logger.info('==============================================');
-require('../test/launcher');
+// require('../test/launcher');
