@@ -23,7 +23,7 @@ template:
     format: esm
     src: template/release.esm.html
     dest: index.html
-version: 6.19.1
+version: 6.19.4
 author:
   name: astro
   email: www@astrocorp.com.tw
