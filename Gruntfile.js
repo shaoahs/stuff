@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 6.26.0]');
+  console.log('[stuff version 6.27.0]');
   console.log(__dirname);
   grunt.file.setBase(__dirname);
   
@@ -3280,7 +3280,13 @@ module.exports = function(grunt) {
       debugProtection: false,
       debugProtectionInterval: false,
       disableConsoleOutput: true,
-      identifierNamesGenerator: 'mangled',
+      identifierNamesGenerator: 'mangled-shuffled',
+      // reservedStrings: [
+      //   'http:/\d',
+      //   'ws:/\d',
+      //   'https:/\d',
+      //   'wss:/\d'
+      // ],
       log: false,
       renameGlobals: false,
       rotateStringArray: true,
@@ -3294,7 +3300,7 @@ module.exports = function(grunt) {
         'base64',
         'rc4'
       ],
-      stringArrayThreshold: 0.01,
+      stringArrayThreshold: 0.25,
       transformObjectKeys: true,
       unicodeEscapeSequence: false,
       reservedNames: [
@@ -3313,7 +3319,7 @@ module.exports = function(grunt) {
         debugProtection: false,
         debugProtectionInterval: false,
         disableConsoleOutput: false,
-        identifierNamesGenerator: 'mangled', //'hexadecimal',
+        identifierNamesGenerator: 'mangled-shuffled', //'hexadecimal',
         log: false,
         renameGlobals: false,
         rotateStringArray: true,
@@ -3343,8 +3349,14 @@ module.exports = function(grunt) {
         debugProtection: false,
         debugProtectionInterval: false,
         disableConsoleOutput: false,
-        identifierNamesGenerator: 'mangled', //'hexadecimal',
-        log: false,
+        identifierNamesGenerator: 'mangled-shuffled', //'hexadecimal',
+        // reservedStrings: [
+        //   'http:/\d',
+        //   'ws:/\d',
+        //   'https:/\d',
+        //   'wss:/\d'
+        // ],
+          log: false,
         renameGlobals: false,
         rotateStringArray: true,
         selfDefending: false,
