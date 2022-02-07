@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 6.27.0]');
+  console.log('[stuff version 6.29.0]');
   console.log(__dirname);
   grunt.file.setBase(__dirname);
   
@@ -3642,7 +3642,7 @@ module.exports = function(grunt) {
               usePrefix: false,
               patterns: [
                 {
-                  match: '172.16.80.22',
+                  match: '172.16.102.149',
                   replacement: '127.0.0.1'
                 },
                 {
@@ -3843,10 +3843,10 @@ module.exports = function(grunt) {
       }
   
       if(pkg.currentMode === MODE.RELEASE) {
-        if('agent' !== pkg.name) {
-          cmdList.push('obfuscate:resource');
-          cmdList.push('obfuscate:vendor');
-        }
+        // if('agent' !== pkg.name) {
+        // }
+        cmdList.push('obfuscate:resource');
+        cmdList.push('obfuscate:vendor');
 
         // cmdList.push('cache:deploy');
         // cmdList.push('compress:project');
