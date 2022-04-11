@@ -186,7 +186,7 @@ module.exports = function(grunt) {
           'app/**/*.{js,mjs}'
         ],
         resource: [
-          'systemjs/6.8.3/system.min.js'
+          'systemjs/6.12.1/system.min.js'
         ],
         output: 'config/cache.txt'
       }
