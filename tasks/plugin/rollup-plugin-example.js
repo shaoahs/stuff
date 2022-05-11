@@ -1,7 +1,14 @@
 import YAML from 'js-yaml';
 import { createFilter, makeLegalIdentifier, dataToEsm } from '@rollup/pluginutils';
 
+
 export default function myExample (options = {}) {
+
+  let instance = options.instance;
+  let aaaa = options;
+  // instance.get('/workspace?ID=12345').then(response => {
+  //   console.log('[rollup-plugin-example]', response.data);
+  // });
 
   return {
     name: 'my-example', // this name will show up in warnings and errors
@@ -13,23 +20,42 @@ export default function myExample (options = {}) {
 
       return null;
     },
-    renderChunk(code, chunk, options) {
-       console.log(`renderChunk ${chunk.name}`);
-      if(chunk.name === 'fingerprint2') {
-//         console.log(chunk);
-//         console.log('=========================');
-//         console.log(code);
-//         return `zzzz ${code}`;
-        
+
+    // generateBundle(outputOptions, bundle) {
+    //   console.log('generateBundle : ', outputOptions);
+    //   console.log(bundle);
+
+    // },
+    // resolveId(source, importer) {
+    //   console.log(`[resolveId] source:${source}, importer:${importer}`);
+    // },
+
+    load(id) {
+      console.log(`[load] id:${id}`);
+    },
+
+    async renderChunk(code, chunk, options) {
+      if(chunk.name === 'lib') {
+        let response = await instance.get('/workspace?ID=12345');
+        console.log(`renderChunk ${chunk.name} ${chunk.fileName}`);
+        console.log('[rollup-plugin-example]', response.data);
+        console.log('=========================');
+        console.log(chunk);
+        // console.log('=========================');
+        // console.log(options);
+        // return `\n/* javascript-obfuscator:disable */\n${code}`;
+      } else {
+        console.log(`renderChunk ${chunk.name} ${chunk.fileName}`);
       }
     },
-    transform(code, id) {
-       console.log(`transform ${id}`);
-       if(id === '/home/dott/html/javascript/astro/stuff/project/agent/src/browser/common.js') {
-         console.log(code);
-         return `\n/* javascript-obfuscator:disable */\n${code}\n/* javascript-obfuscator:enable */\n`;
-       }
-    }
+    
+    // transform(code, id) {
+    //   //  console.log(`transform ${id}`);
+    //   //  if(id === '/home/dott/html/javascript/astro/stuff/project/agent/src/browser/common.js') {
+    //   //   //  console.log(code);
+    //   //   //  return `\n/* javascript-obfuscator:disable */\n${code}\n/* javascript-obfuscator:enable */\n`;
+    //   //  }
+    // }
     
 //     resolveId(source, importer) {
 //       console.log(`resolveId ${importer}`);
