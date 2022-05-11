@@ -1,6 +1,7 @@
 
 module.exports = function(grunt) {
   "use strict";
+  const process = require("process");
   const path = require("path");
   const yaml = require('js-yaml');
   const fs   = require('fs');
@@ -21,7 +22,9 @@ module.exports = function(grunt) {
   console.log('[stuff version 6.30.0]');
   console.log(__dirname);
   grunt.file.setBase(__dirname);
-  
+
+
+
   let isFramework = null;
   let pkg = {};
   let resConfig = {};
@@ -75,6 +78,43 @@ module.exports = function(grunt) {
     mode: MODE.TEST,
     set: null
   };
+
+  let argv = process.argv;
+  // console.log(argv);
+
+  let fastify = null;
+  
+  if(argv.length >= 2) {
+    let substr = argv[2];
+    if(substr) {
+      const words = substr.split(':');
+      let word = words[0];
+      if(word === 'source' ) {
+        fastify = require('fastify')({
+          logger: false
+        });
+      
+        fastify.get('/config/workspace', async (request, reply) => {
+          reply.type('application/json').code(200);
+          return workspace;
+        });
+      
+        fastify.ready(err => {
+          if (err) {
+            throw err;
+          }
+      
+          fastify.listen({ port: 2000, host: '127.0.0.1' }, (err, address) => {
+            if (err) {
+              grunt.log.error(err);
+            }
+          });
+        });
+      }
+    }
+  }
+
+
 
   function getAppName() {
     let key = `${workspace.output}.js`;
@@ -2101,6 +2141,7 @@ module.exports = function(grunt) {
           }
         },
         command() {
+
           if(!pkg.current && pkg.current.length > 0){
             return 'echo 未設定專案名稱';
           }
@@ -2496,6 +2537,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('config', '設定', function (mode) {
+
     let done = this.async();
     if(pkg.framework.builder === 'rollup') {
       if(workspace.set && workspace.set.config && workspace.set.config.map){
@@ -2699,6 +2741,7 @@ module.exports = function(grunt) {
     let cmd = 'shell:eslint';
     cmdList.push(cmd);
     grunt.task.run(cmdList);
+
   });
 
   grunt.registerTask('checkres', '檢查資源檔', function() {
@@ -2764,6 +2807,7 @@ module.exports = function(grunt) {
     if(isFramework){
       return;
     }
+
     changeMode(mode);
     workspace.runMode = 'source';
  
@@ -3278,7 +3322,7 @@ module.exports = function(grunt) {
       controlFlowFlattening: false,
       deadCodeInjection: false,
       debugProtection: false,
-      debugProtectionInterval: false,
+      debugProtectionInterval: 0,
       disableConsoleOutput: true,
       identifierNamesGenerator: 'mangled-shuffled',
       // reservedStrings: [
@@ -3317,7 +3361,7 @@ module.exports = function(grunt) {
         controlFlowFlattening: false,
         deadCodeInjection: false,
         debugProtection: false,
-        debugProtectionInterval: false,
+        debugProtectionInterval: 0,
         disableConsoleOutput: false,
         identifierNamesGenerator: 'mangled-shuffled', //'hexadecimal',
         log: false,
@@ -3347,7 +3391,7 @@ module.exports = function(grunt) {
         controlFlowFlattening: false,
         deadCodeInjection: false,
         debugProtection: false,
-        debugProtectionInterval: false,
+        debugProtectionInterval: 0,
         disableConsoleOutput: false,
         identifierNamesGenerator: 'mangled-shuffled', //'hexadecimal',
         // reservedStrings: [
@@ -3805,8 +3849,8 @@ module.exports = function(grunt) {
       srcList.push('README.md');
       files.push({expand: true, src: srcList, dest: 'public/' + currentMode + '/'});
       cmdList.push('clone:public');
-      // cmdList.push('compress:lib');
-      // cmdList.push('compress:lib1');
+      cmdList.push('compress:lib');
+      cmdList.push('compress:lib1');
 
     } else {
       let set = workspace.set;
@@ -3849,8 +3893,8 @@ module.exports = function(grunt) {
         cmdList.push('obfuscate:vendor');
 
         // cmdList.push('cache:deploy');
-        // cmdList.push('compress:project');
-        // cmdList.push('compress:project1');
+        cmdList.push('compress:project');
+        cmdList.push('compress:project1');
       }
 
       if(event && event.finish) {
