@@ -1,6 +1,6 @@
 {
   "name": "stuff.framework",
-  "version": "6.30.3",
+  "version": "6.31.0",
   "description": "",
   "scripts": {
     "install": "grunt copy:setup",
@@ -29,11 +29,11 @@
   },
   "devDependencies": {
     "@auto-it/exec": "^10.37.0",
-    "@babel/core": "^7.18.0",
+    "@babel/core": "^7.18.2",
     "@babel/plugin-transform-arrow-functions": "^7.17.12",
     "@babel/plugin-transform-async-to-generator": "^7.17.12",
     "@babel/plugin-transform-classes": "^7.17.12",
-    "@babel/preset-env": "^7.18.0",
+    "@babel/preset-env": "^7.18.2",
     "@gitbeaker/node": "^35.6.0",
     "@rollup/plugin-alias": "~3.1.9",
     "@rollup/plugin-babel": "~5.3.1",
@@ -51,7 +51,7 @@
     "@rollup/plugin-yaml": "~3.1.0",
     "@rollup/pluginutils": "~4.2.1",
     "@swc/cli": "^0.1.57",
-    "@swc/core": "^1.2.189",
+    "@swc/core": "^1.2.194",
     "@types/ms": "^0.7.31",
     "@typescript-eslint/eslint-plugin": "^5.26.0",
     "@typescript-eslint/parser": "^5.26.0",
