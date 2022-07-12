@@ -1,8 +1,11 @@
 (function() {
   const logger = require('pino')({
-    prettyPrint: {
-      translateTime: true,
-      colorize: true,
+    transport: {
+      target: 'pino-pretty',
+      options: {
+        translateTime: true,
+        colorize: true
+      }
     }
   });
   

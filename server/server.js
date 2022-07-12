@@ -10,7 +10,7 @@ const logger = require('pino')({
   }
 });
 
-const cors  = require('fastify-cors');
+const cors  = require('@fastify/cors');
 
 //------------------------------------------
 let corsOptions = {
@@ -58,7 +58,7 @@ const fastify = require('fastify')({
 //   }
 //   // { /*inflateIfDeflated: true*/}
 // );
-fastify.register(require('fastify-websocket'));
+fastify.register(require('@fastify/websocket'));
 
 var send = require('send');
 
@@ -71,7 +71,7 @@ send.mime.define({
 });
 fastify.register(cors, corsOptions);
 fastify
-  .register(require('fastify-static'), {
+  .register(require('@fastify/static'), {
     root: path.join(__dirname+'/../', '/'),
     setHeaders:function (res, pathName) {
       if(pathName.indexOf('index.html') >= 0){
@@ -83,7 +83,10 @@ fastify
     // cacheControl: 'public',
     // maxAge: '16384'
   })
-  .listen(3000, '0.0.0.0', err => {
+  .listen({
+    port: 3000,
+    host: '0.0.0.0'
+  }, err => {
     if (err) throw err;
     logger.info('!!!! start web server !!!!');
     logger.info('http://localhost:3000/developer/agent/');
@@ -112,7 +115,7 @@ fastify.get('/avro',{ websocket: true }, (connection, req) => {
 /* const testServer = require('fastify')();
 testServer.register(cors, corsOptions);
 testServer
-  .register(require('fastify-static'), {
+  .register(require('@fastify/static'), {
     root: path.join(__dirname+'/../tmp/', '/'),
     setHeaders:function (res, pathName) {
 //      console.log(pathName);
