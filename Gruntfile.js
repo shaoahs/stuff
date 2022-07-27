@@ -3666,7 +3666,7 @@ module.exports = function(grunt) {
     // 清除 public 資料
     if(isFramework){
       cleanPublic.src = [
-        'public/<%= pkg.currentMode %>/README.md',
+        // 'public/<%= pkg.currentMode %>/README.md',
         'public/<%= pkg.currentMode %>/dependence/**',
         'public/<%= pkg.currentMode %>/dependence',
         'public/<%= pkg.currentMode %>/systemjs/**',
@@ -3846,7 +3846,7 @@ module.exports = function(grunt) {
         });
       });
       
-      srcList.push('README.md');
+      // srcList.push('README.md');
       files.push({expand: true, src: srcList, dest: 'public/' + currentMode + '/'});
       cmdList.push('clone:public');
       cmdList.push('compress:lib');
