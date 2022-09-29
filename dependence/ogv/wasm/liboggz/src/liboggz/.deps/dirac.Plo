@@ -1,0 +1,48 @@
+dirac.lo: ../../../../../liboggz/src/liboggz/dirac.c ../../config.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h \
+  ../../../../../liboggz/src/liboggz/dirac.h \
+  /home/dott/ogv.js/build/wasm/root/include/ogg/ogg.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h \
+  /home/dott/ogv.js/build/wasm/root/include/ogg/os_types.h \
+  /home/dott/ogv.js/build/wasm/root/include/ogg/config_types.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/inttypes.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/features.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/endian.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h
+
+../../config.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h:
+
+../../../../../liboggz/src/liboggz/dirac.h:
+
+/home/dott/ogv.js/build/wasm/root/include/ogg/ogg.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h:
+
+/home/dott/ogv.js/build/wasm/root/include/ogg/os_types.h:
+
+/home/dott/ogv.js/build/wasm/root/include/ogg/config_types.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/inttypes.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/features.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/endian.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h:

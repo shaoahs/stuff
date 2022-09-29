@@ -1,0 +1,266 @@
+[
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d_entrypoint.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ src/libdav1d_entrypoint.a.p/lib.c.o -MF src/libdav1d_entrypoint.a.p/lib.c.o.d -o src/libdav1d_entrypoint.a.p/lib.c.o -c ../../../dav1d/src/lib.c",
+    "file": "../../../dav1d/src/lib.c",
+    "output": "src/libdav1d_entrypoint.a.p/lib.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d_entrypoint.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ src/libdav1d_entrypoint.a.p/thread_task.c.o -MF src/libdav1d_entrypoint.a.p/thread_task.c.o.d -o src/libdav1d_entrypoint.a.p/thread_task.c.o -c ../../../dav1d/src/thread_task.c",
+    "file": "../../../dav1d/src/thread_task.c",
+    "output": "src/libdav1d_entrypoint.a.p/thread_task.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d_bitdepth_8.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -DBITDEPTH=8 -MD -MQ src/libdav1d_bitdepth_8.a.p/cdef_apply_tmpl.c.o -MF src/libdav1d_bitdepth_8.a.p/cdef_apply_tmpl.c.o.d -o src/libdav1d_bitdepth_8.a.p/cdef_apply_tmpl.c.o -c ../../../dav1d/src/cdef_apply_tmpl.c",
+    "file": "../../../dav1d/src/cdef_apply_tmpl.c",
+    "output": "src/libdav1d_bitdepth_8.a.p/cdef_apply_tmpl.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d_bitdepth_8.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -DBITDEPTH=8 -MD -MQ src/libdav1d_bitdepth_8.a.p/cdef_tmpl.c.o -MF src/libdav1d_bitdepth_8.a.p/cdef_tmpl.c.o.d -o src/libdav1d_bitdepth_8.a.p/cdef_tmpl.c.o -c ../../../dav1d/src/cdef_tmpl.c",
+    "file": "../../../dav1d/src/cdef_tmpl.c",
+    "output": "src/libdav1d_bitdepth_8.a.p/cdef_tmpl.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d_bitdepth_8.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -DBITDEPTH=8 -MD -MQ src/libdav1d_bitdepth_8.a.p/fg_apply_tmpl.c.o -MF src/libdav1d_bitdepth_8.a.p/fg_apply_tmpl.c.o.d -o src/libdav1d_bitdepth_8.a.p/fg_apply_tmpl.c.o -c ../../../dav1d/src/fg_apply_tmpl.c",
+    "file": "../../../dav1d/src/fg_apply_tmpl.c",
+    "output": "src/libdav1d_bitdepth_8.a.p/fg_apply_tmpl.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d_bitdepth_8.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -DBITDEPTH=8 -MD -MQ src/libdav1d_bitdepth_8.a.p/film_grain_tmpl.c.o -MF src/libdav1d_bitdepth_8.a.p/film_grain_tmpl.c.o.d -o src/libdav1d_bitdepth_8.a.p/film_grain_tmpl.c.o -c ../../../dav1d/src/film_grain_tmpl.c",
+    "file": "../../../dav1d/src/film_grain_tmpl.c",
+    "output": "src/libdav1d_bitdepth_8.a.p/film_grain_tmpl.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d_bitdepth_8.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -DBITDEPTH=8 -MD -MQ src/libdav1d_bitdepth_8.a.p/ipred_prepare_tmpl.c.o -MF src/libdav1d_bitdepth_8.a.p/ipred_prepare_tmpl.c.o.d -o src/libdav1d_bitdepth_8.a.p/ipred_prepare_tmpl.c.o -c ../../../dav1d/src/ipred_prepare_tmpl.c",
+    "file": "../../../dav1d/src/ipred_prepare_tmpl.c",
+    "output": "src/libdav1d_bitdepth_8.a.p/ipred_prepare_tmpl.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d_bitdepth_8.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -DBITDEPTH=8 -MD -MQ src/libdav1d_bitdepth_8.a.p/ipred_tmpl.c.o -MF src/libdav1d_bitdepth_8.a.p/ipred_tmpl.c.o.d -o src/libdav1d_bitdepth_8.a.p/ipred_tmpl.c.o -c ../../../dav1d/src/ipred_tmpl.c",
+    "file": "../../../dav1d/src/ipred_tmpl.c",
+    "output": "src/libdav1d_bitdepth_8.a.p/ipred_tmpl.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d_bitdepth_8.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -DBITDEPTH=8 -MD -MQ src/libdav1d_bitdepth_8.a.p/itx_tmpl.c.o -MF src/libdav1d_bitdepth_8.a.p/itx_tmpl.c.o.d -o src/libdav1d_bitdepth_8.a.p/itx_tmpl.c.o -c ../../../dav1d/src/itx_tmpl.c",
+    "file": "../../../dav1d/src/itx_tmpl.c",
+    "output": "src/libdav1d_bitdepth_8.a.p/itx_tmpl.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d_bitdepth_8.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -DBITDEPTH=8 -MD -MQ src/libdav1d_bitdepth_8.a.p/lf_apply_tmpl.c.o -MF src/libdav1d_bitdepth_8.a.p/lf_apply_tmpl.c.o.d -o src/libdav1d_bitdepth_8.a.p/lf_apply_tmpl.c.o -c ../../../dav1d/src/lf_apply_tmpl.c",
+    "file": "../../../dav1d/src/lf_apply_tmpl.c",
+    "output": "src/libdav1d_bitdepth_8.a.p/lf_apply_tmpl.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d_bitdepth_8.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -DBITDEPTH=8 -MD -MQ src/libdav1d_bitdepth_8.a.p/loopfilter_tmpl.c.o -MF src/libdav1d_bitdepth_8.a.p/loopfilter_tmpl.c.o.d -o src/libdav1d_bitdepth_8.a.p/loopfilter_tmpl.c.o -c ../../../dav1d/src/loopfilter_tmpl.c",
+    "file": "../../../dav1d/src/loopfilter_tmpl.c",
+    "output": "src/libdav1d_bitdepth_8.a.p/loopfilter_tmpl.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d_bitdepth_8.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -DBITDEPTH=8 -MD -MQ src/libdav1d_bitdepth_8.a.p/looprestoration_tmpl.c.o -MF src/libdav1d_bitdepth_8.a.p/looprestoration_tmpl.c.o.d -o src/libdav1d_bitdepth_8.a.p/looprestoration_tmpl.c.o -c ../../../dav1d/src/looprestoration_tmpl.c",
+    "file": "../../../dav1d/src/looprestoration_tmpl.c",
+    "output": "src/libdav1d_bitdepth_8.a.p/looprestoration_tmpl.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d_bitdepth_8.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -DBITDEPTH=8 -MD -MQ src/libdav1d_bitdepth_8.a.p/lr_apply_tmpl.c.o -MF src/libdav1d_bitdepth_8.a.p/lr_apply_tmpl.c.o.d -o src/libdav1d_bitdepth_8.a.p/lr_apply_tmpl.c.o -c ../../../dav1d/src/lr_apply_tmpl.c",
+    "file": "../../../dav1d/src/lr_apply_tmpl.c",
+    "output": "src/libdav1d_bitdepth_8.a.p/lr_apply_tmpl.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d_bitdepth_8.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -DBITDEPTH=8 -MD -MQ src/libdav1d_bitdepth_8.a.p/mc_tmpl.c.o -MF src/libdav1d_bitdepth_8.a.p/mc_tmpl.c.o.d -o src/libdav1d_bitdepth_8.a.p/mc_tmpl.c.o -c ../../../dav1d/src/mc_tmpl.c",
+    "file": "../../../dav1d/src/mc_tmpl.c",
+    "output": "src/libdav1d_bitdepth_8.a.p/mc_tmpl.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d_bitdepth_8.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -DBITDEPTH=8 -MD -MQ src/libdav1d_bitdepth_8.a.p/recon_tmpl.c.o -MF src/libdav1d_bitdepth_8.a.p/recon_tmpl.c.o.d -o src/libdav1d_bitdepth_8.a.p/recon_tmpl.c.o -c ../../../dav1d/src/recon_tmpl.c",
+    "file": "../../../dav1d/src/recon_tmpl.c",
+    "output": "src/libdav1d_bitdepth_8.a.p/recon_tmpl.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ src/libdav1d.a.p/cdf.c.o -MF src/libdav1d.a.p/cdf.c.o.d -o src/libdav1d.a.p/cdf.c.o -c ../../../dav1d/src/cdf.c",
+    "file": "../../../dav1d/src/cdf.c",
+    "output": "src/libdav1d.a.p/cdf.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ src/libdav1d.a.p/cpu.c.o -MF src/libdav1d.a.p/cpu.c.o.d -o src/libdav1d.a.p/cpu.c.o -c ../../../dav1d/src/cpu.c",
+    "file": "../../../dav1d/src/cpu.c",
+    "output": "src/libdav1d.a.p/cpu.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ src/libdav1d.a.p/data.c.o -MF src/libdav1d.a.p/data.c.o.d -o src/libdav1d.a.p/data.c.o -c ../../../dav1d/src/data.c",
+    "file": "../../../dav1d/src/data.c",
+    "output": "src/libdav1d.a.p/data.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ src/libdav1d.a.p/decode.c.o -MF src/libdav1d.a.p/decode.c.o.d -o src/libdav1d.a.p/decode.c.o -c ../../../dav1d/src/decode.c",
+    "file": "../../../dav1d/src/decode.c",
+    "output": "src/libdav1d.a.p/decode.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ src/libdav1d.a.p/dequant_tables.c.o -MF src/libdav1d.a.p/dequant_tables.c.o.d -o src/libdav1d.a.p/dequant_tables.c.o -c ../../../dav1d/src/dequant_tables.c",
+    "file": "../../../dav1d/src/dequant_tables.c",
+    "output": "src/libdav1d.a.p/dequant_tables.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ src/libdav1d.a.p/getbits.c.o -MF src/libdav1d.a.p/getbits.c.o.d -o src/libdav1d.a.p/getbits.c.o -c ../../../dav1d/src/getbits.c",
+    "file": "../../../dav1d/src/getbits.c",
+    "output": "src/libdav1d.a.p/getbits.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ src/libdav1d.a.p/intra_edge.c.o -MF src/libdav1d.a.p/intra_edge.c.o.d -o src/libdav1d.a.p/intra_edge.c.o -c ../../../dav1d/src/intra_edge.c",
+    "file": "../../../dav1d/src/intra_edge.c",
+    "output": "src/libdav1d.a.p/intra_edge.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ src/libdav1d.a.p/itx_1d.c.o -MF src/libdav1d.a.p/itx_1d.c.o.d -o src/libdav1d.a.p/itx_1d.c.o -c ../../../dav1d/src/itx_1d.c",
+    "file": "../../../dav1d/src/itx_1d.c",
+    "output": "src/libdav1d.a.p/itx_1d.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ src/libdav1d.a.p/lf_mask.c.o -MF src/libdav1d.a.p/lf_mask.c.o.d -o src/libdav1d.a.p/lf_mask.c.o -c ../../../dav1d/src/lf_mask.c",
+    "file": "../../../dav1d/src/lf_mask.c",
+    "output": "src/libdav1d.a.p/lf_mask.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ src/libdav1d.a.p/log.c.o -MF src/libdav1d.a.p/log.c.o.d -o src/libdav1d.a.p/log.c.o -c ../../../dav1d/src/log.c",
+    "file": "../../../dav1d/src/log.c",
+    "output": "src/libdav1d.a.p/log.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ src/libdav1d.a.p/msac.c.o -MF src/libdav1d.a.p/msac.c.o.d -o src/libdav1d.a.p/msac.c.o -c ../../../dav1d/src/msac.c",
+    "file": "../../../dav1d/src/msac.c",
+    "output": "src/libdav1d.a.p/msac.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ src/libdav1d.a.p/obu.c.o -MF src/libdav1d.a.p/obu.c.o.d -o src/libdav1d.a.p/obu.c.o -c ../../../dav1d/src/obu.c",
+    "file": "../../../dav1d/src/obu.c",
+    "output": "src/libdav1d.a.p/obu.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ src/libdav1d.a.p/picture.c.o -MF src/libdav1d.a.p/picture.c.o.d -o src/libdav1d.a.p/picture.c.o -c ../../../dav1d/src/picture.c",
+    "file": "../../../dav1d/src/picture.c",
+    "output": "src/libdav1d.a.p/picture.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ src/libdav1d.a.p/qm.c.o -MF src/libdav1d.a.p/qm.c.o.d -o src/libdav1d.a.p/qm.c.o -c ../../../dav1d/src/qm.c",
+    "file": "../../../dav1d/src/qm.c",
+    "output": "src/libdav1d.a.p/qm.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ src/libdav1d.a.p/ref.c.o -MF src/libdav1d.a.p/ref.c.o.d -o src/libdav1d.a.p/ref.c.o -c ../../../dav1d/src/ref.c",
+    "file": "../../../dav1d/src/ref.c",
+    "output": "src/libdav1d.a.p/ref.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ src/libdav1d.a.p/ref_mvs.c.o -MF src/libdav1d.a.p/ref_mvs.c.o.d -o src/libdav1d.a.p/ref_mvs.c.o -c ../../../dav1d/src/ref_mvs.c",
+    "file": "../../../dav1d/src/ref_mvs.c",
+    "output": "src/libdav1d.a.p/ref_mvs.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ src/libdav1d.a.p/scan.c.o -MF src/libdav1d.a.p/scan.c.o.d -o src/libdav1d.a.p/scan.c.o -c ../../../dav1d/src/scan.c",
+    "file": "../../../dav1d/src/scan.c",
+    "output": "src/libdav1d.a.p/scan.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ src/libdav1d.a.p/tables.c.o -MF src/libdav1d.a.p/tables.c.o.d -o src/libdav1d.a.p/tables.c.o -c ../../../dav1d/src/tables.c",
+    "file": "../../../dav1d/src/tables.c",
+    "output": "src/libdav1d.a.p/tables.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ src/libdav1d.a.p/warpmv.c.o -MF src/libdav1d.a.p/warpmv.c.o.d -o src/libdav1d.a.p/warpmv.c.o -c ../../../dav1d/src/warpmv.c",
+    "file": "../../../dav1d/src/warpmv.c",
+    "output": "src/libdav1d.a.p/warpmv.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Isrc/libdav1d.a.p -Isrc -I../../../dav1d/src -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -I../../../dav1d/include/compat/fake_atomics -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ src/libdav1d.a.p/wedge.c.o -MF src/libdav1d.a.p/wedge.c.o.d -o src/libdav1d.a.p/wedge.c.o -c ../../../dav1d/src/wedge.c",
+    "file": "../../../dav1d/src/wedge.c",
+    "output": "src/libdav1d.a.p/wedge.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Itools/libdav1d_input.a.p -Itools -I../../../dav1d/tools -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ tools/libdav1d_input.a.p/input_input.c.o -MF tools/libdav1d_input.a.p/input_input.c.o.d -o tools/libdav1d_input.a.p/input_input.c.o -c ../../../dav1d/tools/input/input.c",
+    "file": "../../../dav1d/tools/input/input.c",
+    "output": "tools/libdav1d_input.a.p/input_input.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Itools/libdav1d_input.a.p -Itools -I../../../dav1d/tools -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ tools/libdav1d_input.a.p/input_annexb.c.o -MF tools/libdav1d_input.a.p/input_annexb.c.o.d -o tools/libdav1d_input.a.p/input_annexb.c.o -c ../../../dav1d/tools/input/annexb.c",
+    "file": "../../../dav1d/tools/input/annexb.c",
+    "output": "tools/libdav1d_input.a.p/input_annexb.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Itools/libdav1d_input.a.p -Itools -I../../../dav1d/tools -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ tools/libdav1d_input.a.p/input_ivf.c.o -MF tools/libdav1d_input.a.p/input_ivf.c.o.d -o tools/libdav1d_input.a.p/input_ivf.c.o -c ../../../dav1d/tools/input/ivf.c",
+    "file": "../../../dav1d/tools/input/ivf.c",
+    "output": "tools/libdav1d_input.a.p/input_ivf.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Itools/libdav1d_input.a.p -Itools -I../../../dav1d/tools -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ tools/libdav1d_input.a.p/input_section5.c.o -MF tools/libdav1d_input.a.p/input_section5.c.o.d -o tools/libdav1d_input.a.p/input_section5.c.o -c ../../../dav1d/tools/input/section5.c",
+    "file": "../../../dav1d/tools/input/section5.c",
+    "output": "tools/libdav1d_input.a.p/input_section5.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Itools/libdav1d_output.a.p -Itools -I../../../dav1d/tools -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ tools/libdav1d_output.a.p/output_md5.c.o -MF tools/libdav1d_output.a.p/output_md5.c.o.d -o tools/libdav1d_output.a.p/output_md5.c.o -c ../../../dav1d/tools/output/md5.c",
+    "file": "../../../dav1d/tools/output/md5.c",
+    "output": "tools/libdav1d_output.a.p/output_md5.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Itools/libdav1d_output.a.p -Itools -I../../../dav1d/tools -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ tools/libdav1d_output.a.p/output_null.c.o -MF tools/libdav1d_output.a.p/output_null.c.o.d -o tools/libdav1d_output.a.p/output_null.c.o -c ../../../dav1d/tools/output/null.c",
+    "file": "../../../dav1d/tools/output/null.c",
+    "output": "tools/libdav1d_output.a.p/output_null.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Itools/libdav1d_output.a.p -Itools -I../../../dav1d/tools -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ tools/libdav1d_output.a.p/output_output.c.o -MF tools/libdav1d_output.a.p/output_output.c.o.d -o tools/libdav1d_output.a.p/output_output.c.o -c ../../../dav1d/tools/output/output.c",
+    "file": "../../../dav1d/tools/output/output.c",
+    "output": "tools/libdav1d_output.a.p/output_output.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Itools/libdav1d_output.a.p -Itools -I../../../dav1d/tools -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ tools/libdav1d_output.a.p/output_y4m2.c.o -MF tools/libdav1d_output.a.p/output_y4m2.c.o.d -o tools/libdav1d_output.a.p/output_y4m2.c.o -c ../../../dav1d/tools/output/y4m2.c",
+    "file": "../../../dav1d/tools/output/y4m2.c",
+    "output": "tools/libdav1d_output.a.p/output_y4m2.c.o"
+  },
+  {
+    "directory": "/home/dott/ogv.js/build/wasm/dav1d",
+    "command": "emcc -Itools/libdav1d_output.a.p -Itools -I../../../dav1d/tools -I. -I../../../dav1d -Iinclude/dav1d -I../../../dav1d/include/dav1d -Iinclude -I../../../dav1d/include -Xclang -fcolor-diagnostics -DNDEBUG -pipe -D_FILE_OFFSET_BITS=64 -Wall -Winvalid-pch -Wextra -std=c99 -O3 -D_GNU_SOURCE -fvisibility=hidden -Wundef -Werror=vla -Wno-missing-field-initializers -Wno-unused-parameter -Werror=missing-prototypes -Wshorten-64-to-32 -fomit-frame-pointer -ffast-math -fPIC -MD -MQ tools/libdav1d_output.a.p/output_yuv.c.o -MF tools/libdav1d_output.a.p/output_yuv.c.o.d -o tools/libdav1d_output.a.p/output_yuv.c.o -c ../../../dav1d/tools/output/yuv.c",
+    "file": "../../../dav1d/tools/output/yuv.c",
+    "output": "tools/libdav1d_output.a.p/output_yuv.c.o"
+  }
+]

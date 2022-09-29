@@ -1,0 +1,7 @@
+mimetypes.o: ../../../../../liboggz/src/tools/mimetypes.c \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h \
+  ../../../../../liboggz/src/tools/mimetypes.h
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h:
+
+../../../../../liboggz/src/tools/mimetypes.h:

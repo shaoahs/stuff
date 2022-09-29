@@ -1,0 +1,85 @@
+libskeleton_la-skeleton.lo: ../../../../libskeleton/src/skeleton.c \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/assert.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/features.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/string.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/strings.h \
+  ../../../../libskeleton/src/skeleton_private.h \
+  ../../../../libskeleton/include/skeleton/skeleton.h \
+  /home/dott/ogv.js/build/wasm/root/include/ogg/ogg.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/__stddef_max_align_t.h \
+  /home/dott/ogv.js/build/wasm/root/include/ogg/os_types.h \
+  /home/dott/ogv.js/build/wasm/root/include/ogg/config_types.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/inttypes.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/endian.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h \
+  ../../../../libskeleton/include/skeleton/skeleton_constants.h \
+  ../../../../libskeleton/include/skeleton/skeleton_query.h \
+  ../../../../libskeleton/src/skeleton_macros.h \
+  ../../../../libskeleton/src/skeleton_vector.h
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/assert.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/features.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/string.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:
+
+../../../../libskeleton/src/skeleton_private.h:
+
+../../../../libskeleton/include/skeleton/skeleton.h:
+
+/home/dott/ogv.js/build/wasm/root/include/ogg/ogg.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/__stddef_max_align_t.h:
+
+/home/dott/ogv.js/build/wasm/root/include/ogg/os_types.h:
+
+/home/dott/ogv.js/build/wasm/root/include/ogg/config_types.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/inttypes.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/endian.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h:
+
+../../../../libskeleton/include/skeleton/skeleton_constants.h:
+
+../../../../libskeleton/include/skeleton/skeleton_query.h:
+
+../../../../libskeleton/src/skeleton_macros.h:
+
+../../../../libskeleton/src/skeleton_vector.h:

@@ -4,10 +4,14 @@
   let filename = "developer/agent/test/data/gameList.txt";
   // let filename = "project/agent/test/data/gameList.txt";
   //----
-  var gameConfigList = JSON.parse(fs.readFileSync(filename, {encoding:'utf8'}));
+  var gameConfigList = null;
+  if(fs.existsSync(filename)) {
+    gameConfigList = JSON.parse(fs.readFileSync(filename, {encoding:'utf8'}));
+  }
+
 
   var gameConfigMap = {};
-  gameConfigList.forEach(function(gameConfig){
+  gameConfigList && gameConfigList.forEach(function(gameConfig){
     if(!gameConfig) {
       return;
     }
@@ -18,8 +22,11 @@
     let conf = gameConfigMap[id];
     if(!conf){
       console.log(filename);
-      gameConfigList = JSON.parse(fs.readFileSync(filename, {encoding:'utf8'}));
-      gameConfigList.forEach(function(gameConfig){
+      gameConfigList = null;
+      if(fs.existsSync(filename)) {
+        gameConfigList = JSON.parse(fs.readFileSync(filename, {encoding:'utf8'}));
+      }
+      gameConfigList && gameConfigList.forEach(function(gameConfig){
         if(!gameConfig) {
           return;
         }

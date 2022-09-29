@@ -1,0 +1,136 @@
+oggz_seek.lo: ../../../../../liboggz/src/liboggz/oggz_seek.c \
+  ../../config.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/assert.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/features.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/endian.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/sys/stat.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/stat.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stat.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/posix.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/fcntl.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/fcntl.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/errno.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/errno.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/string.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/strings.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/time.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/time.h \
+  /home/dott/ogv.js/build/wasm/root/include/ogg/ogg.h \
+  /home/dott/ogv.js/build/wasm/root/include/ogg/os_types.h \
+  /home/dott/ogv.js/build/wasm/root/include/ogg/config_types.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/inttypes.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h \
+  ../../../../../liboggz/src/liboggz/oggz_compat.h \
+  ../../../../../liboggz/src/liboggz/oggz_private.h \
+  ../../../../../liboggz/include/oggz/oggz_constants.h \
+  ../../../../../liboggz/include/oggz/oggz_off_t.h \
+  ../../include/oggz/oggz_off_t_generated.h \
+  ../../../../../liboggz/include/oggz/oggz_packet.h \
+  ../../../../../liboggz/src/liboggz/oggz_macros.h \
+  ../../../../../liboggz/src/liboggz/oggz_vector.h \
+  ../../../../../liboggz/src/liboggz/oggz_dlist.h \
+  ../../../../../liboggz/src/liboggz/oggz_stream_private.h
+
+../../config.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/assert.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/features.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/endian.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/sys/stat.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/stat.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stat.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/unistd.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/posix.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/fcntl.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/fcntl.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/errno.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/errno.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/string.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/time.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/time.h:
+
+/home/dott/ogv.js/build/wasm/root/include/ogg/ogg.h:
+
+/home/dott/ogv.js/build/wasm/root/include/ogg/os_types.h:
+
+/home/dott/ogv.js/build/wasm/root/include/ogg/config_types.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/inttypes.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h:
+
+../../../../../liboggz/src/liboggz/oggz_compat.h:
+
+../../../../../liboggz/src/liboggz/oggz_private.h:
+
+../../../../../liboggz/include/oggz/oggz_constants.h:
+
+../../../../../liboggz/include/oggz/oggz_off_t.h:
+
+../../include/oggz/oggz_off_t_generated.h:
+
+../../../../../liboggz/include/oggz/oggz_packet.h:
+
+../../../../../liboggz/src/liboggz/oggz_macros.h:
+
+../../../../../liboggz/src/liboggz/oggz_vector.h:
+
+../../../../../liboggz/src/liboggz/oggz_dlist.h:
+
+../../../../../liboggz/src/liboggz/oggz_stream_private.h:

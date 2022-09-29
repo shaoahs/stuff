@@ -32,12 +32,12 @@ let corsOptions = {
 
 const path = require('path');
 const fastify = require('fastify')({
-  // http2: true,
-  // https:{
-  //   allowHTTP1: true,
-  //   key: fs.readFileSync('server/keys/test/server.key'),
-  //   cert: fs.readFileSync('server/keys/test/server.crt')
-  // }
+  http2: true,
+  https:{
+    allowHTTP1: true,
+    key: fs.readFileSync('server/keys/test/server.key'),
+    cert: fs.readFileSync('server/keys/test/server.crt')
+  }
 });
 
 // const authenticate = {realm: 'Westeros'};
@@ -65,6 +65,7 @@ var send = require('send');
 send.mime.define({
   ' text/javascript ': ['js', 'mjs'],
   'application/wasm': ['wasm'],
+  'image/avif': ['avif'],
   'application/manifest+json': ['webmanifest'],
   'application/x-web-app-manifest+json': ['webapp'],
   'text/cache-manifest': ['appcache']

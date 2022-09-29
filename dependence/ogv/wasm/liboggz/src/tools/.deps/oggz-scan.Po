@@ -1,0 +1,120 @@
+oggz-scan.o: ../../../../../liboggz/src/tools/oggz-scan.c ../../config.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/features.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/string.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/strings.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/getopt.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/errno.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/errno.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/inttypes.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h \
+  ../../../../../liboggz/include/oggz/oggz.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/endian.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h \
+  /home/dott/ogv.js/build/wasm/root/include/ogg/ogg.h \
+  /home/dott/ogv.js/build/wasm/root/include/ogg/os_types.h \
+  /home/dott/ogv.js/build/wasm/root/include/ogg/config_types.h \
+  ../../../../../liboggz/include/oggz/oggz_constants.h \
+  ../../../../../liboggz/include/oggz/oggz_table.h \
+  ../../../../../liboggz/include/oggz/oggz_off_t.h \
+  ../../include/oggz/oggz_off_t_generated.h \
+  ../../../../../liboggz/include/oggz/oggz_read.h \
+  ../../../../../liboggz/include/oggz/oggz_packet.h \
+  ../../../../../liboggz/include/oggz/oggz_stream.h \
+  ../../../../../liboggz/include/oggz/oggz_seek.h \
+  ../../../../../liboggz/include/oggz/oggz_write.h \
+  ../../../../../liboggz/include/oggz/oggz_io.h \
+  ../../../../../liboggz/include/oggz/oggz_comments.h \
+  ../../../../../liboggz/include/oggz/oggz_deprecated.h \
+  ../../../../../liboggz/src/tools/oggz_tools.h
+
+../../config.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/features.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/string.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/getopt.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/errno.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/errno.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/inttypes.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h:
+
+../../../../../liboggz/include/oggz/oggz.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/endian.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h:
+
+/home/dott/ogv.js/build/wasm/root/include/ogg/ogg.h:
+
+/home/dott/ogv.js/build/wasm/root/include/ogg/os_types.h:
+
+/home/dott/ogv.js/build/wasm/root/include/ogg/config_types.h:
+
+../../../../../liboggz/include/oggz/oggz_constants.h:
+
+../../../../../liboggz/include/oggz/oggz_table.h:
+
+../../../../../liboggz/include/oggz/oggz_off_t.h:
+
+../../include/oggz/oggz_off_t_generated.h:
+
+../../../../../liboggz/include/oggz/oggz_read.h:
+
+../../../../../liboggz/include/oggz/oggz_packet.h:
+
+../../../../../liboggz/include/oggz/oggz_stream.h:
+
+../../../../../liboggz/include/oggz/oggz_seek.h:
+
+../../../../../liboggz/include/oggz/oggz_write.h:
+
+../../../../../liboggz/include/oggz/oggz_io.h:
+
+../../../../../liboggz/include/oggz/oggz_comments.h:
+
+../../../../../liboggz/include/oggz/oggz_deprecated.h:
+
+../../../../../liboggz/src/tools/oggz_tools.h:

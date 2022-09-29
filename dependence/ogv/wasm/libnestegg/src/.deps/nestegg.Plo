@@ -1,0 +1,43 @@
+src/nestegg.lo: ../../../libnestegg/src/nestegg.c \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/assert.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/features.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/string.h \
+  ../../../libnestegg/include/nestegg/nestegg.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/limits.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/limits.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/assert.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/features.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/string.h:
+
+../../../libnestegg/include/nestegg/nestegg.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/limits.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/limits.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h:

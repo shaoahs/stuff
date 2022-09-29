@@ -1,0 +1,83 @@
+lookup.lo: ../../../../libvorbis/lib/lookup.c \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/math.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/math.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/features.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h \
+  ../../../../libvorbis/lib/lookup.h \
+  ../../../../libvorbis/lib/lookup_data.h ../../../../libvorbis/lib/os.h \
+  ../config.h /home/dott/ogv.js/build/wasm/root/include/ogg/os_types.h \
+  /home/dott/ogv.js/build/wasm/root/include/ogg/config_types.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/inttypes.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/endian.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h \
+  ../../../../libvorbis/lib/misc.h \
+  ../../../../libvorbis/include/vorbis/codec.h \
+  /home/dott/ogv.js/build/wasm/root/include/ogg/ogg.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/__stddef_max_align_t.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/memory.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/string.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/strings.h
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/math.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/math.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/features.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:
+
+../../../../libvorbis/lib/lookup.h:
+
+../../../../libvorbis/lib/lookup_data.h:
+
+../../../../libvorbis/lib/os.h:
+
+../config.h:
+
+/home/dott/ogv.js/build/wasm/root/include/ogg/os_types.h:
+
+/home/dott/ogv.js/build/wasm/root/include/ogg/config_types.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/inttypes.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/endian.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h:
+
+../../../../libvorbis/lib/misc.h:
+
+../../../../libvorbis/include/vorbis/codec.h:
+
+/home/dott/ogv.js/build/wasm/root/include/ogg/ogg.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/__stddef_max_align_t.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/memory.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/string.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:

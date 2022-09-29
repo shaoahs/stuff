@@ -2,12 +2,28 @@
 
 ## [Unreleased]
 ### Added
+- 測試用服務 新增支援 https
+- 測試用服務 新增支援 avif
+- 測試用服務 新增錯誤處理
 
 ### Changed
+- 修改專案路徑組合方式
 
 ### Fixed
 
 ### Removed
+- 移除 login.txt 的功能
+- 移除 appHash 功能
+
+## [6.34.0] - 2022-08-29
+### Added
+- 新增支援 typescript 4.8
+- 新增 @rollup/plugin-legacy
+
+### Changed
+- 更新 agent 版本
+- 更新 第三方程式庫版本
+
 
 ## [6.31.0] - 2022-05-26
 ### Changed

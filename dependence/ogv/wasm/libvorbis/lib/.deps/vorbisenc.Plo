@@ -1,0 +1,180 @@
+vorbisenc.lo: ../../../../libvorbis/lib/vorbisenc.c \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/features.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/string.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/strings.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/math.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/math.h \
+  ../../../../libvorbis/include/vorbis/codec.h \
+  /home/dott/ogv.js/build/wasm/root/include/ogg/ogg.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/__stddef_max_align_t.h \
+  /home/dott/ogv.js/build/wasm/root/include/ogg/os_types.h \
+  /home/dott/ogv.js/build/wasm/root/include/ogg/config_types.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/inttypes.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/endian.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h \
+  ../../../../libvorbis/include/vorbis/vorbisenc.h \
+  ../../../../libvorbis/lib/codec_internal.h \
+  ../../../../libvorbis/lib/envelope.h ../../../../libvorbis/lib/mdct.h \
+  ../../../../libvorbis/lib/codebook.h ../../../../libvorbis/lib/psy.h \
+  ../../../../libvorbis/lib/smallft.h \
+  ../../../../libvorbis/lib/backends.h \
+  ../../../../libvorbis/lib/bitrate.h ../../../../libvorbis/lib/os.h \
+  ../config.h ../../../../libvorbis/lib/misc.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/memory.h \
+  ../../../../libvorbis/lib/highlevel.h \
+  ../../../../libvorbis/lib/modes/setup_44.h \
+  ../../../../libvorbis/lib/modes/floor_all.h \
+  ../../../../libvorbis/lib/books/floor/floor_books.h \
+  ../../../../libvorbis/lib/modes/residue_44.h \
+  ../../../../libvorbis/lib/books/coupled/res_books_stereo.h \
+  ../../../../libvorbis/lib/modes/psych_44.h \
+  ../../../../libvorbis/lib/modes/setup_44u.h \
+  ../../../../libvorbis/lib/modes/residue_44u.h \
+  ../../../../libvorbis/lib/books/uncoupled/res_books_uncoupled.h \
+  ../../../../libvorbis/lib/modes/setup_44p51.h \
+  ../../../../libvorbis/lib/modes/residue_44p51.h \
+  ../../../../libvorbis/lib/books/coupled/res_books_51.h \
+  ../../../../libvorbis/lib/modes/setup_32.h \
+  ../../../../libvorbis/lib/modes/setup_8.h \
+  ../../../../libvorbis/lib/modes/psych_8.h \
+  ../../../../libvorbis/lib/modes/residue_8.h \
+  ../../../../libvorbis/lib/modes/setup_11.h \
+  ../../../../libvorbis/lib/modes/psych_11.h \
+  ../../../../libvorbis/lib/modes/setup_16.h \
+  ../../../../libvorbis/lib/modes/psych_16.h \
+  ../../../../libvorbis/lib/modes/residue_16.h \
+  ../../../../libvorbis/lib/modes/setup_22.h \
+  ../../../../libvorbis/lib/modes/setup_X.h
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/features.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/string.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/math.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/math.h:
+
+../../../../libvorbis/include/vorbis/codec.h:
+
+/home/dott/ogv.js/build/wasm/root/include/ogg/ogg.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/__stddef_max_align_t.h:
+
+/home/dott/ogv.js/build/wasm/root/include/ogg/os_types.h:
+
+/home/dott/ogv.js/build/wasm/root/include/ogg/config_types.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/inttypes.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/endian.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h:
+
+../../../../libvorbis/include/vorbis/vorbisenc.h:
+
+../../../../libvorbis/lib/codec_internal.h:
+
+../../../../libvorbis/lib/envelope.h:
+
+../../../../libvorbis/lib/mdct.h:
+
+../../../../libvorbis/lib/codebook.h:
+
+../../../../libvorbis/lib/psy.h:
+
+../../../../libvorbis/lib/smallft.h:
+
+../../../../libvorbis/lib/backends.h:
+
+../../../../libvorbis/lib/bitrate.h:
+
+../../../../libvorbis/lib/os.h:
+
+../config.h:
+
+../../../../libvorbis/lib/misc.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/memory.h:
+
+../../../../libvorbis/lib/highlevel.h:
+
+../../../../libvorbis/lib/modes/setup_44.h:
+
+../../../../libvorbis/lib/modes/floor_all.h:
+
+../../../../libvorbis/lib/books/floor/floor_books.h:
+
+../../../../libvorbis/lib/modes/residue_44.h:
+
+../../../../libvorbis/lib/books/coupled/res_books_stereo.h:
+
+../../../../libvorbis/lib/modes/psych_44.h:
+
+../../../../libvorbis/lib/modes/setup_44u.h:
+
+../../../../libvorbis/lib/modes/residue_44u.h:
+
+../../../../libvorbis/lib/books/uncoupled/res_books_uncoupled.h:
+
+../../../../libvorbis/lib/modes/setup_44p51.h:
+
+../../../../libvorbis/lib/modes/residue_44p51.h:
+
+../../../../libvorbis/lib/books/coupled/res_books_51.h:
+
+../../../../libvorbis/lib/modes/setup_32.h:
+
+../../../../libvorbis/lib/modes/setup_8.h:
+
+../../../../libvorbis/lib/modes/psych_8.h:
+
+../../../../libvorbis/lib/modes/residue_8.h:
+
+../../../../libvorbis/lib/modes/setup_11.h:
+
+../../../../libvorbis/lib/modes/psych_11.h:
+
+../../../../libvorbis/lib/modes/setup_16.h:
+
+../../../../libvorbis/lib/modes/psych_16.h:
+
+../../../../libvorbis/lib/modes/residue_16.h:
+
+../../../../libvorbis/lib/modes/setup_22.h:
+
+../../../../libvorbis/lib/modes/setup_X.h:

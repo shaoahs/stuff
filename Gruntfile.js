@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 6.33.0]');
+  console.log('[stuff version 7.0.0]');
   console.log(__dirname);
   grunt.file.setBase(__dirname);
 
@@ -512,7 +512,7 @@ module.exports = function(grunt) {
           outputPath : '/<%= pkg.workspace %>/res/main'
         },
         files: [
-          {src:['<%= pkg.workspace %>/raw/main/**/*.{png,jpg}'],  dest:'<%= pkg.workspace %>/raw/main/textureList.yml', type:'image'},
+          {src:['<%= pkg.workspace %>/raw/main/**/*.{avif,png,jpg}'],  dest:'<%= pkg.workspace %>/raw/main/textureList.yml', type:'image'},
           {src:['<%= pkg.workspace %>/raw/main/asset/**/*.json'],  dest:'<%= pkg.workspace %>/raw/main/textureList.yml', type:'asset'},
           {src:['<%= pkg.workspace %>/raw/main/spine/**/*.json'],  dest:'<%= pkg.workspace %>/raw/main/spineList.yml', type:'spine'},
           {src:['<%= pkg.workspace %>/raw/main/bones/**/*.{json,atlas}'],  dest:'<%= pkg.workspace %>/raw/main/bonesList.yml', type:'bones', basePath:'raw/main/bones'},
@@ -527,7 +527,7 @@ module.exports = function(grunt) {
           outputPath : '/<%= pkg.workspace %>/res/ui'
         },
         files: [
-          {src:['<%= pkg.workspace %>/raw/ui/**/*.{png,jpg}'],  dest:'<%= pkg.workspace %>/raw/ui/textureList.yml', type:'image'},
+          {src:['<%= pkg.workspace %>/raw/ui/**/*.{avif,png,jpg}'],  dest:'<%= pkg.workspace %>/raw/ui/textureList.yml', type:'image'},
           {src:['<%= pkg.workspace %>/raw/ui/asset/**/*.json'],  dest:'<%= pkg.workspace %>/raw/ui/textureList.yml', type:'asset'},
           {src:['<%= pkg.workspace %>/raw/ui/sound/**/*.{wav,ogg,mp3}'],  dest:'<%= pkg.workspace %>/raw/ui/soundList.yml', type:'sound'}
         ]
@@ -540,7 +540,7 @@ module.exports = function(grunt) {
           outputPath : '/<%= pkg.workspace %>/res/sub'
         },
         files: [
-          {src:['<%= pkg.workspace %>/raw/sub/**/*.{png,jpg}'],  dest:'<%= pkg.workspace %>/raw/sub/textureList.yml', type:'image'},
+          {src:['<%= pkg.workspace %>/raw/sub/**/*.{avif,png,jpg}'],  dest:'<%= pkg.workspace %>/raw/sub/textureList.yml', type:'image'},
           {src:['<%= pkg.workspace %>/raw/sub/bones/**/*.{json,atlas}'],  dest:'<%= pkg.workspace %>/raw/sub/bonesList.yml', type:'bones', basePath:'raw/sub/bones'},
           {src:['<%= pkg.workspace %>/raw/sub/**/*.{wav,ogg,mp3}'],  dest:'<%= pkg.workspace %>/raw/sub/soundList.yml', type:'sound'}
         ]
@@ -637,16 +637,17 @@ module.exports = function(grunt) {
                   app = JSON.parse(fs.readFileSync(filename, 'utf8'));
                 }
                 if(app) {
-                  app = `${workspace.root}/debug/${app[pkg.output+'.js']}`;
+                  app = `debug/${app[pkg.output+'.js']}`;
                 } else {
-                  app = `${workspace.root}/debug/${pkg.output}.js`;
+                  app = `debug/${pkg.output}.js`;
                 }
-                obj.app = `/${app}`;
+                obj.app = app;
 
                 let baseURL = '';
                 if(!obj.baseURL) {
                   baseURL = `/${workspace.root}/`;
                 }
+
                 obj.devMode = 'debug';
                 obj.version = pkg.version;
                 if(obj.images) {
@@ -821,9 +822,9 @@ module.exports = function(grunt) {
                 app = JSON.parse(fs.readFileSync(filename, 'utf8'));
               }
               if(app) {
-                app = `${pkg.current}/release/${app[pkg.output+'.js']}`;
+                app = `release/${app[pkg.output+'.js']}`;
               } else {
-                app = `${pkg.current}/release/${pkg.output}.js`;
+                app = `release/${pkg.output}.js`;
               }
 
               obj.app = app;
@@ -997,34 +998,37 @@ module.exports = function(grunt) {
                 let custom = workspace.vendor.custom;
                 let names = Object.getOwnPropertyNames(custom);
                 let app = {};
-                let appHash = {};
+                // let appHash = {};
                                 
                 names.forEach(lang => {
-                  let pathname = pkg.current + '/app/' + custom[lang];
+                  let pathname = 'app/' + custom[lang];
                   app[lang] = pathname;
 
+                  /*
                   let data = fs.readFileSync(`project/${pathname}`, 'utf8');
                   const hash = crypto.createHash('sha384');
                   hash.update(data);
                   appHash[lang] = `sha384-${hash.digest().toString('base64')}`;
+                  */
                 });
                 obj.app = app;
-                obj.appHash = appHash;
+                // obj.appHash = appHash;
               } else {
                 let app = getAppName();
                 if(app) {
-                  app = `${pkg.current}/app/${app}`;
+                  app = `app/${app}`;
                 } else {
-                  app = `${pkg.current}/app/${pkg.output}.js`;
+                  app = `app/${pkg.output}.js`;
                 }
-                obj.app = `${app}`;
-                console.log('obj.app ' + obj.app ); 
-                
+                obj.app = app;
+ 
+                /*
                 let pathname = `project/${app}`;
                 let data = fs.readFileSync(pathname, 'utf8');
                 const hash = crypto.createHash('sha384');
                 hash.update(data);
                 obj.appHash = `sha384-${hash.digest().toString('base64')}`;
+                */
               }
 
               obj.version = pkg.version;
@@ -1228,40 +1232,42 @@ module.exports = function(grunt) {
                 let custom = workspace.vendor.custom;
                 let names = Object.getOwnPropertyNames(custom);
                 let app = {};
-                let appHash = {};
+                // let appHash = {};
 
                 names.forEach(lang => {
-                  let pathname = `${pkg.current}/app/${custom[lang]}`;
-                  if(fs.existsSync(`public/${pkg.currentMode}/${pathname}`)) {
-                    let data = fs.readFileSync(`public/${pkg.currentMode}/${pathname}`, 'utf8');
-                    const hash = crypto.createHash('sha384');
-                    hash.update(data);
-                    appHash[lang] = `sha384-${hash.digest().toString('base64')}`;
-                    app[lang] = pathname;
-                  } else {
-                    console.error(`找不到檔案: ${pathname}`);
-                  }
+                  let pathname = `app/${custom[lang]}`;
+                  app[lang] = pathname;
+
+                  // if(fs.existsSync(`public/${pkg.currentMode}/${pathname}`)) {
+                  //   let data = fs.readFileSync(`public/${pkg.currentMode}/${pathname}`, 'utf8');
+                  //   const hash = crypto.createHash('sha384');
+                  //   hash.update(data);
+                  //   appHash[lang] = `sha384-${hash.digest().toString('base64')}`;
+                  //   app[lang] = pathname;
+                  // } else {
+                  //   console.error(`找不到檔案: ${pathname}`);
+                  // }
                 });
                 obj.app = app;
-                obj.appHash = appHash;
+                // obj.appHash = appHash;
               } else {
                 let app = getAppName();
                 if(app) {
-                  app = `${pkg.current}/app/${app}`;
+                  app = `app/${app}`;
                 } else {
-                  app = `${pkg.current}/app/${pkg.output}.js`;
+                  app = `app/${pkg.output}.js`;
                 }
                 obj.app = app;
                 
-                let pathname = `public/${pkg.currentMode}/${obj.app}`;
-                if(fs.existsSync(pathname)) {
-                  let data = fs.readFileSync(pathname, 'utf8');
-                  const hash = crypto.createHash('sha384');
-                  hash.update(data);
-                  obj.appHash = `sha384-${hash.digest().toString('base64')}`;
-                } else {
-                  console.error(`找不到檔案: ${pathname}`);
-                }
+                // let pathname = `public/${pkg.currentMode}/${obj.app}`;
+                // if(fs.existsSync(pathname)) {
+                //   let data = fs.readFileSync(pathname, 'utf8');
+                //   const hash = crypto.createHash('sha384');
+                //   hash.update(data);
+                //   obj.appHash = `sha384-${hash.digest().toString('base64')}`;
+                // } else {
+                //   console.error(`找不到檔案: ${pathname}`);
+                // }
               }
 
               obj.version = pkg.version;
@@ -1433,7 +1439,7 @@ module.exports = function(grunt) {
                 let names = Object.getOwnPropertyNames(custom);
                 app = {};
                 names.forEach(lang => {
-                  app[lang] = pkg.current + '/app/' + custom[lang];
+                  app[lang] = 'app/' + custom[lang];
                 });
               } else {
                 app = fs.readFileSync(workspace.root + '/tmp/app.json', 'utf8');
@@ -1441,9 +1447,9 @@ module.exports = function(grunt) {
                 app = app[this.noProcess.app];
   
                 if(!app){
-                  app = workspace.current + '/app/' + this.noProcess.app;
+                  app = 'app/' + this.noProcess.app;
                 } else {
-                  app = workspace.current + '/app/' + app;
+                  app = 'app/' + app;
                 }
               }
             } else if(workspace.runMode === 'build') {
@@ -1458,9 +1464,9 @@ module.exports = function(grunt) {
                 }
               }
               if(app){
-                app = workspace.current + '/release/' + app[pkg.output + '.js'];
+                app = 'release/' + app[pkg.output + '.js'];
               }else {
-                app = workspace.current + '/release/' + pkg.output + '.js';
+                app = 'release/' + pkg.output + '.js';
               }
             } else {
               app = workspace.current;
@@ -1499,7 +1505,7 @@ module.exports = function(grunt) {
                 obj.dependence = dependence;
               }
               if(obj.devMode === 'debug'){
-                obj.app = `/project/${workspace.current}/debug/${workspace.output}.js`;
+                obj.app = `debug/${workspace.output}.js`;
               }
             }
 
@@ -1546,7 +1552,7 @@ module.exports = function(grunt) {
           removeKey: resConfig.removeKey || '',
           mapping: '<%= pkg.workspace %>/tmp/resLoading.json' //mapping file so your server can serve the right files
         },
-        src: '<%= pkg.workspace %>/res/loading/**/*.{png,wav,ogg,mp3}',  //all your js that needs a hash appended to it
+        src: '<%= pkg.workspace %>/res/loading/**/*.{avif,png,wav,ogg,mp3}',  //all your js that needs a hash appended to it
         dest: '<%= pkg.workspace %>/data' //where the new files will be created
       },
       res: {
@@ -2136,7 +2142,7 @@ module.exports = function(grunt) {
         options: {
           execOptions: {
             env: {
-              NODE_OPTIONS: '--max_old_space_size=4096'
+              NODE_OPTIONS: '--max_old_space_size=8192'
             }
           }
         },
@@ -2194,7 +2200,7 @@ module.exports = function(grunt) {
         options: {
           execOptions: {
             env: {
-              // NODE_OPTIONS: '--max_old_space_size=4096'
+              // NODE_OPTIONS: '--max_old_space_size=8192'
             }
           }
         },
@@ -2362,7 +2368,7 @@ module.exports = function(grunt) {
         options: {
           execOptions: {
             env: {
-              NODE_OPTIONS: '--max_old_space_size=4096'
+              NODE_OPTIONS: '--max_old_space_size=8192'
             }
           }
         },
@@ -2386,7 +2392,7 @@ module.exports = function(grunt) {
         options: {
           execOptions: {
             env: {
-              NODE_OPTIONS: '--max_old_space_size=4096'
+              NODE_OPTIONS: '--max_old_space_size=8192'
             }
           }
         },
@@ -2405,7 +2411,7 @@ module.exports = function(grunt) {
         options: {
           execOptions: {
             env: {
-              NODE_OPTIONS: '--max_old_space_size=4096'
+              NODE_OPTIONS: '--max_old_space_size=8192'
             }
           }
         },
@@ -2432,7 +2438,7 @@ module.exports = function(grunt) {
         options: {
           execOptions: {
             env: {
-              NODE_OPTIONS: '--max_old_space_size=4096'
+              NODE_OPTIONS: '--max_old_space_size=8192'
             }
           }
         },
