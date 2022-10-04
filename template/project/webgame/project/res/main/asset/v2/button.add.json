@@ -1,0 +1,30 @@
+{"frames": {
+"button.add.enter.png":
+{
+    "frame": {"x":46,"y":0,"w":22,"h":42},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":22,"h":42},
+    "sourceSize": {"w":22,"h":42}
+},
+"button.add.leave.png":
+{
+    "frame": {"x":23,"y":0,"w":22,"h":42},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":22,"h":42},
+    "sourceSize": {"w":22,"h":42}
+},
+"button.add.press.png":
+{
+    "frame": {"x":0,"y":0,"w":22,"h":42},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":22,"h":42},
+    "sourceSize": {"w":22,"h":42}
+}},
+"meta": {
+  "app": "GIMP",
+  "image": "button.add.png"
+}
+}

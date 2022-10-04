@@ -1,0 +1,33 @@
+images:
+  # ui:
+  #   pageInfo:
+  #     - res/main/ui/lang/zh-tw/feature_tw.png
+  #     - res/main/ui/lang/zh-tw/paytable_tw.png
+  #     - res/main/ui/lang/zh-tw/paytable01_tw.png
+  #     - res/main/ui/lang/zh-tw/payline_tw.png
+  #     - res/main/ui/lang/zh-tw/jp_tw.png
+  #   pageInfoText:
+  #     - res/main/ui/lang/zh-tw/havejp_tw.png
+  #     - res/main/ui/lang/zh-tw/nojp_tw.png
+  #   btnViewpayPoint:
+  #     - res/main/ui/image/light_01.png
+  #     - res/main/ui/image/light.png
+
+frames:
+  ui:
+    btnViewpayPoint:
+      - ui.image.light_01.png
+      - ui.image.light.png
+    pageInfo:
+      - ui.lang.zh-tw.feature_tw.png
+      - ui.lang.zh-tw.paytable_tw.png
+      - ui.lang.zh-tw.paytable01_tw.png
+      - ui.lang.zh-tw.payline_tw.png
+      - ui.lang.zh-tw.jp_tw.png
+    pageInfoText:
+      - ui.lang.zh-tw.havejp_tw.png
+      - ui.lang.zh-tw.nojp_tw.png
+assets: #註解
+- res/main/ui/asset/v2/numInfo.json
+- res/main/ui/asset/v2/ui.image.json
+- res/main/ui/asset/v2/ui.lang.zh-tw.json

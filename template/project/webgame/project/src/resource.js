@@ -1,11 +1,17 @@
-import * as main from 'makeres/main';
+import * as v1main from 'makeres/v1main';
+import * as v2main from 'makeres/v2main';
 import * as sub from 'makeres/sub';
-import * as load from 'makeres/load';
-import * as info from 'makeres/info';
+import * as v1load from 'makeres/v1load';
+import * as v2load from 'makeres/v2load';
+import * as v1info from 'makeres/v1info';
+import * as v2info from 'makeres/v2info';
 
 export {
-  main,
+  v1main,
+  v2main,
   sub,
-  load,
-  info
+  v1load,
+  v2load,
+  v1info,
+  v2info
 };

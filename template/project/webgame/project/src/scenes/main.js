@@ -22,7 +22,13 @@ export async function create (game, loadingEvent) {
 
     // 讀取資源檔
     let vendor = await import('src/vendor');
-    let res = await vendor.get('main');
+    
+    let res;
+    if (app.setting.useAvif) {
+      res = await vendor.get('v2main');
+    } else {
+      res = await vendor.get('v1main');
+    }
     console.log(res);
 
     let config = {

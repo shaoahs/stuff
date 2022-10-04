@@ -2,14 +2,24 @@
 
 ## [Unreleased]
 ### Added
+
+### Changed
+
+### Fixed
+
+### Removed
+
+## [7.0.0] - 2022-10-04
+### Added
 - 測試用服務 新增支援 https
 - 測試用服務 新增支援 avif
 - 測試用服務 新增錯誤處理
+- [template] 新增 多版本資源檔範例
 
 ### Changed
 - 修改專案路徑組合方式
-
-### Fixed
+- 更新 agent 版本
+- 更新 第三方程式庫版本
 
 ### Removed
 - 移除 login.txt 的功能

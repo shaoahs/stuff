@@ -25,6 +25,6 @@ frames:
       500000: sub.base.chip_500k.png
       1000000: sub.base.chip_1m.png
 assets: #註解
-- res/main/asset/numBW.json
-- res/main/asset/NumMPurple.json
-- res/main/asset/sub.base.json
+- res/main/asset/v1/numBW.json
+- res/main/asset/v1/NumMPurple.json
+- res/main/asset/v1/sub.base.json
