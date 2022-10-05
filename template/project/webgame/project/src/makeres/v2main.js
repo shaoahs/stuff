@@ -8,7 +8,7 @@ export async function get (id) {
 
   res.texture  = await import(`../../res/main/v2.${id}.textureList.yml`);
 
-  res.spine = await import('res/main/base.spineList');
+  res.spine = await import('res/main/v2.spineList');
 
   res.object = await import('res/main/objectList');
 

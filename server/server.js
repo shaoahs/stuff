@@ -59,7 +59,9 @@ const fastify = require('fastify')({
 //   // { /*inflateIfDeflated: true*/}
 // );
 fastify.register(require('@fastify/websocket'));
-fastify.register(require('fastify-socket.io'))
+fastify.register(require('fastify-socket.io'), {
+  allowEIO3: true
+})
   .ready(()=>{
     logger.info('[init] socket.io');
     let io = fastify.io;
