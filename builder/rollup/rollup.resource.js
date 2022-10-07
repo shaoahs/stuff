@@ -11,11 +11,10 @@ import resolve from '@rollup/plugin-node-resolve';
 
 // import typescript from '@rollup/plugin-typescript';
 // import sucrase from '@rollup/plugin-sucrase';
-// import virtual from '@rollup/plugin-virtual';
+import virtual from '@rollup/plugin-virtual';
 import {terser} from 'rollup-plugin-terser';
 import globImport from 'rollup-plugin-glob-import';
 import dynamicImportVars from '@rollup/plugin-dynamic-import-vars';
-
 
 let filename;
 if(process.env.WORKSPACE) {
@@ -51,7 +50,12 @@ if(process.env.WORKSPACE){
 } else {
   filename = path.resolve(__dirname + '/res.config.yml');
 }
-let langID = process.env.RES_LANG || 'en-us';
+let langID = process.env.LANG_ID || 'en-us';
+let resName = null;
+if(process.env.RES_NAME && process.env.RES_NAME !== 'undefined') {
+  resName = process.env.RES_NAME;
+}
+// console.log('resName:', resName);
 
 let res = jsyaml.load(fs.readFileSync(filename, 'utf8'));
 //console.log(res);
@@ -166,7 +170,33 @@ if(process.env.GENERATOR_VENDOR) {
         }
       ];
       console.log(`input : ${input}`);
-      // console.log(`output : ${output[0].dir}`);
+      console.log(`output : ${output[0].dir}`);
+      let test = '';
+      if(resName) {
+        test = `import * as ${resName} from 'makeres/${resName}'
+        export {
+          ${resName}
+        }
+        `;
+
+      } else {
+        if(res.vendor.sceneList) {
+          let names = [];
+          if(Array.isArray(res.vendor.sceneList)) {
+            names = res.vendor.sceneList;
+          }
+          names.forEach(scene => {
+            test += `import * as ${scene} from 'makeres/${scene}'` + '\n';
+          });
+  
+          test += 'export {';
+          names.forEach(scene => {
+            test += `  ${scene}` + ',\n';
+          });
+          test += '}';
+        }
+      }
+
     
       let job = {
         input: input,
@@ -176,6 +206,9 @@ if(process.env.GENERATOR_VENDOR) {
           yaml(),
           json(),
           alias(paths),
+          virtual({
+            res: test
+          }),
           dynamicImportVars({
             include: [
               `${workspace.root}/src/makeres/**/*`
@@ -252,9 +285,9 @@ if(process.env.GENERATOR_VENDOR) {
           alias(paths)
         ]
       };
-      jobs.push(job);
+      jobs.push(job); 
     });
-    // let lang = langID.replace('-', '');
+    
     let obj = {
       input: `${workspace.root}/tmp/nameMap.js`,
       output: {

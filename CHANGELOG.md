@@ -9,6 +9,15 @@
 
 ### Removed
 
+## [7.0.0] - 2022-10-07
+### Added
+- 資源命令 新增 參數 resName, 指定處理單一資源
+- template 新增 資源檔參數 vendor.langList 與 vendor.sceneList
+
+### Changed
+- 語言代碼 vendor.custom 改為 vendor.langList
+- 命令 custom 改為 lang
+
 ## [7.0.0] - 2022-10-05
 ### Added
 - 測試用服務 新增支援 舊版 socket.io 2.4.0

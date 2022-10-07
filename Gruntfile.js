@@ -42,7 +42,7 @@ module.exports = function(grunt) {
       env:''
     },
     vendor: {
-      custom:{}
+      langList:{}
     },
 
     public:{
@@ -217,6 +217,12 @@ module.exports = function(grunt) {
       resConfig = yaml.load(fs.readFileSync(filename, 'utf8'));
     } catch (err) {
       console.error('no use! ' + filename);
+    }
+
+    if(resConfig.vendor) {
+      if(resConfig.vendor.custom) {
+        resConfig.vendor.langList = resConfig.vendor.custom;
+      }
     }
     
     if(!resConfig.cache) {
@@ -980,6 +986,8 @@ module.exports = function(grunt) {
           process: function(content) {
             let objList = [];
             let standalone = true;
+            // console.log(pkg);
+
 
             //
             if(pkg.template.format === 'game') {
@@ -994,14 +1002,14 @@ module.exports = function(grunt) {
                 console.error(err);
               }
 
-              if(resConfig.vendor && resConfig.vendor.custom) {
-                let custom = workspace.vendor.custom;
-                let names = Object.getOwnPropertyNames(custom);
+              if(resConfig.vendor && resConfig.vendor.langList) {
+                let langList = workspace.vendor.langList;
+                let names = Object.getOwnPropertyNames(langList);
                 let app = {};
                 // let appHash = {};
                                 
                 names.forEach(lang => {
-                  let pathname = 'app/' + custom[lang];
+                  let pathname = 'app/' + langList[lang];
                   app[lang] = pathname;
 
                   /*
@@ -1092,6 +1100,7 @@ module.exports = function(grunt) {
                 }
               }
 
+
               // 是否需要更新 測試用的遊戲卡片
               if(!pkg.excluded || !pkg.excluded.autoTest) {
                 filename = pkg.template.release.gamecard.dest;
@@ -1178,6 +1187,7 @@ module.exports = function(grunt) {
                 mapList.push(o);
               }
 
+
               if(pkg.template.release.format !== 'system') {
                 view.app = app;
               }
@@ -1212,7 +1222,7 @@ module.exports = function(grunt) {
             // pkg.currentMode = 'release';
             // let filename = workspace.root + '/tmp/app.json';
             // let obj = JSON.parse(fs.readFileSync(filename, 'utf8'));
-            // workspace.vendor.custom['en-us'] = obj[workspace.output+'.js'];
+            // workspace.vendor.langList['en-us'] = obj[workspace.output+'.js'];
             
             if(pkg.template.format === 'game') {
               let obj = null;
@@ -1228,14 +1238,14 @@ module.exports = function(grunt) {
                 console.error('no use! ' + filename);
               }
 
-              if(resConfig.vendor && resConfig.vendor.custom) {
-                let custom = workspace.vendor.custom;
-                let names = Object.getOwnPropertyNames(custom);
+              if(resConfig.vendor && resConfig.vendor.langList) {
+                let langList = workspace.vendor.langList;
+                let names = Object.getOwnPropertyNames(langList);
                 let app = {};
                 // let appHash = {};
 
                 names.forEach(lang => {
-                  let pathname = `app/${custom[lang]}`;
+                  let pathname = `app/${langList[lang]}`;
                   app[lang] = pathname;
 
                   // if(fs.existsSync(`public/${pkg.currentMode}/${pathname}`)) {
@@ -1434,12 +1444,12 @@ module.exports = function(grunt) {
             let app = null;
 
             if(workspace.runMode === 'public'){
-              if(resConfig.vendor && resConfig.vendor.custom) {
-                let custom = workspace.vendor.custom;
-                let names = Object.getOwnPropertyNames(custom);
+              if(resConfig.vendor && resConfig.vendor.langList) {
+                let langList = workspace.vendor.langList;
+                let names = Object.getOwnPropertyNames(langList);
                 app = {};
                 names.forEach(lang => {
-                  app[lang] = 'app/' + custom[lang];
+                  app[lang] = 'app/' + langList[lang];
                 });
               } else {
                 app = fs.readFileSync(workspace.root + '/tmp/app.json', 'utf8');
@@ -2415,20 +2425,20 @@ module.exports = function(grunt) {
             }
           }
         },
-        command(mode) {
-          if(!mode) {
-            mode ='en-us';
+        command(lang, resName) {
+          if(!lang) {
+            lang ='en-us';
           }
           
           let cmd = '';
           if(pkg.template.format === 'game') {
             if(pkg.framework.custom) {
-              cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,RES_LANG:${mode},MAKERES_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.js`;
+              cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},MAKERES_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.js`;
             } else {
-              cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,RES_LANG:${mode},MAKERES_VENDOR:${pkg.generatorVendor} -c builder/rollup/rollup.resource.js`;
+              cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},MAKERES_VENDOR:${pkg.generatorVendor} -c builder/rollup/rollup.resource.js`;
             }
           } else {
-            cmd += `rollup  --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,RES_LANG:${mode},MAKERES_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.js`;
+            cmd += `rollup  --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},MAKERES_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.js`;
           }
           return cmd;
         }
@@ -2442,17 +2452,17 @@ module.exports = function(grunt) {
             }
           }
         },
-        command(mode) {
+        command(lang, resName) {
           let cmd = '';
 
           if(pkg.template.format === 'game') {
             if(pkg.framework.custom) {
-              cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${mode},GENERATOR_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.js`;
+              cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},GENERATOR_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.js`;
             } else {
-              cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${mode},GENERATOR_VENDOR:${pkg.generatorVendor} -c builder/rollup/rollup.resource.js`;
+              cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},GENERATOR_VENDOR:${pkg.generatorVendor} -c builder/rollup/rollup.resource.js`;
             }
           } else {
-            cmd += `rollup  --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${mode},GENERATOR_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.js`;
+            cmd += `rollup  --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},GENERATOR_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.js`;
           }
           return cmd;
         }
@@ -2499,10 +2509,6 @@ module.exports = function(grunt) {
       resource: {
         command(scene) {
           let cmd = 'echo scene : ' + scene;
-          // cmd = `rollup --silent --environment INCLUDE_DEPS,WORKSPACE:<%= pkg.workspace %>,LANG_ID:${mode},GENERATOR_VENDOR:${pkg.generatorVendor} -c builder/rollup/rollup.resource.js`;
-          // cmd += '&&';
-          // cmd += 'node builder/resource.js <%= pkg.group %> <%= pkg.name %> ' + scene;
-
           return cmd;
         }
       },
@@ -2694,25 +2700,32 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('makeres', '建立資源檔', function(mode) {
+  grunt.registerTask('makeres', '建立資源檔', function(lang, resName) {
     if(isFramework) {
       return;
     }
 
     if(resConfig && resConfig.vendor) {
-      if(!mode) {
-        mode = 'en-us';
+      if(!lang) {
+        lang = 'en-us';
       }
       let cmdList = [];
-      cmdList.push(`shell:generatorvendor:${mode}`);
-      cmdList.push(`resource:${mode}`);
-      cmdList.push(`shell:makeres:${mode}`);
+      if(resName && (resName.length > 0) ) {
+        cmdList.push(`shell:generatorvendor:${lang}:${resName}`);
+        cmdList.push(`resource:${lang}:${resName}`);
+        cmdList.push(`shell:makeres:${lang}:${resName}`);
+      } else {
+        cmdList.push(`shell:generatorvendor:${lang}`);
+        cmdList.push(`resource:${lang}`);
+        cmdList.push(`shell:makeres:${lang}`);
+      }
       grunt.task.run(cmdList);
       return;
     }
   
 
     if(resConfig.resource && resConfig.resource.sceneList){
+      console.log('resConfig.resource.sceneList');
       let done = this.async();
       const Generate = require('./builder/resource.js');
 
@@ -2907,7 +2920,7 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('custom', '自定義設定', function(lang) {
+  grunt.registerTask('lang', '語言', function(lang) {
     let key = `${workspace.output}.js`;
     let filename = `${workspace.root}/tmp/release.json`;
     let obj = JSON.parse(fs.readFileSync(filename, 'utf8'));
@@ -2920,7 +2933,7 @@ module.exports = function(grunt) {
     if(!name) {
       grunt.fail.fatal('找不到指定的檔案');
     }
-    workspace.vendor.custom[lang] = name;
+    workspace.vendor.langList[lang] = name;
   });
 
   grunt.registerTask('resource', '資源', function(mode) {
@@ -3579,10 +3592,10 @@ module.exports = function(grunt) {
       cmdList.push('clean:app');
     }
     if(resConfig.vendor) {
-      let custom = resConfig.vendor.custom;
+      let langList = resConfig.vendor.langList;
       let names = ['en-us', 'zh-tw', 'zh-cn'];
-      if(Array.isArray(custom)) {
-        names = custom;
+      if(Array.isArray(langList)) {
+        names = langList;
       }
       names.forEach(lang => {
         cmdList.push('copy:atlas');
@@ -3599,7 +3612,7 @@ module.exports = function(grunt) {
       cmdList.push('replace:app');
       cmdList.push('hash:app');
       names.forEach(lang => {
-        cmdList.push(`custom:${lang}`);
+        cmdList.push(`lang:${lang}`);
       });
 
     } else {

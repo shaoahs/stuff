@@ -18,7 +18,15 @@ removeKey: project/{%= group %}/{%= name %}/
 
 # 最佳化用
 vendor:
-  custom:
+  sceneList:
+    - v1main
+    - v2main
+    - sub
+    - v1load
+    - v2load
+    - v1info
+    - v2info
+  langList:
     - en-us
     - zh-tw
     - zh-cn
