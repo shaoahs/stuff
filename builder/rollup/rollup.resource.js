@@ -250,7 +250,19 @@ if(process.env.GENERATOR_VENDOR) {
 
   } else if(process.env.MAKERES_VENDOR === 'v2') {
     let filename = `${workspace.root}/tmp/resource/${langID}`;
-    let resDir = fs.readdirSync(filename);
+    let resDir = [];
+    if (resName) {
+      resDir.push(resName + '.js');
+    } else {
+      if(Array.isArray(res.vendor.sceneList)) {
+        res.vendor.sceneList.forEach(scene => {
+          resDir.push(scene + '.js');
+        });
+      } else {
+        resDir = fs.readdirSync(filename);
+      }
+    }
+    console.log(resDir);
   
     resDir.forEach(name => {
       let input = `${filename}/${name}`;

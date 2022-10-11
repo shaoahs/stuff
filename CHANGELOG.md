@@ -11,7 +11,11 @@
 
 ## [7.0.0] - 2022-10-07
 ### Added
-- 資源命令 新增 參數 resName, 指定處理單一資源
+- (makeres) 切割子任務,單獨處理指定的子場景 
+
+## [7.0.0] - 2022-10-07
+### Added
+- (makeres) 新增 參數 resName, 指定處理單一資源
 - template 新增 資源檔參數 vendor.langList 與 vendor.sceneList
 
 ### Changed
