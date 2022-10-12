@@ -1,5 +1,5 @@
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 import jsyaml from 'js-yaml';
 
 import postcss from 'rollup-plugin-postcss';

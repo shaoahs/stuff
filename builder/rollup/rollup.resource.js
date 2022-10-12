@@ -136,7 +136,8 @@ if(process.env.GENERATOR_VENDOR) {
         format: 'cjs',
         intro: '/*eslint-disable camelcase max-len*/',
         outro: '/*eslint-enable camelcase max-len*/',
-        sourcemap: false
+        sourcemap: false,
+        sourcemapExcludeSources: true
       }
     ];
     // console.log(`input : ${input}`);
@@ -167,6 +168,7 @@ if(process.env.GENERATOR_VENDOR) {
           // intro: '/*eslint-disable camelcase max-len*/',
           // outro: '/*eslint-enable camelcase max-len*/',
           sourcemap: false,
+          sourcemapExcludeSources: true
         }
       ];
       console.log(`input : ${input}`);
@@ -196,6 +198,8 @@ if(process.env.GENERATOR_VENDOR) {
           test += '}';
         }
       }
+      output.sourcemap = false;
+      output.sourcemapExcludeSources = true;
 
     
       let job = {
@@ -229,7 +233,8 @@ if(process.env.GENERATOR_VENDOR) {
         format: templateFormat,
         intro: '/*eslint-disable camelcase*/\n/*eslint-disable max-len*/\n',
         outro: '/*eslint-enable camelcase*/\n/*eslint-enable max-len*/\n',
-        sourcemap: false
+        sourcemap: false,
+        sourcemapExcludeSources: true
       }
     ];
     let job = {
@@ -280,7 +285,8 @@ if(process.env.GENERATOR_VENDOR) {
               }
             })
           ],
-          sourcemap: false
+          sourcemap: false,
+          sourcemapExcludeSources: true
         },
       ];
       // console.log(`input : ${input}`);

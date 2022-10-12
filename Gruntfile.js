@@ -436,7 +436,7 @@ module.exports = function(grunt) {
 
     if(pkg.framework.useCodeSplitting) {
       let filename = `${workspace.root}/${pkg.input}`;
-      console.log(`output filename : ${filename}`);
+      // console.log(`output filename : ${filename}`);
       let fmt = path.parse(filename);
 
       pkg.output = fmt.name;
@@ -2389,9 +2389,9 @@ module.exports = function(grunt) {
             buildMode = 'development'
           }
           if(pkg.framework.custom) {
-            cmd += `rollup --silent --environment INCLUDE_DEPS,BUILD:${buildMode},TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>${workspace.build.env} -c <%= pkg.workspace %>/rollup.config.js`;
+            cmd += `rollup --bundleConfigAsCjs --silent --environment INCLUDE_DEPS,BUILD:${buildMode},TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>${workspace.build.env} -c <%= pkg.workspace %>/rollup.config.js`;
           } else {
-            cmd += `rollup --silent --environment INCLUDE_DEPS,BUILD:${buildMode},TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>${workspace.build.env} -c builder/rollup/rollup.${pkg.template.format}.js`;
+            cmd += `rollup --silent --environment INCLUDE_DEPS,BUILD:${buildMode},TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>${workspace.build.env} -c builder/rollup/rollup.${pkg.template.format}.mjs`;
           }
 
           return cmd;
@@ -2409,9 +2409,9 @@ module.exports = function(grunt) {
         command(mode) {
           let cmd = '';
           if(pkg.framework.custom) {
-            cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,VISUAL_TEMPLATE:${mode} -c <%= pkg.workspace %>/rollup.visualizer.js`;
+            cmd += `rollup --bundleConfigAsCjs --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,VISUAL_TEMPLATE:${mode} -c <%= pkg.workspace %>/rollup.visualizer.js`;
           } else {
-            cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,VISUAL_TEMPLATE:${mode} -c builder/rollup/rollup.visualizer.js`;
+            cmd += `rollup --bundleConfigAsCjs --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,VISUAL_TEMPLATE:${mode} -c builder/rollup/rollup.visualizer.js`;
           }
           return cmd;
         }
@@ -2433,12 +2433,12 @@ module.exports = function(grunt) {
           let cmd = '';
           if(pkg.template.format === 'game') {
             if(pkg.framework.custom) {
-              cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},MAKERES_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.js`;
+              cmd += `rollup --bundleConfigAsCjs --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},MAKERES_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.js`;
             } else {
-              cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},MAKERES_VENDOR:${pkg.generatorVendor} -c builder/rollup/rollup.resource.js`;
+              cmd += `rollup --bundleConfigAsCjs --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},MAKERES_VENDOR:${pkg.generatorVendor} -c builder/rollup/rollup.resource.js`;
             }
           } else {
-            cmd += `rollup  --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},MAKERES_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.js`;
+            cmd += `rollup  --bundleConfigAsCjs --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},MAKERES_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.js`;
           }
           return cmd;
         }
@@ -2457,12 +2457,12 @@ module.exports = function(grunt) {
 
           if(pkg.template.format === 'game') {
             if(pkg.framework.custom) {
-              cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},GENERATOR_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.js`;
+              cmd += `rollup --bundleConfigAsCjs --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},GENERATOR_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.js`;
             } else {
-              cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},GENERATOR_VENDOR:${pkg.generatorVendor} -c builder/rollup/rollup.resource.js`;
+              cmd += `rollup --bundleConfigAsCjs --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},GENERATOR_VENDOR:${pkg.generatorVendor} -c builder/rollup/rollup.resource.js`;
             }
           } else {
-            cmd += `rollup  --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},GENERATOR_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.js`;
+            cmd += `rollup  --bundleConfigAsCjs --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},GENERATOR_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.js`;
           }
           return cmd;
         }
