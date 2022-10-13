@@ -1,0 +1,52 @@
+Build started at 2022-09-07T14:43:24.889031
+Main binary: /usr/bin/python3
+Build Options: -Denable_asm=false -Denable_tests=false -Denable_tools=false '-Dbitdepths=["8"]' -Ddefault_library=static -Dprefix=/home/dott/ogv.js/build/wasm-mt/root -Dbuildtype=release '--cross-file ../../../buildscripts/dav1d-wasm-mt-cross.txt'
+Python system: Linux
+The Meson build system
+Version: 0.56.0
+Source dir: /home/dott/ogv.js/dav1d
+Build dir: /home/dott/ogv.js/build/wasm-mt/dav1d
+Build type: cross build
+Project name: dav1d
+Project version: 0.6.0
+Using 'CFLAGS' from environment with value: '-pthread'
+Using 'LDFLAGS' from environment with value: '-pthread'
+None of 'CPPFLAGS' are defined in the environment, not changing global flags.
+Sanity testing C compiler: emcc
+Is cross compiler: True.
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Sanity check compiler command line: emcc /home/dott/ogv.js/build/wasm-mt/dav1d/meson-private/sanitycheckc.c -o /home/dott/ogv.js/build/wasm-mt/dav1d/meson-private/sanitycheckc_cross.exe -s USE_PTHREADS=1 -pipe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /usr/bin/echo /home/dott/ogv.js/build/wasm-mt/dav1d/meson-private/sanitycheckc_cross.exe
+C compiler for the host machine: emcc (emscripten 3.1.17 "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 3.1.17 (fbc532773d84d2bd7da876275671970e792ad1cd)")
+C linker for the host machine: emcc ld.wasm 15.0.0
+None of 'CC_FOR_BUILD' are defined in the environment, not changing global flags.
+None of 'CFLAGS_FOR_BUILD' are defined in the environment, not changing global flags.
+None of 'LDFLAGS_FOR_BUILD' are defined in the environment, not changing global flags.
+None of 'CPPFLAGS_FOR_BUILD' are defined in the environment, not changing global flags.
+None of 'CC_LD_FOR_BUILD' are defined in the environment, not changing global flags.
+Sanity testing C compiler: cc
+Is cross compiler: False.
+None of 'CC_LD_FOR_BUILD' are defined in the environment, not changing global flags.
+Sanity check compiler command line: cc /home/dott/ogv.js/build/wasm-mt/dav1d/meson-private/sanitycheckc.c -o /home/dott/ogv.js/build/wasm-mt/dav1d/meson-private/sanitycheckc.exe -pipe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /home/dott/ogv.js/build/wasm-mt/dav1d/meson-private/sanitycheckc.exe
+C compiler for the build machine: cc (gcc 10.4.0 "cc (Mageia 10.4.0-3.mga8) 10.4.0")
+C linker for the build machine: cc ld.bfd 2.36.1
+None of 'AR_FOR_BUILD' are defined in the environment, not changing global flags.
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Target machine cpu family: wasm32
+Target machine cpu: wasm32

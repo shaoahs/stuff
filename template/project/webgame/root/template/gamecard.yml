@@ -59,9 +59,16 @@ resize: # 畫面尺寸改變用
     width: *HEIGHT    # 寬
     height: *WIDTH  # 高
 images:   # 圖檔設定
-  icon: gamecard/icon.png
-  logo: gamecard/logo.png
-  background: gamecard/background.jpg
+  v1:
+    icon: gamecard/icon.png
+    logo: gamecard/logo.png
+    background: gamecard/background.jpg
+    useBackground: true # 是否顯示背景圖片
+  v2:
+    icon: gamecard/icon.png
+    logo: gamecard/logo.avif
+    background: gamecard/background.avif
+    useBackground: true # 是否顯示背景圖片
   #useBackground: true # 是否顯示背景圖片
 overview: # 預覽用
   width: 960  # 畫面的寬

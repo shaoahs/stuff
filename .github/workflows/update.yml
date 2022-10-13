@@ -1,0 +1,19 @@
+name: 更新
+on:
+  push:
+    branches: [update]
+jobs:
+  release:
+    env:
+      STUFF_DEBUG: 1
+    runs-on: [self-hosted, x64, game]
+    name: package
+    steps:
+      - name: 訊息
+        run: |
+          . stuff-env
+          report "複製專案"
+      - uses: actions/checkout@v3
+      - name: 部署
+        run: ls -la
+

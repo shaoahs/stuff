@@ -1,7 +1,6 @@
 {
   "server": {
-    "host" : "127.0.0.1:11102",
-    "roomID"  : "manager",
+    "host" : "http://127.0.0.1:11102",
     "token"  : "key1"
   }
 }

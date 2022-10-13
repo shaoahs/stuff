@@ -1,0 +1,13 @@
+[options]
+enable_asm = false
+enable_tests = false
+enable_tools = false
+bitdepths = ["8"]
+default_library = static
+fake_atomics = true
+prefix = /home/dott/ogv.js/build/wasm/root
+buildtype = release
+
+[properties]
+cross_file = ['../../../buildscripts/dav1d-wasm-cross.txt']
+

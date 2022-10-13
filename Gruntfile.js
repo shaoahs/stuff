@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 6.33.0]');
+  console.log('[stuff version 7.0.0]');
   console.log(__dirname);
   grunt.file.setBase(__dirname);
 
@@ -42,7 +42,7 @@ module.exports = function(grunt) {
       env:''
     },
     vendor: {
-      custom:{}
+      langList:{}
     },
 
     public:{
@@ -217,6 +217,12 @@ module.exports = function(grunt) {
       resConfig = yaml.load(fs.readFileSync(filename, 'utf8'));
     } catch (err) {
       console.error('no use! ' + filename);
+    }
+
+    if(resConfig.vendor) {
+      if(resConfig.vendor.custom) {
+        resConfig.vendor.langList = resConfig.vendor.custom;
+      }
     }
     
     if(!resConfig.cache) {
@@ -430,7 +436,7 @@ module.exports = function(grunt) {
 
     if(pkg.framework.useCodeSplitting) {
       let filename = `${workspace.root}/${pkg.input}`;
-      console.log(`output filename : ${filename}`);
+      // console.log(`output filename : ${filename}`);
       let fmt = path.parse(filename);
 
       pkg.output = fmt.name;
@@ -512,7 +518,7 @@ module.exports = function(grunt) {
           outputPath : '/<%= pkg.workspace %>/res/main'
         },
         files: [
-          {src:['<%= pkg.workspace %>/raw/main/**/*.{png,jpg}'],  dest:'<%= pkg.workspace %>/raw/main/textureList.yml', type:'image'},
+          {src:['<%= pkg.workspace %>/raw/main/**/*.{avif,png,jpg}'],  dest:'<%= pkg.workspace %>/raw/main/textureList.yml', type:'image'},
           {src:['<%= pkg.workspace %>/raw/main/asset/**/*.json'],  dest:'<%= pkg.workspace %>/raw/main/textureList.yml', type:'asset'},
           {src:['<%= pkg.workspace %>/raw/main/spine/**/*.json'],  dest:'<%= pkg.workspace %>/raw/main/spineList.yml', type:'spine'},
           {src:['<%= pkg.workspace %>/raw/main/bones/**/*.{json,atlas}'],  dest:'<%= pkg.workspace %>/raw/main/bonesList.yml', type:'bones', basePath:'raw/main/bones'},
@@ -527,7 +533,7 @@ module.exports = function(grunt) {
           outputPath : '/<%= pkg.workspace %>/res/ui'
         },
         files: [
-          {src:['<%= pkg.workspace %>/raw/ui/**/*.{png,jpg}'],  dest:'<%= pkg.workspace %>/raw/ui/textureList.yml', type:'image'},
+          {src:['<%= pkg.workspace %>/raw/ui/**/*.{avif,png,jpg}'],  dest:'<%= pkg.workspace %>/raw/ui/textureList.yml', type:'image'},
           {src:['<%= pkg.workspace %>/raw/ui/asset/**/*.json'],  dest:'<%= pkg.workspace %>/raw/ui/textureList.yml', type:'asset'},
           {src:['<%= pkg.workspace %>/raw/ui/sound/**/*.{wav,ogg,mp3}'],  dest:'<%= pkg.workspace %>/raw/ui/soundList.yml', type:'sound'}
         ]
@@ -540,7 +546,7 @@ module.exports = function(grunt) {
           outputPath : '/<%= pkg.workspace %>/res/sub'
         },
         files: [
-          {src:['<%= pkg.workspace %>/raw/sub/**/*.{png,jpg}'],  dest:'<%= pkg.workspace %>/raw/sub/textureList.yml', type:'image'},
+          {src:['<%= pkg.workspace %>/raw/sub/**/*.{avif,png,jpg}'],  dest:'<%= pkg.workspace %>/raw/sub/textureList.yml', type:'image'},
           {src:['<%= pkg.workspace %>/raw/sub/bones/**/*.{json,atlas}'],  dest:'<%= pkg.workspace %>/raw/sub/bonesList.yml', type:'bones', basePath:'raw/sub/bones'},
           {src:['<%= pkg.workspace %>/raw/sub/**/*.{wav,ogg,mp3}'],  dest:'<%= pkg.workspace %>/raw/sub/soundList.yml', type:'sound'}
         ]
@@ -637,16 +643,17 @@ module.exports = function(grunt) {
                   app = JSON.parse(fs.readFileSync(filename, 'utf8'));
                 }
                 if(app) {
-                  app = `${workspace.root}/debug/${app[pkg.output+'.js']}`;
+                  app = `debug/${app[pkg.output+'.js']}`;
                 } else {
-                  app = `${workspace.root}/debug/${pkg.output}.js`;
+                  app = `debug/${pkg.output}.js`;
                 }
-                obj.app = `/${app}`;
+                obj.app = app;
 
                 let baseURL = '';
                 if(!obj.baseURL) {
                   baseURL = `/${workspace.root}/`;
                 }
+
                 obj.devMode = 'debug';
                 obj.version = pkg.version;
                 if(obj.images) {
@@ -821,9 +828,9 @@ module.exports = function(grunt) {
                 app = JSON.parse(fs.readFileSync(filename, 'utf8'));
               }
               if(app) {
-                app = `${pkg.current}/release/${app[pkg.output+'.js']}`;
+                app = `release/${app[pkg.output+'.js']}`;
               } else {
-                app = `${pkg.current}/release/${pkg.output}.js`;
+                app = `release/${pkg.output}.js`;
               }
 
               obj.app = app;
@@ -979,6 +986,8 @@ module.exports = function(grunt) {
           process: function(content) {
             let objList = [];
             let standalone = true;
+            // console.log(pkg);
+
 
             //
             if(pkg.template.format === 'game') {
@@ -993,38 +1002,41 @@ module.exports = function(grunt) {
                 console.error(err);
               }
 
-              if(resConfig.vendor && resConfig.vendor.custom) {
-                let custom = workspace.vendor.custom;
-                let names = Object.getOwnPropertyNames(custom);
+              if(resConfig.vendor && resConfig.vendor.langList) {
+                let langList = workspace.vendor.langList;
+                let names = Object.getOwnPropertyNames(langList);
                 let app = {};
-                let appHash = {};
+                // let appHash = {};
                                 
                 names.forEach(lang => {
-                  let pathname = pkg.current + '/app/' + custom[lang];
+                  let pathname = 'app/' + langList[lang];
                   app[lang] = pathname;
 
+                  /*
                   let data = fs.readFileSync(`project/${pathname}`, 'utf8');
                   const hash = crypto.createHash('sha384');
                   hash.update(data);
                   appHash[lang] = `sha384-${hash.digest().toString('base64')}`;
+                  */
                 });
                 obj.app = app;
-                obj.appHash = appHash;
+                // obj.appHash = appHash;
               } else {
                 let app = getAppName();
                 if(app) {
-                  app = `${pkg.current}/app/${app}`;
+                  app = `app/${app}`;
                 } else {
-                  app = `${pkg.current}/app/${pkg.output}.js`;
+                  app = `app/${pkg.output}.js`;
                 }
-                obj.app = `${app}`;
-                console.log('obj.app ' + obj.app ); 
-                
+                obj.app = app;
+ 
+                /*
                 let pathname = `project/${app}`;
                 let data = fs.readFileSync(pathname, 'utf8');
                 const hash = crypto.createHash('sha384');
                 hash.update(data);
                 obj.appHash = `sha384-${hash.digest().toString('base64')}`;
+                */
               }
 
               obj.version = pkg.version;
@@ -1087,6 +1099,7 @@ module.exports = function(grunt) {
                   }
                 }
               }
+
 
               // 是否需要更新 測試用的遊戲卡片
               if(!pkg.excluded || !pkg.excluded.autoTest) {
@@ -1174,6 +1187,7 @@ module.exports = function(grunt) {
                 mapList.push(o);
               }
 
+
               if(pkg.template.release.format !== 'system') {
                 view.app = app;
               }
@@ -1208,7 +1222,7 @@ module.exports = function(grunt) {
             // pkg.currentMode = 'release';
             // let filename = workspace.root + '/tmp/app.json';
             // let obj = JSON.parse(fs.readFileSync(filename, 'utf8'));
-            // workspace.vendor.custom['en-us'] = obj[workspace.output+'.js'];
+            // workspace.vendor.langList['en-us'] = obj[workspace.output+'.js'];
             
             if(pkg.template.format === 'game') {
               let obj = null;
@@ -1224,44 +1238,46 @@ module.exports = function(grunt) {
                 console.error('no use! ' + filename);
               }
 
-              if(resConfig.vendor && resConfig.vendor.custom) {
-                let custom = workspace.vendor.custom;
-                let names = Object.getOwnPropertyNames(custom);
+              if(resConfig.vendor && resConfig.vendor.langList) {
+                let langList = workspace.vendor.langList;
+                let names = Object.getOwnPropertyNames(langList);
                 let app = {};
-                let appHash = {};
+                // let appHash = {};
 
                 names.forEach(lang => {
-                  let pathname = `${pkg.current}/app/${custom[lang]}`;
-                  if(fs.existsSync(`public/${pkg.currentMode}/${pathname}`)) {
-                    let data = fs.readFileSync(`public/${pkg.currentMode}/${pathname}`, 'utf8');
-                    const hash = crypto.createHash('sha384');
-                    hash.update(data);
-                    appHash[lang] = `sha384-${hash.digest().toString('base64')}`;
-                    app[lang] = pathname;
-                  } else {
-                    console.error(`找不到檔案: ${pathname}`);
-                  }
+                  let pathname = `app/${langList[lang]}`;
+                  app[lang] = pathname;
+
+                  // if(fs.existsSync(`public/${pkg.currentMode}/${pathname}`)) {
+                  //   let data = fs.readFileSync(`public/${pkg.currentMode}/${pathname}`, 'utf8');
+                  //   const hash = crypto.createHash('sha384');
+                  //   hash.update(data);
+                  //   appHash[lang] = `sha384-${hash.digest().toString('base64')}`;
+                  //   app[lang] = pathname;
+                  // } else {
+                  //   console.error(`找不到檔案: ${pathname}`);
+                  // }
                 });
                 obj.app = app;
-                obj.appHash = appHash;
+                // obj.appHash = appHash;
               } else {
                 let app = getAppName();
                 if(app) {
-                  app = `${pkg.current}/app/${app}`;
+                  app = `app/${app}`;
                 } else {
-                  app = `${pkg.current}/app/${pkg.output}.js`;
+                  app = `app/${pkg.output}.js`;
                 }
                 obj.app = app;
                 
-                let pathname = `public/${pkg.currentMode}/${obj.app}`;
-                if(fs.existsSync(pathname)) {
-                  let data = fs.readFileSync(pathname, 'utf8');
-                  const hash = crypto.createHash('sha384');
-                  hash.update(data);
-                  obj.appHash = `sha384-${hash.digest().toString('base64')}`;
-                } else {
-                  console.error(`找不到檔案: ${pathname}`);
-                }
+                // let pathname = `public/${pkg.currentMode}/${obj.app}`;
+                // if(fs.existsSync(pathname)) {
+                //   let data = fs.readFileSync(pathname, 'utf8');
+                //   const hash = crypto.createHash('sha384');
+                //   hash.update(data);
+                //   obj.appHash = `sha384-${hash.digest().toString('base64')}`;
+                // } else {
+                //   console.error(`找不到檔案: ${pathname}`);
+                // }
               }
 
               obj.version = pkg.version;
@@ -1428,12 +1444,12 @@ module.exports = function(grunt) {
             let app = null;
 
             if(workspace.runMode === 'public'){
-              if(resConfig.vendor && resConfig.vendor.custom) {
-                let custom = workspace.vendor.custom;
-                let names = Object.getOwnPropertyNames(custom);
+              if(resConfig.vendor && resConfig.vendor.langList) {
+                let langList = workspace.vendor.langList;
+                let names = Object.getOwnPropertyNames(langList);
                 app = {};
                 names.forEach(lang => {
-                  app[lang] = pkg.current + '/app/' + custom[lang];
+                  app[lang] = 'app/' + langList[lang];
                 });
               } else {
                 app = fs.readFileSync(workspace.root + '/tmp/app.json', 'utf8');
@@ -1441,9 +1457,9 @@ module.exports = function(grunt) {
                 app = app[this.noProcess.app];
   
                 if(!app){
-                  app = workspace.current + '/app/' + this.noProcess.app;
+                  app = 'app/' + this.noProcess.app;
                 } else {
-                  app = workspace.current + '/app/' + app;
+                  app = 'app/' + app;
                 }
               }
             } else if(workspace.runMode === 'build') {
@@ -1458,9 +1474,9 @@ module.exports = function(grunt) {
                 }
               }
               if(app){
-                app = workspace.current + '/release/' + app[pkg.output + '.js'];
+                app = 'release/' + app[pkg.output + '.js'];
               }else {
-                app = workspace.current + '/release/' + pkg.output + '.js';
+                app = 'release/' + pkg.output + '.js';
               }
             } else {
               app = workspace.current;
@@ -1499,7 +1515,7 @@ module.exports = function(grunt) {
                 obj.dependence = dependence;
               }
               if(obj.devMode === 'debug'){
-                obj.app = `/project/${workspace.current}/debug/${workspace.output}.js`;
+                obj.app = `debug/${workspace.output}.js`;
               }
             }
 
@@ -1546,7 +1562,7 @@ module.exports = function(grunt) {
           removeKey: resConfig.removeKey || '',
           mapping: '<%= pkg.workspace %>/tmp/resLoading.json' //mapping file so your server can serve the right files
         },
-        src: '<%= pkg.workspace %>/res/loading/**/*.{png,wav,ogg,mp3}',  //all your js that needs a hash appended to it
+        src: '<%= pkg.workspace %>/res/loading/**/*.{avif,png,wav,ogg,mp3}',  //all your js that needs a hash appended to it
         dest: '<%= pkg.workspace %>/data' //where the new files will be created
       },
       res: {
@@ -2136,7 +2152,7 @@ module.exports = function(grunt) {
         options: {
           execOptions: {
             env: {
-              NODE_OPTIONS: '--max_old_space_size=4096'
+              NODE_OPTIONS: '--max_old_space_size=8192'
             }
           }
         },
@@ -2194,7 +2210,7 @@ module.exports = function(grunt) {
         options: {
           execOptions: {
             env: {
-              // NODE_OPTIONS: '--max_old_space_size=4096'
+              // NODE_OPTIONS: '--max_old_space_size=8192'
             }
           }
         },
@@ -2271,9 +2287,9 @@ module.exports = function(grunt) {
         command(mode) {
           let cmd = '';
           if(pkg.framework.custom) {
-            cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,TEST_MODE:${mode} -c <%= pkg.workspace %>/rollup.test.js`;
+            cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,TEST_MODE:${mode} -c <%= pkg.workspace %>/rollup.test.mjs`;
           } else {
-            cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,TEST_MODE:${mode} -c builder/rollup/rollup.test.js`;
+            cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,TEST_MODE:${mode} -c builder/rollup/rollup.test.mjs`;
           }
 
           return cmd;
@@ -2362,7 +2378,7 @@ module.exports = function(grunt) {
         options: {
           execOptions: {
             env: {
-              NODE_OPTIONS: '--max_old_space_size=4096'
+              NODE_OPTIONS: '--max_old_space_size=8192'
             }
           }
         },
@@ -2372,10 +2388,11 @@ module.exports = function(grunt) {
           if(mode !== 'release') {
             buildMode = 'development'
           }
+          // --bundleConfigAsCjs
           if(pkg.framework.custom) {
-            cmd += `rollup --silent --environment INCLUDE_DEPS,BUILD:${buildMode},TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>${workspace.build.env} -c <%= pkg.workspace %>/rollup.config.js`;
+            cmd += `rollup --silent --environment INCLUDE_DEPS,BUILD:${buildMode},TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>${workspace.build.env} -c <%= pkg.workspace %>/rollup.config.mjs`;
           } else {
-            cmd += `rollup --silent --environment INCLUDE_DEPS,BUILD:${buildMode},TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>${workspace.build.env} -c builder/rollup/rollup.${pkg.template.format}.js`;
+            cmd += `rollup --silent --environment INCLUDE_DEPS,BUILD:${buildMode},TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>${workspace.build.env} -c builder/rollup/rollup.${pkg.template.format}.mjs`;
           }
 
           return cmd;
@@ -2386,16 +2403,17 @@ module.exports = function(grunt) {
         options: {
           execOptions: {
             env: {
-              NODE_OPTIONS: '--max_old_space_size=4096'
+              NODE_OPTIONS: '--max_old_space_size=8192'
             }
           }
         },
         command(mode) {
           let cmd = '';
+          // --bundleConfigAsCjs
           if(pkg.framework.custom) {
-            cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,VISUAL_TEMPLATE:${mode} -c <%= pkg.workspace %>/rollup.visualizer.js`;
+            cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,VISUAL_TEMPLATE:${mode} -c <%= pkg.workspace %>/rollup.visualizer.mjs`;
           } else {
-            cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,VISUAL_TEMPLATE:${mode} -c builder/rollup/rollup.visualizer.js`;
+            cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,VISUAL_TEMPLATE:${mode} -c builder/rollup/rollup.visualizer.mjs`;
           }
           return cmd;
         }
@@ -2405,24 +2423,26 @@ module.exports = function(grunt) {
         options: {
           execOptions: {
             env: {
-              NODE_OPTIONS: '--max_old_space_size=4096'
+              NODE_OPTIONS: '--max_old_space_size=8192'
             }
           }
         },
-        command(mode) {
-          if(!mode) {
-            mode ='en-us';
+        command(lang, resName) {
+          if(!lang) {
+            lang ='en-us';
           }
           
           let cmd = '';
+          // --bundleConfigAsCjs
+
           if(pkg.template.format === 'game') {
             if(pkg.framework.custom) {
-              cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,RES_LANG:${mode},MAKERES_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.js`;
+              cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},MAKERES_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.mjs`;
             } else {
-              cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,RES_LANG:${mode},MAKERES_VENDOR:${pkg.generatorVendor} -c builder/rollup/rollup.resource.js`;
+              cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},MAKERES_VENDOR:${pkg.generatorVendor} -c builder/rollup/rollup.resource.mjs`;
             }
           } else {
-            cmd += `rollup  --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,RES_LANG:${mode},MAKERES_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.js`;
+            cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},MAKERES_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.mjs`;
           }
           return cmd;
         }
@@ -2432,21 +2452,22 @@ module.exports = function(grunt) {
         options: {
           execOptions: {
             env: {
-              NODE_OPTIONS: '--max_old_space_size=4096'
+              NODE_OPTIONS: '--max_old_space_size=8192'
             }
           }
         },
-        command(mode) {
+        command(lang, resName) {
           let cmd = '';
 
+          // --bundleConfigAsCjs
           if(pkg.template.format === 'game') {
             if(pkg.framework.custom) {
-              cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${mode},GENERATOR_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.js`;
+              cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},GENERATOR_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.mjs`;
             } else {
-              cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${mode},GENERATOR_VENDOR:${pkg.generatorVendor} -c builder/rollup/rollup.resource.js`;
+              cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},GENERATOR_VENDOR:${pkg.generatorVendor} -c builder/rollup/rollup.resource.mjs`;
             }
           } else {
-            cmd += `rollup  --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${mode},GENERATOR_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.js`;
+            cmd += `rollup --silent --environment INCLUDE_DEPS,TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>,LANG_ID:${lang},RES_NAME:${resName},GENERATOR_VENDOR:${pkg.generatorVendor} -c <%= pkg.workspace %>/rollup.resource.mjs`;
           }
           return cmd;
         }
@@ -2493,10 +2514,6 @@ module.exports = function(grunt) {
       resource: {
         command(scene) {
           let cmd = 'echo scene : ' + scene;
-          // cmd = `rollup --silent --environment INCLUDE_DEPS,WORKSPACE:<%= pkg.workspace %>,LANG_ID:${mode},GENERATOR_VENDOR:${pkg.generatorVendor} -c builder/rollup/rollup.resource.js`;
-          // cmd += '&&';
-          // cmd += 'node builder/resource.js <%= pkg.group %> <%= pkg.name %> ' + scene;
-
           return cmd;
         }
       },
@@ -2688,25 +2705,32 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('makeres', '建立資源檔', function(mode) {
+  grunt.registerTask('makeres', '建立資源檔', function(lang, resName) {
     if(isFramework) {
       return;
     }
 
     if(resConfig && resConfig.vendor) {
-      if(!mode) {
-        mode = 'en-us';
+      if(!lang) {
+        lang = 'en-us';
       }
       let cmdList = [];
-      cmdList.push(`shell:generatorvendor:${mode}`);
-      cmdList.push(`resource:${mode}`);
-      cmdList.push(`shell:makeres:${mode}`);
+      if(resName && (resName.length > 0) ) {
+        cmdList.push(`shell:generatorvendor:${lang}:${resName}`);
+        cmdList.push(`resource:${lang}:${resName}`);
+        cmdList.push(`shell:makeres:${lang}:${resName}`);
+      } else {
+        cmdList.push(`shell:generatorvendor:${lang}`);
+        cmdList.push(`resource:${lang}`);
+        cmdList.push(`shell:makeres:${lang}`);
+      }
       grunt.task.run(cmdList);
       return;
     }
   
 
     if(resConfig.resource && resConfig.resource.sceneList){
+      console.log('resConfig.resource.sceneList');
       let done = this.async();
       const Generate = require('./builder/resource.js');
 
@@ -2901,7 +2925,7 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('custom', '自定義設定', function(lang) {
+  grunt.registerTask('lang', '語言', function(lang) {
     let key = `${workspace.output}.js`;
     let filename = `${workspace.root}/tmp/release.json`;
     let obj = JSON.parse(fs.readFileSync(filename, 'utf8'));
@@ -2914,7 +2938,7 @@ module.exports = function(grunt) {
     if(!name) {
       grunt.fail.fatal('找不到指定的檔案');
     }
-    workspace.vendor.custom[lang] = name;
+    workspace.vendor.langList[lang] = name;
   });
 
   grunt.registerTask('resource', '資源', function(mode) {
@@ -3573,10 +3597,10 @@ module.exports = function(grunt) {
       cmdList.push('clean:app');
     }
     if(resConfig.vendor) {
-      let custom = resConfig.vendor.custom;
+      let langList = resConfig.vendor.langList;
       let names = ['en-us', 'zh-tw', 'zh-cn'];
-      if(Array.isArray(custom)) {
-        names = custom;
+      if(Array.isArray(langList)) {
+        names = langList;
       }
       names.forEach(lang => {
         cmdList.push('copy:atlas');
@@ -3593,7 +3617,7 @@ module.exports = function(grunt) {
       cmdList.push('replace:app');
       cmdList.push('hash:app');
       names.forEach(lang => {
-        cmdList.push(`custom:${lang}`);
+        cmdList.push(`lang:${lang}`);
       });
 
     } else {

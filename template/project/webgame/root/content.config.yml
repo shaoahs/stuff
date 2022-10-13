@@ -8,7 +8,7 @@ version: 1.0.0
 generatorVendor: v2
 framework:
   name: stuff
-  version: 6.15.0
+  version: 7.0.0
   builder: rollup
   skipCommandTerser: true
   useCodeSplitting: true

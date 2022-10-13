@@ -32,12 +32,12 @@ let corsOptions = {
 
 const path = require('path');
 const fastify = require('fastify')({
-  // http2: true,
-  // https:{
-  //   allowHTTP1: true,
-  //   key: fs.readFileSync('server/keys/test/server.key'),
-  //   cert: fs.readFileSync('server/keys/test/server.crt')
-  // }
+  http2: true,
+  https:{
+    allowHTTP1: true,
+    key: fs.readFileSync('server/keys/test/server.key'),
+    cert: fs.readFileSync('server/keys/test/server.crt')
+  }
 });
 
 // const authenticate = {realm: 'Westeros'};
@@ -59,12 +59,64 @@ const fastify = require('fastify')({
 //   // { /*inflateIfDeflated: true*/}
 // );
 fastify.register(require('@fastify/websocket'));
+fastify.register(require('fastify-socket.io'), {
+  allowEIO3: true
+})
+  .ready(()=>{
+    logger.info('[init] socket.io');
+    let io = fastify.io;
+    //----
+    let net = {};
+    net.users = {};
+
+    /**
+     * 建立未登入的使用者（有連線的使用者清單）
+     * @param socket {Object} socket.io 網路物件
+     */
+    function createUser(socket) {
+      let command = require("./command/command.js");
+      let user = {};
+      user.socket = socket;
+      user.game = {};
+      //  user.token;
+
+      //--------------
+      // 設定命令對照表
+      user.cmdList = command.list;
+      user.cmdList.forEach(function(cmd){
+        logger.debug("register command : " + cmd.id);
+        let conf = {
+          user:user,
+          net : net,
+          io : io
+        };
+        let event = cmd.init(conf);
+        socket.on(cmd.id, event.proc);
+      });
+      //--------------
+      //---建立新使用者
+      return user;
+    }
+    net.eventConnect = function(socket){
+      logger.info('eventConnect');
+    //  console.log(socket);
+      let user = createUser(socket);
+      net.users[socket] = user;
+    };
+    //--------------
+    io.of('/1.00.0').on('connection', net.eventConnect);
+    io.of('/develop').on('connection', net.eventConnect);
+
+
+  });
+
 
 var send = require('send');
 
 send.mime.define({
   ' text/javascript ': ['js', 'mjs'],
   'application/wasm': ['wasm'],
+  'image/avif': ['avif'],
   'application/manifest+json': ['webmanifest'],
   'application/x-web-app-manifest+json': ['webapp'],
   'text/cache-manifest': ['appcache']
@@ -88,6 +140,8 @@ fastify
     host: '0.0.0.0'
   }, err => {
     if (err) throw err;
+    // console.log(fastify.io);
+
     logger.info('!!!! start web server !!!!');
     logger.info('http://localhost:3000/developer/agent/');
 });
@@ -95,6 +149,10 @@ fastify
 fastify.get('/', (request, reply) => {
   reply.send({hello:'world'});
 });
+
+fastify.get('/socket.io/', { websocket: true }, (/* connection, req */) => {
+});
+
 
 fastify.get('/protobuf',{ websocket: true }, (connection, req) => {
   console.log('[websocket]connection');
@@ -138,60 +196,57 @@ testServer
   });
 });*/
 
+//////////////////////////////////////////////////
 
-/* =========================================================
-////////////////////////////////////////////////////////////
-   ========================================================= */
-const customParser = require('socket.io-msgpack-parser');
+// let io = require('socket.io')({
+//   // parser: customParser
+// }).listen(11102);
 
-let io = require('socket.io')({
-  // parser: customParser
-}).listen(11102);
+// //----
+// let net = {};
+// net.users = {};
 
-//----
-let net = {};
-net.users = {};
+// /**
+//  * 建立未登入的使用者（有連線的使用者清單）
+//  * @param socket {Object} socket.io 網路物件
+//  */
+// function createUser(socket) {
+//   let command = require("./command/command.js");
+//   let user = {};
+//   user.socket = socket;
+//   user.game = {};
+//   //  user.token;
 
-/**
- * 建立未登入的使用者（有連線的使用者清單）
- * @param socket {Object} socket.io 網路物件
- */
-function createUser(socket) {
-  let command = require("./command/command.js");
-  let user = {};
-  user.socket = socket;
-  user.game = {};
-  //  user.token;
+//   //--------------
+//   // 設定命令對照表
+//   user.cmdList = command.list;
+//   user.cmdList.forEach(function(cmd){
+//     logger.debug("register command : " + cmd.id);
+//     let conf = {
+//       user:user,
+//       net : net,
+//       io : io
+//     };
+//     let event = cmd.init(conf);
+//     socket.on(cmd.id, event.proc);
+//   });
+//   return user;
+// }
+// net.eventConnect = function(socket){
+//   logger.info('eventConnect');
+// //  console.log(socket);
+//   let user = createUser(socket);
+//   net.users[socket] = user;
+// };
+// //--------------
+// io.of('/1.00.0').on('connection', net.eventConnect);
+// io.of('/develop').on('connection', net.eventConnect);
 
-  //--------------
-  // 設定命令對照表
-  user.cmdList = command.list;
-  user.cmdList.forEach(function(cmd){
-    logger.debug("register command : " + cmd.id);
-    let conf = {
-      user:user,
-      net : net,
-      io : io
-    };
-    let event = cmd.init(conf);
-    socket.on(cmd.id, event.proc);
-  });
-  //--------------
-  //---建立新使用者
-  return user;
-}
-net.eventConnect = function(socket){
-  logger.info('eventConnect');
-//  console.log(socket);
-  let user = createUser(socket);
-  net.users[socket] = user;
-};
-//--------------
-//---啟動服務
-io.of('/1.00.0').on('connection', net.eventConnect);
-io.of('/develop').on('connection', net.eventConnect);
-//io.on('connection', net.eventConnect);
 
-logger.info('!!!! start server !!!!');
-logger.info('==============================================');
+// logger.info('!!!! start server !!!!');
+// logger.info('==============================================');
+
+
+
+
 // require('../test/launcher');

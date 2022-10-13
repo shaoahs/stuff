@@ -1,0 +1,118 @@
+celt/vq.lo: ../../../libopus/celt/vq.c config.h \
+  ../../../libopus/celt/mathops.h ../../../libopus/celt/arch.h \
+  ../../../libopus/include/opus_types.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h \
+  ../../../libopus/include/opus_defines.h \
+  ../../../libopus/celt/entcode.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/limits.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/limits.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/features.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/limits.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/__stddef_max_align_t.h \
+  ../../../libopus/celt/ecintrin.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/math.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/math.h \
+  ../../../libopus/celt/os_support.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/string.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/strings.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h \
+  ../../../libopus/celt/cwrs.h ../../../libopus/celt/stack_alloc.h \
+  ../../../libopus/celt/entenc.h ../../../libopus/celt/entdec.h \
+  ../../../libopus/celt/vq.h ../../../libopus/celt/modes.h \
+  ../../../libopus/celt/celt.h ../../../libopus/include/opus_custom.h \
+  ../../../libopus/celt/mdct.h ../../../libopus/celt/kiss_fft.h \
+  ../../../libopus/celt/cpu_support.h ../../../libopus/celt/bands.h \
+  ../../../libopus/celt/rate.h ../../../libopus/celt/pitch.h
+
+config.h:
+
+../../../libopus/celt/mathops.h:
+
+../../../libopus/celt/arch.h:
+
+../../../libopus/include/opus_types.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h:
+
+../../../libopus/include/opus_defines.h:
+
+../../../libopus/celt/entcode.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/limits.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/limits.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/features.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/limits.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/__stddef_max_align_t.h:
+
+../../../libopus/celt/ecintrin.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/math.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/math.h:
+
+../../../libopus/celt/os_support.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/string.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h:
+
+../../../libopus/celt/cwrs.h:
+
+../../../libopus/celt/stack_alloc.h:
+
+../../../libopus/celt/entenc.h:
+
+../../../libopus/celt/entdec.h:
+
+../../../libopus/celt/vq.h:
+
+../../../libopus/celt/modes.h:
+
+../../../libopus/celt/celt.h:
+
+../../../libopus/include/opus_custom.h:
+
+../../../libopus/celt/mdct.h:
+
+../../../libopus/celt/kiss_fft.h:
+
+../../../libopus/celt/cpu_support.h:
+
+../../../libopus/celt/bands.h:
+
+../../../libopus/celt/rate.h:
+
+../../../libopus/celt/pitch.h:

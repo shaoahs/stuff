@@ -9,6 +9,64 @@
 
 ### Removed
 
+## [7.0.0] - 2022-10-13
+### Changed
+- [ext] convert js to mjs
+- 更新 agent 版本
+- 更新 第三方程式庫版本
+
+### Fixed
+- (template) 修正 資源檔路徑
+
+### Removed
+- [rollup config] 移除 __dirname
+
+## [7.0.0] - 2022-10-07
+### Added
+- (makeres) 切割子任務,單獨處理指定的子場景 
+
+## [7.0.0] - 2022-10-07
+### Added
+- (makeres) 新增 參數 resName, 指定處理單一資源
+- (template) 新增 資源檔參數 vendor.langList 與 vendor.sceneList
+
+### Changed
+- 語言代碼 vendor.custom 改為 vendor.langList
+- 命令 custom 改為 lang
+
+## [7.0.0] - 2022-10-05
+### Added
+- 測試用服務 新增支援 舊版 socket.io 2.4.0
+- 更新 agent 版本
+- 更新 第三方程式庫版本
+
+## [7.0.0] - 2022-10-04
+### Added
+- 測試用服務 新增支援 https
+- 測試用服務 新增支援 avif
+- 測試用服務 新增錯誤處理
+- [template] 新增 多版本資源檔範例
+
+### Changed
+- 測試用服務 修改初始化方式
+- 修改專案路徑組合方式
+- 更新 agent 版本
+- 更新 第三方程式庫版本
+
+### Removed
+- 移除 login.txt 的功能
+- 移除 appHash 功能
+
+## [6.34.0] - 2022-08-29
+### Added
+- 新增支援 typescript 4.8
+- 新增 @rollup/plugin-legacy
+
+### Changed
+- 更新 agent 版本
+- 更新 第三方程式庫版本
+
+
 ## [6.31.0] - 2022-05-26
 ### Changed
 - 更新 agent 版本

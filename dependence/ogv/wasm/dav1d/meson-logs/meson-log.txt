@@ -1,0 +1,324 @@
+Build started at 2022-09-07T14:36:56.713858
+Main binary: /usr/bin/python3
+Build Options: -Denable_asm=false -Denable_tests=false -Denable_tools=false '-Dbitdepths=["8"]' -Ddefault_library=static -Dfake_atomics=true -Dprefix=/home/dott/ogv.js/build/wasm/root -Dbuildtype=release '--cross-file ../../../buildscripts/dav1d-wasm-cross.txt'
+Python system: Linux
+The Meson build system
+Version: 0.56.0
+Source dir: /home/dott/ogv.js/dav1d
+Build dir: /home/dott/ogv.js/build/wasm/dav1d
+Build type: cross build
+Project name: dav1d
+Project version: 0.6.0
+None of 'CFLAGS' are defined in the environment, not changing global flags.
+None of 'LDFLAGS' are defined in the environment, not changing global flags.
+None of 'CPPFLAGS' are defined in the environment, not changing global flags.
+Sanity testing C compiler: emcc
+Is cross compiler: True.
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Sanity check compiler command line: emcc /home/dott/ogv.js/build/wasm/dav1d/meson-private/sanitycheckc.c -o /home/dott/ogv.js/build/wasm/dav1d/meson-private/sanitycheckc_cross.exe -pipe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /usr/bin/echo /home/dott/ogv.js/build/wasm/dav1d/meson-private/sanitycheckc_cross.exe
+C compiler for the host machine: emcc (emscripten 3.1.20 "emcc (Emscripten gcc/clang-like replacement + linker emulating GNU ld) 3.1.20 (5d878c99921ec247d34fb26a20b5a13d60d69e93)")
+C linker for the host machine: emcc ld.wasm 16.0.0
+None of 'CC_FOR_BUILD' are defined in the environment, not changing global flags.
+None of 'CFLAGS_FOR_BUILD' are defined in the environment, not changing global flags.
+None of 'LDFLAGS_FOR_BUILD' are defined in the environment, not changing global flags.
+None of 'CPPFLAGS_FOR_BUILD' are defined in the environment, not changing global flags.
+None of 'CC_LD_FOR_BUILD' are defined in the environment, not changing global flags.
+Sanity testing C compiler: cc
+Is cross compiler: False.
+None of 'CC_LD_FOR_BUILD' are defined in the environment, not changing global flags.
+Sanity check compiler command line: cc /home/dott/ogv.js/build/wasm/dav1d/meson-private/sanitycheckc.c -o /home/dott/ogv.js/build/wasm/dav1d/meson-private/sanitycheckc.exe -pipe -D_FILE_OFFSET_BITS=64
+Sanity check compile stdout:
+
+-----
+Sanity check compile stderr:
+
+-----
+Running test binary command: /home/dott/ogv.js/build/wasm/dav1d/meson-private/sanitycheckc.exe
+C compiler for the build machine: cc (gcc 10.4.0 "cc (Mageia 10.4.0-3.mga8) 10.4.0")
+C linker for the build machine: cc ld.bfd 2.36.1
+None of 'AR_FOR_BUILD' are defined in the environment, not changing global flags.
+Build machine cpu family: x86_64
+Build machine cpu: x86_64
+Host machine cpu family: x86_64
+Host machine cpu: x86_64
+Target machine cpu family: wasm32
+Target machine cpu: wasm32
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Running compile:
+Working directory:  /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmp3rzqfvv_
+Command line:  emcc /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmp3rzqfvv_/testfile.c -o /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmp3rzqfvv_/output.js -pipe -D_FILE_OFFSET_BITS=64 -O0 -Wl,--start-group -ldl -Wl,--end-group -s ERROR_ON_UNDEFINED_SYMBOLS=0 
+
+Code:
+ int main(void) { return 0; }
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Library dl found: YES
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Running compile:
+Working directory:  /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmptpwt0xtl
+Command line:  emcc /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmptpwt0xtl/testfile.c -o /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmptpwt0xtl/output.js -pipe -D_FILE_OFFSET_BITS=64 -O0 -std=c99 -D_GNU_SOURCE -Wl,--start-group -ldl -Wl,--end-group 
+
+Code:
+ #include <dlfcn.h>
+#include <limits.h>
+
+        #if defined __stub_dlsym || defined __stub___dlsym
+        fail fail fail this function is not going to work
+        #endif
+        
+int main(void) {
+            void *a = (void*) &dlsym;
+            long long b = (long long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "dlsym" with dependency -ldl: YES 
+Running compile:
+Working directory:  /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpbp3sav7z
+Command line:  emcc /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpbp3sav7z/testfile.c -o /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpbp3sav7z/output.wasm -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Werror=unknown-warning-option -Werror=unused-command-line-argument -std=c99 
+
+Code:
+ 
+        #include <unistd.h>
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Check usable header "unistd.h" : YES 
+Running compile:
+Working directory:  /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmps_3ua15p
+Command line:  emcc /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmps_3ua15p/testfile.c -o /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmps_3ua15p/output.wasm -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Werror=unknown-warning-option -Werror=unused-command-line-argument -std=c99 
+
+Code:
+ 
+        #include <io.h>
+Compiler stdout:
+ 
+Compiler stderr:
+ /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmps_3ua15p/testfile.c:2:18: fatal error: 'io.h' file not found
+        #include <io.h>
+                 ^~~~~~
+1 error generated.
+emcc: error: '/home/dott/emsdk/upstream/bin/clang -target wasm32-unknown-emscripten -fignore-exceptions -fvisibility=default -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr -DEMSCRIPTEN -D__EMSCRIPTEN_major__=3 -D__EMSCRIPTEN_minor__=1 -D__EMSCRIPTEN_tiny__=20 -Werror=implicit-function-declaration -I/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/SDL --sysroot=/home/dott/emsdk/upstream/emscripten/cache/sysroot -Xclang -iwithsysroot/include/compat -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Werror=unknown-warning-option -std=c99 /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmps_3ua15p/testfile.c -o /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmps_3ua15p/output.wasm' failed (returned 1)
+
+Check usable header "io.h" : NO 
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Running compile:
+Working directory:  /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpeicbcdj6
+Command line:  emcc /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpeicbcdj6/testfile.c -o /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpeicbcdj6/output.js -pipe -D_FILE_OFFSET_BITS=64 -O0 -std=c99 -D_GNU_SOURCE 
+
+Code:
+ #include <getopt.h>
+#include <limits.h>
+
+        #if defined __stub_getopt_long || defined __stub___getopt_long
+        fail fail fail this function is not going to work
+        #endif
+        
+int main(void) {
+            void *a = (void*) &getopt_long;
+            long long b = (long long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "getopt_long" : YES 
+None of 'CC_LD' are defined in the environment, not changing global flags.
+Running compile:
+Working directory:  /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmp7yeqd4pj
+Command line:  emcc /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmp7yeqd4pj/testfile.c -o /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmp7yeqd4pj/output.js -pipe -D_FILE_OFFSET_BITS=64 -O0 -std=c99 -D_GNU_SOURCE 
+
+Code:
+ #include <stdlib.h>
+#include <limits.h>
+
+        #if defined __stub_posix_memalign || defined __stub___posix_memalign
+        fail fail fail this function is not going to work
+        #endif
+        
+int main(void) {
+            void *a = (void*) &posix_memalign;
+            long long b = (long long) a;
+            return (int) b;
+        }
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Checking for function "posix_memalign" : YES 
+Running compile:
+Working directory:  /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpg41_9c1b
+Command line:  emcc /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpg41_9c1b/testfile.c -o /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpg41_9c1b/output.wasm -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Werror=unknown-warning-option -Werror=unused-command-line-argument -fvisibility=hidden 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -fvisibility=hidden: YES 
+Running compile:
+Working directory:  /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmp4t48iwz0
+Command line:  emcc /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmp4t48iwz0/testfile.c -o /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmp4t48iwz0/output.wasm -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Werror=unknown-warning-option -Werror=unused-command-line-argument -Wundef 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wundef: YES 
+Running compile:
+Working directory:  /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpd50_iyq2
+Command line:  emcc /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpd50_iyq2/testfile.c -o /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpd50_iyq2/output.wasm -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=vla 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Werror=vla: YES 
+Running compile:
+Working directory:  /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmph_kqryrb
+Command line:  emcc /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmph_kqryrb/testfile.c -o /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmph_kqryrb/output.wasm -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Werror=unknown-warning-option -Werror=unused-command-line-argument -Wmaybe-uninitialized -Wno-maybe-uninitialized 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ error: unknown warning option '-Wmaybe-uninitialized'; did you mean '-Wuninitialized'? [-Werror,-Wunknown-warning-option]
+error: unknown warning option '-Wno-maybe-uninitialized'; did you mean '-Wno-uninitialized'? [-Werror,-Wunknown-warning-option]
+emcc: error: '/home/dott/emsdk/upstream/bin/clang -target wasm32-unknown-emscripten -fignore-exceptions -fvisibility=default -mllvm -combiner-global-alias-analysis=false -mllvm -enable-emscripten-sjlj -mllvm -disable-lsr -DEMSCRIPTEN -D__EMSCRIPTEN_major__=3 -D__EMSCRIPTEN_minor__=1 -D__EMSCRIPTEN_tiny__=20 -Werror=implicit-function-declaration -I/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/SDL --sysroot=/home/dott/emsdk/upstream/emscripten/cache/sysroot -Xclang -iwithsysroot/include/compat -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Werror=unknown-warning-option -Wmaybe-uninitialized -Wno-maybe-uninitialized /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmph_kqryrb/testfile.c -o /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmph_kqryrb/output.wasm' failed (returned 1)
+
+Compiler for C supports arguments -Wno-maybe-uninitialized: NO 
+Running compile:
+Working directory:  /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpvo0nanyb
+Command line:  emcc /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpvo0nanyb/testfile.c -o /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpvo0nanyb/output.wasm -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Werror=unknown-warning-option -Werror=unused-command-line-argument -Wmissing-field-initializers -Wno-missing-field-initializers 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-missing-field-initializers: YES 
+Running compile:
+Working directory:  /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpijuf4gi2
+Command line:  emcc /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpijuf4gi2/testfile.c -o /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpijuf4gi2/output.wasm -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Werror=unknown-warning-option -Werror=unused-command-line-argument -Wunused-parameter -Wno-unused-parameter 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wno-unused-parameter: YES 
+Running compile:
+Working directory:  /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpilbfqxzf
+Command line:  emcc /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpilbfqxzf/testfile.c -o /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpilbfqxzf/output.wasm -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Werror=unknown-warning-option -Werror=unused-command-line-argument -Werror=missing-prototypes 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Werror=missing-prototypes: YES 
+Running compile:
+Working directory:  /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpvm854cww
+Command line:  emcc /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpvm854cww/testfile.c -o /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpvm854cww/output.wasm -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Werror=unknown-warning-option -Werror=unused-command-line-argument -Wshorten-64-to-32 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -Wshorten-64-to-32: YES 
+Running compile:
+Working directory:  /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpuogkaqgz
+Command line:  emcc /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpuogkaqgz/testfile.c -o /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpuogkaqgz/output.wasm -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Werror=unknown-warning-option -Werror=unused-command-line-argument -fomit-frame-pointer 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -fomit-frame-pointer: YES 
+Running compile:
+Working directory:  /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpakfn8c9o
+Command line:  emcc /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpakfn8c9o/testfile.c -o /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmpakfn8c9o/output.wasm -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Werror=unknown-warning-option -Werror=unused-command-line-argument -ffast-math 
+
+Code:
+ extern int i;
+int i;
+
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Compiler for C supports arguments -ffast-math: YES 
+Running compile:
+Working directory:  /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmp37loy35i
+Command line:  emcc /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmp37loy35i/testfile.c -o /home/dott/ogv.js/build/wasm/dav1d/meson-private/tmp37loy35i/output.wasm -pipe -c -D_FILE_OFFSET_BITS=64 -O0 -Werror=unknown-warning-option -Werror=unused-command-line-argument -O0 -Werror=unknown-warning-option -Werror=unused-command-line-argument 
+
+Code:
+ #ifdef __cplusplus
+        extern "C" {
+        #endif
+        void meson_uscore_prefix (void) {}
+        #ifdef __cplusplus
+        }
+        #endif
+        
+Compiler stdout:
+ 
+Compiler stderr:
+ 
+Symbols have underscore prefix: NO
+Configuring config.h using configuration
+Configuring version.h using configuration
+Program doxygen found: NO
+Build targets in project: 7
+
+Found ninja-1.10.2 at /usr/bin/ninja
+None of 'STRIP' are defined in the environment, not changing global flags.
+WARNING: Cross file does not specify strip binary, result will not be stripped.
+None of 'STRIP' are defined in the environment, not changing global flags.
+WARNING: Cross file does not specify strip binary, result will not be stripped.

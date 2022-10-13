@@ -1,0 +1,115 @@
+decode.lo: ../../../../libtheora/lib/decode.c \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/features.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/string.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/strings.h \
+  /home/dott/ogv.js/build/wasm/root/include/ogg/ogg.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/__stddef_max_align_t.h \
+  /home/dott/ogv.js/build/wasm/root/include/ogg/os_types.h \
+  /home/dott/ogv.js/build/wasm/root/include/ogg/config_types.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/inttypes.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/endian.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h \
+  ../../../../libtheora/lib/decint.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/limits.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/limits.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/limits.h \
+  ../../../../libtheora/include/theora/theoradec.h \
+  ../../../../libtheora/include/theora/codec.h \
+  ../../../../libtheora/lib/state.h ../../../../libtheora/lib/internal.h \
+  ../config.h ../../../../libtheora/include/theora/theora.h \
+  ../../../../libtheora/lib/ocintrin.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/math.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/math.h \
+  ../../../../libtheora/lib/huffman.h ../../../../libtheora/lib/quant.h \
+  ../../../../libtheora/lib/bitpack.h \
+  ../../../../libtheora/lib/huffdec.h \
+  ../../../../libtheora/lib/dequant.h
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/features.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/string.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:
+
+/home/dott/ogv.js/build/wasm/root/include/ogg/ogg.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/__stddef_max_align_t.h:
+
+/home/dott/ogv.js/build/wasm/root/include/ogg/os_types.h:
+
+/home/dott/ogv.js/build/wasm/root/include/ogg/config_types.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/inttypes.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/types.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/endian.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/sys/select.h:
+
+../../../../libtheora/lib/decint.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/limits.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/limits.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/limits.h:
+
+../../../../libtheora/include/theora/theoradec.h:
+
+../../../../libtheora/include/theora/codec.h:
+
+../../../../libtheora/lib/state.h:
+
+../../../../libtheora/lib/internal.h:
+
+../config.h:
+
+../../../../libtheora/include/theora/theora.h:
+
+../../../../libtheora/lib/ocintrin.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/math.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/math.h:
+
+../../../../libtheora/lib/huffman.h:
+
+../../../../libtheora/lib/quant.h:
+
+../../../../libtheora/lib/bitpack.h:
+
+../../../../libtheora/lib/huffdec.h:
+
+../../../../libtheora/lib/dequant.h:

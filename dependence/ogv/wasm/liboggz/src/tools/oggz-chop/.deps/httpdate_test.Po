@@ -1,0 +1,65 @@
+httpdate_test.o: \
+  ../../../../../../liboggz/src/tools/oggz-chop/httpdate_test.c \
+  ../../../config.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/features.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/string.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/strings.h \
+  ../../../../../../liboggz/src/tests/oggz_tests.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/inttypes.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h \
+  ../../../../../../liboggz/src/tools/oggz-chop/httpdate.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/time.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/time.h
+
+../../../config.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/features.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/string.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:
+
+../../../../../../liboggz/src/tests/oggz_tests.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/stdlib.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdlib.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/alloca.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/inttypes.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/inttypes.h:
+
+../../../../../../liboggz/src/tools/oggz-chop/httpdate.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/time.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/time.h:

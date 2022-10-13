@@ -1,0 +1,132 @@
+silk/float/corrMatrix_FLP.lo: \
+  ../../../libopus/silk/float/corrMatrix_FLP.c config.h \
+  ../../../libopus/silk/float/main_FLP.h \
+  ../../../libopus/silk/float/SigProc_FLP.h \
+  ../../../libopus/silk/SigProc_FIX.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/string.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/features.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/strings.h \
+  ../../../libopus/silk/typedef.h ../../../libopus/include/opus_types.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h \
+  ../../../libopus/include/opus_defines.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/float.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/float.h \
+  ../../../libopus/silk/resampler_structs.h \
+  ../../../libopus/silk/macros.h ../../../libopus/celt/arch.h \
+  ../../../libopus/celt/ecintrin.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/math.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/math.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/limits.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/limits.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/limits.h \
+  ../../../libopus/celt/cpu_support.h ../../../libopus/silk/Inlines.h \
+  ../../../libopus/silk/MacroCount.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h \
+  /home/dott/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h \
+  /home/dott/emsdk/upstream/lib/clang/16.0.0/include/__stddef_max_align_t.h \
+  ../../../libopus/silk/MacroDebug.h ../../../libopus/celt/float_cast.h \
+  ../../../libopus/silk/float/structs_FLP.h ../../../libopus/silk/main.h \
+  ../../../libopus/silk/define.h ../../../libopus/silk/errors.h \
+  ../../../libopus/silk/structs.h ../../../libopus/celt/entenc.h \
+  ../../../libopus/celt/entcode.h ../../../libopus/celt/entdec.h \
+  ../../../libopus/silk/tables.h ../../../libopus/silk/PLC.h \
+  ../../../libopus/silk/control.h ../../../libopus/silk/debug.h
+
+config.h:
+
+../../../libopus/silk/float/main_FLP.h:
+
+../../../libopus/silk/float/SigProc_FLP.h:
+
+../../../libopus/silk/SigProc_FIX.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/string.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/string.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/features.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/alltypes.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/strings.h:
+
+../../../libopus/silk/typedef.h:
+
+../../../libopus/include/opus_types.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdint.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/stdint.h:
+
+../../../libopus/include/opus_defines.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/float.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/float.h:
+
+../../../libopus/silk/resampler_structs.h:
+
+../../../libopus/silk/macros.h:
+
+../../../libopus/celt/arch.h:
+
+../../../libopus/celt/ecintrin.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/compat/math.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/math.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/limits.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/limits.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/bits/limits.h:
+
+../../../libopus/celt/cpu_support.h:
+
+../../../libopus/silk/Inlines.h:
+
+../../../libopus/silk/MacroCount.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/stdio.h:
+
+/home/dott/emsdk/upstream/emscripten/cache/sysroot/include/wasi/api.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/stddef.h:
+
+/home/dott/emsdk/upstream/lib/clang/16.0.0/include/__stddef_max_align_t.h:
+
+../../../libopus/silk/MacroDebug.h:
+
+../../../libopus/celt/float_cast.h:
+
+../../../libopus/silk/float/structs_FLP.h:
+
+../../../libopus/silk/main.h:
+
+../../../libopus/silk/define.h:
+
+../../../libopus/silk/errors.h:
+
+../../../libopus/silk/structs.h:
+
+../../../libopus/celt/entenc.h:
+
+../../../libopus/celt/entcode.h:
+
+../../../libopus/celt/entdec.h:
+
+../../../libopus/silk/tables.h:
+
+../../../libopus/silk/PLC.h:
+
+../../../libopus/silk/control.h:
+
+../../../libopus/silk/debug.h:
