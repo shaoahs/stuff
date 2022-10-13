@@ -1,5 +1,5 @@
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 import jsyaml from 'js-yaml';
 
 import visualizer from 'rollup-plugin-visualizer';
@@ -18,21 +18,15 @@ import dynamicImportVars from '@rollup/plugin-dynamic-import-vars';
 
 
 let filename;
-if(process.env.WORKSPACE){
-  filename = path.resolve(process.env.WORKSPACE + '/content.config.yml');
-} else {
-  filename = path.resolve(__dirname + '/content.config.yml');
-}
 
-
+// context
+filename = path.resolve(process.env.WORKSPACE + '/content.config.yml');
 let content = jsyaml.load(fs.readFileSync(filename, 'utf8'));
 
-if(process.env.WORKSPACE){
-  filename = path.resolve(process.env.WORKSPACE + '/system.set.yml');
-} else {
-  filename = path.resolve(__dirname + '/system.set.yml');
-}
+// system.set
+filename = path.resolve(process.env.WORKSPACE + '/system.set.yml');
 let set = jsyaml.load(fs.readFileSync(filename, 'utf8'));
+
 let config = set.config;
 let external = set.build.externals;
 

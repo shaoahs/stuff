@@ -31,7 +31,7 @@ vendor:
     - zh-tw
     - zh-cn
 
-  source: src/resource.js
+  source: src/makeres/resource.js
   resource: res/vendor.yml
   output: res/vendor.js
   

@@ -1,8 +1,8 @@
-import fs from 'fs';
-import path from 'path';
+import fs from 'node:fs';
+import path from 'node:path';
 import jsyaml from 'js-yaml';
 
-import atlas from '../../tasks/plugin/rollup-plugin-atlas.js';
+import atlas from '../../tasks/plugin/rollup-plugin-atlas.mjs';
 
 import alias from '@rollup/plugin-alias';
 import json from '@rollup/plugin-json';
@@ -16,12 +16,6 @@ import {terser} from 'rollup-plugin-terser';
 import globImport from 'rollup-plugin-glob-import';
 import dynamicImportVars from '@rollup/plugin-dynamic-import-vars';
 
-let filename;
-if(process.env.WORKSPACE) {
-  filename = path.resolve(process.env.WORKSPACE + '/content.config.yml');
-} else {
-  filename = path.resolve(__dirname + '/content.config.yml');
-}
 
 let templateVersion = 'game.4.0';
 let templateFormat = 'esm';
@@ -32,16 +26,16 @@ if(templateVersion === 'game.2.0') {
   templateFormat = 'system';
 }
 
+let filename;
 
+// context
+filename = path.resolve(process.env.WORKSPACE + '/content.config.yml');
 let content = jsyaml.load(fs.readFileSync(filename, 'utf8'));
 
-if(process.env.WORKSPACE){
-  filename = path.resolve(process.env.WORKSPACE + '/system.set.yml');
-} else {
-  filename = path.resolve(__dirname + '/system.set.yml');
-}
-
+// system.set
+filename = path.resolve(process.env.WORKSPACE + '/system.set.yml');
 let set = jsyaml.load(fs.readFileSync(filename, 'utf8'));
+
 let config = set.config;
 let external = set.build.externals;
 

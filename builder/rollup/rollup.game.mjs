@@ -33,21 +33,16 @@ if(templateVersion === 'game.2.0') {
 }
 
 let filename;
-if(process.env.WORKSPACE){
-  filename = path.resolve(process.env.WORKSPACE + '/content.config.yml');
-} else {
-  filename = path.resolve(__dirname + '/content.config.yml');
-}
-console.log(`filename : ${filename}`);
+
+// context
+filename = path.resolve(process.env.WORKSPACE + '/content.config.yml');
 let content = jsyaml.load(fs.readFileSync(filename, 'utf8'));
 
-//------------------------
-if(process.env.WORKSPACE){
-  filename = path.resolve(process.env.WORKSPACE + '/system.set.yml');
-} else {
-  filename = path.resolve(__dirname + '/system.set.yml');
-}
+// system.set
+filename = path.resolve(process.env.WORKSPACE + '/system.set.yml');
 let set = jsyaml.load(fs.readFileSync(filename, 'utf8'));
+
+
 let config = set.config;
 let external = set.build.externals;
 

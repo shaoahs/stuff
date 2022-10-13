@@ -2,8 +2,8 @@ images:
   demo: #群組
     fiveofkind: #動畫-五連線獎
       mask:
-        gradient1: res/main/spine/five/gradient1_mask.png
-        gradient2: res/main/spine/five/gradient2_mask.png
+        gradient1: res/main/spine/v1/five/gradient1_mask.png
+        gradient2: res/main/spine/v1/five/gradient2_mask.png
 frames:
   demo: #群組
     button: #群組

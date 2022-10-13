@@ -7,7 +7,7 @@ package:
 # config
 config:
   paths:
-    nuts: /dependence/nuts/nuts.2.8.0.js
+    nuts: /dependence/nuts/nuts.2.9.0.js
     data/: {%= group %}/{%= name %}/data/
     res/: {%= group %}/{%= name %}/res/
     src/: {%= group %}/{%= name %}/src/
@@ -29,7 +29,7 @@ config:
     # mithril: depend:mithril/mithril.min.2.0.4.js
     tweenjs: depend:createjs/tweenjs.min.1.0.2.js
 #    js-yaml: depend:yaml/js-yaml.min.3.14.0.js
-    pixi: depend:pixi/pixi.min.6.5.4.js
+    pixi: depend:pixi/pixi.min.6.5.6.js
     pixi-spine: depend:pixi/pixi-spine.2.0.5.js
     pixi-particles: depend:pixi/pixi-particles.2.0.0.js
 
