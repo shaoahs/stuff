@@ -9,6 +9,16 @@
 
 ### Removed
 
+## [7.0.0] - 2022-10-17
+### Added
+- (template) 新增 版本二 資源檔
+
+### Changed
+- 更新 agent 版本
+- 更新 第三方程式庫版本
+
+
+
 ## [7.0.0] - 2022-10-13
 ### Changed
 - [ext] convert js to mjs
