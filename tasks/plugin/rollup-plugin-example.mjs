@@ -13,9 +13,9 @@ export default function myExample (options = {}) {
   return {
     name: 'my-example', // this name will show up in warnings and errors
     augmentChunkHash ( chunkInfo ) {
-//       console.log(chunkInfo.name);
-      if(chunkInfo.name === 'fingerprint2') {
-//         console.log(chunkInfo);
+      console.log('[augmentChunkHash]', chunkInfo.name);
+      if(chunkInfo.name === 'lib') {
+        console.log(chunkInfo);
       }
 
       return null;
@@ -36,9 +36,9 @@ export default function myExample (options = {}) {
 
     async renderChunk(code, chunk, options) {
       if(chunk.name === 'lib') {
-        let response = await instance.get('/workspace?ID=12345');
-        console.log(`renderChunk ${chunk.name} ${chunk.fileName}`);
-        console.log('[rollup-plugin-example]', response.data);
+        // let response = await instance.get('/workspace?ID=12345');
+        // console.log(`renderChunk ${chunk.name} ${chunk.fileName}`);
+        // console.log('[rollup-plugin-example]', response.data);
         console.log('=========================');
         console.log(chunk);
         // console.log('=========================');
