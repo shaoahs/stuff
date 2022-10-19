@@ -21,6 +21,15 @@ export default function myExample (options = {}) {
       return null;
     },
 
+    generateBundle (options, bundle) {
+      console.log('[outputOptions]', options, bundle);
+    },
+
+    // buildEnd () {
+    //   console.log('[buildEnd]');
+
+    // },
+
     // generateBundle(outputOptions, bundle) {
     //   console.log('generateBundle : ', outputOptions);
     //   console.log(bundle);
@@ -30,9 +39,9 @@ export default function myExample (options = {}) {
     //   console.log(`[resolveId] source:${source}, importer:${importer}`);
     // },
 
-    load(id) {
-      console.log(`[load] id:${id}`);
-    },
+    // load(id) {
+    //   console.log(`[load] id:${id}`);
+    // },
 
     async renderChunk(code, chunk, options) {
       if(chunk.name === 'lib') {
