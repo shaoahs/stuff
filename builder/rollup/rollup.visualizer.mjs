@@ -2,7 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import jsyaml from 'js-yaml';
 
-import visualizer from 'rollup-plugin-visualizer';
+import {visualizer} from 'rollup-plugin-visualizer';
 import analyze from 'rollup-plugin-analyzer';
 import postcss from 'rollup-plugin-postcss';
 
@@ -97,6 +97,9 @@ if(output.format === 'iife') {
 } else {
   output.name = null;
 }
+output.inlineDynamicImports = true;
+
+
 let visualTemplate = 'sunburst';
 if(process.env.VISUAL_TEMPLATE) {
   switch (process.env.VISUAL_TEMPLATE) {
@@ -119,7 +122,6 @@ export default {
   input: input,
   external: external,
   output: output,
-  inlineDynamicImports: true,
   plugins: [
     alias(paths),
     visualizer({

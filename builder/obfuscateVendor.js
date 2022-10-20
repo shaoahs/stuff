@@ -1,7 +1,6 @@
 // const yaml = require('js-yaml');
 // const fs   = require('fs');
 // 
-// console.log(__dirname);
 // let filename = '../builder.config.yml';
 // console.log(filename);
 // 

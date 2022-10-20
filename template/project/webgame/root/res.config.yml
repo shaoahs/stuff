@@ -18,15 +18,15 @@ removeKey: project/{%= group %}/{%= name %}/
 
 # 最佳化用
 vendor:
-  sceneList:
-    - v1main
-    - v2main
-    - sub
-    - v1load
-    - v2load
-    - v1info
-    - v2info
-  langList:
+  sceneList: # 場景清單
+    - v1main   # 主場景    版本之一
+    - v2main   # 主場景    版本之二
+    - sub      # 子場景
+    - v1load   # 讀取畫面  版本之一
+    - v2load   # 讀取畫面  版本之二
+    - v1info   # 說明     版本之一
+    - v2info   # 說明     版本之二
+  langList: # 語言清單
     - en-us
     - zh-tw
     - zh-cn
