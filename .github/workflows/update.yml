@@ -15,7 +15,7 @@ jobs:
           report "複製專案"
       - uses: actions/checkout@v3
       - name: 部署
-        run: 
-          - pwd
-          - ls -la
+        run: |
+          pwd
+          ls -la
 
