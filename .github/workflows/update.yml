@@ -18,4 +18,8 @@ jobs:
         run: |
           pwd
           ls -la
+          cp /actions-runner/_work/stuff/stuff/* -Rf /tmp/ramdisk/stuff/
+          cd /tmp/ramdisk/stuff/
+          pwd
+          npm install
 
