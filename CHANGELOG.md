@@ -9,6 +9,10 @@
 
 ### Removed
 
+## [7.0.1] - 2022-10-24
+### Added
+- (template) 新增 github 設定
+
 ## [7.0.0] - 2022-10-24
 ### Changed
 - 更新 agent 版本
