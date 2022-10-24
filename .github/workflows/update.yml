@@ -15,5 +15,9 @@ jobs:
           report "複製專案"
       - uses: actions/checkout@v3
       - name: 部署
-        run: ls -la
+        run: |
+          mkdir -p /tmp/ramdisk/stuff/
+          cp /actions-runner/_work/stuff/stuff/* -Rf /tmp/ramdisk/stuff/
+          cd /tmp/ramdisk/stuff/
+          npm install
 

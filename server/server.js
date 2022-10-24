@@ -143,7 +143,7 @@ fastify
     // console.log(fastify.io);
 
     logger.info('!!!! start web server !!!!');
-    logger.info('http://localhost:3000/developer/agent/');
+    logger.info('https://localhost:3000/developer/agent/');
 });
 
 fastify.get('/', (request, reply) => {

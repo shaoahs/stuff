@@ -1074,7 +1074,7 @@ var base = /*#__PURE__*/Object.freeze({
   debug: debug,
   getTextureGroup: getTextureGroup$1,
   make: make,
-  'default': BaseOld
+  default: BaseOld
 });
 
 const TYPE$9 = 'animation';
@@ -3946,18 +3946,11 @@ var utils = /*#__PURE__*/Object.freeze({
 /* globals Howl */
 //let clock = null;
 let dragon = null;
-let baseLoader = null;
-let jsyaml = null;
 
 /**
  * 場景管理
  *
  */
-/*
- * 設定檔
- */
-const    ID_CREATE_CONFIG = 'config';
-
 /*
  * 聲音
  */
@@ -4611,8 +4604,6 @@ function init$6 (conf) {
   property.objectFactory[OBJ_TYPE.SPINE]        = createSpine;
   property.objectFactory[OBJ_TYPE.PARTICLE]     = createParticle;
 
-  jsyaml = conf.jsyaml;
-  baseLoader = conf.Loader;
   dragon = conf.dragon;
 
   if (dragon) {
@@ -4638,158 +4629,6 @@ function registerFactory (config) {
  * @param config {Object} 場景設定檔
  * @return {boolean} 是否開始讀取
  */
-function loadScene (config) {
-  let e = property.event;
-  let procFinish;
-  let procData;
-  if (property.isBusy) {
-    return false;
-  }
-
-  property.isBusy = true;
-  property.game = config.game;
-
-  //----
-  let filenameList = config.filename,
-    procList = config.proc,
-    callbackList = config.callback,
-    finish = config.finish,
-    rawDataList = [],
-    currentIndex = 0;
-
-  //----
-  // 一筆原生資料處理完成後
-  let procCallback = (data) => {
-    let curCallback = callbackList[currentIndex];
-    if (curCallback) {
-      curCallback(data);
-    }
-
-    if (e.resEnd) {
-      e.resEnd(currentIndex);
-    }
-
-    // if (currentIndex !== 0) {
-    // }
-
-    // 確認是否有下一筆
-    currentIndex += 1;
-    if (currentIndex < rawDataList.length)    {
-      if (e.resBegin) {
-        e.resBegin(currentIndex);
-      }
-
-      procData();
-    } else {
-      procFinish();
-    }
-  };
-
-  // 完成所有原生資料處理
-  procFinish = () => {
-    property.isBusy = false;
-    if (finish) {
-      finish();
-    }
-  };
-
-  //處理一筆原生資料成為可使用物件
-  procData = () => {
-    let curProc, rawData, data;
-    curProc = procList[currentIndex];
-    rawData = rawDataList[currentIndex];
-
-    try {
-      data = jsyaml.load(rawData);
-      if (curProc) {
-        property.baseIndex += 1;
-        property.baseProgress = property.baseIndex / property.baseMax * 100;
-        curProc(data, procCallback);
-      }
-    } catch (err) {
-      console.log(err);
-    }
-  };
-
-  //----
-  if (!Array.isArray(filenameList)) {
-    console.log('error : filenameList');
-    return false;
-  }
-
-  if (!Array.isArray(procList)) {
-    console.log('error : procList');
-    return false;
-  }
-
-  if (!Array.isArray(callbackList)) {
-    console.log('error : callbackList');
-    return false;
-  }
-
-  if (filenameList.length !== procList.length) {
-    console.log('error : procList.length');
-    return false;
-  }
-
-  //--
-  function start () {
-    currentIndex = 0;
-    procData();
-  }
-
-  //--
-  (function () {
-    console.log('-------------------------------');
-    if (e.sceneResBegin) {
-      e.sceneResBegin(ID_CREATE_CONFIG);
-    }
-
-    property.baseIndex = 0;
-    property.baseProgress = 0;
-    property.baseMax = 1 + filenameList.length;
-    property.baseProgress = property.baseIndex / property.baseMax * 100;
-    property.base = 1 / property.baseMax;
-
-    let loader = new baseLoader(property.baseURL, 50);
-    filenameList.forEach((filename, index) => {
-      loader.add(index.toString(), filename);
-    });
-    loader.onProgress.once(loader => {
-      let currentProgress = loader.progress;
-      if (currentProgress > 100) {
-        currentProgress = 100;
-      }
-
-      let totalProgress = property.baseProgress + currentProgress * property.base;
-
-      if (e.sceneResLoading) {
-        e.sceneResLoading({
-          currentProgress: currentProgress,
-          currentLength: filenameList.length,
-          totalProgress: totalProgress,
-          state: property.state
-        });
-      }
-    });
-
-    loader.load((loader, resource) => {
-      let names = Object.getOwnPropertyNames(resource);
-      names.forEach((name) => {
-        let idx = parseInt(name);
-        rawDataList[idx] = resource[name].data;
-      });
-      if (e.sceneResEnd) {
-        e.sceneResEnd(ID_CREATE_CONFIG);
-      }
-
-      start();
-    });
-  }());
-
-  return true;
-}
-
 function loadSceneEx (config) {
   let e = property.event;
   let procFinish;
@@ -6255,7 +6094,6 @@ var sceneManager = /*#__PURE__*/Object.freeze({
   createGroup: createGroup,
   init: init$6,
   registerFactory: registerFactory,
-  loadScene: loadScene,
   loadSceneEx: loadSceneEx,
   setEvent: setEvent,
   setState: setState$1,
@@ -6962,7 +6800,7 @@ var uiLoading = /*#__PURE__*/Object.freeze({
  ************************************************************************ */
 
 
-class Base$1 {
+let Base$1 = class Base {
   constructor () {
     let self = this;
     let stats = null;
@@ -7333,7 +7171,7 @@ class Base$1 {
 
     self.stats = null;
   }
-}
+};
 
 Base$1.Stats = null;
 Base$1.isInitial = false;
@@ -8309,53 +8147,29 @@ class Base {
     }
 
     //-----------------------------
-    if (config.isObject) {
-      let conf = {
-        game: properties.game,
-        objData: [],
-        proc: [],
-        callback: [],
-        finish: createFinish
-      };
-      if (infoList && Array.isArray(infoList)) {
-        infoList.forEach(info => {
-          let event = eventMap[info.eventName];
-          if (event && info.obj && event.proc) {
-            conf.objData.push(info.obj);
-            conf.proc.push(event.proc);
-          } else {
-            console.error('eventName  : ' + info.eventName + ' init error !');
-          }
-          conf.callback.push(event.callback);
-        });
-      } else {
-        console.log('error : infoList');
-      }
-
-      loadSceneEx(conf);
-    } else {
-      let conf = {
-        game: properties.game,
-        filename: [],
-        proc: [],
-        callback: [],
-        finish: createFinish
-      };
-      if (infoList && Array.isArray(infoList)) {
-        infoList.forEach((info) => {
-          let event = eventMap[info.eventName];
-          if (event && info.filename) {
-            conf.filename.push(info.filename);
-          }
+    let conf = {
+      game: properties.game,
+      objData: [],
+      proc: [],
+      callback: [],
+      finish: createFinish
+    };
+    if (infoList && Array.isArray(infoList)) {
+      infoList.forEach(info => {
+        let event = eventMap[info.eventName];
+        if (event && info.obj && event.proc) {
+          conf.objData.push(info.obj);
           conf.proc.push(event.proc);
-          conf.callback.push(event.callback);
-        });
-      } else {
-        console.log('error : infoList');
-      }
-
-      loadScene(conf);
+        } else {
+          console.error('eventName  : ' + info.eventName + ' init error !');
+        }
+        conf.callback.push(event.callback);
+      });
+    } else {
+      console.log('error : infoList');
     }
+
+    loadSceneEx(conf);
 
     return true;
   }

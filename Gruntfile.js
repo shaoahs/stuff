@@ -494,15 +494,15 @@ module.exports = function(grunt) {
     fs.writeFileSync(filename, buf, 'utf8');
 
     // demo
-    filename = dir + 'demo.txt';
-    grunt.log.writeln(filename);
-    if(o.demo) {
-      o.id = o.demo;
-    } else {
-      o.id = 'dm' + o.id;
-    }
-    buf = JSON.stringify(o, null, 2);
-    fs.writeFileSync(filename, buf, 'utf8');
+    // filename = dir + 'demo.txt';
+    // grunt.log.writeln(filename);
+    // if(o.demo) {
+    //   o.id = o.demo;
+    // } else {
+    //   o.id = 'dm' + o.id;
+    // }
+    // buf = JSON.stringify(o, null, 2);
+    // fs.writeFileSync(filename, buf, 'utf8');
   }
 
   //-------------------------
@@ -3387,7 +3387,7 @@ module.exports = function(grunt) {
         debugProtection: false,
         debugProtectionInterval: 0,
         disableConsoleOutput: false,
-        identifierNamesGenerator: 'mangled-shuffled', //'hexadecimal',
+        identifierNamesGenerator: 'mangled', //'hexadecimal',
         log: false,
         renameGlobals: false,
         rotateStringArray: true,
@@ -3417,14 +3417,14 @@ module.exports = function(grunt) {
         debugProtection: false,
         debugProtectionInterval: 0,
         disableConsoleOutput: false,
-        identifierNamesGenerator: 'mangled-shuffled', //'hexadecimal',
+        identifierNamesGenerator: 'hexadecimal', //mangled 'hexadecimal',
         // reservedStrings: [
         //   'http:/\d',
         //   'ws:/\d',
         //   'https:/\d',
         //   'wss:/\d'
         // ],
-          log: false,
+        log: false,
         renameGlobals: false,
         rotateStringArray: true,
         selfDefending: false,
