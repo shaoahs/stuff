@@ -494,15 +494,15 @@ module.exports = function(grunt) {
     fs.writeFileSync(filename, buf, 'utf8');
 
     // demo
-    filename = dir + 'demo.txt';
-    grunt.log.writeln(filename);
-    if(o.demo) {
-      o.id = o.demo;
-    } else {
-      o.id = 'dm' + o.id;
-    }
-    buf = JSON.stringify(o, null, 2);
-    fs.writeFileSync(filename, buf, 'utf8');
+    // filename = dir + 'demo.txt';
+    // grunt.log.writeln(filename);
+    // if(o.demo) {
+    //   o.id = o.demo;
+    // } else {
+    //   o.id = 'dm' + o.id;
+    // }
+    // buf = JSON.stringify(o, null, 2);
+    // fs.writeFileSync(filename, buf, 'utf8');
   }
 
   //-------------------------
