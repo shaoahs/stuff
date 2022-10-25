@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 7.0.1]');
+  console.log('[stuff version 7.0.2]');
   console.log(__dirname);
   grunt.file.setBase(__dirname);
 
@@ -219,11 +219,11 @@ module.exports = function(grunt) {
       console.error('no use! ' + filename);
     }
 
-    if(resConfig.vendor) {
-      if(resConfig.vendor.custom) {
-        resConfig.vendor.langList = resConfig.vendor.custom;
-      }
-    }
+    // if(resConfig.vendor) {
+    //   if(resConfig.vendor.custom) {
+    //     resConfig.vendor.langList = resConfig.vendor.custom;
+    //   }
+    // }
     
     if(!resConfig.cache) {
       resConfig.cache = {
