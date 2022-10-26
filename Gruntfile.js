@@ -3349,12 +3349,12 @@ module.exports = function(grunt) {
       debugProtectionInterval: 0,
       disableConsoleOutput: true,
       identifierNamesGenerator: 'mangled-shuffled',
-      // reservedStrings: [
-      //   'http:/\d',
-      //   'ws:/\d',
-      //   'https:/\d',
-      //   'wss:/\d'
-      // ],
+      forceTransformStrings: [
+        'http:/\d',
+        'ws:/\d',
+        'https:/\d',
+        'wss:/\d'
+      ],
       log: false,
       renameGlobals: false,
       rotateStringArray: true,
@@ -3369,7 +3369,7 @@ module.exports = function(grunt) {
         'rc4'
       ],
       stringArrayThreshold: 0.25,
-      transformObjectKeys: true,
+      transformObjectKeys: false,
       unicodeEscapeSequence: false,
       reservedNames: [
       ],
