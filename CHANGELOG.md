@@ -4,6 +4,7 @@
 ### Added
 
 ### Changed
+- 調整說明文件 
 
 ### Fixed
 
