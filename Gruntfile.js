@@ -67,7 +67,7 @@ module.exports = function(grunt) {
           'public/<%= pkg.currentMode %>/<%= pkg.current %>/data/**/*.{js,txt}',
           'public/<%= pkg.currentMode %>/<%= pkg.current %>/config/**/*.{js,txt}',
           'public/<%= pkg.currentMode %>/<%= pkg.current %>/app/**/*.js',
-          'public/<%= pkg.currentMode %>/<%= pkg.current %>/*.html'
+          'public/<%= pkg.currentMode %>/<%= pkg.current %>/*.{html,json}'
         ]
       },
       cleanList:null
@@ -1460,7 +1460,7 @@ module.exports = function(grunt) {
             if(content && pkg.version) {
               let nameList = pkg.template.release.dest.split('.');
               let ext = nameList[nameList.length - 1];
-              let filename = `${workspace.root}/v${pkg.version}.${ext}`;
+              let filename = `public/${pkg.currentMode}/${pkg.current}/v${pkg.version}.${ext}`;
               fs.writeFileSync(filename, content, 'utf8')
             }         
 
