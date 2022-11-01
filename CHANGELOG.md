@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 ### Added
+- 新增版本輸出
 
 ### Changed
 - 調整說明文件 

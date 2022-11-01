@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 7.0.3]');
+  console.log('[stuff version 7.1.0]');
   console.log(__dirname);
   grunt.file.setBase(__dirname);
 
@@ -476,8 +476,13 @@ module.exports = function(grunt) {
     }
 
     let filename = dir + 'gamecard.txt';
-    grunt.log.writeln(filename);
+    // grunt.log.writeln(filename);
     fs.writeFileSync(filename, buf, 'utf8');
+
+    if(o.version) {
+      filename = `${dir}v${o.version}.txt`;
+      fs.writeFileSync(filename, buf, 'utf8');
+    }
   }
 
   function copyGameCardDeploy(o) {
@@ -490,8 +495,13 @@ module.exports = function(grunt) {
     }
 
     let filename = dir + 'gamecard.txt';
-    grunt.log.writeln(filename);
+    // grunt.log.writeln(filename);
     fs.writeFileSync(filename, buf, 'utf8');
+
+    if(o.version) {
+      filename = `${dir}v${o.version}.txt`;
+      fs.writeFileSync(filename, buf, 'utf8');
+    }
 
     // demo
     // filename = dir + 'demo.txt';
@@ -567,10 +577,10 @@ module.exports = function(grunt) {
         src: isFramework || ['<%= pkg.workspace %>/config/**/*.*','<%= pkg.workspace %>/config']
       },
       debug: {
-          src: isFramework || ['<%= pkg.workspace %>/debug/**/*.*', '<%= pkg.workspace %>/debug/**/*', '<%= pkg.workspace %>/debug', '<%= pkg.workspace %>/tmp/debug.json']
+          src: isFramework || ['<%= pkg.workspace %>/v*.{json, html}', '<%= pkg.workspace %>/debug/**/*.*', '<%= pkg.workspace %>/debug/**/*', '<%= pkg.workspace %>/debug', '<%= pkg.workspace %>/tmp/debug.json']
       },
       release: {
-          src: isFramework || ['<%= pkg.workspace %>/release/**/*.*', '<%= pkg.workspace %>/release/**/*', '<%= pkg.workspace %>/release', '<%= pkg.workspace %>/tmp/release.json']
+          src: isFramework || ['<%= pkg.workspace %>/v*.{json, html}', '<%= pkg.workspace %>/release/**/*.*', '<%= pkg.workspace %>/release/**/*', '<%= pkg.workspace %>/release', '<%= pkg.workspace %>/tmp/release.json']
       },
       public: {
         src: workspace.public && workspace.public.cleanList || [
@@ -796,6 +806,13 @@ module.exports = function(grunt) {
             } else {
               content = null;
             }
+
+            if(content && pkg.version) {
+              let nameList = pkg.template.debug.dest.split('.');
+              let ext = nameList[nameList.length - 1];
+              let filename = `${workspace.root}/v${pkg.version}.${ext}`;
+              fs.writeFileSync(filename, content, 'utf8')
+            }
             
             return content;
           }
@@ -969,6 +986,13 @@ module.exports = function(grunt) {
               content = Mustache.render(content, view);
             } else {
               content = null;
+            }
+
+            if(content && pkg.version) {
+              let nameList = pkg.template.release.dest.split('.');
+              let ext = nameList[nameList.length - 1];
+              let filename = `${workspace.root}/v${pkg.version}.${ext}`;
+              fs.writeFileSync(filename, content, 'utf8')
             }
 
             return content;
@@ -1202,7 +1226,14 @@ module.exports = function(grunt) {
             } else {
               content = null;
             }
-            
+
+            if(content && pkg.version) {
+              let nameList = pkg.template.release.dest.split('.');
+              let ext = nameList[nameList.length - 1];
+              let filename = `${workspace.root}/v${pkg.version}.${ext}`;
+              fs.writeFileSync(filename, content, 'utf8')
+            }
+
             return content;
           }
         }
@@ -1425,7 +1456,14 @@ module.exports = function(grunt) {
             } else {
               content = null;
             }
-            
+
+            if(content && pkg.version) {
+              let nameList = pkg.template.release.dest.split('.');
+              let ext = nameList[nameList.length - 1];
+              let filename = `${workspace.root}/v${pkg.version}.${ext}`;
+              fs.writeFileSync(filename, content, 'utf8')
+            }         
+
             return content;
           }
         }
