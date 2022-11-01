@@ -5,6 +5,8 @@ Thumbs.db
 index.html
 index.json
 statistics.html
+v*.html
+v*.json
 /node_modules/
 /app/
 /tmp/
