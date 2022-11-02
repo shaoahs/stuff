@@ -4,10 +4,16 @@
 ### Added
 
 ### Changed
+- 調整說明文件 
 
 ### Fixed
 
 ### Removed
+
+## [7.1.0] - 2022-11-01
+### Added
+- 新增輸出獨立版本
+- (template) git config 新增過濾條件
 
 ## [7.0.1] - 2022-10-24
 ### Added

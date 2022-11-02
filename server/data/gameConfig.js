@@ -9,7 +9,6 @@
     gameConfigList = JSON.parse(fs.readFileSync(filename, {encoding:'utf8'}));
   }
 
-
   var gameConfigMap = {};
   gameConfigList && gameConfigList.forEach(function(gameConfig){
     if(!gameConfig) {
@@ -18,7 +17,7 @@
     gameConfigMap[gameConfig.id] = gameConfig;
   });
 
-  exports.get = function(id){
+  exports.get = function(id) {
     let conf = gameConfigMap[id];
     if(!conf){
       console.log(filename);

@@ -14,14 +14,14 @@ $> 此畫面為 command line interface (console 終端機)
 
 ### 相關需求
 
-- nodejs  v12.x.x [下載](https://nodejs.org/dist/latest-v12.x/)
+- nodejs  v18.x.x [下載](https://nodejs.org/dist/latest-v18.x/)
 - git [下載](https://git-scm.com/downloads)
 
 確認是否安裝完成，請參考如下畫面
 
 ````bash
 $> node --version
-v12.x.x
+v18.x.x
 
 $> git --version
 git version x.x.x
@@ -96,7 +96,7 @@ $> npm install
 $> grunt serve
 ````
 
-開啟瀏覽器 輸入網址 http://localhost:3000/developer/agent/index.html
+開啟瀏覽器 輸入網址 https://localhost:3000/developer/agent/index.html
 
 ## 建立新專案
 
@@ -149,7 +149,7 @@ $> cd <專案名稱>
 ├── app                 [自動產生, public 模式用]
 ├── ci                   [CI 用]
 ├── config              [自動產生, build public 模式用]
-├── content.config.yml  [專案設定檔]]
+├── content.config.yml  [專案設定檔]
 ├── data                [自動產生, public 模式用]
 ├── debug               [自動產生, debug 模式用]
 ├── gamecard            [遊戲卡片圖檔]
@@ -209,7 +209,7 @@ $> grunt public
 
 ### 本機測試用網址
 
-開啟瀏覽器 輸入網址  (http://localhost:3000/developer/agent/index.html)
+開啟瀏覽器 輸入網址  (https://localhost:3000/developer/agent/index.html)
 
 ### 產生資源設定檔 輸入下面命令
 
@@ -261,7 +261,7 @@ $> grunt build
 $> grunt public
 ````
 
-完成後 重新更新網頁 http://localhost:3000/developer/agent/index.html 就可以看要指定的專案
+完成後 重新更新網頁 https://localhost:3000/developer/agent/index.html 就可以看要指定的專案
 
 ### 當專案為附屬專案或子專案時
 
