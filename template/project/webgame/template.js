@@ -29,8 +29,8 @@ exports.template = function(grunt, init, done) {
   // const chalk = require('chalk');
   init.process({}, [
     // Prompt for these values.
-    init.prompt('group','slot'),
-    init.prompt('name', 'sample'),
+    init.prompt('group','demo'),
+    init.prompt('name', 'z01'),
     init.prompt('package')
   ], function(err, props) {
     console.log('err:');

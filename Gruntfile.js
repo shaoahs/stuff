@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 7.1.0]');
+  console.log('[stuff version 7.2.0]');
   console.log(__dirname);
   grunt.file.setBase(__dirname);
 
@@ -219,11 +219,11 @@ module.exports = function(grunt) {
       console.error('no use! ' + filename);
     }
 
-    // if(resConfig.vendor) {
-    //   if(resConfig.vendor.custom) {
-    //     resConfig.vendor.langList = resConfig.vendor.custom;
-    //   }
-    // }
+    if(resConfig.vendor) {
+      if(resConfig.vendor.custom) {
+        resConfig.vendor.langList = resConfig.vendor.custom;
+      }
+    }
     
     if(!resConfig.cache) {
       resConfig.cache = {
@@ -232,7 +232,7 @@ module.exports = function(grunt) {
           'app/**/*.{js,mjs}'
         ],
         resource: [
-          'systemjs/6.12.1/system.min.js'
+          'systemjs/6.13.0/system.min.js'
         ],
         output: 'config/cache.txt'
       }
@@ -1031,9 +1031,19 @@ module.exports = function(grunt) {
                 let names = Object.getOwnPropertyNames(langList);
                 let app = {};
                 // let appHash = {};
-                                
+
+                let isTheSame = true;
+                let firstPathname;
+
                 names.forEach(lang => {
                   let pathname = 'app/' + langList[lang];
+                  if(!firstPathname) {
+                    firstPathname = pathname;
+                  } else {
+                    if(firstPathname !== pathname) {
+                      isTheSame = false;
+                    }
+                  }
                   app[lang] = pathname;
 
                   /*
@@ -1043,7 +1053,11 @@ module.exports = function(grunt) {
                   appHash[lang] = `sha384-${hash.digest().toString('base64')}`;
                   */
                 });
-                obj.app = app;
+                if(isTheSame) {
+                  obj.app = firstPathname;
+                } else {
+                  obj.app = app;
+                }
                 // obj.appHash = appHash;
               } else {
                 let app = getAppName();
@@ -1274,10 +1288,20 @@ module.exports = function(grunt) {
                 let names = Object.getOwnPropertyNames(langList);
                 let app = {};
                 // let appHash = {};
+                let isTheSame = true;
+                let firstPathname;
 
                 names.forEach(lang => {
                   let pathname = `app/${langList[lang]}`;
                   app[lang] = pathname;
+
+                  if(!firstPathname) {
+                    firstPathname = pathname;
+                  } else {
+                    if(firstPathname !== pathname) {
+                      isTheSame = false;
+                    }
+                  }
 
                   // if(fs.existsSync(`public/${pkg.currentMode}/${pathname}`)) {
                   //   let data = fs.readFileSync(`public/${pkg.currentMode}/${pathname}`, 'utf8');
@@ -1289,7 +1313,12 @@ module.exports = function(grunt) {
                   //   console.error(`找不到檔案: ${pathname}`);
                   // }
                 });
-                obj.app = app;
+                if(isTheSame) {
+                  obj.app = firstPathname;
+                } else {
+                  obj.app = app;
+                }
+
                 // obj.appHash = appHash;
               } else {
                 let app = getAppName();
@@ -3636,7 +3665,7 @@ module.exports = function(grunt) {
     }
     if(resConfig.vendor) {
       let langList = resConfig.vendor.langList;
-      let names = ['en-us', 'zh-tw', 'zh-cn'];
+      let names = ['en-us', 'zh-cn'];
       if(Array.isArray(langList)) {
         names = langList;
       }
