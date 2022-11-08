@@ -2069,6 +2069,14 @@ module.exports = function(grunt) {
         files:[
           {
             expand: true,
+            cwd: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            src: ['index.{html,json}', 'v<%= pkg.version %>.{html,json}'],
+            dest: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            extDot: 'last',
+            ext: '.js.gz'
+          },
+          {
+            expand: true,
             cwd: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/app/',
             src: ['**/*.js'],
             dest: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/app/',
@@ -2113,6 +2121,14 @@ module.exports = function(grunt) {
           }
         },
         files:[
+          {
+            expand: true,
+            cwd: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            src: ['index.{html,json}', 'v<%= pkg.version %>.{html,json}'],
+            dest: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            extDot: 'last',
+            ext: '.js.br'
+          },
           {
             expand: true,
             cwd: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/app/',

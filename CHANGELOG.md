@@ -13,6 +13,7 @@
 ## [7.2.0] - 2022-11-07
 ### Added
 - 不同語言的版本 hash code 都相同時, gamecard.app 輸出成字串 (不輸出成多語對照表)
+- 壓縮檔清單 新增 index.html index.json v*.json
 
 ## [7.1.0] - 2022-11-01
 ### Added
