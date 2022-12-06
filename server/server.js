@@ -24,6 +24,7 @@ let corsOptions = {
     'https://g01bn.nrmhp.com/',
     'http://ip-api.com/',
     'http://127.0.0.1:3000',
+    'wss://172.16.102.5:4301',
     'http://172.16.65.127:3000',
     'http://127.0.0.1:4000'
   ],

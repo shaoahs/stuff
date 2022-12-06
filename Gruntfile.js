@@ -219,11 +219,11 @@ module.exports = function(grunt) {
       console.error('no use! ' + filename);
     }
 
-    if(resConfig.vendor) {
-      if(resConfig.vendor.custom) {
-        resConfig.vendor.langList = resConfig.vendor.custom;
-      }
-    }
+    // if(resConfig.vendor) {
+    //   if(resConfig.vendor.custom) {
+    //     resConfig.vendor.langList = resConfig.vendor.custom;
+    //   }
+    // }
     
     if(!resConfig.cache) {
       resConfig.cache = {
