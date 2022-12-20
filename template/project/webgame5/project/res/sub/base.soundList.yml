@@ -1,0 +1,28 @@
+sounds:
+  demo: #群組
+  - #點擊
+    objName: click
+    config:
+      src:
+      - res/sub/sound/pbg_click.wav
+      - res/sub/sound/pbg_click.mp3
+      - res/sub/sound/pbg_click.ogg
+      loop: false
+
+  - #得分
+    objName: winBonus
+    config:
+      src:
+      - res/sub/sound/pbg_winbonus.wav
+      - res/sub/sound/pbg_winbonus.mp3
+      - res/sub/sound/pbg_winbonus.ogg
+      loop: false
+
+  - #下注
+    objName: countDown
+    config:
+      src:
+      - res/sub/sound/pbg_countdown.wav
+      - res/sub/sound/pbg_countdown.mp3
+      - res/sub/sound/pbg_countdown.ogg
+    loop: false

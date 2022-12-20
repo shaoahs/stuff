@@ -1,0 +1,17 @@
+syntax = "proto3";
+package Game.{%= Group %}.{%= Name %}.Info;
+
+// 命令種類
+enum ActionType {
+  NORMAL = 0;          // 一般
+}
+
+message BaseResponse {
+  ActionType actionType = 1;   // 命令種類
+  reserved 2;               // 保留
+  string aPIVersion = 3;
+  string chanceVersion = 4;
+  string libVersion = 5;
+  string packageVersion = 6;
+  string slotServerVersion = 7;
+}

@@ -1,0 +1,62 @@
+{"frames": {
+"ui.lang.en-us.feature_en.png":
+{
+    "frame": {"x":0,"y":1860,"w":746,"h":464},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":746,"h":464},
+    "sourceSize": {"w":746,"h":464}
+},
+"ui.lang.en-us.havejp_en.png":
+{
+    "frame": {"x":747,"y":1395,"w":132,"h":108},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":132,"h":108},
+    "sourceSize": {"w":132,"h":108}
+},
+"ui.lang.en-us.jp_en.png":
+{
+    "frame": {"x":0,"y":1395,"w":746,"h":464},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":746,"h":464},
+    "sourceSize": {"w":746,"h":464}
+},
+"ui.lang.en-us.nojp_en.png":
+{
+    "frame": {"x":747,"y":930,"w":132,"h":108},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":132,"h":108},
+    "sourceSize": {"w":132,"h":108}
+},
+"ui.lang.en-us.payline_en.png":
+{
+    "frame": {"x":0,"y":930,"w":746,"h":464},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":746,"h":464},
+    "sourceSize": {"w":746,"h":464}
+},
+"ui.lang.en-us.paytable01_en.png":
+{
+    "frame": {"x":0,"y":465,"w":746,"h":464},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":746,"h":464},
+    "sourceSize": {"w":746,"h":464}
+},
+"ui.lang.en-us.paytable_en.png":
+{
+    "frame": {"x":0,"y":0,"w":746,"h":464},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":746,"h":464},
+    "sourceSize": {"w":746,"h":464}
+}},
+"meta": {
+  "app": "GIMP",
+  "image": "ui.lang.en-us.avif"
+}
+}

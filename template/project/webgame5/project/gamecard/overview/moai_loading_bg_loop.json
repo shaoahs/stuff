@@ -1,0 +1,599 @@
+{
+"bones": [
+	{ "name": "root" },
+	{ "name": "moai_loading_fx", "parent": "root", "x": 481, "y": -400 },
+	{ "name": "moai_loading_bg_b_1", "parent": "root", "x": 480, "y": -400 },
+	{ "name": "moai_loading_bg_c_1", "parent": "root", "x": 480, "y": -400 },
+	{ "name": "moai_loading_fx_06_1", "parent": "root", "x": 477, "y": -401 },
+	{ "name": "moai_loading_fx_06_2", "parent": "root", "x": 477, "y": -401 },
+	{ "name": "moai_loading_fx_06_3", "parent": "root", "x": 477, "y": -401 },
+	{ "name": "moai_loading_fx_06_4", "parent": "root", "x": 477, "y": -401 },
+	{ "name": "moai_loading_fx_01", "parent": "root", "x": 480, "y": -384 },
+	{ "name": "moai_loading_bg0", "parent": "root", "x": 480, "y": -405 },
+	{ "name": "moai_loading_bg1", "parent": "root", "x": 480, "y": -135 },
+	{ "name": "percentage", "parent": "root", "x":0, "y":200 },
+	{ "name": "percentage_fx", "parent": "root", "x":0, "y":200 },
+	{ "name": "moai_loading_fx_03_2", "parent": "root", "x": 391, "y": -398 },
+	{ "name": "moai_loading_fx_03_3", "parent": "root", "x": 496, "y": -300 },
+	{ "name": "moai_loading_fx_03_4", "parent": "root", "x": 521, "y": -364 },
+	{ "name": "moai_loading_fx_03_5", "parent": "root", "x": 479, "y": -403 },
+	{ "name": "moai_loading_bg2", "parent": "root", "x": 480, "y": -340 },
+	{ "name": "moai_loading_fx_02_1", "parent": "moai_loading_fx", "x": 69, "y": -2 },
+	{ "name": "moai_loading_fx_02_2", "parent": "moai_loading_fx", "x": -69, "y": -2 },
+	{ "name": "moai_loading_fx_03_1", "parent": "moai_loading_fx_01", "y": -8.561 },
+	{ "name": "moai_loading_bg_b_2", "parent": "moai_loading_bg_c_1" },
+	{ "name": "moai_loading_bg_a", "parent": "moai_loading_bg_c_1" },
+	{ "name": "moai_loading_bg_c_2", "parent": "moai_loading_bg_c_1", "y": 0.5, "rotation": -336 },
+	{ "name": "moai_loading_bg_c_3", "parent": "moai_loading_bg_c_1", "y": 0.5, "rotation": -312 },
+	{ "name": "moai_loading_bg_c_4", "parent": "moai_loading_bg_c_1", "y": 0.5, "rotation": -288 },
+	{ "name": "moai_loading_bg_c_5", "parent": "moai_loading_bg_c_1", "y": 0.5, "rotation": -264 },
+	{ "name": "moai_loading_bg_c_6", "parent": "moai_loading_bg_c_1", "y": 0.5, "rotation": -240 },
+	{ "name": "moai_loading_bg_c_7", "parent": "moai_loading_bg_c_1", "y": 0.5, "rotation": -216 },
+	{ "name": "moai_loading_bg_c_8", "parent": "moai_loading_bg_c_1", "y": 0.5, "rotation": -192 },
+	{ "name": "moai_loading_bg_c_9", "parent": "moai_loading_bg_c_1", "y": 0.5, "rotation": -168 },
+	{ "name": "moai_loading_bg_c_10", "parent": "moai_loading_bg_c_1", "y": 0.5, "rotation": -144 },
+	{ "name": "moai_loading_bg_c_11", "parent": "moai_loading_bg_c_1", "y": 0.5, "rotation": -120 },
+	{ "name": "moai_loading_bg_c_12", "parent": "moai_loading_bg_c_1", "y": 0.5, "rotation": -96 },
+	{ "name": "moai_loading_bg_c_13", "parent": "moai_loading_bg_c_1", "y": 0.5, "rotation": -72 },
+	{ "name": "moai_loading_bg_c_14", "parent": "moai_loading_bg_c_1", "y": 0.5, "rotation": -48 },
+	{ "name": "moai_loading_bg_c_15", "parent": "moai_loading_bg_c_1", "y": 0.5, "rotation": -24 },
+	{ "name": "moai_loading_bg_c_16", "parent": "moai_loading_bg_c_1", "y": 0.5 }
+],
+"slots": [
+	{ "name": "moai_loading_bg2", "bone": "moai_loading_bg2", "attachment": "moai_loading_bg2" },
+	{ "name": "moai_loading_fx_03_5", "bone": "moai_loading_fx_03_5", "attachment": "moai_loading_fx_03_5", "blend": "additive", "color": "0041FFCC" },
+	{ "name": "moai_loading_fx_03_4", "bone": "moai_loading_fx_03_4", "attachment": "moai_loading_fx_03_4", "blend": "additive", "color": "0077FFCC" },
+	{ "name": "moai_loading_fx_03_3", "bone": "moai_loading_fx_03_3", "attachment": "moai_loading_fx_03_3", "blend": "additive", "color": "0077FF00" },
+	{ "name": "moai_loading_fx_03_2", "bone": "moai_loading_fx_03_2", "attachment": "moai_loading_fx_03_2", "blend": "additive", "color": "0077FFCC" },
+	{ "name": "percentage", "bone": "percentage" ,"attachment": "percentage"},
+	{ "name": "moai_loading_bg1", "bone": "moai_loading_bg1", "attachment": "moai_loading_bg1" },
+	{ "name": "moai_loading_bg0", "bone": "moai_loading_bg0", "attachment": "moai_loading_bg0" },
+	{ "name": "percentage_fx", "bone": "percentage_fx", "attachment": "percentage_fx",  "color": "00FF00FF"  },
+	{ "name": "moai_loading_fx_01", "bone": "moai_loading_fx_01", "attachment": "moai_loading_fx_01", "blend": "additive", "color": "0095FFFF" },
+	{ "name": "moai_loading_fx_06_4", "bone": "moai_loading_fx_06_4", "attachment": "moai_loading_fx_06_4", "blend": "additive", "color": "FFFFFFB0" },
+	{ "name": "moai_loading_fx_06_3", "bone": "moai_loading_fx_06_3", "blend": "additive", "color": "FFFFFF33" },
+	{ "name": "moai_loading_fx_06_2", "bone": "moai_loading_fx_06_2", "blend": "additive", "color": "FFFFFF33" },
+	{ "name": "moai_loading_fx_06_1", "bone": "moai_loading_fx_06_1", "blend": "additive", "color": "FFFFFF33" },
+	{ "name": "moai_loading_bg_c_16", "bone": "moai_loading_bg_c_16", "attachment": "moai_loading_bg_c_16" },
+	{ "name": "moai_loading_bg_c_15", "bone": "moai_loading_bg_c_15", "attachment": "moai_loading_bg_c_15" },
+	{ "name": "moai_loading_bg_c_14", "bone": "moai_loading_bg_c_14", "attachment": "moai_loading_bg_c_14" },
+	{ "name": "moai_loading_bg_c_13", "bone": "moai_loading_bg_c_13", "attachment": "moai_loading_bg_c_13" },
+	{ "name": "moai_loading_bg_c_12", "bone": "moai_loading_bg_c_12", "attachment": "moai_loading_bg_c_12" },
+	{ "name": "moai_loading_bg_c_11", "bone": "moai_loading_bg_c_11", "attachment": "moai_loading_bg_c_11" },
+	{ "name": "moai_loading_bg_c_10", "bone": "moai_loading_bg_c_10", "attachment": "moai_loading_bg_c_10" },
+	{ "name": "moai_loading_bg_c_9", "bone": "moai_loading_bg_c_9", "attachment": "moai_loading_bg_c_9" },
+	{ "name": "moai_loading_bg_c_8", "bone": "moai_loading_bg_c_8", "attachment": "moai_loading_bg_c_8" },
+	{ "name": "moai_loading_bg_c_7", "bone": "moai_loading_bg_c_7", "attachment": "moai_loading_bg_c_7" },
+	{ "name": "moai_loading_bg_c_6", "bone": "moai_loading_bg_c_6", "attachment": "moai_loading_bg_c_6" },
+	{ "name": "moai_loading_bg_c_5", "bone": "moai_loading_bg_c_5", "attachment": "moai_loading_bg_c_5" },
+	{ "name": "moai_loading_bg_c_4", "bone": "moai_loading_bg_c_4", "attachment": "moai_loading_bg_c_4" },
+	{ "name": "moai_loading_bg_c_3", "bone": "moai_loading_bg_c_3", "attachment": "moai_loading_bg_c_3" },
+	{ "name": "moai_loading_bg_c_2", "bone": "moai_loading_bg_c_2", "attachment": "moai_loading_bg_c_2" },
+	{ "name": "moai_loading_bg_a", "bone": "moai_loading_bg_a", "attachment": "moai_loading_bg_a" },
+	{ "name": "moai_loading_bg_b_2", "bone": "moai_loading_bg_b_2", "attachment": "moai_loading_bg_b_2" },
+	{ "name": "moai_loading_fx_03_1", "bone": "moai_loading_fx_03_1", "attachment": "moai_loading_fx_03_1", "blend": "additive", "color": "3400A9FF" },
+	{ "name": "moai_loading_bg_b_1", "bone": "moai_loading_bg_b_1", "attachment": "moai_loading_bg_b_1" },
+	{ "name": "moai_loading_fx_02_2", "bone": "moai_loading_fx_02_2", "attachment": "moai_loading_fx_02_2", "blend": "additive" },
+	{ "name": "moai_loading_fx_02_1", "bone": "moai_loading_fx_02_1", "attachment": "moai_loading_fx_02_1", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"percentage_fx": {
+			"percentage_fx": { "width": 18, "height": 50 }
+		},
+		"percentage": {
+			"percentage": { "width": 472, "height": 22 }
+		},
+		"moai_loading_fx_02_1": {
+			"moai_loading_fx_02_1": { "width": 60, "height": 140, "name": "moai_loading_fx_02" }
+		},
+		"moai_loading_fx_02_2": {
+			"moai_loading_fx_02_2": { "width": 60, "height": 140, "name": "moai_loading_fx_02" }
+		},
+		"moai_loading_bg_b_1": {
+			"moai_loading_bg_b_1": { "width": 106, "height": 106, "name": "moai_loading_bg_b" }
+		},
+		"moai_loading_fx_03_1": {
+			"moai_loading_fx_03_1": { "width": 64, "height": 64, "name": "moai_loading_fx_03" }
+		},
+		"moai_loading_bg_b_2": {
+			"moai_loading_bg_b_2": { "width": 106, "height": 106, "name": "moai_loading_bg_b" }
+		},
+		"moai_loading_bg_a": {
+			"moai_loading_bg_a": { "width": 154, "height": 154 }
+		},
+		"moai_loading_bg_c_2": {
+			"moai_loading_bg_c_2": { "width": 18, "height": 14, "x": 67, "name": "moai_loading_bg_c" }
+		},
+		"moai_loading_bg_c_3": {
+			"moai_loading_bg_c_3": { "width": 18, "height": 14, "x": 67, "name": "moai_loading_bg_c" }
+		},
+		"moai_loading_bg_c_4": {
+			"moai_loading_bg_c_4": { "width": 18, "height": 14, "x": 67, "name": "moai_loading_bg_c" }
+		},
+		"moai_loading_bg_c_5": {
+			"moai_loading_bg_c_5": { "width": 18, "height": 14, "x": 67, "name": "moai_loading_bg_c" }
+		},
+		"moai_loading_bg_c_6": {
+			"moai_loading_bg_c_6": { "width": 18, "height": 14, "x": 67, "name": "moai_loading_bg_c" }
+		},
+		"moai_loading_bg_c_7": {
+			"moai_loading_bg_c_7": { "width": 18, "height": 14, "x": 67, "name": "moai_loading_bg_c" }
+		},
+		"moai_loading_bg_c_8": {
+			"moai_loading_bg_c_8": { "width": 18, "height": 14, "x": 67, "name": "moai_loading_bg_c" }
+		},
+		"moai_loading_bg_c_9": {
+			"moai_loading_bg_c_9": { "width": 18, "height": 14, "x": 67, "name": "moai_loading_bg_c" }
+		},
+		"moai_loading_bg_c_10": {
+			"moai_loading_bg_c_10": { "width": 18, "height": 14, "x": 67, "name": "moai_loading_bg_c" }
+		},
+		"moai_loading_bg_c_11": {
+			"moai_loading_bg_c_11": { "width": 18, "height": 14, "x": 67, "name": "moai_loading_bg_c" }
+		},
+		"moai_loading_bg_c_12": {
+			"moai_loading_bg_c_12": { "width": 18, "height": 14, "x": 67, "name": "moai_loading_bg_c" }
+		},
+		"moai_loading_bg_c_13": {
+			"moai_loading_bg_c_13": { "width": 18, "height": 14, "x": 67, "name": "moai_loading_bg_c" }
+		},
+		"moai_loading_bg_c_14": {
+			"moai_loading_bg_c_14": { "width": 18, "height": 14, "x": 67, "name": "moai_loading_bg_c" }
+		},
+		"moai_loading_bg_c_15": {
+			"moai_loading_bg_c_15": { "width": 18, "height": 14, "x": 67, "name": "moai_loading_bg_c" }
+		},
+		"moai_loading_bg_c_16": {
+			"moai_loading_bg_c_16": { "width": 18, "height": 14, "x": 67, "name": "moai_loading_bg_c" }
+		},
+		"moai_loading_fx_06_1": {
+			"moai_loading_fx_06_1": { "width": 256, "height": 256, "name": "moai_loading_fx_06" }
+		},
+		"moai_loading_fx_06_2": {
+			"moai_loading_fx_06_2": { "width": 256, "height": 256, "name": "moai_loading_fx_06" }
+		},
+		"moai_loading_fx_06_3": {
+			"moai_loading_fx_06_3": { "width": 256, "height": 256, "name": "moai_loading_fx_06" }
+		},
+		"moai_loading_fx_06_4": {
+			"moai_loading_fx_06_4": { "width": 256, "height": 256, "name": "moai_loading_fx_06" }
+		},
+		"moai_loading_fx_01": {
+			"moai_loading_fx_01": { "width": 192, "height": 192 }
+		},
+		"moai_loading_bg0": {
+			"moai_loading_bg0": { "width": 960, "height": 270 }
+		},
+		"moai_loading_bg1": {
+			"moai_loading_bg1": { "width": 960, "height": 270 }
+		},
+		"moai_loading_fx_03_2": {
+			"moai_loading_fx_03_2": { "width": 64, "height": 64, "name": "moai_loading_fx_03" }
+		},
+		"moai_loading_fx_03_3": {
+			"moai_loading_fx_03_3": { "width": 64, "height": 64, "name": "moai_loading_fx_03" }
+		},
+		"moai_loading_fx_03_4": {
+			"moai_loading_fx_03_4": { "width": 64, "height": 64, "name": "moai_loading_fx_03" }
+		},
+		"moai_loading_fx_03_5": {
+			"moai_loading_fx_03_5": { "width": 64, "height": 64, "name": "moai_loading_fx_03" }
+		},
+		"moai_loading_bg2": {
+			"moai_loading_bg2": { "width": 20, "height": 20 }
+		}
+	}
+},
+"animations": {
+	"demo": {
+		"bones": {
+			"moai_loading_fx": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 0.992, "angle": -90 },
+					{ "time": 1.983, "angle": -180 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"moai_loading_fx_02_1": {
+				"scale": [
+					{ "time": 0, "x": -1, "y": 1 }
+				]
+			},
+			"moai_loading_fx_02_2": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"moai_loading_bg_b_1": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"moai_loading_fx_03_1": {
+				"scale": [
+					{ "time": 0, "x": 2.136, "y": 2.136 }
+				]
+			},
+			"moai_loading_bg_c_1": {
+				"rotate": [
+					{ "time": 0, "angle": 0 },
+					{ "time": 1.983, "angle": -24 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"moai_loading_bg_b_2": {
+				"scale": [
+					{ "time": 0, "x": 1.02, "y": 1.02 }
+				]
+			},
+			"moai_loading_bg_a": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"moai_loading_bg_c_2": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"moai_loading_bg_c_3": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"moai_loading_bg_c_4": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"moai_loading_bg_c_5": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"moai_loading_bg_c_6": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"moai_loading_bg_c_7": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"moai_loading_bg_c_8": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"moai_loading_bg_c_9": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"moai_loading_bg_c_10": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"moai_loading_bg_c_11": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"moai_loading_bg_c_12": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"moai_loading_bg_c_13": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"moai_loading_bg_c_14": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"moai_loading_bg_c_15": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"moai_loading_bg_c_16": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"moai_loading_fx_06_1": {
+				"scale": [
+					{ "time": 0, "x": 0.2, "y": 0.2 },
+					{ "time": 1.583, "x": 0.2, "y": 0.2 },
+					{ "time": 1.983, "x": 0.7, "y": 0.7 }
+				]
+			},
+			"moai_loading_fx_06_2": {
+				"scale": [
+					{ "time": 0, "x": 0.2, "y": 0.2 },
+					{ "time": 0.8, "x": 0.2, "y": 0.2 },
+					{ "time": 1.783, "x": 1.2, "y": 1.2 }
+				]
+			},
+			"moai_loading_fx_06_3": {
+				"scale": [
+					{ "time": 0, "x": 0.2, "y": 0.2 },
+					{ "time": 0.25, "x": 0.2, "y": 0.2 },
+					{ "time": 1.233, "x": 1.2, "y": 1.2 }
+				]
+			},
+			"moai_loading_fx_06_4": {
+				"scale": [
+					{ "time": -0.417, "x": 0.2, "y": 0.2 },
+					{ "time": 0, "x": 0.7, "y": 0.7 },
+					{ "time": 0.567, "x": 1.4, "y": 1.4 }
+				]
+			},
+			"moai_loading_fx_01": {
+				"scale": [
+					{ "time": 0, "x": 0.8, "y": 0.8 },
+					{ "time": 0.667, "x": 1.65, "y": 1.65 },
+					{ "time": 1.5, "x": 0.8, "y": 0.8 }
+				]
+			},
+			"moai_loading_bg0": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"moai_loading_bg1": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"moai_loading_fx_03_2": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.667, "x": -81.228, "y": -0.727 },
+					{ "time": 1.5, "x": -185, "y": -1.5 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2.125, "y": 1.719 }
+				]
+			},
+			"moai_loading_fx_03_3": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.667, "x": 82.272, "y": 5.773 },
+					{ "time": 1.5, "x": 180, "y": 8 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1.484, "y": 1.2 }
+				]
+			},
+			"moai_loading_fx_03_4": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.667, "x": 108.272, "y": 11.773 },
+					{ "time": 1.5, "x": 223, "y": 19 }
+				],
+				"scale": [
+					{ "time": 0, "x": 2.125, "y": 1.719 }
+				]
+			},
+			"moai_loading_fx_03_5": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 },
+					{ "time": 0.667, "x": 7.78, "y": 7.78 },
+					{ "time": 1.5, "x": 11.21, "y": 11.21 }
+				]
+			},
+			"moai_loading_bg2": {
+				"scale": [
+					{ "time": 0, "x": 35.3, "y": 19.3 }
+				]
+			},
+			"percentage_fx": {
+				"translate": [
+					{	"time": 0,	"x": 248,	"y": -448 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		},
+		"slots": {
+			"moai_loading_fx_06_1": {
+				"color": [
+					{ "time": 0, "color": "FFFFFF33" },
+					{ "time": 1.583, "color": "FFFFFF33" },
+					{ "time": 1.75, "color": "FFFFFFFF" },
+					{ "time": 2, "color": "FFFFFFB0" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1.583, "name": "moai_loading_fx_06_1" }
+				]
+			},
+			"moai_loading_fx_06_2": {
+				"color": [
+					{ "time": 0, "color": "FFFFFF33" },
+					{ "time": 0.8, "color": "FFFFFF33" },
+					{ "time": 0.967, "color": "FFFFFFFF" },
+					{ "time": 1.783, "color": "FFFFFF00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.8, "name": "moai_loading_fx_06_2" },
+					{ "time": 1.8, "name": null }
+				]
+			},
+			"moai_loading_fx_06_3": {
+				"color": [
+					{ "time": 0, "color": "FFFFFF33" },
+					{ "time": 0.25, "color": "FFFFFF33" },
+					{ "time": 0.417, "color": "FFFFFFFF" },
+					{ "time": 1.233, "color": "FFFFFF00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.25, "name": "moai_loading_fx_06_3" },
+					{ "time": 1.25, "name": null }
+				]
+			},
+			"moai_loading_fx_06_4": {
+				"color": [
+					{ "time": -0.417, "color": "FFFFFF33" },
+					{ "time": -0.25, "color": "FFFFFFFF" },
+					{ "time": 0, "color": "FFFFFFB0" },
+					{ "time": 0.567, "color": "FFFFFF00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "moai_loading_fx_06_4" },
+					{ "time": 0.583, "name": null }
+				]
+			},
+			"moai_loading_fx_03_2": {
+				"color": [
+					{ "time": 0, "color": "0077FFCC" },
+					{ "time": 0.667, "color": "0077FFFF" },
+					{ "time": 1.5, "color": "0077FF00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "moai_loading_fx_03_2" },
+					{ "time": 1.517, "name": null }
+				]
+			},
+			"moai_loading_fx_03_3": {
+				"color": [
+					{ "time": 0, "color": "0077FF00" },
+					{ "time": 0.667, "color": "0077FFFF" },
+					{ "time": 1.5, "color": "0077FF00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "moai_loading_fx_03_3" },
+					{ "time": 1.517, "name": null }
+				]
+			},
+			"moai_loading_fx_03_4": {
+				"color": [
+					{ "time": 0, "color": "0077FFCC" },
+					{ "time": 0.667, "color": "0077FFFF" },
+					{ "time": 1.5, "color": "0077FF00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "moai_loading_fx_03_4" },
+					{ "time": 1.517, "name": null }
+				]
+			},
+			"moai_loading_fx_03_5": {
+				"color": [
+					{ "time": 0, "color": "0041FFCC" },
+					{ "time": 0.667, "color": "0041FFFF" },
+					{ "time": 1.5, "color": "0041FF00" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "moai_loading_fx_03_5" },
+					{ "time": 1.517, "name": null }
+				]
+			},
+			"percentage_fx": {
+				"color": [
+					{ "time":0, "color": "FFFFFF33" },
+					{ "time":0.3, "color": "FFFFFFFF" },
+					{ "time": 0.6, "color": "FF0000B0" },
+					{ "time": 0.9, "color": "00FF00FF" },
+					{ "time": 1.2, "color": "0000FFB0" },
+					{ "time": 1.5, "color": "00000070" }
+				],
+				"attachment": [
+					{ "time": 0, "name": "percentage_fx" }
+				]
+			}			
+		}
+	},
+	"progress":{
+		"bones":{
+			"percentage_fx": {
+				"translate": [
+					{	"time": 0,	"x": 248,	"y": -448 },
+					{	"time": 0.6,	"x":710,	"y": -448 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"percentage": {
+				"translate": [
+					{	"time": 0,	"x":0,	"y": -448 },
+					{	"time": 0.6,	"x": 482,	"y": -448 }
+				]
+			}
+		},
+		"slots": {
+			"percentage_fx": {
+				"attachment": [
+					{ "time": 0, "name": "percentage_fx" }
+				]
+			},
+			"percentage": {
+				"attachment": [
+					{ "time": 0, "name": "percentage" }
+				]
+			}
+		}
+	},
+	"enter":{
+		"bones":{
+		},
+		"slots": {
+			"moai_loading_bg0": {
+				"color": [
+					{ "time": 0, "color": "FFFFFF00" },
+					{ "time": 0.6, "color": "FFFFFFFF" }
+				]
+			},
+			"moai_loading_bg1": {
+				"color": [
+					{ "time": 0, "color": "FFFFFF00" },
+					{ "time": 0.6, "color": "FFFFFFFF" }
+				]
+			}			
+		}
+	},
+	"leave":{
+		"bones":{
+		},
+		"slots": {
+			"percentage_fx": {
+				"attachment": [
+					{ "time": 0.1, "name": null }
+				]
+			},
+			"percentage": {
+				"attachment": [
+					{ "time": 0.1, "name": null }
+				]
+			},
+			"moai_loading_bg0": {
+				"color": [
+					{ "time": 0, "color": "FFFFFFFF" },
+					{ "time": 0.6, "color": "FFFFFF00" }
+				]
+			},
+			"moai_loading_bg1": {
+				"color": [
+					{ "time": 0, "color": "FFFFFFFF" },
+					{ "time": 0.6, "color": "FFFFFF00" }
+				]
+			}			
+		}
+	}
+}
+}

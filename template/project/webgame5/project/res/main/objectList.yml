@@ -1,0 +1,341 @@
+objects:
+- #背景
+  objName: bg
+  name: 背景
+  type: background
+  isInScene: true
+  resource:
+    group: demo.background
+    name: back
+  pos: {x: 0,y: 0}
+  width: 640
+  height: 780
+  init: null
+
+- #前景
+  objName: fg
+  name: 前景
+  type: background
+  isInScene: true
+  resource:
+    group: demo.background
+    name: fore
+  pos: {x: 0,y: 0}
+  width: 640
+  height: 780
+  init: null
+
+- #動畫-連續圖
+  objName: ring
+  name: 動畫-連續圖
+  type: animation
+  isInScene: true
+  resource:
+    group: demo
+    name: ring
+  pos: {x: 160,y: 160}
+  width: 212
+  height: 222
+  loop: true
+  init: setAnim
+
+- #籌碼
+  objName: coin
+  name: 籌碼
+  type: image
+  isInScene: true
+  resource:
+    group: demo.coin
+    name: 50
+  pos: {x: 350,y: 50}
+  anchor: {x: 0.5, y: 0.5}
+  width: 76
+  height: 66
+  index: 3
+  init: null
+
+- #金額
+  objName: cash
+  name: 金額
+  type: number
+  isInScene: true
+  resource:
+    texture: cnum
+    group: null
+  charMap: '0123456789.'
+  pos: {x: 350,y: 10}
+  anchor: {x: 0.0,y: 0.5}
+  width: 212
+  height: 40
+  numCounts: 6
+  offset: 18
+  autoHide: true
+  init: setNum
+
+- #動畫-五連線獎
+  objName: fiveOfKind
+  name: 動畫-五連線獎
+  type: spine
+  isInScene: true
+  resource:
+    spineData: demo.fiveofkind             # spine data 群組
+    texture: demo.fiveofkind.mask          # texture    群組
+  configList: #動畫設定用
+  - #動畫之一 (文字)
+    name: text                  #物件名稱
+    dataName: text              #資源名稱
+    timeScale: 1.0              #播放速度
+    animationName: demo         #播放名稱
+  - #動畫之一 (光)
+    name: light01               #物件名稱
+    dataName: light01           #資源名稱
+    timeScale: 1.0              #播放速度
+    animationName: demo         #播放名稱
+    debug: false
+    mask:                       #開啟遮罩
+      local: false                #是否使用區域座標
+      name: gradient1             #材質名稱
+      debug: false
+  - #動畫之一 (光)
+    name: light02               #物件名稱
+    dataName: light02           #資源名稱
+    timeScale: 1.0              #播放速度
+    animationName: demo         #播放名稱
+    mask:                       #開啟遮罩
+      local: false                #是否使用區域座標
+      name: gradient2             #材質名稱
+  - #動畫之一 (星星)
+    name: star                  #物件名稱
+    dataName: star              #資源名稱
+    timeScale: 1.0              #播放速度
+    animationName: demo         #播放名稱
+  pos: {x: 0,y: 0}
+  childName: star_7
+  init: setSpine
+
+- #操作界面
+  objName: gui
+  name: 操作界面
+  type: group
+  isInScene: true
+  pos: {x: 0, y: 200}
+  width: 120
+  height: 100
+  init: null
+  childList:
+  - #開始
+    objName: btnStart
+    name: 開始
+    type: button
+    isInScene: true
+    resource:
+      group: demo.button
+      name: start
+      enter: enter
+      press: press
+      leave: leave
+      disable: disable
+    pos: {x: 707,y: 0}
+    width: 88
+    height: 82
+    init: setPlay
+  - #自動
+    objName: btnAuto
+    name: 自動
+    type: button
+    isInScene: true
+    resource:
+      group: demo.button
+      name: auto
+      enter: enter
+      press: press
+      leave: leave
+      disable: disable
+    pos: {x: 618,y: 0}
+    width: 88
+    height: 82
+    init: setAuto
+  - #下注
+    objName: btnBet
+    name: 下注
+    type: button
+    isInScene: true
+    resource:
+      group: demo.button
+      name: bet
+      enter: enter
+      press: press
+      leave: leave
+      disable: disable
+    pos: {x: 408,y: 0}
+    debug: false
+    width: 212
+    height: 82
+    init: setBet
+  - #規則
+    objName: btnRule
+    name: 規則
+    type: button
+    isInScene: true
+    resource:
+      group: demo.button
+      name: rule
+      enter: enter
+      press: press
+      leave: leave
+      disable: disable
+    pos: {x: 94,y: 0}
+    debug: false
+    width: 88
+    height: 82
+    init: setInfo
+  - #離開
+    objName: btnLeave
+    name: 離開
+    type: button
+    isInScene: true
+    resource:
+      group: demo.button
+      name: leave
+      enter: enter
+      press: press
+      leave: leave
+      disable: disable
+    pos: {x: 2,y: 0}
+    debug: false
+    width: 88
+    height: 82
+    init: setLeave
+
+- #說明
+  objName: rule
+  name: 說明
+  type: group
+  isInScene: false
+  resource:
+    group: null
+    name: null
+  pos: {x: 0,y: 0}
+  width: 960
+  height: 540
+  init: createRule
+  childList:
+  - #info page
+    objName: imgPage
+    name: info page
+    type: image
+    isInScene: true
+    resource:
+      group: ui.pageInfo
+      name: 0
+    pos: {x: 101,y: 18}
+    width: 754
+    height: 465
+    init: null
+  - #info page WILDTEXT
+    objName: imgPageText
+    name: info page WILDTEXT
+    type: image
+    isInScene: true
+    resource:
+      group: ui.pageInfoText
+      name: 0
+    pos: {x: 196,y: 305}
+    width: 132
+    height: 108
+    init: null
+  - #info page close
+    objName: btnInfoClose
+    name: info page close
+    type: button
+    isInScene: true
+    resource:
+      group: ui
+      name: btnClose
+      enter: enter
+      press: press
+      leave: leave
+      disable: disable
+    pos: {x: 786,y: 85}
+    width: 42
+    height: 42
+    init: null
+  - #btnPage1
+    objName: btnPage1
+    name: btnPage
+    type: image
+    isInScene: true
+    resource:
+      group: ui.btnViewpayPoint
+      name: 0
+    pos: {x: 408,y: 440}
+    width: 21
+    height: 21
+    init: null
+  - #btnPage2
+    objName: btnPage2
+    name: btnPage
+    type: image
+    isInScene: true
+    resource:
+      group: ui.btnViewpayPoint
+      name: 0
+    pos: {x: 438,y: 440}
+    width: 24
+    height: 24
+    init: null
+  - #btnPage3
+    objName: btnPage3
+    name: btnPage
+    type: image
+    isInScene: true
+    resource:
+      group: ui.btnViewpayPoint
+      name: 0
+    pos: {x: 468,y: 440}
+    width: 24
+    height: 24
+    init: null
+  - #btnPage4
+    objName: btnPage4
+    name: btnPage
+    type: image
+    isInScene: true
+    resource:
+      group: ui.btnViewpayPoint
+      name: 0
+    pos: {x: 498,y: 440}
+    width: 24
+    height: 24
+    init: null
+  - #btnPage5
+    objName: btnPage5
+    name: btnPage
+    type: image
+    isInScene: true
+    resource:
+      group: ui.btnViewpayPoint
+      name: 0
+    pos: {x: 528,y: 440}
+    width: 24
+    height: 24
+    init: null
+  - #cash number 01
+    objName: num
+    name: oddnum
+    type: number
+    isInScene: true
+    resource:
+      texture: numInfo
+    charMap: '0123456789,.'
+    pos: {x: 318,y: 185}
+    width: 100
+    height: 20
+    numCounts: 10
+    offset: 10
+    autoHide: true
+    useComma: true
+    debug: false
+    init: autoonPageNumber
+
+

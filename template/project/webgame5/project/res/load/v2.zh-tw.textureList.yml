@@ -1,0 +1,67 @@
+images:
+  demo:
+    ring: #旋轉圖
+      - res/main/loading/Loading_01.avif
+      - res/main/loading/Loading_02.avif
+      - res/main/loading/Loading_03.avif
+      - res/main/loading/Loading_04.avif
+      - res/main/loading/Loading_05.avif
+      - res/main/loading/Loading_06.avif
+      - res/main/loading/Loading_07.avif
+      - res/main/loading/Loading_08.avif
+      - res/main/loading/Loading_09.avif
+      - res/main/loading/Loading_10.avif
+      - res/main/loading/Loading_11.avif
+      - res/main/loading/Loading_12.avif
+    # button: #群組
+    #   auto: #自動
+    #     enter: res/main/button/auto/enter.png
+    #     leave: res/main/button/auto/leave.png
+    #     press: res/main/button/auto/press.png
+    #   autoLight: #自動
+    #     enter: res/main/button/auto/press.png
+    #     leave: res/main/button/auto/press.png
+    #     press: res/main/button/auto/enter.png
+    #   bet: #下注
+    #     enter: res/main/button/bet/enter.png
+    #     leave: res/main/button/bet/leave.png
+    #     press: res/main/button/bet/press.png
+    #   leave: #離開
+    #     enter: res/main/button/leave/enter.png
+    #     leave: res/main/button/leave/leave.png
+    #     press: res/main/button/leave/press.png
+  ui:
+    #pageInfo:
+      #a: res/main/ui/lang/zh-tw/feature_tw.png
+      #b: res/main/ui/lang/zh-tw/paytable_tw.png
+      #c: res/main/ui/lang/zh-tw/paytable01_tw.png
+      #d: res/main/ui/lang/zh-tw/payline_tw.png
+      #e: res/main/ui/lang/zh-tw/jp_tw.png
+    pageInfoText:
+      a: res/main/ui/lang/zh-tw/havejp_tw.avif
+      b: res/main/ui/lang/zh-tw/nojp_tw.avif
+frames:
+  demo:
+    button: #群組
+      auto: #自動
+        enter: button.auto.enter.png
+        leave: button.auto.leave.png
+        press: button.auto.press.png
+      autoLight: #自動
+        enter: button.auto.press.png
+        leave: button.auto.press.png
+        press: button.auto.enter.png
+      bet: #下注
+        enter: button.bet.enter.png
+        leave: button.bet.leave.png
+        press: button.bet.press.png
+      leave: #離開
+        enter: button.leave.enter.png
+        leave: button.leave.leave.png
+        press: button.leave.press.png
+assets: #註解
+- res/main/asset/v2/numBW.json
+- res/main/asset/v2/NumMPurple.json
+- res/main/asset/v2/button.auto.json
+- res/main/asset/v2/button.bet.json
+- res/main/asset/v2/button.leave.json

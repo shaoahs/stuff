@@ -1,0 +1,14 @@
+spines:
+  demo: #群組
+    contbo: #英雄
+      tom:
+        star:
+          - res/sub/spine/contbo/khero_tom_star_03.json
+          - res/sub/spine/contbo/khero_tom_star_04.json
+          - res/sub/spine/contbo/khero_tom_star_05.json
+        loop:
+          - res/sub/spine/contbo/khero_tom_loop_01.json
+          - res/sub/spine/contbo/khero_tom_loop_02.json
+          - res/sub/spine/contbo/khero_tom_loop_03.json
+          - res/sub/spine/contbo/khero_tom_loop_04.json
+          - res/sub/spine/contbo/khero_tom_loop_05.json

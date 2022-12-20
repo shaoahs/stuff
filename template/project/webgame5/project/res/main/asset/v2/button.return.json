@@ -1,0 +1,31 @@
+{"frames": {
+"button.return.enter.png":
+{
+    "frame": {"x":214,"y":0,"w":106,"h":46},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":106,"h":46},
+    "sourceSize": {"w":106,"h":46}
+},
+"button.return.leave.png":
+{
+    "frame": {"x":107,"y":0,"w":106,"h":46},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":106,"h":46},
+    "sourceSize": {"w":106,"h":46}
+},
+"button.return.press.png":
+{
+    "frame": {"x":0,"y":0,"w":106,"h":46},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":106,"h":46},
+    "sourceSize": {"w":106,"h":46}
+}
+},
+"meta": {
+  "app": "GIMP",
+  "image": "button.return.png"
+}
+}

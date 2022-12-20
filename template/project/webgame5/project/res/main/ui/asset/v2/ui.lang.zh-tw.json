@@ -1,0 +1,63 @@
+{"frames": {
+"ui.lang.zh-tw.feature_tw.png":
+{
+    "frame": {"x":0,"y":1860,"w":746,"h":464},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":746,"h":464},
+    "sourceSize": {"w":746,"h":464}
+},
+"ui.lang.zh-tw.havejp_tw.png":
+{
+    "frame": {"x":747,"y":1395,"w":132,"h":108},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":132,"h":108},
+    "sourceSize": {"w":132,"h":108}
+},
+"ui.lang.zh-tw.jp_tw.png":
+{
+    "frame": {"x":0,"y":1395,"w":746,"h":464},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":746,"h":464},
+    "sourceSize": {"w":746,"h":464}
+},
+"ui.lang.zh-tw.nojp_tw.png":
+{
+    "frame": {"x":747,"y":930,"w":132,"h":108},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":132,"h":108},
+    "sourceSize": {"w":132,"h":108}
+},
+"ui.lang.zh-tw.payline_tw.png":
+{
+    "frame": {"x":0,"y":930,"w":746,"h":464},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":746,"h":464},
+    "sourceSize": {"w":746,"h":464}
+},
+"ui.lang.zh-tw.paytable01_tw.png":
+{
+    "frame": {"x":0,"y":465,"w":746,"h":464},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":746,"h":464},
+    "sourceSize": {"w":746,"h":464}
+},
+"ui.lang.zh-tw.paytable_tw.png":
+{
+    "frame": {"x":0,"y":0,"w":746,"h":464},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":746,"h":464},
+    "sourceSize": {"w":746,"h":464}
+}
+},
+"meta": {
+  "app": "GIMP",
+  "image": "ui.lang.zh-tw.avif"
+}
+}

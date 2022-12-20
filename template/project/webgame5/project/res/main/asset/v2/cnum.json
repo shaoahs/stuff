@@ -1,0 +1,103 @@
+{"frames": {
+
+"cnum.":
+{
+    "frame": {"x":198,"y":0,"w":7,"h":27},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":7,"h":27},
+    "sourceSize": {"w":7,"h":27}
+},
+"cnum,":
+{
+    "frame": {"x":180,"y":0,"w":7,"h":27},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":7,"h":27},
+    "sourceSize": {"w":7,"h":27}
+},
+"cnum9":
+{
+    "frame": {"x":162,"y":0,"w":18,"h":27},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":18,"h":27},
+    "sourceSize": {"w":18,"h":27}
+},
+"cnum8":
+{
+    "frame": {"x":144,"y":0,"w":18,"h":27},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":18,"h":27},
+    "sourceSize": {"w":18,"h":27}
+},
+"cnum7":
+{
+    "frame": {"x":126,"y":0,"w":18,"h":27},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":18,"h":27},
+    "sourceSize": {"w":18,"h":27}
+},
+"cnum6":
+{
+    "frame": {"x":108,"y":0,"w":18,"h":27},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":18,"h":27},
+    "sourceSize": {"w":18,"h":27}
+},
+"cnum5":
+{
+    "frame": {"x":90,"y":0,"w":18,"h":27},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":18,"h":27},
+    "sourceSize": {"w":18,"h":27}
+},
+"cnum4":
+{
+    "frame": {"x":72,"y":0,"w":18,"h":27},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":18,"h":27},
+    "sourceSize": {"w":18,"h":27}
+},
+"cnum3":
+{
+    "frame": {"x":54,"y":0,"w":18,"h":27},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":18,"h":27},
+    "sourceSize": {"w":18,"h":27}
+},
+"cnum2":
+{
+    "frame": {"x":36,"y":0,"w":18,"h":27},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":18,"h":27},
+    "sourceSize": {"w":18,"h":27}
+},
+"cnum1":
+{
+    "frame": {"x":18,"y":0,"w":18,"h":27},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":18,"h":27},
+    "sourceSize": {"w":18,"h":27}
+},
+"cnum0":
+{
+    "frame": {"x":0,"y":0,"w":18,"h":27},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":18,"h":27},
+    "sourceSize": {"w":18,"h":27}
+}},
+"meta": {
+  "app": "GIMP",
+  "image": "cnum.png"
+}
+}

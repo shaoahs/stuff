@@ -19,8 +19,7 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 7.2.0]');
-  console.log(__dirname);
+  console.log('[stuff version 7.2.1]');
   grunt.file.setBase(__dirname);
 
 
@@ -2070,10 +2069,18 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
-            src: ['index.{html,json}', 'v<%= pkg.version %>.{html,json}'],
+            src: ['index.html', 'v<%= pkg.version %>.html'],
             dest: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
             extDot: 'last',
-            ext: '.js.gz'
+            ext: '.html.gz'
+          },
+          {
+            expand: true,
+            cwd: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            src: ['index.json', 'v<%= pkg.version %>.json'],
+            dest: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            extDot: 'last',
+            ext: '.json.gz'
           },
           {
             expand: true,
@@ -2124,10 +2131,18 @@ module.exports = function(grunt) {
           {
             expand: true,
             cwd: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
-            src: ['index.{html,json}', 'v<%= pkg.version %>.{html,json}'],
+            src: ['index.html', 'v<%= pkg.version %>.html'],
             dest: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
             extDot: 'last',
-            ext: '.js.br'
+            ext: '.html.br'
+          },
+          {
+            expand: true,
+            cwd: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            src: ['index.json', 'v<%= pkg.version %>.json'],
+            dest: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            extDot: 'last',
+            ext: '.json.br'
           },
           {
             expand: true,
@@ -2585,7 +2600,7 @@ module.exports = function(grunt) {
 
       create:{
         command(name) {
-          let cmd = 'grunt-init template/project/webgame';
+          let cmd = 'grunt-init template/project/webgame5';
           if(name){
             cmd = 'grunt-init template/project/' + name;
           }

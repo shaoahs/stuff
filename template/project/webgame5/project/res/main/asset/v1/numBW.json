@@ -1,0 +1,105 @@
+{"frames": {
+
+"numBW0":
+{
+	"frame": {"x":0,"y":0,"w":72,"h":116},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":116},
+	"sourceSize": {"w":72,"h":116}
+},
+"numBW1":
+{
+	"frame": {"x":72,"y":0,"w":72,"h":116},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":116},
+	"sourceSize": {"w":72,"h":116}
+},
+"numBW2":
+{
+	"frame": {"x":145,"y":0,"w":72,"h":116},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":116},
+	"sourceSize": {"w":72,"h":116}
+},
+"numBW3":
+{
+	"frame": {"x":218,"y":0,"w":72,"h":116},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":116},
+	"sourceSize": {"w":72,"h":116}
+},
+"numBW4":
+{
+	"frame": {"x":291,"y":0,"w":72,"h":116},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":116},
+	"sourceSize": {"w":72,"h":116}
+},
+"numBW5":
+{
+	"frame": {"x":364,"y":0,"w":72,"h":116},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":116},
+	"sourceSize": {"w":72,"h":116}
+},
+"numBW6":
+{
+	"frame": {"x":437,"y":0,"w":72,"h":116},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":116},
+	"sourceSize": {"w":72,"h":116}
+},
+"numBW7":
+{
+	"frame": {"x":510,"y":0,"w":72,"h":116},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":116},
+	"sourceSize": {"w":72,"h":116}
+},
+"numBW8":
+{
+	"frame": {"x":583,"y":0,"w":72,"h":116},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":116},
+	"sourceSize": {"w":72,"h":116}
+},
+"numBW9":
+{
+	"frame": {"x":656,"y":0,"w":72,"h":116},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":72,"h":116},
+	"sourceSize": {"w":72,"h":116}
+},
+"numBW,":
+{
+	"frame": {"x":729,"y":0,"w":36,"h":116},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":116},
+	"sourceSize": {"w":36,"h":116}
+},
+"numBW.":
+{
+	"frame": {"x":766,"y":0,"w":36,"h":116},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":36,"h":116},
+	"sourceSize": {"w":36,"h":116}
+}},
+"meta": {
+	"image": "numBW.png",
+	"format": "RGBA8888",
+	"size": {"w":820,"h":116},
+	"scale": "1"
+}
+}

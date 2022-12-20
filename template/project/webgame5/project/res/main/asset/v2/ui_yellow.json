@@ -1,0 +1,175 @@
+{
+"frames": {
+	"Go.png": {
+		"frame": {"x":0, "y":227, "w":197, "h":121},
+		"spriteSourceSize": {"x":0,"y":0,"w":197,"h":121},
+		"sourceSize": {"w":197,"h":121}
+	},
+	"JACKPOT01.png": {
+		"frame": {"x":0, "y":181, "w":250, "h":45},
+		"spriteSourceSize": {"x":0,"y":0,"w":250,"h":45},
+		"sourceSize": {"w":250,"h":45}
+	},
+	"coin_button_10_off.png": {
+		"frame": {"x":198, "y":227, "w":87, "h":87},
+		"spriteSourceSize": {"x":0,"y":0,"w":87,"h":87},
+		"sourceSize": {"w":87,"h":87}
+	},
+	"coin_button_10_on.png": {
+		"frame": {"x":275, "y":315, "w":87, "h":87},
+		"spriteSourceSize": {"x":0,"y":0,"w":87,"h":87},
+		"sourceSize": {"w":87,"h":87}
+	},
+	"coin_button_1_off.png": {
+		"frame": {"x":187, "y":349, "w":87, "h":87},
+		"spriteSourceSize": {"x":0,"y":0,"w":87,"h":87},
+		"sourceSize": {"w":87,"h":87}
+	},
+	"coin_button_1_on.png": {
+		"frame": {"x":99, "y":349, "w":87, "h":87},
+		"spriteSourceSize": {"x":0,"y":0,"w":87,"h":87},
+		"sourceSize": {"w":87,"h":87}
+	},
+	"cube_10bingo.png": {
+		"frame": {"x":363, "y":289, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_11bingo.png": {
+		"frame": {"x":341, "y":235, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_12bingo.png": {
+		"frame": {"x":440, "y":397, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_13bingo.png": {
+		"frame": {"x":451, "y":162, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_14bingo.png": {
+		"frame": {"x":440, "y":451, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_15bingo.png": {
+		"frame": {"x":286, "y":181, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_16bingo.png": {
+		"frame": {"x":275, "y":403, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_17bingo.png": {
+		"frame": {"x":220, "y":437, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_18bingo.png": {
+		"frame": {"x":341, "y":181, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_19bingo.png": {
+		"frame": {"x":330, "y":403, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_1bingo.png": {
+		"frame": {"x":418, "y":289, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_20bingo.png": {
+		"frame": {"x":55, "y":437, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_21bingo.png": {
+		"frame": {"x":0, "y":437, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_22bingo.png": {
+		"frame": {"x":165, "y":437, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_23bingo.png": {
+		"frame": {"x":286, "y":235, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_24bingo.png": {
+		"frame": {"x":110, "y":437, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_25bingo.png": {
+		"frame": {"x":418, "y":343, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_2bingo.png": {
+		"frame": {"x":408, "y":108, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_3bingo.png": {
+		"frame": {"x":408, "y":54, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_4bingo.png": {
+		"frame": {"x":408, "y":0, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_5bingo.png": {
+		"frame": {"x":396, "y":235, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_6bingo.png": {
+		"frame": {"x":396, "y":181, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_7bingo.png": {
+		"frame": {"x":385, "y":451, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_8bingo.png": {
+		"frame": {"x":385, "y":397, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"cube_9bingo.png": {
+		"frame": {"x":363, "y":343, "w":54, "h":53},
+		"spriteSourceSize": {"x":0,"y":0,"w":54,"h":53},
+		"sourceSize": {"w":54,"h":53}
+	},
+	"jpword.png": {
+		"frame": {"x":0, "y":0, "w":407, "h":180},
+		"spriteSourceSize": {"x":0,"y":0,"w":407,"h":180},
+		"sourceSize": {"w":407,"h":180}
+	},
+	"yellowball_on.png": {
+		"frame": {"x":0, "y":349, "w":98, "h":69},
+		"spriteSourceSize": {"x":0,"y":0,"w":98,"h":69},
+		"sourceSize": {"w":98,"h":69}
+	}
+
+},
+"meta": {
+	"image": "sprites.png",
+	"size": {"w": 506, "h": 505},
+	"scale": "1"
+}
+}
