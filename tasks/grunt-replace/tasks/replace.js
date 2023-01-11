@@ -225,9 +225,19 @@ module.exports = function (grunt) {
       process: function (content) {
         if(options.type == 'flat'){
           var fileInfo = path.parse(source);
-          // grunt.log.writeln('------------------------------');
-          // grunt.log.writeln('filename: ' + source);
-          // grunt.log.writeln('source: ' + fileInfo.base);
+
+          // console.log(fileInfo);
+          console.log(options.workspace);
+
+          if(!options.workspace) {
+            options.workspace = grunt.dir;
+          }
+          fileInfo.dir = fileInfo.dir.replace(options.workspace + '/', '');
+
+          // grunt.log.writeln('|| ------------------------------');
+          // grunt.log.writeln('- dir: ' + fileInfo.dir);
+          // grunt.log.writeln('- filename: ' + fileInfo.base);
+
           patterns.forEach(function(pattern){
             var json = pattern.json;
             var names;
@@ -239,10 +249,12 @@ module.exports = function (grunt) {
             if(names){
               names.forEach(function(name){
                 var nameInfo = path.parse(name);
-//                grunt.log.writeln('-- ' + nameInfo.dir + ' find: ' + nameInfo.base);
-                if(fileInfo.dir.indexOf(nameInfo.dir) >= 0){
-                  // grunt.log.writeln(chalk.red('target: ' + nameInfo.base));
-                  // grunt.log.writeln(chalk.red('replace: ' + path.parse(json[name]).base));
+                // grunt.log.writeln('-- dir: ' + nameInfo.dir + ' filename: ' + nameInfo.base);
+
+                if(fileInfo.dir === nameInfo.dir) {
+                  
+                  // grunt.log.writeln(chalk.red('-- dir: ' + nameInfo.dir + 'target: ' + nameInfo.base));
+                  // grunt.log.writeln(chalk.red('-- replace: ' + path.parse(json[name]).base));
                   json[nameInfo.base] = path.parse(json[name]).base;
                   tmpList.push({name:nameInfo.base});
                   state = true;
