@@ -1,0 +1,56 @@
+stages:
+- check
+- deploy
+
+檢查程式碼:
+  stage: check
+  environment:
+    name: check
+  variables:
+    STUFF_DEBUG: 1
+  script:
+  - stuff eslint
+
+打包正式版:
+  stage: deploy
+  environment:
+    name: release/$CI_COMMIT_REF_NAME
+  variables:
+    GIT_STRATEGY: none
+    STUFF_DEBUG: 1
+    STUFF_MODE: release
+    STUFF_UPLOAD: review
+  script:
+  - stuff deploy
+  only:
+  - tags
+
+測試機:
+  stage: deploy
+  environment:
+    name: beta/$CI_COMMIT_REF_NAME
+  variables:
+    GIT_STRATEGY: none
+    STUFF_DEBUG: 1
+    STUFF_MODE: release
+    STUFF_UPLOAD: beta_lcs
+  when: manual
+  script:
+  - stuff deploy
+  only:
+  - beta
+
+測試機(log):
+  stage: deploy
+  environment:
+    name: alpha/$CI_COMMIT_REF_NAME
+  variables:
+    GIT_STRATEGY: none
+    STUFF_DEBUG: 1
+    STUFF_MODE: test
+    STUFF_UPLOAD: beta_lcs
+  script:
+  - stuff deploy
+  only:
+  - beta
+

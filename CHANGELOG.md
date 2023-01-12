@@ -2,6 +2,7 @@
 
 ## [Unreleased]
 ### Added
+- [壓縮命令] 新增 mjs 與 wasm
 
 ### Changed
 - 調整說明文件 
@@ -9,6 +10,24 @@
 ### Fixed
 
 ### Removed
+- 取消使用 __dirname
+
+## [7.3.0] - 2023-01-11
+### Fixed
+- [replace命令] 修正父子路徑資料夾內的相同檔案名稱,取代檔案名稱錯誤
+
+## [7.3.0] - 2023-01-10
+### Added
+- [壓縮命令] 新增 mjs 與 wasm
+
+## [7.2.1] - 2022-12-20
+### Fixed
+- 修正 產生壓縮檔的副檔名錯誤(當檔案格式為 html 或 json)
+
+## [7.2.0] - 2022-11-07
+### Added
+- 不同語言的版本 hash code 都相同時, gamecard.app 輸出成字串 (不輸出成多語對照表)
+- 壓縮檔清單 新增 index.html index.json v*.json
 
 ## [7.1.0] - 2022-11-01
 ### Added

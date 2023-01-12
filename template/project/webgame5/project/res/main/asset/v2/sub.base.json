@@ -1,0 +1,94 @@
+{"frames": {
+"sub.base.chip_100.png":
+{
+    "frame": {"x":308,"y":67,"w":76,"h":66},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":76,"h":66},
+    "sourceSize": {"w":76,"h":66}
+},
+"sub.base.chip_100k.png":
+{
+    "frame": {"x":231,"y":67,"w":76,"h":66},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":76,"h":66},
+    "sourceSize": {"w":76,"h":66}
+},
+"sub.base.chip_10k.png":
+{
+    "frame": {"x":154,"y":67,"w":76,"h":66},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":76,"h":66},
+    "sourceSize": {"w":76,"h":66}
+},
+"sub.base.chip_1k.png":
+{
+    "frame": {"x":77,"y":67,"w":76,"h":66},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":76,"h":66},
+    "sourceSize": {"w":76,"h":66}
+},
+"sub.base.chip_1m.png":
+{
+    "frame": {"x":0,"y":67,"w":76,"h":66},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":76,"h":66},
+    "sourceSize": {"w":76,"h":66}
+},
+"sub.base.chip_50.png":
+{
+    "frame": {"x":385,"y":0,"w":76,"h":66},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":76,"h":66},
+    "sourceSize": {"w":76,"h":66}
+},
+"sub.base.chip_500.png":
+{
+    "frame": {"x":308,"y":0,"w":76,"h":66},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":76,"h":66},
+    "sourceSize": {"w":76,"h":66}
+},
+"sub.base.chip_500k.png":
+{
+    "frame": {"x":231,"y":0,"w":76,"h":66},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":76,"h":66},
+    "sourceSize": {"w":76,"h":66}
+},
+"sub.base.chip_50k.png":
+{
+    "frame": {"x":154,"y":0,"w":76,"h":66},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":76,"h":66},
+    "sourceSize": {"w":76,"h":66}
+},
+"sub.base.chip_5k.png":
+{
+    "frame": {"x":77,"y":0,"w":76,"h":66},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":76,"h":66},
+    "sourceSize": {"w":76,"h":66}
+},
+"sub.base.chip_d.png":
+{
+    "frame": {"x":0,"y":0,"w":76,"h":66},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":76,"h":66},
+    "sourceSize": {"w":76,"h":66}
+}},
+"meta": {
+  "app": "GIMP",
+  "image": "sub.base.png"
+}
+}

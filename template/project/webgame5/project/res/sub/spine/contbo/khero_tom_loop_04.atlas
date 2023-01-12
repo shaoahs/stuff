@@ -1,0 +1,48 @@
+khero_contbo_pf_07.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_pf_07
+  rotate: false
+  xy: 0, 0
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+
+khero_contbo_line_04.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_line_04
+  rotate: false
+  xy: 0, 0
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+
+khero_contbo_line_03.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_line_03
+  rotate: false
+  xy: 0, 0
+  size: 960, 540
+  orig: 960, 540
+  offset: 0, 0
+  index: -1
+
+khero_contbo_line_02.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_line_02
+  rotate: false
+  xy: 0, 0
+  size: 960, 540
+  orig: 960, 540
+  offset: 0, 0
+  index: -1
+

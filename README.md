@@ -39,7 +39,7 @@ git version x.x.x
 ````bash
 $> npm install -g grunt-cli
 $> grunt --version
-grunt-cli v1.3.2
+grunt-cli v1.4.3
 ````
 
 確認上面步驟完成後

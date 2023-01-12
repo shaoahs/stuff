@@ -19,16 +19,13 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 7.1.0]');
-  console.log(__dirname);
+  console.log('[stuff version 7.3.0]');
+
   grunt.file.setBase(__dirname);
-
-
 
   let isFramework = null;
   let pkg = {};
   let resConfig = {};
-  let buffer = {};  // game card used
   // let agentPath = 'project/agent';    // 除錯用
   let agentPath = 'developer/agent';     // 遊戲專案測試用
   let workspace = {
@@ -232,7 +229,7 @@ module.exports = function(grunt) {
           'app/**/*.{js,mjs}'
         ],
         resource: [
-          'systemjs/6.12.1/system.min.js'
+          'systemjs/6.13.0/system.min.js'
         ],
         output: 'config/cache.txt'
       }
@@ -1031,9 +1028,19 @@ module.exports = function(grunt) {
                 let names = Object.getOwnPropertyNames(langList);
                 let app = {};
                 // let appHash = {};
-                                
+
+                let isTheSame = true;
+                let firstPathname;
+
                 names.forEach(lang => {
                   let pathname = 'app/' + langList[lang];
+                  if(!firstPathname) {
+                    firstPathname = pathname;
+                  } else {
+                    if(firstPathname !== pathname) {
+                      isTheSame = false;
+                    }
+                  }
                   app[lang] = pathname;
 
                   /*
@@ -1043,7 +1050,11 @@ module.exports = function(grunt) {
                   appHash[lang] = `sha384-${hash.digest().toString('base64')}`;
                   */
                 });
-                obj.app = app;
+                if(isTheSame) {
+                  obj.app = firstPathname;
+                } else {
+                  obj.app = app;
+                }
                 // obj.appHash = appHash;
               } else {
                 let app = getAppName();
@@ -1274,10 +1285,20 @@ module.exports = function(grunt) {
                 let names = Object.getOwnPropertyNames(langList);
                 let app = {};
                 // let appHash = {};
+                let isTheSame = true;
+                let firstPathname;
 
                 names.forEach(lang => {
                   let pathname = `app/${langList[lang]}`;
                   app[lang] = pathname;
+
+                  if(!firstPathname) {
+                    firstPathname = pathname;
+                  } else {
+                    if(firstPathname !== pathname) {
+                      isTheSame = false;
+                    }
+                  }
 
                   // if(fs.existsSync(`public/${pkg.currentMode}/${pathname}`)) {
                   //   let data = fs.readFileSync(`public/${pkg.currentMode}/${pathname}`, 'utf8');
@@ -1289,7 +1310,12 @@ module.exports = function(grunt) {
                   //   console.error(`找不到檔案: ${pathname}`);
                   // }
                 });
-                obj.app = app;
+                if(isTheSame) {
+                  obj.app = firstPathname;
+                } else {
+                  obj.app = app;
+                }
+
                 // obj.appHash = appHash;
               } else {
                 let app = getAppName();
@@ -1801,6 +1827,7 @@ module.exports = function(grunt) {
     replace: {
       debug: {  // 新版本沒有使用
         options: {
+          workspace: workspace.root,
           usePrefix: false,
           patterns: [
             {
@@ -1815,6 +1842,7 @@ module.exports = function(grunt) {
       },
       textureAsset: {
         options: {
+          workspace: workspace.root,
           usePrefix: false,
           type:'flat',
           jsonfile: '<%= pkg.workspace %>/tmp/resFlat.json',
@@ -1827,6 +1855,7 @@ module.exports = function(grunt) {
       },
       textureSpine: {
         options: {
+          workspace: workspace.root,
           usePrefix: false,
           type:'flat',
           jsonfile: '<%= pkg.workspace %>/tmp/resSpine.json',
@@ -1839,6 +1868,7 @@ module.exports = function(grunt) {
       },
       textureBones: {
         options: {
+          workspace: workspace.root,
           usePrefix: false,
           type:'flat',
           jsonfile: '<%= pkg.workspace %>/tmp/resBones.json',
@@ -1851,6 +1881,7 @@ module.exports = function(grunt) {
       },
       yml: {
         options: {
+          workspace: workspace.root,
           usePrefix: false,
           jsonfile: ['<%= pkg.workspace %>/tmp/res.json', '<%= pkg.workspace %>/tmp/textureAsset.json', '<%= pkg.workspace %>/tmp/spine.json', '<%= pkg.workspace %>/tmp/bones.json', '<%= pkg.workspace %>/tmp/textureBones.json'],
           patterns: [
@@ -1862,6 +1893,7 @@ module.exports = function(grunt) {
       },
       vendor: {
         options: {
+          workspace: workspace.root,
           usePrefix: false,
           jsonfile: ['<%= pkg.workspace %>/tmp/res.json', '<%= pkg.workspace %>/tmp/textureAsset.json', '<%= pkg.workspace %>/tmp/spine.json', '<%= pkg.workspace %>/tmp/atlas.json'],
           patterns: [
@@ -1876,6 +1908,7 @@ module.exports = function(grunt) {
       },
       resource: {
         options: {
+          workspace: workspace.root,
           usePrefix: false,
           jsonfile: ['<%= pkg.workspace %>/tmp/spine.json', '<%= pkg.workspace %>/tmp/atlas.json'],
           patterns: [
@@ -1890,6 +1923,7 @@ module.exports = function(grunt) {
       },
       ymlSpine: {
         options: {
+          workspace: workspace.root,
           usePrefix: false,
           jsonfile: ['<%= pkg.workspace %>/tmp/spine.json'],
           patterns: [
@@ -1901,6 +1935,7 @@ module.exports = function(grunt) {
       },
       ymlBones: {
         options: {
+          workspace: workspace.root,
           usePrefix: false,
           jsonfile: ['<%= pkg.workspace %>/tmp/bones.json', '<%= pkg.workspace %>/tmp/textureBones.json'],
           patterns: [
@@ -1912,7 +1947,8 @@ module.exports = function(grunt) {
       },
       release: {
           options: {
-              usePrefix: false,
+            workspace: workspace.root,
+            usePrefix: false,
               jsonfile: '<%= pkg.workspace %>/tmp/release.json',
               patterns: [
               ]
@@ -1923,6 +1959,7 @@ module.exports = function(grunt) {
       },
       public: {
         options: {
+          workspace: workspace.root,
           usePrefix: false,
           jsonfile: '<%= pkg.workspace %>/tmp/app.json',
           patterns: [
@@ -1938,6 +1975,7 @@ module.exports = function(grunt) {
       },
       deploy: {
         options: {
+          workspace: workspace.root,
           usePrefix: false,
           patterns: [
             // {
@@ -1952,6 +1990,7 @@ module.exports = function(grunt) {
       },
       cache: {
         options: {
+          workspace: workspace.root,
           usePrefix: false,
           patterns: (resConfig.replace && resConfig.replace.cache) || []
         },
@@ -1961,6 +2000,7 @@ module.exports = function(grunt) {
       },
       importmap: {
         options: {
+          workspace: workspace.root,
           usePrefix: false,
           patterns: [
             {
@@ -1975,6 +2015,7 @@ module.exports = function(grunt) {
       },
       app: {
         options: {
+          workspace: workspace.root,
           usePrefix: false,
           jsonfile: resConfig.app,
           patterns: [
@@ -1986,6 +2027,7 @@ module.exports = function(grunt) {
       },
       resVendor: {
         options: {
+          workspace: workspace.root,
           usePrefix: false,
           jsonfile: '<%= pkg.workspace %>/tmp/vendor.json',
           patterns: [
@@ -1997,6 +2039,7 @@ module.exports = function(grunt) {
       },
       gamecard: {
         options: {
+          workspace: workspace.root,
           usePrefix: false,
           jsonfile: resConfig.gamecard,
           patterns: [
@@ -2008,6 +2051,7 @@ module.exports = function(grunt) {
       },
       gamelist: {
         options: {
+          workspace: workspace.root,
           usePrefix: false,
           jsonfile: resConfig.gamecard,
           patterns: [
@@ -2040,11 +2084,43 @@ module.exports = function(grunt) {
         files:[
           {
             expand: true,
-            cwd: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/app/',
-            src: ['**/*.js'],
-            dest: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/app/',
+            cwd: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            src: ['index.html', 'v<%= pkg.version %>.html'],
+            dest: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            extDot: 'last',
+            ext: '.html.gz'
+          },
+          {
+            expand: true,
+            cwd: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            src: ['index.json', 'v<%= pkg.version %>.json'],
+            dest: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            extDot: 'last',
+            ext: '.json.gz'
+          },
+          {
+            expand: true,
+            cwd: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            src: ['app/**/*.js', 'data/vendor/**/*.js'],
+            dest: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
             extDot: 'last',
             ext: '.js.gz'
+          },
+          {
+            expand: true,
+            cwd: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            src: ['app/**/*.mjs', 'data/vendor/**/*.mjs'],
+            dest: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            extDot: 'last',
+            ext: '.mjs.gz'
+          },
+          {
+            expand: true,
+            cwd: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            src: ['app/**/*.wasm', 'data/vendor/**/*.wasm'],
+            dest: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            extDot: 'last',
+            ext: '.wasm.gz'
           },
           {
             expand: true,
@@ -2053,14 +2129,6 @@ module.exports = function(grunt) {
             dest: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/config/',
             extDot: 'last',
             ext: '.txt.gz'
-          },
-          {
-            expand: true,
-            cwd: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/data/vendor/',
-            src: ['**/*.js'],
-            dest: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/data/vendor/',
-            extDot: 'last',
-            ext: '.js.gz'
           },
           {
             expand: true,
@@ -2086,11 +2154,43 @@ module.exports = function(grunt) {
         files:[
           {
             expand: true,
-            cwd: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/app/',
-            src: ['**/*.js'],
-            dest: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/app/',
+            cwd: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            src: ['index.html', 'v<%= pkg.version %>.html'],
+            dest: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            extDot: 'last',
+            ext: '.html.br'
+          },
+          {
+            expand: true,
+            cwd: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            src: ['index.json', 'v<%= pkg.version %>.json'],
+            dest: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            extDot: 'last',
+            ext: '.json.br'
+          },
+          {
+            expand: true,
+            cwd: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            src: ['app/**/*.js', 'data/vendor/**/*.js'],
+            dest: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
             extDot: 'last',
             ext: '.js.br'
+          },
+          {
+            expand: true,
+            cwd: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            src: ['app/**/*.mjs', 'data/vendor/**/*.mjs'],
+            dest: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            extDot: 'last',
+            ext: '.mjs.br'
+          },
+          {
+            expand: true,
+            cwd: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            src: ['app/**/*.wasm', 'data/vendor/**/*.wasm'],
+            dest: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/',
+            extDot: 'last',
+            ext: '.wasm.br'
           },
           {
             expand: true,
@@ -2099,14 +2199,6 @@ module.exports = function(grunt) {
             dest: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/config/',
             extDot: 'last',
             ext: '.txt.br'
-          },
-          {
-            expand: true,
-            cwd: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/data/vendor/',
-            src: ['**/*.js'],
-            dest: 'public/<%= pkg.currentMode %>/<%= pkg.current %>/data/vendor/',
-            extDot: 'last',
-            ext: '.js.br'
           },
           {
             expand: true,
@@ -2132,6 +2224,22 @@ module.exports = function(grunt) {
             dest: 'public/<%= pkg.currentMode %>/dependence/',
             extDot: 'last',
             ext: '.js.gz'
+          },
+          {
+            expand: true,
+            cwd: 'public/<%= pkg.currentMode %>/dependence/',
+            src: ['**/*.mjs'],
+            dest: 'public/<%= pkg.currentMode %>/dependence/',
+            extDot: 'last',
+            ext: '.mjs.gz'
+          },
+          {
+            expand: true,
+            cwd: 'public/<%= pkg.currentMode %>/dependence/',
+            src: ['**/*.wasm'],
+            dest: 'public/<%= pkg.currentMode %>/dependence/',
+            extDot: 'last',
+            ext: '.wasm.gz'
           },
           {
             expand: true,
@@ -2162,6 +2270,22 @@ module.exports = function(grunt) {
             dest: 'public/<%= pkg.currentMode %>/dependence/',
             extDot: 'last',
             ext: '.js.br'
+          },
+          {
+            expand: true,
+            cwd: 'public/<%= pkg.currentMode %>/dependence/',
+            src: ['**/*.mjs'],
+            dest: 'public/<%= pkg.currentMode %>/dependence/',
+            extDot: 'last',
+            ext: '.mjs.br'
+          },
+          {
+            expand: true,
+            cwd: 'public/<%= pkg.currentMode %>/dependence/',
+            src: ['**/*.wasm'],
+            dest: 'public/<%= pkg.currentMode %>/dependence/',
+            extDot: 'last',
+            ext: '.wasm.br'
           },
           {
             expand: true,
@@ -2540,7 +2664,7 @@ module.exports = function(grunt) {
 
       create:{
         command(name) {
-          let cmd = 'grunt-init template/project/webgame';
+          let cmd = 'grunt-init template/project/webgame5';
           if(name){
             cmd = 'grunt-init template/project/' + name;
           }
@@ -3636,7 +3760,7 @@ module.exports = function(grunt) {
     }
     if(resConfig.vendor) {
       let langList = resConfig.vendor.langList;
-      let names = ['en-us', 'zh-tw', 'zh-cn'];
+      let names = ['en-us', 'zh-cn'];
       if(Array.isArray(langList)) {
         names = langList;
       }

@@ -1,0 +1,143 @@
+moai_loading_fx_02.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+moai_loading_fx_02
+  rotate: false
+  xy: 0, 0
+  size: 60, 140
+  orig: 60, 140
+  offset: 0, 0
+  index: -1
+
+moai_loading_bg_b.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+moai_loading_bg_b
+  rotate: false
+  xy: 0, 0
+  size: 106, 106
+  orig: 106, 106
+  offset: 0, 0
+  index: -1
+
+moai_loading_fx_03.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+moai_loading_fx_03
+  rotate: false
+  xy: 0, 0
+  size: 64, 64
+  orig: 64, 64
+  offset: 0, 0
+  index: -1
+
+moai_loading_bg_a.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+moai_loading_bg_a
+  rotate: false
+  xy: 0, 0
+  size: 154, 154
+  orig: 154, 154
+  offset: 0, 0
+  index: -1
+
+moai_loading_bg_c.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+moai_loading_bg_c
+  rotate: false
+  xy: 0, 0
+  size: 18, 14
+  orig: 18, 14
+  offset: 0, 0
+  index: -1
+
+moai_loading_fx_06.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+moai_loading_fx_06
+  rotate: false
+  xy: 0, 0
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+moai_loading_fx_01.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+moai_loading_fx_01
+  rotate: false
+  xy: 0, 0
+  size: 192, 192
+  orig: 192, 192
+  offset: 0, 0
+  index: -1
+
+moai_loading_bg0.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+moai_loading_bg0
+  rotate: false
+  xy: 0, 0
+  size: 960, 270
+  orig: 960, 270
+  offset: 0, 0
+  index: -1
+
+moai_loading_bg1.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+moai_loading_bg1
+  rotate: false
+  xy: 0, 0
+  size: 960, 270
+  orig: 960, 270
+  offset: 0, 0
+  index: -1
+
+moai_loading_bg2.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+moai_loading_bg2
+  rotate: false
+  xy: 0, 0
+  size: 20, 20
+  orig: 20, 20
+  offset: 0, 0
+  index: -1
+
+moai_loading_percentage.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+percentage
+  rotate: false
+  xy: 0, 0
+  size: 472, 22
+  orig: 472, 22
+  offset: 0, 0
+  index: -1
+
+moai_loading_percentage_fx.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+percentage_fx
+  rotate: false
+  xy: 0, 0
+  size: 18, 50
+  orig: 18, 50
+  offset: 0, 0
+  index: -1

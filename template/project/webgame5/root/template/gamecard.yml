@@ -1,0 +1,88 @@
+---
+baseURL: /project/{%= group %}/{%= name %}/
+id: {%= name %} # 遊戲代號 遊戲代號
+name:   # 遊戲名稱 (多語設定)
+  th-th: เกม
+  vi-vn: trò chơi
+  en-us: game
+  zh-tw: 遊戲
+  zh-cn: 游戏
+sysTray: # 是否顯示系統選單
+  left: 40px         # 左邊界座標
+  top: 40px          # 上邊界座標
+  flags: # 選單功能項目開關設定
+    fullscreen: false   # 全螢幕
+    lock: false         # 鎖定顯示比例
+    music: false        # 音樂
+    sound: false        # 音效
+manual: # 指定需要手動控制的項目
+  overview: true     # 讀取畫面
+  disableNet: false  # 是否關閉網路功能  
+options: # 功能開關設定
+  overview:       # 預覽畫面相關設定
+    logo: true           # 是否顯示 公版的 logo
+    animation: true      # 是否顯示 自定義的動畫 (根據 下面的 overview 決定)
+    background: true     # 是否顯示 自定義的背景 (根據 下面的 images.background 決定)
+    progress: false      # 是否顯示 公版的進度條
+  game:
+    custom: false      # 是否顯示 場景設定選單 (pixi.js 初始化設定)
+    fps: true          # 是否顯示畫面更新率
+    debug: false       # 是否顯示 vConsole (目前沒作用)
+    useDialog: true    # 是否使用共用對話視窗
+app: release/{%= group %}.{%= name %}.js   # 程式 (自動產生)
+group: {%= group %}                # 群組
+appConfig: {%= name %}             # 程式設定檔
+# theOther: other      # 是否有子專案
+pixiConfig: #PIXI 設定
+  legacy: false
+  width: &WIDTH 1024
+  height: &HEIGHT 768
+  resolution: 1.0
+  antialias: false
+  transparent: true
+screen:   # 螢幕設定
+  isLock: true              # 是否鎖定
+  orientation: landscape    # portrait = 垂直 , landscape = 水平, 沒有的話是不檢查
+  width: *WIDTH               # 寬
+  height: *HEIGHT              # 高
+  # portrait: # 垂直鎖定設定
+  #   width: 800               # 寬
+  #   height: 960              # 高
+  # landscape: # 水平鎖定設定
+  #   width: 960               # 寬
+  #   height: 800              # 高  
+resize: # 畫面尺寸改變用
+  horizontal:     # 水平
+    width: *WIDTH   # 寬
+    height: *HEIGHT   # 高
+  vertical:       # 垂直
+    width: *HEIGHT    # 寬
+    height: *WIDTH  # 高
+images:   # 圖檔設定
+  v1:
+    icon: gamecard/icon.png
+    logo: gamecard/logo.png
+    background: gamecard/background.jpg
+    useBackground: true # 是否顯示背景圖片
+  v2:
+    icon: gamecard/icon.png
+    logo: gamecard/logo.avif
+    background: gamecard/background.avif
+    useBackground: true # 是否顯示背景圖片
+  #useBackground: true # 是否顯示背景圖片
+overview: # 預覽用
+  width: 960  # 畫面的寬
+  height: 580 # 畫面的高
+  spine: # 動畫設定
+    pos: # 座標
+      x: 0
+      y: 0
+    src: gamecard/overview/moai_loading_bg_loop.json
+    animName:    # 動畫名稱
+      enter: enter      # 進入
+      loop: demo     # 重複播放
+      leave: leave     # 離開
+      progress: progress  # 進度
+type: sports               # 目前沒使用
+doc: slotTest 說明         # 目前沒使用
+

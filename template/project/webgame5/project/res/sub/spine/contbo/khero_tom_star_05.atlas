@@ -1,0 +1,444 @@
+khero_contbo_fire_b.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_b
+  rotate: false
+  xy: 0, 0
+  size: 300, 200
+  orig: 300, 200
+  offset: 0, 0
+  index: -1
+
+khero_contbo_pf_03.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_pf_03
+  rotate: false
+  xy: 0, 0
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_ms.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_ms
+  rotate: false
+  xy: 0, 0
+  size: 300, 200
+  orig: 300, 200
+  offset: 0, 0
+  index: -1
+
+khero_contbo_people_ani_0.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_people_ani_0
+  rotate: false
+  xy: 0, 0
+  size: 300, 200
+  orig: 300, 200
+  offset: 0, 0
+  index: -1
+
+khero_contbo_pf_02.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_pf_02
+  rotate: false
+  xy: 0, 0
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_fg_01.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_fg_01
+  rotate: false
+  xy: 0, 0
+  size: 300, 200
+  orig: 300, 200
+  offset: 0, 0
+  index: -1
+
+khero_contbo_pf_06_n_mask.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_pf_06_n_mask
+  rotate: false
+  xy: 0, 0
+  size: 170, 170
+  orig: 170, 170
+  offset: 0, 0
+  index: -1
+
+khero_contbo_pf_05.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_pf_05
+  rotate: false
+  xy: 0, 0
+  size: 128, 128
+  orig: 128, 128
+  offset: 0, 0
+  index: -1
+
+khero_contbo_cc.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_cc
+  rotate: false
+  xy: 0, 0
+  size: 128, 256
+  orig: 128, 256
+  offset: 0, 0
+  index: -1
+
+khero_contbo_people_ani_1.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_people_ani_1
+  rotate: false
+  xy: 0, 0
+  size: 300, 200
+  orig: 300, 200
+  offset: 0, 0
+  index: -1
+
+khero_contbo_people_ani_2.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_people_ani_2
+  rotate: false
+  xy: 0, 0
+  size: 300, 200
+  orig: 300, 200
+  offset: 0, 0
+  index: -1
+
+khero_contbo_pf_08.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_pf_08
+  rotate: false
+  xy: 0, 0
+  size: 350, 140
+  orig: 350, 140
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_fg_02.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_fg_02
+  rotate: false
+  xy: 0, 0
+  size: 300, 200
+  orig: 300, 200
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_fg_11.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_fg_11
+  rotate: false
+  xy: 0, 0
+  size: 300, 200
+  orig: 300, 200
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_fg_13.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_fg_13
+  rotate: false
+  xy: 0, 0
+  size: 300, 200
+  orig: 300, 200
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_bk0.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_bk0
+  rotate: false
+  xy: 0, 0
+  size: 297, 100
+  orig: 297, 100
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_bk1.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_bk1
+  rotate: false
+  xy: 0, 0
+  size: 297, 100
+  orig: 297, 100
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_bk2.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_bk2
+  rotate: false
+  xy: 0, 0
+  size: 297, 100
+  orig: 297, 100
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_bk3.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_bk3
+  rotate: false
+  xy: 0, 0
+  size: 297, 100
+  orig: 297, 100
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_bk4.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_bk4
+  rotate: false
+  xy: 0, 0
+  size: 297, 100
+  orig: 297, 100
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_bk5.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_bk5
+  rotate: false
+  xy: 0, 0
+  size: 297, 100
+  orig: 297, 100
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_bk6.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_bk6
+  rotate: false
+  xy: 0, 0
+  size: 297, 100
+  orig: 297, 100
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_bk7.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_bk7
+  rotate: false
+  xy: 0, 0
+  size: 297, 100
+  orig: 297, 100
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_bk8.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_bk8
+  rotate: false
+  xy: 0, 0
+  size: 297, 100
+  orig: 297, 100
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_bk9.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_bk9
+  rotate: false
+  xy: 0, 0
+  size: 297, 100
+  orig: 297, 100
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_bk10.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_bk10
+  rotate: false
+  xy: 0, 0
+  size: 297, 100
+  orig: 297, 100
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_bk11.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_bk11
+  rotate: false
+  xy: 0, 0
+  size: 297, 100
+  orig: 297, 100
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_bk12.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_bk12
+  rotate: false
+  xy: 0, 0
+  size: 297, 100
+  orig: 297, 100
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_bk13.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_bk13
+  rotate: false
+  xy: 0, 0
+  size: 297, 100
+  orig: 297, 100
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_bk14.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_bk14
+  rotate: false
+  xy: 0, 0
+  size: 297, 100
+  orig: 297, 100
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_bk15.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_bk15
+  rotate: false
+  xy: 0, 0
+  size: 297, 100
+  orig: 297, 100
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_bk16.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_bk16
+  rotate: false
+  xy: 0, 0
+  size: 297, 100
+  orig: 297, 100
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_bk17.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_bk17
+  rotate: false
+  xy: 0, 0
+  size: 297, 100
+  orig: 297, 100
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_bk18.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_bk18
+  rotate: false
+  xy: 0, 0
+  size: 297, 100
+  orig: 297, 100
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_bk19.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_bk19
+  rotate: false
+  xy: 0, 0
+  size: 297, 100
+  orig: 297, 100
+  offset: 0, 0
+  index: -1
+
+khero_contbo_fire_bk20.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_fire_bk20
+  rotate: false
+  xy: 0, 0
+  size: 297, 100
+  orig: 297, 100
+  offset: 0, 0
+  index: -1
+
+khero_contbo_pf_04.png
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+khero_contbo_pf_04
+  rotate: false
+  xy: 0, 0
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+

@@ -1,0 +1,453 @@
+{
+"bones": [
+	{ "name": "root" },
+	{ "name": "khero_contbo_pf_07_1", "parent": "root", "x": -75, "y": 60 },
+	{ "name": "khero_contbo_pf_07_2", "parent": "root", "x": -75, "y": 60 },
+	{ "name": "khero_contbo_pf_07_3", "parent": "root", "x": 535, "y": -59 },
+	{ "name": "khero_contbo_pf_07_4", "parent": "root", "x": 535, "y": -59 },
+	{ "name": "khero_contbo_line_04_1", "parent": "root", "x": -68, "y": 58 },
+	{ "name": "khero_contbo_line_04_2", "parent": "root", "x": 529, "y": -58 },
+	{ "name": "khero_contbo_line_03_1", "parent": "root", "x": -75, "y": -62 },
+	{ "name": "khero_contbo_line_03_2", "parent": "root", "x": -75, "y": -62 },
+	{ "name": "khero_contbo_line_02_1", "parent": "root", "x": -79, "y": 59 },
+	{ "name": "khero_contbo_line_02_2", "parent": "root", "x": -79, "y": 59 },
+	{ "name": "khero_contbo_line_03_3", "parent": "root", "x": 536, "y": 62 },
+	{ "name": "khero_contbo_line_03_4", "parent": "root", "x": 536, "y": 62 },
+	{ "name": "khero_contbo_line_02_3", "parent": "root", "x": 539, "y": -59 },
+	{ "name": "khero_contbo_line_02_4", "parent": "root", "x": 539, "y": -59 },
+	{ "name": "khero_contbo_line_03_5", "parent": "root", "x": -75, "y": 62 },
+	{ "name": "khero_contbo_line_03_6", "parent": "root", "x": -75, "y": 62 },
+	{ "name": "khero_contbo_line_03_7", "parent": "root", "x": 536, "y": -62 },
+	{ "name": "khero_contbo_line_03_8", "parent": "root", "x": 536, "y": -62 },
+	{ "name": "khero_contbo_line_02_5", "parent": "root", "x": 539, "y": 59 },
+	{ "name": "khero_contbo_line_02_6", "parent": "root", "x": 539, "y": 59 },
+	{ "name": "khero_contbo_line_02_7", "parent": "root", "x": -79, "y": -59 },
+	{ "name": "khero_contbo_line_02_8", "parent": "root", "x": -79, "y": -59 }
+],
+"slots": [
+	{ "name": "khero_contbo_line_02_8", "bone": "khero_contbo_line_02_8" },
+	{ "name": "khero_contbo_line_02_7", "bone": "khero_contbo_line_02_7", "blend": "additive" },
+	{ "name": "khero_contbo_line_02_6", "bone": "khero_contbo_line_02_6" },
+	{ "name": "khero_contbo_line_02_5", "bone": "khero_contbo_line_02_5", "blend": "additive" },
+	{ "name": "khero_contbo_line_03_8", "bone": "khero_contbo_line_03_8" },
+	{ "name": "khero_contbo_line_03_7", "bone": "khero_contbo_line_03_7", "blend": "additive" },
+	{ "name": "khero_contbo_line_03_6", "bone": "khero_contbo_line_03_6" },
+	{ "name": "khero_contbo_line_03_5", "bone": "khero_contbo_line_03_5", "blend": "additive" },
+	{ "name": "khero_contbo_line_02_4", "bone": "khero_contbo_line_02_4", "attachment": "khero_contbo_line_02_4" },
+	{ "name": "khero_contbo_line_02_3", "bone": "khero_contbo_line_02_3", "attachment": "khero_contbo_line_02_3", "blend": "additive" },
+	{ "name": "khero_contbo_line_03_4", "bone": "khero_contbo_line_03_4", "attachment": "khero_contbo_line_03_4" },
+	{ "name": "khero_contbo_line_03_3", "bone": "khero_contbo_line_03_3", "attachment": "khero_contbo_line_03_3", "blend": "additive" },
+	{ "name": "khero_contbo_line_02_2", "bone": "khero_contbo_line_02_2", "attachment": "khero_contbo_line_02_2" },
+	{ "name": "khero_contbo_line_02_1", "bone": "khero_contbo_line_02_1", "attachment": "khero_contbo_line_02_1", "blend": "additive" },
+	{ "name": "khero_contbo_line_03_2", "bone": "khero_contbo_line_03_2", "attachment": "khero_contbo_line_03_2" },
+	{ "name": "khero_contbo_line_03_1", "bone": "khero_contbo_line_03_1", "attachment": "khero_contbo_line_03_1", "blend": "additive" },
+	{ "name": "khero_contbo_line_04_2", "bone": "khero_contbo_line_04_2", "attachment": "khero_contbo_line_04_2", "blend": "additive", "color": "FFFFFF00" },
+	{ "name": "khero_contbo_line_04_1", "bone": "khero_contbo_line_04_1", "attachment": "khero_contbo_line_04_1", "blend": "additive", "color": "FFFFFF00" },
+	{ "name": "khero_contbo_pf_07_4", "bone": "khero_contbo_pf_07_4", "attachment": "khero_contbo_pf_07_4", "blend": "additive" },
+	{ "name": "khero_contbo_pf_07_3", "bone": "khero_contbo_pf_07_3", "attachment": "khero_contbo_pf_07_3", "blend": "additive" },
+	{ "name": "khero_contbo_pf_07_2", "bone": "khero_contbo_pf_07_2", "attachment": "khero_contbo_pf_07_2", "blend": "additive" },
+	{ "name": "khero_contbo_pf_07_1", "bone": "khero_contbo_pf_07_1", "attachment": "khero_contbo_pf_07_1", "blend": "additive" }
+],
+"skins": {
+	"default": {
+		"khero_contbo_pf_07_1": {
+			"khero_contbo_pf_07_1": { "width": 128, "height": 128, "name": "khero_contbo_pf_07" }
+		},
+		"khero_contbo_pf_07_2": {
+			"khero_contbo_pf_07_2": { "width": 128, "height": 128, "name": "khero_contbo_pf_07" }
+		},
+		"khero_contbo_pf_07_3": {
+			"khero_contbo_pf_07_3": { "width": 128, "height": 128, "name": "khero_contbo_pf_07" }
+		},
+		"khero_contbo_pf_07_4": {
+			"khero_contbo_pf_07_4": { "width": 128, "height": 128, "name": "khero_contbo_pf_07" }
+		},
+		"khero_contbo_line_04_1": {
+			"khero_contbo_line_04_1": { "width": 128, "height": 128, "name": "khero_contbo_line_04" }
+		},
+		"khero_contbo_line_04_2": {
+			"khero_contbo_line_04_2": { "width": 128, "height": 128, "name": "khero_contbo_line_04" }
+		},
+		"khero_contbo_line_03_1": {
+			"khero_contbo_line_03_1": { "width": 960, "height": 540, "x": -382, "y": 54, "name": "khero_contbo_line_03" }
+		},
+		"khero_contbo_line_03_2": {
+			"khero_contbo_line_03_2": { "width": 960, "height": 540, "x": -382, "y": 54, "name": "khero_contbo_line_03" }
+		},
+		"khero_contbo_line_02_1": {
+			"khero_contbo_line_02_1": { "width": 960, "height": 540, "x": 387, "y": -76, "name": "khero_contbo_line_02" }
+		},
+		"khero_contbo_line_02_2": {
+			"khero_contbo_line_02_2": { "width": 960, "height": 540, "x": 387, "y": -76, "name": "khero_contbo_line_02" }
+		},
+		"khero_contbo_line_03_3": {
+			"khero_contbo_line_03_3": { "width": 960, "height": 540, "x": -382, "y": -79, "name": "khero_contbo_line_03" }
+		},
+		"khero_contbo_line_03_4": {
+			"khero_contbo_line_03_4": { "width": 960, "height": 540, "x": -382, "y": -79, "name": "khero_contbo_line_03" }
+		},
+		"khero_contbo_line_02_3": {
+			"khero_contbo_line_02_3": { "width": 960, "height": 540, "x": -386, "y": -76, "name": "khero_contbo_line_02" }
+		},
+		"khero_contbo_line_02_4": {
+			"khero_contbo_line_02_4": { "width": 960, "height": 540, "x": -386, "y": -76, "name": "khero_contbo_line_02" }
+		},
+		"khero_contbo_line_03_5": {
+			"khero_contbo_line_03_5": { "width": 960, "height": 540, "x": -382, "y": -79, "name": "khero_contbo_line_03" }
+		},
+		"khero_contbo_line_03_6": {
+			"khero_contbo_line_03_6": { "width": 960, "height": 540, "x": -382, "y": -79, "name": "khero_contbo_line_03" }
+		},
+		"khero_contbo_line_03_7": {
+			"khero_contbo_line_03_7": { "width": 960, "height": 540, "x": -382, "y": 54, "name": "khero_contbo_line_03" }
+		},
+		"khero_contbo_line_03_8": {
+			"khero_contbo_line_03_8": { "width": 960, "height": 540, "x": -382, "y": 54, "name": "khero_contbo_line_03" }
+		},
+		"khero_contbo_line_02_5": {
+			"khero_contbo_line_02_5": { "width": 960, "height": 540, "x": -386, "y": -76, "name": "khero_contbo_line_02" }
+		},
+		"khero_contbo_line_02_6": {
+			"khero_contbo_line_02_6": { "width": 960, "height": 540, "x": -386, "y": -76, "name": "khero_contbo_line_02" }
+		},
+		"khero_contbo_line_02_7": {
+			"khero_contbo_line_02_7": { "width": 960, "height": 540, "x": 387, "y": -76, "name": "khero_contbo_line_02" }
+		},
+		"khero_contbo_line_02_8": {
+			"khero_contbo_line_02_8": { "width": 960, "height": 540, "x": 387, "y": -76, "name": "khero_contbo_line_02" }
+		}
+	}
+},
+"animations": {
+	"demo": {
+		"bones": {
+			"khero_contbo_pf_07_1": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.25, "x": 611.856, "y": 0 },
+					{ "time": 0.333, "x": 612.428, "y": -73.999 },
+					{ "time": 0.417, "x": 613, "y": -98 },
+					{ "time": 0.5, "x": 613, "y": -119 },
+					{ "time": 0.583, "x": 458.33, "y": -119 },
+					{ "time": 0.75, "x": -1, "y": -119 },
+					{ "time": 0.917, "x": -1, "y": -36 },
+					{ "time": 0.983, "x": -1, "y": 0.143 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.45, "y": 0.45 }
+				]
+			},
+			"khero_contbo_pf_07_2": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.25, "x": 611.856, "y": 0 },
+					{ "time": 0.333, "x": 612.428, "y": -73.999 },
+					{ "time": 0.417, "x": 613, "y": -98 },
+					{ "time": 0.5, "x": 613, "y": -119 },
+					{ "time": 0.583, "x": 458.33, "y": -119 },
+					{ "time": 0.75, "x": -1, "y": -119 },
+					{ "time": 0.917, "x": -1, "y": -36 },
+					{ "time": 0.983, "x": -1, "y": 0.143 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.45, "y": 0.45 }
+				]
+			},
+			"khero_contbo_pf_07_3": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.25, "x": -610.144, "y": 0 },
+					{ "time": 0.333, "x": -610.072, "y": 75.001 },
+					{ "time": 0.417, "x": -610, "y": 98 },
+					{ "time": 0.5, "x": -610, "y": 119 },
+					{ "time": 0.583, "x": -457.998, "y": 119 },
+					{ "time": 0.75, "x": 2, "y": 119 },
+					{ "time": 0.917, "x": 1, "y": 36 },
+					{ "time": 0.983, "x": 1, "y": 0.571 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.45, "y": 0.45 }
+				]
+			},
+			"khero_contbo_pf_07_4": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.25, "x": -610.144, "y": 0 },
+					{ "time": 0.333, "x": -610.072, "y": 75.001 },
+					{ "time": 0.417, "x": -610, "y": 98 },
+					{ "time": 0.5, "x": -610, "y": 119 },
+					{ "time": 0.583, "x": -457.998, "y": 119 },
+					{ "time": 0.75, "x": 2, "y": 119 },
+					{ "time": 0.917, "x": 1, "y": 36 },
+					{ "time": 0.983, "x": 1, "y": 0.571 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.45, "y": 0.45 }
+				]
+			},
+			"khero_contbo_line_04_1": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.083, "x": 189.542, "y": 0 },
+					{ "time": 0.583, "x": 301.559, "y": 0 },
+					{ "time": 0.75, "x": 597, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.23, "y": 0.22 },
+					{ "time": 0.083, "x": 5.09, "y": 0.22 },
+					{ "time": 0.583, "x": 7.73, "y": 0.22 },
+					{ "time": 0.75, "x": 0.2, "y": 0.22 }
+				]
+			},
+			"khero_contbo_line_04_2": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 0.083, "x": -196.441, "y": 0 },
+					{ "time": 0.583, "x": -297.458, "y": 0 },
+					{ "time": 0.75, "x": -599, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 0.23, "y": 0.22 },
+					{ "time": 0.083, "x": 5.09, "y": 0.22 },
+					{ "time": 0.583, "x": 7.73, "y": 0.22 },
+					{ "time": 0.75, "x": 0.2, "y": 0.22 }
+				]
+			},
+			"khero_contbo_line_03_1": {
+				"scale": [
+					{ "time": 0, "x": -1, "y": 0 },
+					{ "time": 0.25, "x": -1, "y": 0 },
+					{ "time": 0.333, "x": -1, "y": 0.6 },
+					{ "time": 0.5, "x": -1, "y": 0.93 }
+				]
+			},
+			"khero_contbo_line_03_2": {
+				"scale": [
+					{ "time": 0, "x": -1, "y": 0 },
+					{ "time": 0.25, "x": -1, "y": 0 },
+					{ "time": 0.333, "x": -1, "y": 0.6 },
+					{ "time": 0.5, "x": -1, "y": 0.93 }
+				]
+			},
+			"khero_contbo_line_02_1": {
+				"scale": [
+					{ "time": 0, "x": 0, "y": 1 },
+					{ "time": 0.25, "x": 0.8, "y": 1 }
+				]
+			},
+			"khero_contbo_line_02_2": {
+				"scale": [
+					{ "time": 0, "x": 0, "y": 1 },
+					{ "time": 0.25, "x": 0.8, "y": 1 }
+				]
+			},
+			"khero_contbo_line_03_3": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 0 },
+					{ "time": 0.25, "x": 1, "y": 0 },
+					{ "time": 0.333, "x": 1, "y": 0.6 },
+					{ "time": 0.5, "x": 1, "y": 0.93 }
+				]
+			},
+			"khero_contbo_line_03_4": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 0 },
+					{ "time": 0.25, "x": 1, "y": 0 },
+					{ "time": 0.333, "x": 1, "y": 0.6 },
+					{ "time": 0.5, "x": 1, "y": 0.93 }
+				]
+			},
+			"khero_contbo_line_02_3": {
+				"scale": [
+					{ "time": 0, "x": 0, "y": -1 },
+					{ "time": 0.25, "x": 0.8, "y": -1 }
+				]
+			},
+			"khero_contbo_line_02_4": {
+				"scale": [
+					{ "time": 0, "x": 0, "y": -1 },
+					{ "time": 0.25, "x": 0.8, "y": -1 }
+				]
+			},
+			"khero_contbo_line_03_5": {
+				"scale": [
+					{ "time": 0, "x": -1, "y": 0.93 },
+					{ "time": 0.75, "x": -1, "y": 0.93 },
+					{ "time": 0.833, "x": -1, "y": 0.6 },
+					{ "time": 1, "x": -1, "y": 0 }
+				]
+			},
+			"khero_contbo_line_03_6": {
+				"scale": [
+					{ "time": 0, "x": -1, "y": 0.93 },
+					{ "time": 0.75, "x": -1, "y": 0.93 },
+					{ "time": 0.833, "x": -1, "y": 0.6 },
+					{ "time": 1, "x": -1, "y": 0 }
+				]
+			},
+			"khero_contbo_line_03_7": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 0.93 },
+					{ "time": 0.75, "x": 1, "y": 0.93 },
+					{ "time": 0.833, "x": 1, "y": 0.6 },
+					{ "time": 1, "x": 1, "y": 0 }
+				]
+			},
+			"khero_contbo_line_03_8": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 0.93 },
+					{ "time": 0.75, "x": 1, "y": 0.93 },
+					{ "time": 0.833, "x": 1, "y": 0.6 },
+					{ "time": 1, "x": 1, "y": 0 }
+				]
+			},
+			"khero_contbo_line_02_5": {
+				"scale": [
+					{ "time": 0, "x": 0.8, "y": 1 },
+					{ "time": 0.5, "x": 0.8, "y": 1 },
+					{ "time": 0.583, "x": 0.6, "y": 1 },
+					{ "time": 0.75, "x": 0, "y": 1 }
+				]
+			},
+			"khero_contbo_line_02_6": {
+				"scale": [
+					{ "time": 0, "x": 0.8, "y": 1 },
+					{ "time": 0.5, "x": 0.8, "y": 1 },
+					{ "time": 0.583, "x": 0.6, "y": 1 },
+					{ "time": 0.75, "x": 0, "y": 1 }
+				]
+			},
+			"khero_contbo_line_02_7": {
+				"scale": [
+					{ "time": 0, "x": 0.8, "y": -1 },
+					{ "time": 0.5, "x": 0.8, "y": -1 },
+					{ "time": 0.583, "x": 0.6, "y": -1 },
+					{ "time": 0.75, "x": 0, "y": -1 }
+				]
+			},
+			"khero_contbo_line_02_8": {
+				"scale": [
+					{ "time": 0, "x": 0.8, "y": -1 },
+					{ "time": 0.5, "x": 0.8, "y": -1 },
+					{ "time": 0.583, "x": 0.6, "y": -1 },
+					{ "time": 0.75, "x": 0, "y": -1 }
+				]
+			}
+		},
+		"slots": {
+			"khero_contbo_line_04_1": {
+				"color": [
+					{ "time": 0, "color": "FFFFFF00" },
+					{ "time": 0.025, "color": "FFFFFFFF" },
+					{ "time": 0.583, "color": "FFFFFFFF" },
+					{ "time": 0.75, "color": "FFFFFF00" }
+				]
+			},
+			"khero_contbo_line_04_2": {
+				"color": [
+					{ "time": 0, "color": "FFFFFF00" },
+					{ "time": 0.025, "color": "FFFFFFFF" },
+					{ "time": 0.583, "color": "FFFFFFFF" },
+					{ "time": 0.75, "color": "FFFFFF00" }
+				]
+			},
+			"khero_contbo_line_03_1": {
+				"attachment": [
+					{ "time": 0, "name": "khero_contbo_line_03_1" },
+					{ "time": 0.5, "name": null }
+				]
+			},
+			"khero_contbo_line_03_2": {
+				"attachment": [
+					{ "time": 0, "name": "khero_contbo_line_03_2" },
+					{ "time": 0.5, "name": null }
+				]
+			},
+			"khero_contbo_line_02_1": {
+				"attachment": [
+					{ "time": 0, "name": "khero_contbo_line_02_1" },
+					{ "time": 0.5, "name": null }
+				]
+			},
+			"khero_contbo_line_02_2": {
+				"attachment": [
+					{ "time": 0, "name": "khero_contbo_line_02_2" },
+					{ "time": 0.5, "name": null }
+				]
+			},
+			"khero_contbo_line_03_3": {
+				"attachment": [
+					{ "time": 0, "name": "khero_contbo_line_03_3" },
+					{ "time": 0.5, "name": null }
+				]
+			},
+			"khero_contbo_line_03_4": {
+				"attachment": [
+					{ "time": 0, "name": "khero_contbo_line_03_4" },
+					{ "time": 0.5, "name": null }
+				]
+			},
+			"khero_contbo_line_02_3": {
+				"attachment": [
+					{ "time": 0, "name": "khero_contbo_line_02_3" },
+					{ "time": 0.5, "name": null }
+				]
+			},
+			"khero_contbo_line_02_4": {
+				"attachment": [
+					{ "time": 0, "name": "khero_contbo_line_02_4" },
+					{ "time": 0.5, "name": null }
+				]
+			},
+			"khero_contbo_line_03_5": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.5, "name": "khero_contbo_line_03_5" }
+				]
+			},
+			"khero_contbo_line_03_6": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.5, "name": "khero_contbo_line_03_6" }
+				]
+			},
+			"khero_contbo_line_03_7": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.5, "name": "khero_contbo_line_03_7" }
+				]
+			},
+			"khero_contbo_line_03_8": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.5, "name": "khero_contbo_line_03_8" }
+				]
+			},
+			"khero_contbo_line_02_5": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.5, "name": "khero_contbo_line_02_5" }
+				]
+			},
+			"khero_contbo_line_02_6": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.5, "name": "khero_contbo_line_02_6" }
+				]
+			},
+			"khero_contbo_line_02_7": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.5, "name": "khero_contbo_line_02_7" }
+				]
+			},
+			"khero_contbo_line_02_8": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.5, "name": "khero_contbo_line_02_8" }
+				]
+			}
+		}
+	}
+}
+}

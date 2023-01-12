@@ -1,0 +1,22 @@
+{"frames": {
+"ui.image.light.png":
+{
+    "frame": {"x":25,"y":0,"w":24,"h":24},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":24,"h":24},
+    "sourceSize": {"w":24,"h":24}
+},
+"ui.image.light_01.png":
+{
+    "frame": {"x":0,"y":0,"w":24,"h":24},
+    "rotated": false,
+    "trimmed": false,
+    "spriteSourceSize": {"x":0,"y":0,"w":24,"h":24},
+    "sourceSize": {"w":24,"h":24}
+}},
+"meta": {
+  "app": "GIMP",
+  "image": "ui.image.png"
+}
+}

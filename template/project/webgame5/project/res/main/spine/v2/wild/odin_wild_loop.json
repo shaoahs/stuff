@@ -1,0 +1,665 @@
+{
+"bones": [
+	{ "name": "root" },
+	{ "name": "odinjolly_wildshine_11a_1", "parent": "root", "x": -16, "y": -24.5 },
+	{ "name": "odinwildwildshine_01", "parent": "root", "x": -16, "y": -24.5 },
+	{ "name": "odinjolly_wildshine_11a_2", "parent": "root", "x": -16, "y": -24.5 },
+	{ "name": "lighting", "parent": "root", "x": -7, "y": 15.5, "rotation": -45 },
+	{ "name": "odinjollywild_01", "parent": "root" },
+	{ "name": "odinwildsword_01_1", "parent": "root", "x": -5.5, "y": 10, "rotation": 45 },
+	{ "name": "odinwildsword_01_2", "parent": "root", "x": -5.5, "y": 10, "rotation": 45 },
+	{ "name": "fire", "parent": "root", "y": 51 },
+	{ "name": "odinwildicon_01", "parent": "root" },
+	{ "name": "odinjolly_lighting_01_1", "parent": "lighting" },
+	{ "name": "odinjolly_lighting_02_1", "parent": "lighting" },
+	{ "name": "odinjolly_lighting_03_1", "parent": "lighting" },
+	{ "name": "odinjolly_lighting_01_2", "parent": "lighting" },
+	{ "name": "odinjolly_lighting_02_2", "parent": "lighting" },
+	{ "name": "odinjolly_lighting_03_2", "parent": "lighting" },
+	{ "name": "odinjolly_lighting_01_3", "parent": "lighting" },
+	{ "name": "odinjolly_lighting_02_3", "parent": "lighting" },
+	{ "name": "odinjolly_lighting_03_3", "parent": "lighting" },
+	{ "name": "odinjolly_lighting_01_4", "parent": "lighting" },
+	{ "name": "odinjolly_lighting_02_4", "parent": "lighting" },
+	{ "name": "odinjolly_lighting_03_4", "parent": "lighting" },
+	{ "name": "odinjolly_lighting_01_5", "parent": "lighting" },
+	{ "name": "odinjolly_lighting_02_5", "parent": "lighting" },
+	{ "name": "odinjolly_lighting_03_5", "parent": "lighting" },
+	{ "name": "odinjolly_fire3_01", "parent": "fire" },
+	{ "name": "odinwildfire00_02", "parent": "fire" },
+	{ "name": "odinwildfire00_03", "parent": "fire" },
+	{ "name": "odinwildfire00_04", "parent": "fire" },
+	{ "name": "odinwildfire00_05", "parent": "fire" },
+	{ "name": "odinwildfire00_06", "parent": "fire" },
+	{ "name": "odinwildfire00_07", "parent": "fire" },
+	{ "name": "odinwildfire00_08", "parent": "fire" },
+	{ "name": "odinwildfire00_09", "parent": "fire" },
+	{ "name": "odinwildfire00_10", "parent": "fire" },
+	{ "name": "odinwildfire00_11", "parent": "fire" },
+	{ "name": "odinwildfire00_12", "parent": "fire" },
+	{ "name": "odinwildfire00_13", "parent": "fire" },
+	{ "name": "odinwildfire00_14", "parent": "fire" },
+	{ "name": "odinwildfire00_15", "parent": "fire" }
+],
+"slots": [
+	{ "name": "odinwildicon_01", "bone": "odinwildicon_01", "attachment": "odinwildicon_01" },
+	{ "name": "odinwildfire00_15", "bone": "odinwildfire00_15", "blend": "additive" },
+	{ "name": "odinwildfire00_14", "bone": "odinwildfire00_14", "blend": "additive" },
+	{ "name": "odinwildfire00_13", "bone": "odinwildfire00_13", "blend": "additive" },
+	{ "name": "odinwildfire00_12", "bone": "odinwildfire00_12", "blend": "additive" },
+	{ "name": "odinwildfire00_11", "bone": "odinwildfire00_11", "blend": "additive" },
+	{ "name": "odinwildfire00_10", "bone": "odinwildfire00_10", "blend": "additive" },
+	{ "name": "odinwildfire00_09", "bone": "odinwildfire00_09", "blend": "additive" },
+	{ "name": "odinwildfire00_08", "bone": "odinwildfire00_08", "blend": "additive" },
+	{ "name": "odinwildfire00_07", "bone": "odinwildfire00_07", "blend": "additive" },
+	{ "name": "odinwildfire00_06", "bone": "odinwildfire00_06", "blend": "additive" },
+	{ "name": "odinwildfire00_05", "bone": "odinwildfire00_05", "blend": "additive" },
+	{ "name": "odinwildfire00_04", "bone": "odinwildfire00_04", "blend": "additive" },
+	{ "name": "odinwildfire00_03", "bone": "odinwildfire00_03", "blend": "additive" },
+	{ "name": "odinwildfire00_02", "bone": "odinwildfire00_02", "blend": "additive" },
+	{ "name": "odinjolly_fire3_01", "bone": "odinjolly_fire3_01", "attachment": "odinjolly_fire3_01", "blend": "additive" },
+	{ "name": "odinwildsword_01_2", "bone": "odinwildsword_01_2", "attachment": "odinwildsword_01_2" },
+	{ "name": "odinwildsword_01_1", "bone": "odinwildsword_01_1", "attachment": "odinwildsword_01_1", "blend": "additive", "color": "FFFFFF00" },
+	{ "name": "odinjollywild_01", "bone": "odinjollywild_01", "attachment": "odinjollywild_01" },
+	{ "name": "odinjolly_lighting_03_5", "bone": "odinjolly_lighting_03_5", "blend": "additive" },
+	{ "name": "odinjolly_lighting_02_5", "bone": "odinjolly_lighting_02_5", "blend": "additive" },
+	{ "name": "odinjolly_lighting_01_5", "bone": "odinjolly_lighting_01_5", "blend": "additive" },
+	{ "name": "odinjolly_lighting_03_4", "bone": "odinjolly_lighting_03_4", "blend": "additive" },
+	{ "name": "odinjolly_lighting_02_4", "bone": "odinjolly_lighting_02_4", "blend": "additive" },
+	{ "name": "odinjolly_lighting_01_4", "bone": "odinjolly_lighting_01_4", "blend": "additive" },
+	{ "name": "odinjolly_lighting_03_3", "bone": "odinjolly_lighting_03_3", "blend": "additive" },
+	{ "name": "odinjolly_lighting_02_3", "bone": "odinjolly_lighting_02_3", "blend": "additive" },
+	{ "name": "odinjolly_lighting_01_3", "bone": "odinjolly_lighting_01_3", "blend": "additive" },
+	{ "name": "odinjolly_lighting_03_2", "bone": "odinjolly_lighting_03_2", "blend": "additive" },
+	{ "name": "odinjolly_lighting_02_2", "bone": "odinjolly_lighting_02_2", "blend": "additive" },
+	{ "name": "odinjolly_lighting_01_2", "bone": "odinjolly_lighting_01_2", "blend": "additive" },
+	{ "name": "odinjolly_lighting_03_1", "bone": "odinjolly_lighting_03_1", "blend": "additive" },
+	{ "name": "odinjolly_lighting_02_1", "bone": "odinjolly_lighting_02_1", "blend": "additive" },
+	{ "name": "odinjolly_lighting_01_1", "bone": "odinjolly_lighting_01_1", "attachment": "odinjolly_lighting_01_1", "blend": "additive" },
+	{ "name": "odinjolly_wildshine_11a_2", "bone": "odinjolly_wildshine_11a_2", "attachment": "odinjolly_wildshine_11a_2", "blend": "additive", "color": "4DFF9800" },
+	{ "name": "odinwildwildshine_01", "bone": "odinwildwildshine_01", "attachment": "odinwildwildshine_01", "color": "FFFFFF00" },
+	{ "name": "odinjolly_wildshine_11a_1", "bone": "odinjolly_wildshine_11a_1", "attachment": "odinjolly_wildshine_11a_1", "blend": "additive", "color": "FFFFFF00" }
+],
+"skins": {
+	"default": {
+		"odinjolly_wildshine_11a_1": {
+			"odinjolly_wildshine_11a_1": { "width": 140, "height": 100, "name": "odinjolly_wildshine_11a" }
+		},
+		"odinwildwildshine_01": {
+			"odinwildwildshine_01": { "width": 140, "height": 100 }
+		},
+		"odinjolly_wildshine_11a_2": {
+			"odinjolly_wildshine_11a_2": { "width": 140, "height": 100, "name": "odinjolly_wildshine_11a" }
+		},
+		"odinjolly_lighting_01_1": {
+			"odinjolly_lighting_01_1": { "width": 140, "height": 52, "name": "odinjolly_lighting_01" }
+		},
+		"odinjolly_lighting_02_1": {
+			"odinjolly_lighting_02_1": { "width": 140, "height": 52, "name": "odinjolly_lighting_02" }
+		},
+		"odinjolly_lighting_03_1": {
+			"odinjolly_lighting_03_1": { "width": 140, "height": 52, "name": "odinjolly_lighting_03" }
+		},
+		"odinjolly_lighting_01_2": {
+			"odinjolly_lighting_01_2": { "width": 140, "height": 52, "name": "odinjolly_lighting_01" }
+		},
+		"odinjolly_lighting_02_2": {
+			"odinjolly_lighting_02_2": { "width": 140, "height": 52, "name": "odinjolly_lighting_02" }
+		},
+		"odinjolly_lighting_03_2": {
+			"odinjolly_lighting_03_2": { "width": 140, "height": 52, "name": "odinjolly_lighting_03" }
+		},
+		"odinjolly_lighting_01_3": {
+			"odinjolly_lighting_01_3": { "width": 140, "height": 52, "name": "odinjolly_lighting_01" }
+		},
+		"odinjolly_lighting_02_3": {
+			"odinjolly_lighting_02_3": { "width": 140, "height": 52, "name": "odinjolly_lighting_02" }
+		},
+		"odinjolly_lighting_03_3": {
+			"odinjolly_lighting_03_3": { "width": 140, "height": 52, "name": "odinjolly_lighting_03" }
+		},
+		"odinjolly_lighting_01_4": {
+			"odinjolly_lighting_01_4": { "width": 140, "height": 52, "name": "odinjolly_lighting_01" }
+		},
+		"odinjolly_lighting_02_4": {
+			"odinjolly_lighting_02_4": { "width": 140, "height": 52, "name": "odinjolly_lighting_02" }
+		},
+		"odinjolly_lighting_03_4": {
+			"odinjolly_lighting_03_4": { "width": 140, "height": 52, "name": "odinjolly_lighting_03" }
+		},
+		"odinjolly_lighting_01_5": {
+			"odinjolly_lighting_01_5": { "width": 140, "height": 52, "name": "odinjolly_lighting_01" }
+		},
+		"odinjolly_lighting_02_5": {
+			"odinjolly_lighting_02_5": { "width": 140, "height": 52, "name": "odinjolly_lighting_02" }
+		},
+		"odinjolly_lighting_03_5": {
+			"odinjolly_lighting_03_5": { "width": 140, "height": 52, "name": "odinjolly_lighting_03" }
+		},
+		"odinjollywild_01": {
+			"odinjollywild_01": { "width": 140, "height": 140 }
+		},
+		"odinwildsword_01_1": {
+			"odinwildsword_01_1": { "width": 110, "height": 288, "name": "odinwildsword_01" }
+		},
+		"odinwildsword_01_2": {
+			"odinwildsword_01_2": { "width": 110, "height": 288, "name": "odinwildsword_01" }
+		},
+		"odinjolly_fire3_01": {
+			"odinjolly_fire3_01": { "width": 100, "height": 160 }
+		},
+		"odinwildfire00_02": {
+			"odinwildfire00_02": { "width": 100, "height": 160 }
+		},
+		"odinwildfire00_03": {
+			"odinwildfire00_03": { "width": 100, "height": 160 }
+		},
+		"odinwildfire00_04": {
+			"odinwildfire00_04": { "width": 100, "height": 160 }
+		},
+		"odinwildfire00_05": {
+			"odinwildfire00_05": { "width": 100, "height": 160 }
+		},
+		"odinwildfire00_06": {
+			"odinwildfire00_06": { "width": 100, "height": 160 }
+		},
+		"odinwildfire00_07": {
+			"odinwildfire00_07": { "width": 100, "height": 160 }
+		},
+		"odinwildfire00_08": {
+			"odinwildfire00_08": { "width": 100, "height": 160 }
+		},
+		"odinwildfire00_09": {
+			"odinwildfire00_09": { "width": 100, "height": 160 }
+		},
+		"odinwildfire00_10": {
+			"odinwildfire00_10": { "width": 100, "height": 160 }
+		},
+		"odinwildfire00_11": {
+			"odinwildfire00_11": { "width": 100, "height": 160 }
+		},
+		"odinwildfire00_12": {
+			"odinwildfire00_12": { "width": 100, "height": 160 }
+		},
+		"odinwildfire00_13": {
+			"odinwildfire00_13": { "width": 100, "height": 160 }
+		},
+		"odinwildfire00_14": {
+			"odinwildfire00_14": { "width": 100, "height": 160 }
+		},
+		"odinwildfire00_15": {
+			"odinwildfire00_15": { "width": 100, "height": 160 }
+		},
+		"odinwildicon_01": {
+			"odinwildicon_01": { "width": 140, "height": 140 }
+		}
+	}
+},
+"animations": {
+	"demo": {
+		"bones": {
+			"odinjolly_wildshine_11a_1": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinwildwildshine_01": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinjolly_wildshine_11a_2": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"lighting": {
+				"scale": [
+					{ "time": 0, "x": 1.39, "y": 1.39 },
+					{ "time": 0.25, "x": 1.826, "y": 2.21 },
+					{ "time": 0.55, "x": 1.39, "y": 1.39 },
+					{ "time": 0.817, "x": 1.826, "y": 2.21 },
+					{ "time": 1.233, "x": 1.39, "y": 1.39 }
+				]
+			},
+			"odinjolly_lighting_01_1": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinjolly_lighting_02_1": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinjolly_lighting_03_1": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinjolly_lighting_01_2": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinjolly_lighting_02_2": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinjolly_lighting_03_2": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinjolly_lighting_01_3": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinjolly_lighting_02_3": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinjolly_lighting_03_3": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinjolly_lighting_01_4": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinjolly_lighting_02_4": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinjolly_lighting_03_4": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinjolly_lighting_01_5": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinjolly_lighting_02_5": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinjolly_lighting_03_5": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 1.233, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinjollywild_01": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinwildsword_01_1": {
+				"scale": [
+					{ "time": 0, "x": 0.5, "y": 0.5 },
+					{ "time": 0.25, "x": 0.76, "y": 0.76 },
+					{ "time": 0.55, "x": 0.5, "y": 0.5 },
+					{ "time": 0.817, "x": 0.76, "y": 0.76 },
+					{ "time": 1.233, "x": 0.5, "y": 0.5 }
+				]
+			},
+			"odinwildsword_01_2": {
+				"scale": [
+					{ "time": 0, "x": 0.5, "y": 0.5 },
+					{ "time": 0.25, "x": 0.76, "y": 0.76 },
+					{ "time": 0.55, "x": 0.5, "y": 0.5 },
+					{ "time": 0.817, "x": 0.76, "y": 0.76 },
+					{ "time": 1.233, "x": 0.5, "y": 0.5 }
+				]
+			},
+			"fire": {
+				"scale": [
+					{ "time": 0, "x": 1.3, "y": 1.3 }
+				]
+			},
+			"odinjolly_fire3_01": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinwildfire00_02": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinwildfire00_03": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinwildfire00_04": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinwildfire00_05": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinwildfire00_06": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinwildfire00_07": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinwildfire00_08": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinwildfire00_09": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinwildfire00_10": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinwildfire00_11": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinwildfire00_12": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinwildfire00_13": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinwildfire00_14": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinwildfire00_15": {
+				"translate": [
+					{ "time": 0, "x": 0, "y": 0 },
+					{ "time": 1.233, "x": 0, "y": 0 }
+				],
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			},
+			"odinwildicon_01": {
+				"scale": [
+					{ "time": 0, "x": 1, "y": 1 }
+				]
+			}
+		},
+		"slots": {
+			"odinjolly_wildshine_11a_1": {
+				"color": [
+					{ "time": 0, "color": "FFFFFF00" },
+					{ "time": 0.25, "color": "FFFFFF7F" },
+					{ "time": 0.55, "color": "FFFFFF00" },
+					{ "time": 0.833, "color": "FFFFFF7F" },
+					{ "time": 1.233, "color": "FFFFFF00" }
+				]
+			},
+			"odinwildwildshine_01": {
+				"color": [
+					{ "time": 0, "color": "FFFFFF00" },
+					{ "time": 0.25, "color": "FFFFFFFF" },
+					{ "time": 0.55, "color": "FFFFFF00" },
+					{ "time": 0.833, "color": "FFFFFFFF" },
+					{ "time": 1.233, "color": "FFFFFF00" }
+				]
+			},
+			"odinjolly_wildshine_11a_2": {
+				"color": [
+					{ "time": 0, "color": "4DFF9800" },
+					{ "time": 0.25, "color": "4DFF98FF" },
+					{ "time": 0.55, "color": "4DFF9800" },
+					{ "time": 0.833, "color": "4DFF98FF" },
+					{ "time": 1.233, "color": "4DFF9800" }
+				]
+			},
+			"odinjolly_lighting_01_1": {
+				"attachment": [
+					{ "time": 0, "name": "odinjolly_lighting_01_1" },
+					{ "time": 0.083, "name": null }
+				]
+			},
+			"odinjolly_lighting_02_1": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.083, "name": "odinjolly_lighting_02_1" },
+					{ "time": 0.167, "name": null }
+				]
+			},
+			"odinjolly_lighting_03_1": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.167, "name": "odinjolly_lighting_03_1" },
+					{ "time": 0.25, "name": null }
+				]
+			},
+			"odinjolly_lighting_01_2": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.25, "name": "odinjolly_lighting_01_2" },
+					{ "time": 0.333, "name": null }
+				]
+			},
+			"odinjolly_lighting_02_2": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.333, "name": "odinjolly_lighting_02_2" },
+					{ "time": 0.417, "name": null }
+				]
+			},
+			"odinjolly_lighting_03_2": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.417, "name": "odinjolly_lighting_03_2" },
+					{ "time": 0.5, "name": null }
+				]
+			},
+			"odinjolly_lighting_01_3": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.5, "name": "odinjolly_lighting_01_3" },
+					{ "time": 0.583, "name": null }
+				]
+			},
+			"odinjolly_lighting_02_3": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.583, "name": "odinjolly_lighting_02_3" },
+					{ "time": 0.667, "name": null }
+				]
+			},
+			"odinjolly_lighting_03_3": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.667, "name": "odinjolly_lighting_03_3" },
+					{ "time": 0.75, "name": null }
+				]
+			},
+			"odinjolly_lighting_01_4": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.75, "name": "odinjolly_lighting_01_4" },
+					{ "time": 0.833, "name": null }
+				]
+			},
+			"odinjolly_lighting_02_4": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.833, "name": "odinjolly_lighting_02_4" },
+					{ "time": 0.917, "name": null }
+				]
+			},
+			"odinjolly_lighting_03_4": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.917, "name": "odinjolly_lighting_03_4" },
+					{ "time": 1, "name": null }
+				]
+			},
+			"odinjolly_lighting_01_5": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1, "name": "odinjolly_lighting_01_5" },
+					{ "time": 1.083, "name": null }
+				]
+			},
+			"odinjolly_lighting_02_5": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1.083, "name": "odinjolly_lighting_02_5" }
+				]
+			},
+			"odinjolly_lighting_03_5": {
+				"color": [
+					{ "time": 0, "color": "FFFFFFFF" },
+					{ "time": 1.233, "color": "FFFFFFFF" }
+				],
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1.167, "name": "odinjolly_lighting_03_5" }
+				]
+			},
+			"odinwildsword_01_1": {
+				"color": [
+					{ "time": 0, "color": "FFFFFF00" },
+					{ "time": 0.25, "color": "FFFFFFFF" },
+					{ "time": 0.55, "color": "FFFFFF00" },
+					{ "time": 0.817, "color": "FFFFFFFF" },
+					{ "time": 1.233, "color": "FFFFFF00" }
+				]
+			},
+			"odinjolly_fire3_01": {
+				"attachment": [
+					{ "time": 0, "name": "odinjolly_fire3_01" },
+					{ "time": 0.083, "name": null }
+				]
+			},
+			"odinwildfire00_02": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.083, "name": "odinwildfire00_02" },
+					{ "time": 0.167, "name": null }
+				]
+			},
+			"odinwildfire00_03": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.167, "name": "odinwildfire00_03" },
+					{ "time": 0.25, "name": null }
+				]
+			},
+			"odinwildfire00_04": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.25, "name": "odinwildfire00_04" },
+					{ "time": 0.333, "name": null }
+				]
+			},
+			"odinwildfire00_05": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.333, "name": "odinwildfire00_05" },
+					{ "time": 0.417, "name": null }
+				]
+			},
+			"odinwildfire00_06": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.417, "name": "odinwildfire00_06" },
+					{ "time": 0.5, "name": null }
+				]
+			},
+			"odinwildfire00_07": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.5, "name": "odinwildfire00_07" },
+					{ "time": 0.583, "name": null }
+				]
+			},
+			"odinwildfire00_08": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.583, "name": "odinwildfire00_08" },
+					{ "time": 0.667, "name": null }
+				]
+			},
+			"odinwildfire00_09": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.667, "name": "odinwildfire00_09" },
+					{ "time": 0.75, "name": null }
+				]
+			},
+			"odinwildfire00_10": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.75, "name": "odinwildfire00_10" },
+					{ "time": 0.833, "name": null }
+				]
+			},
+			"odinwildfire00_11": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.833, "name": "odinwildfire00_11" },
+					{ "time": 0.917, "name": null }
+				]
+			},
+			"odinwildfire00_12": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 0.917, "name": "odinwildfire00_12" },
+					{ "time": 1, "name": null }
+				]
+			},
+			"odinwildfire00_13": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1, "name": "odinwildfire00_13" },
+					{ "time": 1.083, "name": null }
+				]
+			},
+			"odinwildfire00_14": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1.083, "name": "odinwildfire00_14" }
+				]
+			},
+			"odinwildfire00_15": {
+				"attachment": [
+					{ "time": 0, "name": null },
+					{ "time": 1.167, "name": "odinwildfire00_15" }
+				]
+			}
+		}
+	}
+}
+}
