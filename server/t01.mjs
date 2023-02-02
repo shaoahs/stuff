@@ -144,16 +144,15 @@ streamList.forEach((stream) => {
       /* Handlers */
       open: (ws) => {
         let index = clientList.length;
-        let client = ws;
        
-        client.index = index;
-        client.isFirst = true;
+        ws.index = index;
+        ws.isFirst = true;
     
-        clientList[index] = client;
+        clientList[index] = ws;
 
         log.info({
           event: 'open',
-          client: client.index,
+          client: ws.index,
           msg: '連線'
         });
       },
@@ -182,8 +181,7 @@ streamList.forEach((stream) => {
           code: code,
           msg: '斷線'
         });
-        let client = ws;
-        clientList[client.index] = null;
+        clientList[ws.index] = null;
       }
     });
   } catch(e) {

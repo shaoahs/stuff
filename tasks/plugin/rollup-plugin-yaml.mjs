@@ -19,11 +19,13 @@ export default function yaml(options = {}) {
       );
       
 			let code = dataToEsm(data, {
-        preferConst: options.preferConst,
-        compact: options.compact,
-        namedExports: false,//options.namedExports,
+        preferConst: false,
+        compact: false,
+        namedExports: true,//options.namedExports,
         indent: '  '
       });
+
+			// console.log(id, code);
 
 			return {
 				code: code,

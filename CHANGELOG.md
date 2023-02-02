@@ -6,11 +6,21 @@
 
 ### Changed
 - 調整說明文件 
+- 修改 yaml 設定
+- 修改 terser 設定
 
 ### Fixed
 
 ### Removed
 - 取消使用 __dirname
+
+
+## [7.4.0] - 2023-01-31
+### Added
+- 使用 @rollup/plugin-terser
+
+### Removed
+- 不使用 rollup-plugin-terser
 
 ## [7.3.0] - 2023-01-11
 ### Fixed
