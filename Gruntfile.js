@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 7.3.0]');
+  console.log('[stuff version 7.4.0]');
 
   grunt.file.setBase(__dirname);
 
@@ -215,6 +215,8 @@ module.exports = function(grunt) {
     } catch (err) {
       console.error('no use! ' + filename);
     }
+    
+    // console.log(pkg);
 
     // if(resConfig.vendor) {
     //   if(resConfig.vendor.custom) {

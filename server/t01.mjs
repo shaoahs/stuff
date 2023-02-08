@@ -78,7 +78,13 @@ streamList.forEach((stream) => {
     });
     let frameQueue = [];
     let clientList = [];
-    let isFirst = true;
+    let isFirstRect = true;
+    let isFirstFrame = true;
+    let report = {
+      timeConnect:  Math.round(performance.now()),
+      timeRecv: Math.round(performance.now()),
+      timeFirstFrame: Math.round(performance.now())
+    };
     
     const ws = new WebSocket(stream.url, {
       // perMessageDeflate: false,
@@ -87,8 +93,8 @@ streamList.forEach((stream) => {
     log.info({event: 'init', msg: '初始化'});
 
     ws.on('open', () => {
-      log.info({event: 'open', msg: '打開'});
-      
+      report.timeConnect = Math.round(performance.now()) - report.timeConnect;
+      log.info({event: 'open', msg: '打開', timeConnect: report.timeConnect});
     });
     ws.on('close', () => {
       log.info({event: 'close', msg: '關閉'});
@@ -97,9 +103,10 @@ streamList.forEach((stream) => {
 
     ws.on('message', (data) => {
       
-      if(isFirst) {
-        isFirst = false;
-        log.info({event: 'message', msg: data.toString()});
+      if(isFirstRect) {
+        isFirstRect = false;
+        report.timeRecv = Math.round(performance.now()) - report.timeRecv;
+        log.info({event: 'message', msg: data.toString(), timeRecv: report.timeRecv});
 
       } else {
 
@@ -107,6 +114,13 @@ streamList.forEach((stream) => {
         if(arr[0] === 0 && arr[1] === 0 && arr[2] === 0 && arr[3] === 1) {
           if( arr[4] === 103 ) {
             frameQueue = [];
+
+            if (isFirstFrame) {
+              isFirstFrame = false;
+              report.timeFirstFrame = Math.round(performance.now()) - report.timeFirstFrame;
+              log.info({event: 'message', msg: 'recv iframe', timeFirstFrame: report.timeFirstFrame});
+              report.timeFirstFrame = Math.round(performance.now());
+            }
             // logger.info('[frame id] ', arr[4]);
             // logger.info('[clean] frameQueue');
           }
@@ -144,16 +158,15 @@ streamList.forEach((stream) => {
       /* Handlers */
       open: (ws) => {
         let index = clientList.length;
-        let client = ws;
        
-        client.index = index;
-        client.isFirst = true;
+        ws.index = index;
+        ws.isFirst = true;
     
-        clientList[index] = client;
+        clientList[index] = ws;
 
         log.info({
           event: 'open',
-          client: client.index,
+          client: ws.index,
           msg: '連線'
         });
       },
@@ -182,8 +195,7 @@ streamList.forEach((stream) => {
           code: code,
           msg: '斷線'
         });
-        let client = ws;
-        clientList[client.index] = null;
+        clientList[ws.index] = null;
       }
     });
   } catch(e) {

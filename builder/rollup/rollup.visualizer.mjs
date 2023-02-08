@@ -10,12 +10,14 @@ import postcss from 'rollup-plugin-postcss';
 import sucrase from '@rollup/plugin-sucrase';
 import alias from '@rollup/plugin-alias';
 import json from '@rollup/plugin-json';
-import yaml from '@rollup/plugin-yaml';
+// import yaml from '@rollup/plugin-yaml';
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 
 import dynamicImportVars from '@rollup/plugin-dynamic-import-vars';
 
+
+import yaml from '../../tasks/plugin/rollup-plugin-yaml.mjs';
 
 let filename;
 
