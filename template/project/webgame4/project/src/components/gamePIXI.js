@@ -3,12 +3,11 @@
 // import 'pixi-particles';
 //import * as Loader from 'resource-loader';
 //import Stats from 'stats';
-
-import m from 'mithril';
+// import m from 'mithril';
 
 import app from 'entity/app';
 import * as nuts from 'nuts';
-import * as scene from 'src/sceneChild';
+import * as scene from 'src/scene';
 
 let defaultStyle = {
   position: 'absolute',
@@ -20,8 +19,6 @@ let defaultStyle = {
 };
 
 let plugin = [
-  'pixi-spine',
-  'pixi-particles'
 ];
 
 export let Component = {
@@ -52,15 +49,9 @@ export async function init () {
   console.log('!!!!!!!!!! init !!!!!!!!!!!!');
   app.nuts = nuts;
 
-  // await import('pixi');
-  // let Stats = await import('stats.js');
-  let Loader = await import('resource-loader');
-
   let config = {};
-  config.Loader = Loader;
   config.m = m;
 
-  // config.Stats = Stats;
   config.PIXI = PIXI;
   config.plugin = plugin;
 

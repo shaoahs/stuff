@@ -30,7 +30,7 @@ exports.template = function(grunt, init, done) {
   init.process({}, [
     // Prompt for these values.
     init.prompt('group','demo'),
-    init.prompt('name', 'z01'),
+    init.prompt('name', 'z02'),
     init.prompt('package')
   ], function(err, props) {
     console.log('err:');

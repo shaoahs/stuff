@@ -1,6 +1,6 @@
 // import 'pixi';
+// import m from 'mithril';
 
-import m from 'mithril';
 import * as nuts from 'nuts';
 import app from 'entity/app';
 import gamecard from 'template/gamecard';
@@ -18,8 +18,6 @@ let defaultStyle = {
 
 
 let plugin = [
-  'pixi-spine',
-  'pixi-particles'
 ];
 
 
@@ -118,9 +116,7 @@ async function init () {
   vendor.setLang(langID);
   vendor.setBaseURL(baseURL);
 
-  let Loader = await import('resource-loader');
   let config = {};
-  config.Loader = Loader;
   config.m = m;
 
   // 使用 PIXI

@@ -22,6 +22,7 @@ export async function reload (scene) {
   let ent = main.entity;
 
   // 指定要更新的資源
+  let newTextures = scene.textures.ui;
   let textures    = main.textures;
 
   textures.demo.ring = scene.textures.demo.ring;
@@ -56,6 +57,11 @@ export async function reload (scene) {
     obj.setTextures('numBW');
   }
 
+  obj = ent.coin;
+  if (obj) {
+    await game.idle(1.0);
+    obj.texture = newTextures.pageInfoText.a;
+  }
   console.log('!!!!!!!! 完成處理 reload !!!!!!!!!');
 }
 
@@ -116,36 +122,19 @@ export function normal (/* options */) {
     },
 
     async setPlay (obj) {
-      async function play () {
-
-        // 傳送網路命令
-        let cmd = await  import('net/command/bet');
-        await cmd.send(1000);
-      }
 
       obj.setClick((/*o*/) => {
-        play();
+        console.log('[開始]');
       });
     },
 
     async setLeave (obj) {
       async function leave () {
+        console.log('[離開]');
         let sound = app.sounds.demo;
-        if (sound && sound.music && sound.music.play) {
+        if (sound && sound.music) {
           sound.music.stop();
         }
-        let scene = await import('scene/sub');
-        scene.reset();
-        main.hide();
-
-        await app.game.idle(0.01);
-        let config = {
-          game: 'z01',
-          group: 'demo',
-          id: 'z01',
-          tablekey: 'abcd1234'
-        };
-        app.game.scene.reload(config);
       }
 
       obj.setClick((/*o*/) => {

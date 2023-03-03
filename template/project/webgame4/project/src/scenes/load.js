@@ -13,14 +13,14 @@ export async function create () {
 
     // 讀取資源檔
     let vendor = await import('src/vendor');
-    
+
     let res;
     if (app.setting.useAvif) {
       res = await vendor.get('v2load');
     } else {
       res = await vendor.get('v1load');
     }
-    
+
     let config = {
       game,
       infoList: [
@@ -55,9 +55,9 @@ export async function create () {
 
   //----------------------------------------
   // 播放背景音樂
-  if(app.sounds) {
+  if (app.sounds) {
     let sound = app.sounds.demo;
-    if (sound && sound.music && sound.music.play) {
+    if (sound && sound.music) {
       sound.music.volume(0.2);
       sound.music.play();
     }

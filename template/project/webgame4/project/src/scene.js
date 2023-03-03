@@ -9,7 +9,9 @@
  ************************************************************************ */
 
 import app from 'entity/app';
-import * as strings from 'language/strings';
+import * as comGame from 'component/gamePIXI';
+import * as component from 'src/component';
+import * as entity from 'src/entity';
 
 /**
  * 事件用
@@ -42,31 +44,19 @@ export async function getLogo () {
  * 初始化事件 (接收大廳傳送的命令用)
  * @returns {Object} 傳回物件事件
  */
-export async function init (config) {
+export function init () {
+  console.log('scene init');
+  if (eventList) {
+    return eventList;
+  }
 
-  // 初始化
-  let baseURL = config.baseURL || '.';
-  let langID = config.langID;
-
-  app.gamecard = config.gamecard;
-  app.isChild = config.isChild;
-  app.game = config.game;
-  app.nuts = config.nuts;
-  app.setting = config.setting;
-
-  app.baseURL = baseURL;
-  app.langID = langID;
+  // 遊戲管理用
+  let gameRoot = null;
+  let gamecard = null;
 
   if (!app.scenes) {
     app.scenes = {};
   }
-
-  let nuts = app.nuts;
-
-  if (eventList) {
-    return eventList;
-  }
-  console.log('scene init');
 
   eventList = {
 
@@ -74,20 +64,54 @@ export async function init (config) {
      * 建立場景
      * @param conf config
      */
-    async create (/* conf */)  {
-      let game = app.game;
-      let loadingEvent = game.scene.loadingEvent;
-      nuts.scene.sceneManager.setBaseURL(baseURL);
-      nuts.scene.sceneManager.setEvent(loadingEvent);
+    async create (conf)  {
+      let game = conf.game;
+      let loadingEvent = null;
+      if (game.scene) {
+        loadingEvent = game.scene.loadingEvent;
+        gamecard = game.scene.gamecard;
+        gameRoot = game;
+        app.gamecard = gamecard;
+      }
 
-      // 建立場景
-      let main = await import('scene/main');
+      // 初始化
+      app.game = game;
+      app.setting = conf.setting;
+      app.langID = conf.langID;
+      app.baseURL = conf.baseURL || '';
+      app.isChild = conf.isChild;
 
-      // 開始
-      await main.create(game, loadingEvent);
+      let vendor = await import('src/vendor');
+      vendor.setLang(app.langID);
+      vendor.setBaseURL(app.baseURL);
 
-      // 完成
-      nuts.scene.sceneManager.setEvent(null);
+      if (conf.console) {
+        console.info = conf.console.info;
+      }
+
+      // todo:game 收到建立遊戲事件
+      let pixiConfig = gamecard.pixiConfig;
+      pixiConfig.game = gameRoot;
+      app.pixiConfig = pixiConfig;
+
+      // 指定遊戲引擎初始化完成後, 需要執行的工作
+      // (開始讀取遊戲資料,然後建立遊戲場景)
+      pixiConfig.ready = (game) => {
+        entity.create({
+          game: game,
+          langID: conf.langID,
+          isChild: conf.isChild,
+          baseURL: conf.baseURL,
+          loadingEvent: loadingEvent
+        });
+      };
+
+      component.add({
+        com: comGame.Component,
+        attrs: {
+          config: pixiConfig
+        }
+      });
     },
 
     /**
@@ -111,35 +135,27 @@ export async function init (config) {
      * 進入場景
      */
     async enter (conf) {
-      console.log('scene enter ');
+      console.log('scene enter ', conf);
 
       // todo:game 收到玩家進入遊戲
-      let game = conf.game;
+      // let game = conf.game;
 
       // 背景讀取資源
       let scene = await import('scene/load');
       scene.create();
 
-      // 初始化網路
-      let net = await import('net/network');
-      await net.init(conf);
+      // 開始更新畫面
+      app.game.play();
+      app.decimal = 2;
+      let mainSet = await import('scene/mainSet');
+      mainSet.normal();
+      app.scenes.main.show();
 
-      /// 傳送網路命令
-      let cmd = await import('net/command/create');
-      cmd.send();
+      // 關閉讀取畫面
+      if (app.game.scene.setOverviewVisible) {
+        app.game.scene.setOverviewVisible(false);
+      }
 
-      getLogo().then(texture => {
-        let sprite = new PIXI.Sprite(texture);
-        sprite.x = 100;
-        sprite.y = 100;
-        sprite.anchor.x = 0.5;
-        sprite.anchor.y = 0.5;
-        game.layer.foreground.addChild(sprite);
-      });
-
-      game.disconnect = () => {
-        console.log('!!!! game.disconnect !!!!');
-      };
     },
 
     /**
@@ -209,14 +225,13 @@ export async function init (config) {
     }
   };
 
-  // 設定多語
-  strings.setLanguage(app.langID);
-
-  // 設定資源
-  let vendor = await import('src/vendor');
-  vendor.setLang(langID);
-  vendor.setBaseURL(baseURL);
-
   return eventList;
 }
 
+window.addEventListener('beforeunload', (event) => {
+  console.log('beforeunload' + JSON.stringify(event));
+});
+window.addEventListener('unload', (/*event*/) => {
+  console.log('unload');
+  app.nuts.scene.sceneManager.destroyAllSound();
+});

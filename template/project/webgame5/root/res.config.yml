@@ -21,7 +21,6 @@ vendor:
   sceneList: # 場景清單
     - v1main   # 主場景    版本之一
     - v2main   # 主場景    版本之二
-    - sub      # 子場景
     - v1load   # 讀取畫面  版本之一
     - v2load   # 讀取畫面  版本之二
     - v1info   # 說明     版本之一
