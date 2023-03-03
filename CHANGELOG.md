@@ -14,6 +14,18 @@
 - 取消使用 __dirname
 
 
+## [7.5.0] - 2023-03-03
+### Added
+- (template) 新增 webgame4 使用子視窗建立專案
+- (template) 新增 webgame5 使用子模組建立專案
+
+### Removed
+- (template) 移除過多的範例程式
+
+### Changed
+- 更新 agent 版本
+- 更新 第三方程式庫版本
+
 ## [7.4.0] - 2023-02-08
 ### Changed
 - 調整說明文件 

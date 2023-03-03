@@ -1,7 +1,7 @@
 ---
 # package
 package:
-  main: src/main2.js
+  main: src/main.js
   defaultExtension: js
 
 # config
@@ -16,7 +16,7 @@ config:
     entity/: {%= group %}/{%= name %}/src/entities/
     language/: {%= group %}/{%= name %}/src/strings/
     loading/: {%= group %}/{%= name %}/src/loading/
-    net/: {%= group %}/{%= name %}/src/net/v1/
+    net/: {%= group %}/{%= name %}/src/net/
     makeres/: {%= group %}/{%= name %}/src/makeres/
     scene/: {%= group %}/{%= name %}/src/scenes/
     style/: {%= group %}/{%= name %}/style/
@@ -26,7 +26,7 @@ config:
   map:
     # stats: depend:stats/stats.min.0.17.0.js
     # loader: depend:loader/resource-loader.min.3.0.1.js
-    # mithril: depend:mithril/mithril.min.2.0.4.js
+    mithril: depend:mithril/mithril.min.2.2.2.js
     tweenjs: depend:createjs/tweenjs.min.1.0.2.js
 #    js-yaml: depend:yaml/js-yaml.min.3.14.0.js
     pixi: depend:pixi/pixi.min.6.5.8.js
@@ -45,8 +45,8 @@ build:
     # - stats
     # - nuts
     # - loader
-    # - mithril
     # - js-yaml
+    - mithril
     - tweenjs
     - mustache
     - howler
