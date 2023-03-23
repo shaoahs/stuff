@@ -3,7 +3,6 @@
 ## [Unreleased]
 ### Added
 - [壓縮命令] 新增 mjs 與 wasm
-- 新增支援 typescript 5.0
 
 ### Changed
 - 
@@ -14,6 +13,9 @@
 ### Removed
 - 取消使用 __dirname
 
+## [7.6.0] - 2023-03-23
+### Added
+- 新增支援 typescript 5.0
 
 ## [7.5.0] - 2023-03-03
 ### Added
