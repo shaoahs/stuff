@@ -35,10 +35,18 @@ let streamList = [
     url: 'wss://sevideo.sempire8.com:9323/b3',
     ws: null
   },
-  // {
-  //   url: 'wss://sevideo.sempire8.com:9323/b4',
-  //   ws: null
-  // }
+  {
+    ch: 4,
+    path: '/b4',
+    url: 'wss://sevideo.sempire8.com:9323/b4',
+    ws: null
+  },
+  {
+    ch: 5,
+    path: '/b5',
+    url: 'wss://sevideo.sempire8.com:9323/b5',
+    ws: null
+  },
 ];
 
 let app = uWS.SSLApp({

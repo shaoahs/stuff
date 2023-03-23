@@ -3,6 +3,7 @@
 ## [Unreleased]
 ### Added
 - [壓縮命令] 新增 mjs 與 wasm
+- 新增支援 typescript 5.0
 
 ### Changed
 - 
