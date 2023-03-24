@@ -1,1 +1,0 @@
-async function a(a){let t,e={};switch(a){case"en-us":default:t=await import("./agent.9babb83c.js"),e=t;break;case"zh-tw":t=await import("./agent.07f09705.js"),e=t;break;case"zh-cn":t=await import("./agent.f489db0d.js"),e=t}return e}export{a as get};
