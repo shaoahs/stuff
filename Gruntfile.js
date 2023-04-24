@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 7.7.0]');
+  console.log('[stuff version 7.8.0]');
 
   grunt.file.setBase(__dirname);
 
@@ -4077,8 +4077,8 @@ module.exports = function(grunt) {
       if(pkg.currentMode === MODE.RELEASE) {
         // if('agent' !== pkg.name) {
         // }
-        cmdList.push('obfuscate:resource');
-        cmdList.push('obfuscate:vendor');
+        // cmdList.push('obfuscate:resource');
+        // cmdList.push('obfuscate:vendor');
 
         // cmdList.push('cache:deploy');
         cmdList.push('compress:project');
