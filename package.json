@@ -163,6 +163,7 @@
     "pino": "^8.11.0",
     "pino-pretty": "^10.0.0",
     "postcss": "^8.4.23",
+    "potpack": "^2.0.0",
     "promise-worker": "^2.0.1",
     "protobufjs": "^7.2.3",
     "qs": "^6.11.1",

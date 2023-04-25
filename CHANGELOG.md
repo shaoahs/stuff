@@ -3,6 +3,7 @@
 ## [Unreleased]
 ### Added
 - [壓縮命令] 新增 mjs 與 wasm
+- [命令] 新增 convert , 圖檔合併用
 
 ### Changed
 - 
