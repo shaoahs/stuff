@@ -3,6 +3,7 @@
 ## [Unreleased]
 ### Added
 - [壓縮命令] 新增 mjs 與 wasm
+- [命令] 新增 convert , 圖檔合併用
 
 ### Changed
 - 
@@ -12,6 +13,11 @@
 
 ### Removed
 - 取消使用 __dirname
+
+## [7.8.0] - 2023-05-04
+### Changed
+- 更新 agent 版本
+- 更新 第三方程式庫版本
 
 ## [7.7.0] - 2023-04-12
 ### Changed

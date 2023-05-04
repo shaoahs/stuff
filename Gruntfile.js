@@ -1,4 +1,3 @@
-
 module.exports = function(grunt) {
   "use strict";
   const process = require("process");
@@ -8,6 +7,7 @@ module.exports = function(grunt) {
   const Mustache = require('mustache');
   const colorette = require("colorette");
   const crypto = require('crypto');
+
 
   // Prints:
   const MODE = {
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 7.7.0]');
+  console.log('[stuff version 7.8.0]');
 
   grunt.file.setBase(__dirname);
 
@@ -3370,68 +3370,94 @@ module.exports = function(grunt) {
   });
 
   // 資源檔合併
-  grunt.registerTask('convert', '資源檔合併', async function(name) {
+  grunt.registerTask('convert', '資源檔合併', async function(name,a1, a2) {
     let done = this.async();
-    console.log(this);
+    console.log(name, a1, a2);
+    let imagePath = `res/${name}`;
+    let assetPath = `res/sub/asset`;
     // let args = this.args;
     let shell = require('shelljs');
+    const potpack = await import("potpack");
+    console.log(potpack);
+    
 
-    let filename = `${workspace.root}/${name}`;
-    console.log(filename);
-    if(!fs.existsSync(filename)) {
-      console.error(`找不到檔案 : ${filename}`);
-      return;
-    }
+    let srcPath = `${workspace.root}/${imagePath}`;
+    let destPath = `${workspace.root}/${assetPath}`;
 
-    let res = yaml.load(fs.readFileSync(filename, 'utf8'));
-    console.log(res);
+    srcPath = path.resolve(srcPath);
+    console.log(srcPath);
+    let rectList = [];
 
-    let images = '';
 
-    let loadTexture = (info) => {
-      // console.log(info);
-      let dir = `${workspace.root}/${info}`;
-      let fmt = path.parse(dir);
-      if(fs.existsSync(dir)) {
-        // console.log('檔案存在');
-        // identify
-        let output = shell.exec(`identify ${dir}`, {silent: true}).stdout;
+    grunt.file.recurse( srcPath, function( abspath, rootdir, subdir, filename ) {
+      let dest;
+      if ( subdir === undefined ) {
+        dest = destPath + filename;
+      } else {
+        dest = destPath + subdir + '/' + filename;
+      }
+      let isImage = grunt.file.isMatch(['**/*.{jpg,png}'], abspath);
+      if(isImage) {
+        let title = `${imagePath}`;
+        if(subdir) {
+          title = `${title}/${subdir}/${filename}`;
+        } else {
+          title = `${title}/${filename}`;
+        }
+        
+        grunt.log.writeln('imagePath:' + imagePath, 'subdir:' + subdir, 'filename:' + filename);
+        let output = shell.exec(`identify ${abspath}`, {silent: true}).stdout;
         let names = output.split(' ');
         console.log(names);
 
-        images += ` ${dir}`;
-      }
-    };
-  
-    let procArray = (infoList, proc) => {
-      infoList.forEach(info => {
-        proc(info);
-      });
-    };
-  
-    let procObject = (object, proc) => {
-      let nameList = Object.getOwnPropertyNames(object);
-      nameList.forEach(name => {
-        let child = object[name];
-        if (typeof child === 'string') {
-          proc(child);
-        } else if (Array.isArray(child)) {
-          procArray(child, proc);
-        } else if (typeof child === 'object') {
-          procObject(child, proc);
-        } else {
-          console.log(' no found : ' + name);
-        }
-      });
-    };
+        let box = {};
+        box.format = names[1];
+        let array = names[2].split('x');
+        box.w = parseInt(array[0]);
+        box.h = parseInt(array[1]);
+        box.title = title;
+        // box.abspath = abspath;
 
-    procObject(res.images, loadTexture);
+        rectList.push(box);
+      }
+
+    });
+
+    const {w, h, fill} = potpack.default(rectList);
+    console.log('w:', w);
+    console.log('h:', h);
+    console.log('fill:', fill);
+    console.log(rectList[0]);
+
+    // let filename = `${workspace.root}/${name}`;
+    // console.log(filename);
+    // if(!fs.existsSync(filename)) {
+    //   console.error(`找不到檔案 : ${filename}`);
+    //   return;
+    // }
+
+    // let res = yaml.load(fs.readFileSync(filename, 'utf8'));
+    // console.log(res);
+
+    let images = '';
+
+ 
 
 
     console.log(images);
-    // -background none
+    
+    // -define png:size=${w}x${h}
+    let cmd = `magick montage -size ${w}x${h} `;
+    
+    // -geometry +${rect.x}-${rect.y} 
+    
+    rectList.forEach(rect => {
+      cmd += `${workspace.root}/${rect.title} `;
+    });
 
-    shell.exec(`montage ${images} -background none -geometry +1+1 ${workspace.root}/res/demo.png`);
+    cmd += `-background none ${workspace.root}/${assetPath}/test.png`;
+
+    shell.exec(cmd);
 
     done();
   });
@@ -4077,8 +4103,8 @@ module.exports = function(grunt) {
       if(pkg.currentMode === MODE.RELEASE) {
         // if('agent' !== pkg.name) {
         // }
-        cmdList.push('obfuscate:resource');
-        cmdList.push('obfuscate:vendor');
+        // cmdList.push('obfuscate:resource');
+        // cmdList.push('obfuscate:vendor');
 
         // cmdList.push('cache:deploy');
         cmdList.push('compress:project');
