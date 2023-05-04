@@ -26,8 +26,8 @@ module.exports = function(grunt) {
   let isFramework = null;
   let pkg = {};
   let resConfig = {};
-  // let agentPath = 'project/agent';    // 除錯用
-  let agentPath = 'developer/agent';     // 遊戲專案測試用
+  let agentPath = 'project/agent';    // 除錯用
+  // let agentPath = 'developer/agent';     // 遊戲專案測試用
   let workspace = {
     basePath: 'project',
     hasConfig: false,
@@ -3446,14 +3446,16 @@ module.exports = function(grunt) {
 
     console.log(images);
     
-    let cmd = `magick -size ${w}x${h} xc:none `;
+    // -define png:size=${w}x${h}
+    let cmd = `magick montage -size ${w}x${h} `;
     
+    // -geometry +${rect.x}-${rect.y} 
     
     rectList.forEach(rect => {
-      cmd += `${workspace.root}/${rect.title} ${workspace.root}/${assetPath}/test.png ${workspace.root}/${assetPath}/test.png -geometry +${rect.x}+${rect.y} -composite `;
+      cmd += `${workspace.root}/${rect.title} `;
     });
 
-    cmd += `-compose CopyOpacity ${workspace.root}/${assetPath}/test.png`;
+    cmd += `-background none ${workspace.root}/${assetPath}/test.png`;
 
     shell.exec(cmd);
 
