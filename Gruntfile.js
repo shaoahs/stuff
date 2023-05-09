@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 7.8.0]');
+  console.log('[stuff version 7.9.0]');
 
   grunt.file.setBase(__dirname);
 
