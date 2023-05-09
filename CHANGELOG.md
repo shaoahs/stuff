@@ -14,6 +14,14 @@
 ### Removed
 - 取消使用 __dirname
 
+## [7.9.0] - 2023-05-04
+### Added
+- 新增 gameTemplate 6.0
+
+### Changed
+- 更新 agent 版本
+- 更新 第三方程式庫版本
+
 ## [7.8.0] - 2023-05-04
 ### Changed
 - 更新 agent 版本

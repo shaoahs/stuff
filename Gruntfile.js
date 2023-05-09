@@ -2666,7 +2666,7 @@ module.exports = function(grunt) {
 
       create:{
         command(name) {
-          let cmd = 'grunt-init template/project/webgame5';
+          let cmd = 'grunt-init template/project/webgame6';
           if(name){
             cmd = 'grunt-init template/project/' + name;
           }
