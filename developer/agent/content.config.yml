@@ -6,7 +6,7 @@ description: com agent
 isRoot: true
 framework:
   name: stuff
-  version: 7.6.0
+  version: 7.9.0
   custom: 1
   builder: rollup
   skipCommandTerser: true
@@ -23,7 +23,7 @@ template:
     format: esm
     src: template/release.esm.html
     dest: index.html
-version: 7.7.0
+version: 8.0.0
 author:
   name: astro
   email: www@astrocorp.com.tw

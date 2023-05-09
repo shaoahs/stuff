@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 7.8.0]');
+  console.log('[stuff version 7.9.0]');
 
   grunt.file.setBase(__dirname);
 
@@ -2666,7 +2666,7 @@ module.exports = function(grunt) {
 
       create:{
         command(name) {
-          let cmd = 'grunt-init template/project/webgame5';
+          let cmd = 'grunt-init template/project/webgame6';
           if(name){
             cmd = 'grunt-init template/project/' + name;
           }

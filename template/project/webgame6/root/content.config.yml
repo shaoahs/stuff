@@ -12,7 +12,7 @@ framework:
   builder: rollup
   skipCommandTerser: true
   useCodeSplitting: true
-templateVersion: game.5.0
+templateVersion: game.6.0
 # template:
 #   format: game
 #   standalone: true
