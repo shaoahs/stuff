@@ -1137,18 +1137,18 @@
   dependencies:
     fast-json-stringify "^5.7.0"
 
-"@fastify/helmet@^10.1.0":
-  version "10.1.0"
-  resolved "https://registry.npmjs.org/@fastify/helmet/-/helmet-10.1.0.tgz"
-  integrity sha512-v7QJPYf1uVcCwzyHzkDGcHTqDPscXj/61JKxOdvczyDPAKTxSeb9Sc2OBActXaj7zUELiAdgnkKkzNwmCNzBLQ==
+"@fastify/helmet@^10.1.1":
+  version "10.1.1"
+  resolved "https://registry.npmjs.org/@fastify/helmet/-/helmet-10.1.1.tgz"
+  integrity sha512-z9abyIlCHPU25llOTyo3uz8F8TJ+uDqtOC4+38dxODPw8Ro9sTZjbm2U7ZIF0IAv3/E0ke6vbUQ4sB376WuKJA==
   dependencies:
     fastify-plugin "^4.2.1"
     helmet "^6.0.0"
 
-"@fastify/oauth2@^7.0.1":
-  version "7.0.1"
-  resolved "https://registry.npmjs.org/@fastify/oauth2/-/oauth2-7.0.1.tgz"
-  integrity sha512-upe52r/LnFNWWUMptgOHzR/bCbm/fOKV6uUP3f459TB1ufohn6ngM1fD3TcbtkP8/vxW1HCijUCmJ/QvQn3uPw==
+"@fastify/oauth2@^7.1.0":
+  version "7.1.0"
+  resolved "https://registry.npmjs.org/@fastify/oauth2/-/oauth2-7.1.0.tgz"
+  integrity sha512-7HR39VEKsTJ3W4ruL8JIZGIkbTYRzJ9JD7TNzCsS2/8jMABBVINFqau8jbR5veZ7m9Wgz9TG7wUq+dJHvKAJ1A==
   dependencies:
     fastify-plugin "^4.0.0"
     simple-oauth2 "^5.0.0"
@@ -2706,10 +2706,10 @@
     "@babel/helper-module-imports" "^7.18.6"
     "@rollup/pluginutils" "^5.0.1"
 
-"@rollup/plugin-commonjs@~24.1.0":
-  version "24.1.0"
-  resolved "https://registry.npmjs.org/@rollup/plugin-commonjs/-/plugin-commonjs-24.1.0.tgz"
-  integrity sha512-eSL45hjhCWI0jCCXcNtLVqM5N1JlBGvlFfY0m6oOYnLCJ6N0qEXoZql4sY2MOUArzhH4SA/qBpTxvvZp2Sc+DQ==
+"@rollup/plugin-commonjs@~25.0.0":
+  version "25.0.0"
+  resolved "https://registry.npmjs.org/@rollup/plugin-commonjs/-/plugin-commonjs-25.0.0.tgz"
+  integrity sha512-hoho2Kay9TZrLu0bnDsTTCaj4Npa+THk9snajP/XDNb9a9mmjTjh52EQM9sKl3HD1LsnihX7js+eA2sd2uKAhw==
   dependencies:
     "@rollup/pluginutils" "^5.0.1"
     commondir "^1.0.1"
@@ -2728,10 +2728,10 @@
     fast-glob "^3.2.12"
     magic-string "^0.27.0"
 
-"@rollup/plugin-eslint@^9.0.3":
-  version "9.0.3"
-  resolved "https://registry.npmjs.org/@rollup/plugin-eslint/-/plugin-eslint-9.0.3.tgz"
-  integrity sha512-iV2m9BhPdsjQzmRVe3Nzovrjxbdq5Slva8bvUSzbM4gSBUaGXAFnFXcHcvO4N4tSuirZoY61mkn8KtV3G6o0iQ==
+"@rollup/plugin-eslint@^9.0.4":
+  version "9.0.4"
+  resolved "https://registry.npmjs.org/@rollup/plugin-eslint/-/plugin-eslint-9.0.4.tgz"
+  integrity sha512-JtXb8RFMsRB6pMsVAo7qR3wopb7XT7XlxnqQQk/5zdrhmCOgF/OoKBYWLzK0yaUXNfRZeuly9VLt6VgXIBrvkw==
   dependencies:
     "@rollup/pluginutils" "^5.0.1"
     eslint "^8.24.0"
@@ -2796,10 +2796,10 @@
     smob "^0.0.6"
     terser "^5.15.1"
 
-"@rollup/plugin-typescript@~11.1.0":
-  version "11.1.0"
-  resolved "https://registry.npmjs.org/@rollup/plugin-typescript/-/plugin-typescript-11.1.0.tgz"
-  integrity sha512-86flrfE+bSHB69znnTV6kVjkncs2LBMhcTCyxWgRxLyfXfQrxg4UwlAqENnjrrxnSNS/XKCDJCl8EkdFJVHOxw==
+"@rollup/plugin-typescript@~11.1.1":
+  version "11.1.1"
+  resolved "https://registry.npmjs.org/@rollup/plugin-typescript/-/plugin-typescript-11.1.1.tgz"
+  integrity sha512-Ioir+x5Bejv72Lx2Zbz3/qGg7tvGbxQZALCLoJaGrkNXak/19+vKgKYJYM3i/fJxvsb23I9FuFQ8CUBEfsmBRg==
   dependencies:
     "@rollup/pluginutils" "^5.0.1"
     resolve "^1.22.1"
@@ -2809,10 +2809,10 @@
   resolved "https://registry.npmjs.org/@rollup/plugin-virtual/-/plugin-virtual-3.0.1.tgz"
   integrity sha512-fK8O0IL5+q+GrsMLuACVNk2x21g3yaw+sG2qn16SnUd3IlBsQyvWxLMGHmCmXRMecPjGRSZ/1LmZB4rjQm68og==
 
-"@rollup/plugin-wasm@~6.1.2":
-  version "6.1.2"
-  resolved "https://registry.npmjs.org/@rollup/plugin-wasm/-/plugin-wasm-6.1.2.tgz"
-  integrity sha512-YdrQ7zfnZ54Y+6raCev3tR1PrhQGxYKSTajGylhyP0oBacouuNo6KcNCk+pYKw9M98jxRWLFFca/udi76IDXzg==
+"@rollup/plugin-wasm@~6.1.3":
+  version "6.1.3"
+  resolved "https://registry.npmjs.org/@rollup/plugin-wasm/-/plugin-wasm-6.1.3.tgz"
+  integrity sha512-7ItTTeyauE6lwdDtQWceEHZ9+txbi4RRy0mYPFn9BW7rD7YdgBDu7HTHsLtHrRzJc313RM/1m6GKgV3np/aEaw==
 
 "@rollup/plugin-yaml@~4.0.1":
   version "4.0.1"
@@ -2880,31 +2880,31 @@
     slash "3.0.0"
     source-map "^0.7.3"
 
-"@swc/core-linux-x64-gnu@1.3.56":
-  version "1.3.56"
-  resolved "https://registry.npmjs.org/@swc/core-linux-x64-gnu/-/core-linux-x64-gnu-1.3.56.tgz"
-  integrity sha512-n0ORNknl50vMRkll3BDO1E4WOqY6iISlPV1ZQCRLWQ6YQ2q8/WAryBxc2OAybcGHBUFkxyACpJukeU1QZ/9tNw==
+"@swc/core-linux-x64-gnu@1.3.57":
+  version "1.3.57"
+  resolved "https://registry.npmjs.org/@swc/core-linux-x64-gnu/-/core-linux-x64-gnu-1.3.57.tgz"
+  integrity sha512-dvtQnv07NikV+CJ+9PYJ3fqphSigzfvSUH6wRCmb5OzLDDLFnPLMrEO0pGeURvdIWCOhngcHF252C1Hl5uFSzA==
 
-"@swc/core-linux-x64-musl@1.3.56":
-  version "1.3.56"
-  resolved "https://registry.npmjs.org/@swc/core-linux-x64-musl/-/core-linux-x64-musl-1.3.56.tgz"
-  integrity sha512-r+D34WLAOAlJtfw1gaVWpHRwCncU9nzW9i7w9kSw4HpWYnHJOz54jLGSEmNsrhdTCz1VK2ar+V2ktFUsrlGlDA==
+"@swc/core-linux-x64-musl@1.3.57":
+  version "1.3.57"
+  resolved "https://registry.npmjs.org/@swc/core-linux-x64-musl/-/core-linux-x64-musl-1.3.57.tgz"
+  integrity sha512-1TKCSngyQxpzwBYDzF5MrEfYRDhlzt/GN1ZqlSnsJIPGkABOWZxYDvWJuMrkASdIztn3jSTPU2ih7rR7YQ8IIw==
 
-"@swc/core@^1.2.66", "@swc/core@^1.3.56", "@swc/core@>=1.2.50":
-  version "1.3.56"
-  resolved "https://registry.npmjs.org/@swc/core/-/core-1.3.56.tgz"
-  integrity sha512-yz/EeXT+PMZucUNrYceRUaTfuNS4IIu5EDZSOlvCEvm4jAmZi7CYH1B/kvzEzoAOzr7zkQiDPNJftcQXLkjbjA==
+"@swc/core@^1.2.66", "@swc/core@^1.3.57", "@swc/core@>=1.2.50":
+  version "1.3.57"
+  resolved "https://registry.npmjs.org/@swc/core/-/core-1.3.57.tgz"
+  integrity sha512-gAT80hOVeK5qoi+BRlgXWgJYI9cbQn2oi05A09Tvb6vjFgBsr9SlQGNZB9uMlcXRXspkZFf9l3yyWRtT4we3Yw==
   optionalDependencies:
-    "@swc/core-darwin-arm64" "1.3.56"
-    "@swc/core-darwin-x64" "1.3.56"
-    "@swc/core-linux-arm-gnueabihf" "1.3.56"
-    "@swc/core-linux-arm64-gnu" "1.3.56"
-    "@swc/core-linux-arm64-musl" "1.3.56"
-    "@swc/core-linux-x64-gnu" "1.3.56"
-    "@swc/core-linux-x64-musl" "1.3.56"
-    "@swc/core-win32-arm64-msvc" "1.3.56"
-    "@swc/core-win32-ia32-msvc" "1.3.56"
-    "@swc/core-win32-x64-msvc" "1.3.56"
+    "@swc/core-darwin-arm64" "1.3.57"
+    "@swc/core-darwin-x64" "1.3.57"
+    "@swc/core-linux-arm-gnueabihf" "1.3.57"
+    "@swc/core-linux-arm64-gnu" "1.3.57"
+    "@swc/core-linux-arm64-musl" "1.3.57"
+    "@swc/core-linux-x64-gnu" "1.3.57"
+    "@swc/core-linux-x64-musl" "1.3.57"
+    "@swc/core-win32-arm64-msvc" "1.3.57"
+    "@swc/core-win32-ia32-msvc" "1.3.57"
+    "@swc/core-win32-x64-msvc" "1.3.57"
 
 "@szmarczak/http-timer@^4.0.5":
   version "4.0.6"
@@ -3913,10 +3913,10 @@ bull@^4.10.4:
     semver "^7.3.2"
     uuid "^8.3.0"
 
-bullmq@^3.13.1:
-  version "3.13.1"
-  resolved "https://registry.npmjs.org/bullmq/-/bullmq-3.13.1.tgz"
-  integrity sha512-TAHejO/9ijlLBzRzLMBbwzakTLNrNuB7JZI9d5SBl1z8ww9ZbADlL2aym6vCRKRFOIpcxqNdOQWVaJovjFUqzQ==
+bullmq@^3.13.4:
+  version "3.13.4"
+  resolved "https://registry.npmjs.org/bullmq/-/bullmq-3.13.4.tgz"
+  integrity sha512-3B16ZbOQSr9VoWpUXhoLB4khgxAbqwIiboJItA5rU2CEkLRe613w8yGxrivNdjJ6q8RcZtS+QvK0WHqCsuQYTQ==
   dependencies:
     cron-parser "^4.6.0"
     glob "^8.0.3"
@@ -9996,10 +9996,10 @@ rollup-pluginutils@^2.3.1, rollup-pluginutils@^2.8.2:
   dependencies:
     estree-walker "^0.6.1"
 
-"rollup@^1.20.0 || ^2.0.0 || ^3.0.0", rollup@^1.20.0||^2.0.0||^3.0.0, rollup@^2.14.0||^3.0.0, rollup@^2.53.1||^3.0.0, rollup@^2.68.0||^3.0.0, rollup@^2.78.0||^3.0.0, "rollup@^2.x || ^3.x", rollup@~3.21.5, "rollup@2.x || 3.x":
-  version "3.21.5"
-  resolved "https://registry.npmjs.org/rollup/-/rollup-3.21.5.tgz"
-  integrity sha512-a4NTKS4u9PusbUJcfF4IMxuqjFzjm6ifj76P54a7cKnvVzJaG12BLVR+hgU2YDGHzyMMQNxLAZWuALsn8q2oQg==
+"rollup@^1.20.0 || ^2.0.0 || ^3.0.0", rollup@^1.20.0||^2.0.0||^3.0.0, rollup@^2.14.0||^3.0.0, rollup@^2.53.1||^3.0.0, rollup@^2.68.0||^3.0.0, rollup@^2.78.0||^3.0.0, "rollup@^2.x || ^3.x", rollup@~3.21.7, "rollup@2.x || 3.x":
+  version "3.21.7"
+  resolved "https://registry.npmjs.org/rollup/-/rollup-3.21.7.tgz"
+  integrity sha512-KXPaEuR8FfUoK2uHwNjxTmJ18ApyvD6zJpYv9FOJSqLStmt6xOY84l1IjK2dSolQmoXknrhEFRaPRgOPdqCT5w==
   optionalDependencies:
     fsevents "~2.3.2"
 
@@ -10592,10 +10592,10 @@ string-hash@^1.1.1:
   resolved "https://registry.npmjs.org/string-hash/-/string-hash-1.1.3.tgz"
   integrity sha512-kJUvRUFK49aub+a7T1nNE66EJbZBMnBgoC1UbCZ5n6bsZKBRga4KgBRTMn/pFkeCZSYtNeSyMxPDM0AXWELk2A==
 
-string-kit@^0.17.6, string-kit@^0.17.8:
-  version "0.17.8"
-  resolved "https://registry.npmjs.org/string-kit/-/string-kit-0.17.8.tgz"
-  integrity sha512-pkJoGTq6y/xMwvV9A9Ets/sRgYEQ/nxhbHsm0z/8pAB6pqkC2JF+Od9r1o8CPRkai12r0XjRsCwUiZaSnEdjdA==
+string-kit@^0.17.10, string-kit@^0.17.6:
+  version "0.17.10"
+  resolved "https://registry.npmjs.org/string-kit/-/string-kit-0.17.10.tgz"
+  integrity sha512-n3/2BeEJrlzztoxeBTt9DVh0dfHordBuZoFsSJs59tk1JoPVvtvNsvAgqu0Nlpj5Y/qoQbnT8jCnfuoHcsfGnw==
 
 string-range@~1.2, string-range@~1.2.1:
   version "1.2.2"
@@ -10868,10 +10868,10 @@ terminal-link@^2.1.1:
     ansi-escapes "^4.2.1"
     supports-hyperlinks "^2.0.0"
 
-terser@^5.15.1, terser@^5.17.2:
-  version "5.17.2"
-  resolved "https://registry.npmjs.org/terser/-/terser-5.17.2.tgz"
-  integrity sha512-1D1aGbOF1Mnayq5PvfMc0amAR1y5Z1nrZaGCvI5xsdEfZEVte8okonk02OiaK5fw5hG1GWuuVsakOnpZW8y25A==
+terser@^5.15.1, terser@^5.17.3:
+  version "5.17.3"
+  resolved "https://registry.npmjs.org/terser/-/terser-5.17.3.tgz"
+  integrity sha512-AudpAZKmZHkG9jueayypz4duuCFJMMNGRMwaPvQKWfxKedh8Z2x3OCoDqIIi1xx5+iwx1u6Au8XQcc9Lke65Yg==
   dependencies:
     "@jridgewell/source-map" "^0.3.2"
     acorn "^8.5.0"
