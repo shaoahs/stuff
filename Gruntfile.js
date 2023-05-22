@@ -26,8 +26,8 @@ module.exports = function(grunt) {
   let isFramework = null;
   let pkg = {};
   let resConfig = {};
-  let agentPath = 'project/agent';    // 除錯用
-  // let agentPath = 'developer/agent';     // 遊戲專案測試用
+  // let agentPath = 'project/agent';    // 除錯用
+  let agentPath = 'developer/agent';     // 遊戲專案測試用
   let workspace = {
     basePath: 'project',
     hasConfig: false,

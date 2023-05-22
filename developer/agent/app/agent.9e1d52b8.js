@@ -1,0 +1,1 @@
+let n=null,t={mpeg1:null,h264:null};async function e(){if(!n){const{getProject:t}=await import("./agent.e4362e78.js").then((function(n){return n.n}));let e=await t("video/player",{version:"2.0.0"});n=e.lib}t.mpeg1||(t.mpeg1=n.mpeg1),t.h264||(t.h264=n.h264)}async function i(n){t.mpeg1&&await t.mpeg1.init(n),t.h264&&await t.h264.init(n)}export{e as getLib,i as init,t as player};
