@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 7.9.0]');
+  console.log('[stuff version 7.10.0]');
 
   grunt.file.setBase(__dirname);
 
@@ -734,7 +734,7 @@ module.exports = function(grunt) {
                   let str = `import("${pathname}");`;
                   return str;
                 },
-
+                
                 importmapName() {
                   let pathname = this.pathname.replace('depend:', '/dependence/');
                   let str = `"${this.key}": "${pathname}"`;
