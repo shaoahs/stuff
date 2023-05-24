@@ -169,7 +169,7 @@ if(process.env.BUILD === 'production'){
           // toplevel: true,
           passes: 1,
           defaults: true,
-          ecma: '2015',
+          ecma: '2017',
           drop_console
         }
       })

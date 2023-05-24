@@ -278,7 +278,7 @@ if(process.env.GENERATOR_VENDOR) {
               mangle: true,
               compress:{
                 passes: 1,
-                ecma: '2015',
+                ecma: '2017',
                 drop_console: true
               }
             })
