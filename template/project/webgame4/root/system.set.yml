@@ -3,11 +3,12 @@
 package:
   main: src/main.js
   defaultExtension: js
+  skipRollup: true
 
 # config
 config:
   paths:
-    nuts: /dependence/nuts/nuts.2.9.0.js
+    nuts: /dependence/nuts/nuts.2.10.0.js
     data/: {%= group %}/{%= name %}/data/
     res/: {%= group %}/{%= name %}/res/
     src/: {%= group %}/{%= name %}/src/

@@ -57,7 +57,7 @@ if(process.env.RES_NAME && process.env.RES_NAME !== 'undefined') {
 
 let res = jsyaml.load(fs.readFileSync(filename, 'utf8'));
 //console.log(res);
-//console.log('==============================');
+// console.log('==============================');
 let workspace = {
   basePath: 'project',
   root: null,
@@ -80,6 +80,7 @@ let dir = path.resolve(process.env.WORKSPACE + '/tmp');
 if(!fs.existsSync(dir)) {
   fs.mkdirSync(dir);
 }
+
 filename = `${dir}/nameMap.js`;
 if(!fs.existsSync(filename)) {
   let javascript = fs.openSync(filename, 'w');
@@ -278,7 +279,7 @@ if(process.env.GENERATOR_VENDOR) {
               mangle: true,
               compress:{
                 passes: 1,
-                ecma: '2017',
+                ecma: '2015',
                 drop_console: true
               }
             })
@@ -324,5 +325,6 @@ if(process.env.GENERATOR_VENDOR) {
     jobs.push(obj);
   }
 }
+
 
 export default jobs;

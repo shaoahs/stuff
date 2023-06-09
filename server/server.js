@@ -14,14 +14,14 @@ const cors  = require('@fastify/cors');
 
 //------------------------------------------
 let corsOptions = {
-  origin: false,
+  // origin: '*',
   credentials: true,
   // allowedHeaders: [
-  //   'Content-Type', 'Authorization'
+  //   'Access-Control-Allow-Origin', '*'
   // ],
   origin: [
-    'https://c01bn.sdrcbgg.com/',
-    'https://g01bn.nrmhp.com/',
+    // 'https://game.wllon.com/',
+    // 'https://34.80.49.231/',
     'http://ip-api.com/',
     'http://127.0.0.1:3000',
     'wss://172.16.102.5:4301',
@@ -117,6 +117,7 @@ var send = require('send');
 send.mime.define({
   ' text/javascript ': ['js', 'mjs'],
   'application/wasm': ['wasm'],
+  'application/importmap+json': ['importmap'],
   'image/avif': ['avif'],
   'application/manifest+json': ['webmanifest'],
   'application/x-web-app-manifest+json': ['webapp'],
@@ -129,7 +130,11 @@ fastify
     setHeaders:function (res, pathName) {
       if(pathName.indexOf('index.html') >= 0){
       }
-      res.setHeader('Service-Worker-Allowed', '/');
+      // res.setHeader("Access-Control-Allow-Origin", "*");
+      // res.setHeader("Access-Control-Allow-Methods", "GET");
+      // res.setHeader("Access-Control-Allow-Headers",  "*");
+
+      // res.setHeader('Access-Control-Allow-Origin', '*');
       // res.setHeader('cache-control', 'public, max-age=16384');
     },
     send,

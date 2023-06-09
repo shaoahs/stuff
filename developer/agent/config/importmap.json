@@ -1,8 +1,0 @@
-{
-  "imports": {
-    "mithril": "/dependence/mithril/mithril.min.2.2.3.mjs",
-    "nuts": "/dependence/nuts/nuts.3.0.0.mjs",
-    "pixi": "/dependence/pixi/pixi.min.6.5.9.mjs",
-    "foot": "/dependence/foot/foot.1.0.0.mjs"
-  }
-}
