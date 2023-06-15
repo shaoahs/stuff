@@ -1,0 +1,1 @@
+let t=null,e={mpeg1:null,h264:null};async function i(){if(!t)try{let e=import.meta.resolve("video/player2");t=await import(e)}catch(t){}t&&(e.mpeg1||(e.mpeg1=t.mpeg1),e.h264||(e.h264=t.h264))}async function a(t){e.mpeg1&&await e.mpeg1.init(t),e.h264&&await e.h264.init(t)}export{i as getLib,a as init,e as player};

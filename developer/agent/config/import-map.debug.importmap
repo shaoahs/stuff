@@ -1,0 +1,24 @@
+{
+  "imports": {
+    "pixi.js": "https://34.80.49.231/public/release/dependence/pixi/pixi.min.6.5.9.mjs",
+    "mithril": "https://34.80.49.231/public/release/lib/mithril/app/main.1.0.0.1dbc0f7e1f615f73.js",
+    "nuts": "/public/release/lib/nuts/app/main.1.0.0.bc56b2263d3613b9.js",
+    "pixi-spine": "https://34.80.49.231/public/release/lib/spine/app/main.1.0.0.075873216b9b6741.js",
+    "apng-js": "https://34.80.49.231/public/release/lib/apng-js/app/main.1.0.0.6762d77704286a78.js",
+    "js-yaml": "https://34.80.49.231/public/release/lib/js-yaml/app/main.1.0.0.e463d9fd952017b2.js",
+    "foot": "/public/release/lib/foot/app/main.1.0.0.feb2354ec06472e4.js",
+    "localforage": "https://34.80.49.231/public/release/lib/localforage/app/main.1.0.0.97b31a916c2e8cb8.js",
+    "scenes/loading": "https://34.80.49.231/public/release/scenes/loading/app/main.2.5.0.839bf691d61aec50.js",
+    "lib/player": "https://34.80.49.231/public/release/lib/player/app/main.0.9.0.68a83ef918250ee3.js",
+    "lib/h246": "/project/lib/h246/app/main.1.0.0.ca7b7b344278dbbe.js",
+    "video/photos": "https://34.80.49.231/public/release/video/photos/app/main.2.5.6.3b597cfe6a9af7f5.js",
+    "video/domains": "https://34.80.49.231/public/release/video/domains/app/main.1.2.37.7354daff45867a7f.js",
+    "video/player": "https://34.80.49.231/public/release/video/player/app/main.1.2.0.06e37ce6e3169f6e.js",
+    "video/player2": "/public/release/video/player/app/main.2.0.0.54974e0451f5c2d1.js"
+  },
+  "scopes": {
+    "https://34.80.49.231/public/release/scenes/loading/": {
+      "workspace": "https://34.80.49.231/public/release/scenes/loading"
+    }
+  }
+}
