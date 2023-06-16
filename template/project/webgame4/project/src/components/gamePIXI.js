@@ -1,9 +1,6 @@
-// import 'pixi';
-// import 'pixi-spine';
-// import 'pixi-particles';
-//import * as Loader from 'resource-loader';
-//import Stats from 'stats';
-// import m from 'mithril';
+import m from 'mithril';
+import * as PIXI from 'pixi.js';
+import * as spine from 'pixi-spine';
 
 import app from 'entity/app';
 import * as nuts from 'nuts';
@@ -51,8 +48,9 @@ export async function init () {
 
   let config = {};
   config.m = m;
-
   config.PIXI = PIXI;
+  config.spine = spine;
+  config.Ticker = createjs.Ticker;
   config.plugin = plugin;
 
   await nuts.init(config);

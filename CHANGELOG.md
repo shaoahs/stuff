@@ -15,6 +15,15 @@
 - 取消使用 __dirname
 
 ## [7.10.0] - 2023-05-22
+### Added
+- 新增支援 importmap 
+- (template) webgame4 webgame6 使用 importmap
+
+### Changed
+- 更新 agent 版本
+- 更新 第三方程式庫版本
+
+## [7.10.0] - 2023-05-22
 ### Changed
 - 更新 agent 版本
 - 更新 第三方程式庫版本

@@ -17,6 +17,7 @@ import yaml from '../../tasks/plugin/rollup-plugin-yaml.mjs';
 
 
 let filename;
+let outputExt = '.js';
 
 // context
 filename = path.resolve(process.env.WORKSPACE + '/content.config.yml');
@@ -66,7 +67,7 @@ if(content.group && content.name) {
 }
 
 const customResolver = resolve({
-  extensions: ['.ts', '.js', '.yml', '.json']
+  extensions: ['.ts', '.mjs', '.js', '.yml', '.json']
 });
 let paths = {
   customResolver,
@@ -96,11 +97,16 @@ let output = {
 let plugins = [];
 
 if(process.env.BUILD === 'development') {
+
+  if(output.format === 'es') {
+    outputExt = '.mjs';
+  }
+
   if(content.framework.useCodeSplitting) {
-    output.chunkFileNames = "[name]-[hash].js";
+    output.chunkFileNames = `[name]-[hash]${outputExt}`;
     output.dir = `${workspace.root}/debug`;
   } else {
-    output.file = `${workspace.root}/debug/${workspace.output}.js`;
+    output.file = `${workspace.root}/debug/${workspace.output}${outputExt}`;
   }
 
   plugins = [
@@ -120,15 +126,20 @@ if(process.env.BUILD === 'development') {
   ];
 }
 else if(process.env.BUILD === 'production') {
+
+  if(output.format === 'es') {
+    outputExt = '.mjs';
+  }
+
   output = {
     format: (content.template && content.template.release && content.template.release.format) || 'iife',
     sourcemap: false
   };
   if(content.framework.useCodeSplitting) {
-    output.chunkFileNames = "[name]-[hash].js";
+    output.chunkFileNames = `[name]-[hash]${outputExt}`;
     output.dir = `${workspace.root}/release`;
   } else {
-    output.file = `${workspace.root}/release/${workspace.output}.js`;
+    output.file = `${workspace.root}/release/${workspace.output}${outputExt}`;
   }
   plugins = [
     yaml(),

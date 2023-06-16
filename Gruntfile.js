@@ -573,7 +573,7 @@ module.exports = function(grunt) {
         src: isFramework || ['<%= pkg.workspace %>/app/<%= pkg.output %>*.*','<%= pkg.workspace %>/app']
       },
       config: {
-        src: isFramework || ['<%= pkg.workspace %>/config/**/*.*','<%= pkg.workspace %>/config']
+        src: isFramework || ['<%= pkg.workspace %>/config/**/v*.{json, txt}']
       },
       debug: {
           src: isFramework || ['<%= pkg.workspace %>/v*.{json, html}', '<%= pkg.workspace %>/debug/**/*.*', '<%= pkg.workspace %>/debug/**/*', '<%= pkg.workspace %>/debug', '<%= pkg.workspace %>/tmp/debug.json']
