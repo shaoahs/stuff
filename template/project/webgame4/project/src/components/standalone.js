@@ -1,5 +1,6 @@
-// import 'pixi';
-// import m from 'mithril';
+import * as PIXI from 'pixi.js';
+
+import m from 'mithril';
 
 import * as nuts from 'nuts';
 import app from 'entity/app';
@@ -118,8 +119,6 @@ async function init () {
 
   let config = {};
   config.m = m;
-
-  // 使用 PIXI
   config.PIXI = PIXI;
   config.plugin = plugin;
 
