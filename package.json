@@ -180,7 +180,6 @@
     "spectorjs": "^0.9.29",
     "stats.js": "^0.17.0",
     "telegraf": "^4.12.2",
-    "tweenjs": "^1.0.2",
     "ws": "^8.13.0"
   },
   "optionalDependencies": {

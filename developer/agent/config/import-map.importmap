@@ -3,6 +3,7 @@
     "pixi.js": "/public/release/dependence/pixi/pixi.min.6.5.9.mjs",
     "pixi-spine": "/public/release/lib/spine/app/main.1.0.0.075873216b9b6741.js",
     "mithril": "/public/release/lib/mithril/app/main.1.0.0.1dbc0f7e1f615f73.js",
+    "tweenjs": "/public/release/lib/tweenjs/app/main.1.0.0.744a66faf9a4872a.js",
     "nuts": "/public/release/lib/nuts/app/main.1.0.0.bc56b2263d3613b9.js",
     "apng-js": "/public/release/lib/apng-js/app/main.1.0.0.6762d77704286a78.js",
     "js-yaml": "/public/release/lib/js-yaml/app/main.1.0.0.e463d9fd952017b2.js",
