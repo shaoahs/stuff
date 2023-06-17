@@ -7,7 +7,7 @@ description: webapp {%= group %} {%= name %}
 isRoot: true
 framework:
   name: stuff
-  version: 6.2.0
+  version: 7.10.0
   builder: rollup
   skipCommandTerser: true
   useCodeSplitting: true
@@ -16,13 +16,13 @@ template:
   format: html
   debug:
     appInLibMap: true
-    format: esm
-    src: template/debug.esm.html
+    format: es
+    src: template/debug.es.html
     dest: index.html
   release:
     appInLibMap: true
-    format: esm
-    src: template/release.esm.html
+    format: es
+    src: template/release.es.html
     dest: index.html
 version: 1.0.0
 author:

@@ -14,7 +14,12 @@
 ### Removed
 - 取消使用 __dirname
 
-## [7.10.0] - 2023-05-22
+## [7.11.0] - 2023-06-17
+### Changed
+- (template) 修改關聯版本, esm 改為 es (webapp webgame4 webgame6)
+- 更新 agent 版本
+
+## [7.10.0] - 2023-06-16
 ### Added
 - 新增支援 importmap 
 - (template) webgame4 webgame6 使用 importmap
