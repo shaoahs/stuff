@@ -10,9 +10,9 @@
     "localforage": "/public/release/lib/localforage/app/main.1.0.0.97b31a916c2e8cb8.js",
     "scenes/loading": "/public/release/scenes/loading/app/main.2.5.0.839bf691d61aec50.js",
     "lib/player": "/public/release/lib/player/app/main.0.9.0.68a83ef918250ee3.js",
-    "video/photos": "/public/release/video/photos/app/main.2.5.6.3b597cfe6a9af7f5.js",
-    "video/domains": "/public/release/video/domains/app/main.1.2.37.7354daff45867a7f.js",
-    "video/player": "/public/release/video/player/app/main.1.2.0.06e37ce6e3169f6e.js",
+    "video/photos": "https://34.80.49.231/public/release/video/photos/app/main.2.5.6.3b597cfe6a9af7f5.js",
+    "video/domains": "https://34.80.49.231/public/release/video/domains/app/main.1.2.37.7354daff45867a7f.js",
+    "video/player": "https://34.80.49.231/public/release/video/player/app/main.1.2.0.06e37ce6e3169f6e.js",
     "video/player2": "/public/release/video/player/app/main.2.0.0.54974e0451f5c2d1.js"
   },
   "scopes": {

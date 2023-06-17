@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 7.10.0]');
+  console.log('[stuff version 7.10.1]');
 
   grunt.file.setBase(__dirname);
 
@@ -52,7 +52,6 @@ module.exports = function(grunt) {
     
         // 設定檔
         {expand: true, src: 'project/<%= pkg.current %>/content.config.yml', dest: 'public/<%= pkg.currentMode %>/'},
-        {expand: true, src: 'project/<%= pkg.current %>/config/browser.config.js', dest: 'public/<%= pkg.currentMode %>/'},
         {expand: true, src: 'project/<%= pkg.current %>/config/*.txt', dest: 'public/<%= pkg.currentMode %>/'},
         {expand: true, src: 'project/<%= pkg.current %>/config/importmap.json', dest: 'public/<%= pkg.currentMode %>/'},
     
@@ -928,14 +927,13 @@ module.exports = function(grunt) {
               }
 
               let view = {
-                config: 'config/browser.config.js',
                 dynamicImportName() {
                   let pathname = this.pathname.replace('depend:', '/dependence/');
                   let str = `import("${pathname}");`;
                   return str;
                 },
                 
-                importmapName(){
+                importmapName() {
                   let pathname = this.pathname.replace('depend:', '/dependence/');
                   let str = `"${this.key}": "${pathname}"`;
                   if(!this.isLast){
@@ -943,7 +941,7 @@ module.exports = function(grunt) {
                   }
                   return str;
                 },
-                jsName(){
+                jsName() {
                   let pathname = this.pathname.replace('depend:', '/dependence/');
                   let str;
                   str = `<script src="${pathname}"></script>`;
@@ -1164,7 +1162,6 @@ module.exports = function(grunt) {
               }
 
               let view = {
-                config: 'config/browser.config.js',
                 dynamicImportName() {
                   let pathname = this.pathname.replace('depend:', '/dependence/');
                   let str = `import("${pathname}");`;
@@ -1400,7 +1397,6 @@ module.exports = function(grunt) {
               }
               
               let view = {
-                config: 'config/browser.config.js',
                 dynamicImportName() {
                   let pathname = this.pathname.replace('depend:', '/dependence/');
                   let str = `import("${pathname}");`;

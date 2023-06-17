@@ -16,12 +16,12 @@ template:
   debug:
     appInLibMap: true
     format: es
-    src: template/debug.esm.html
+    src: template/debug.es.html
     dest: index.html
   release:
     appInLibMap: true
     format: es
-    src: template/release.esm.html
+    src: template/release.es.html
     dest: index.html
 version: 9.0.0
 author:

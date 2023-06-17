@@ -8,7 +8,7 @@ version: 1.0.0
 generatorVendor: v2
 framework:
   name: stuff
-  version: 7.0.0
+  version: 7.10.0
   builder: rollup
   skipCommandTerser: true
   useCodeSplitting: true
@@ -18,13 +18,13 @@ templateVersion: game.6.0
 #   standalone: true
 #   debug:
 #     appInLibMap: true
-#     format: esm
-#     src: template/debug.esm.html
+#     format: es
+#     src: template/debug.es.html
 #     dest: index.html
 #   release:
 #     appInLibMap: true
-#     format: esm
-#     src: template/release.esm.html
+#     format: es
+#     src: template/release.es.html
 #     dest: index.html
 author:
   name: astro
