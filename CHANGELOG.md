@@ -19,10 +19,14 @@
 - (template) 修改關聯版本, esm 改為 es (webapp webgame4 webgame6)
 - 更新 agent 版本
 
+### Removed
+- 移除 browser.config.json 設定
+
 ## [7.10.0] - 2023-06-16
 ### Added
 - 新增支援 importmap 
 - (template) webgame4 webgame6 使用 importmap
+- 新增支援 spine 3.0.1
 
 ### Changed
 - 更新 agent 版本
