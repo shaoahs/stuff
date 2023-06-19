@@ -1,9 +1,10 @@
 {
   "imports": {
     "mithril": "/project/lib/mithril/app/main.1.0.0.1dbc0f7e1f615f73.js",
+    "tweenjs": "/project/lib/tweenjs/app/main.1.0.0.744a66faf9a4872a.js",
     "nuts": "/project/lib/nuts/app/main.1.0.0.0b463b729c2d7379.js",
     "pixi.js": "/dependence/pixi/pixi.min.6.5.9.mjs",
-    "pixi-spine": "/project/lib/spine/app/main.1.0.0.2a6cae0e2456a2d6.js",
+    "pixi-spine": "/dependence/pixi/pixi-spine.3.0.2.mjs",
     "apng-js": "/project/lib/apng-js/app/main.1.0.0.6762d77704286a78.js",
     "js-yaml": "/project/lib/js-yaml/app/main.1.0.0.e463d9fd952017b2.js",
     "foot": "/project/lib/foot/app/main.1.0.0.62a7975e51c47f95.js",
