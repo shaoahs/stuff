@@ -1,7 +1,7 @@
 {
   "imports": {
     "pixi.js": "/public/release/dependence/pixi/pixi.min.6.5.9.mjs",
-    "pixi-spine": "/public/release/lib/spine/app/main.1.0.0.075873216b9b6741.js",
+    "pixi-spine": "/public/release/dependence/pixi/pixi-spine.3.0.2.mjs",
     "mithril": "/public/release/lib/mithril/app/main.1.0.0.1dbc0f7e1f615f73.js",
     "tweenjs": "/public/release/lib/tweenjs/app/main.1.0.0.744a66faf9a4872a.js",
     "nuts": "/public/release/lib/nuts/app/main.1.0.0.bc56b2263d3613b9.js",
