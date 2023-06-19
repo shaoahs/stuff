@@ -14,6 +14,16 @@
 ### Removed
 - 取消使用 __dirname
 
+## [7.10.2] - 2023-06-19
+### Added
+- importmap 新增 tweenjs 與 spine.js
+
+### Changed
+- 更新 agent 版本
+- 更新 第三方程式庫版本
+- (template) 修改 system.set.yml 設定
+
+
 ## [7.10.1] - 2023-06-17
 ### Changed
 - (template) 修改關聯版本, esm 改為 es (webapp webgame4 webgame6)
