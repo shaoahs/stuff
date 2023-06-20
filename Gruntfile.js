@@ -19,15 +19,15 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 7.10.2]');
+  console.log('[stuff version 7.11.0]');
 
   grunt.file.setBase(__dirname);
 
   let isFramework = null;
   let pkg = {};
   let resConfig = {};
-  // let agentPath = 'project/agent';    // 除錯用
-  let agentPath = 'developer/agent';     // 遊戲專案測試用
+  let agentPath = 'project/agent';    // 除錯用
+  // let agentPath = 'developer/agent';     // 遊戲專案測試用
   let workspace = {
     basePath: 'project',
     hasConfig: false,
@@ -230,7 +230,7 @@ module.exports = function(grunt) {
           'app/**/*.{js,mjs}'
         ],
         resource: [
-          'systemjs/6.13.0/system.min.js'
+          'systemjs/6.14.1/system.min.js'
         ],
         output: 'config/cache.txt'
       }
