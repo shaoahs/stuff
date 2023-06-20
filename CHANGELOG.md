@@ -14,6 +14,10 @@
 ### Removed
 - 取消使用 __dirname
 
+## [7.10.4] - 2023-06-20
+### Fixed
+- 修正路徑 project/agent 改為 developer/agent
+
 ## [7.10.3] - 2023-06-20
 ### Changed
 - 更新 agent 版本
