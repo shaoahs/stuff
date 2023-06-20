@@ -14,6 +14,12 @@
 ### Removed
 - 取消使用 __dirname
 
+## [7.10.3] - 2023-06-20
+### Changed
+- 更新 agent 版本
+- 更新 第三方程式庫版本
+- loading 畫面 使用 pixi 6.5.9.js, spine 2.0.5.js
+
 ## [7.10.2] - 2023-06-19
 ### Added
 - importmap 新增 tweenjs 與 spine.js
