@@ -1,9 +1,11 @@
+import app from 'entity/app';
+
 import m from 'mithril';
 import createjs from 'tweenjs';
+
 import * as PIXI from 'pixi.js';
 import * as spine from 'pixi-spine';
 
-import app from 'entity/app';
 import * as nuts from 'nuts';
 import * as scene from 'src/scene';
 
@@ -23,6 +25,8 @@ export let Component = {
   oninit (vnode) {
     let attrs = vnode.attrs;
     this.config = attrs.config;
+    this.config.PIXI = PIXI;
+    this.config.spine = spine;
     this.style = attrs.style || defaultStyle;
   },
   oncreate (/*vnode*/) {
@@ -49,8 +53,6 @@ export async function init () {
 
   let config = {};
   config.m = m;
-  config.PIXI = PIXI;
-  config.spine = spine;
   config.Ticker = createjs.Ticker;
   config.plugin = plugin;
 

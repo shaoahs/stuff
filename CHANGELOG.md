@@ -14,6 +14,14 @@
 ### Removed
 - 取消使用 __dirname
 
+## [7.11.0] - 2023-06-26
+### Added
+- (template) pixi.js 新增參數 useModule
+
+### Changed
+- 更新 agent 版本
+- 更新 第三方程式庫版本
+
 ## [7.10.4] - 2023-06-20
 ### Fixed
 - 修正路徑 project/agent 改為 developer/agent

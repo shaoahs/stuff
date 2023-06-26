@@ -34,6 +34,7 @@ group: {%= group %}                # 群組
 appConfig: {%= name %}             # 程式設定檔
 # theOther: other      # 是否有子專案
 pixiConfig: #PIXI 設定
+  useModule: true
   legacy: false
   width: &WIDTH 1024
   height: &HEIGHT 768

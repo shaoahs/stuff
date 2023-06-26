@@ -51,7 +51,7 @@ build:
     - tweenjs
     - mustache
     - howler
-    - io
+    - apng-js
     - pixi.js
     - pixi
     - pixi-spine
