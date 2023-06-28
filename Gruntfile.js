@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 7.11.0]');
+  console.log('[stuff version 7.12.0]');
 
   grunt.file.setBase(__dirname);
 
@@ -3997,7 +3997,7 @@ module.exports = function(grunt) {
           });
         }
       }
-  
+
       // change config replace.deploy
       str = grunt.template.process(JSON.stringify(replaceDeploy), {
         data: {
@@ -4006,7 +4006,7 @@ module.exports = function(grunt) {
       });
       grunt.config.set('replace.deploy', JSON.parse(str));
     }
-  
+
     // change config clean.public
     str = grunt.template.process(JSON.stringify(cleanPublic), {
       data: {
@@ -4055,7 +4055,7 @@ module.exports = function(grunt) {
           srcList.push(name);
         });
       });
-      
+
       // srcList.push('README.md');
       files.push({expand: true, src: srcList, dest: 'public/' + currentMode + '/'});
       cmdList.push('clone:public');
@@ -4091,18 +4091,19 @@ module.exports = function(grunt) {
       }
 
       cmdList.push('replace:deploy');
-  
+
       if(pkg.framework.builder === 'rollup') {
         cmdList.push('replace:importmap');
       }
-  
-      if(pkg.currentMode === MODE.RELEASE) {
-        // if('agent' !== pkg.name) {
-        // }
-        // cmdList.push('obfuscate:resource');
-        // cmdList.push('obfuscate:vendor');
 
-        // cmdList.push('cache:deploy');
+      if(pkg.currentMode === MODE.RELEASE) {
+        // if('agent' === pkg.name) {
+        //   cmdList.push('obfuscate:resource');
+        //   cmdList.push('obfuscate:vendor');
+        // }
+        cmdList.push('obfuscate:resource');
+        cmdList.push('obfuscate:vendor');
+
         cmdList.push('compress:project');
         cmdList.push('compress:project1');
       }
