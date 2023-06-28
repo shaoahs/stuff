@@ -19,7 +19,7 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 7.11.0]');
+  console.log('[stuff version 7.12.0]');
 
   grunt.file.setBase(__dirname);
 
@@ -4097,12 +4097,13 @@ module.exports = function(grunt) {
       }
 
       if(pkg.currentMode === MODE.RELEASE) {
-        if('agent' === pkg.name) {
-          cmdList.push('obfuscate:resource');
-          cmdList.push('obfuscate:vendor');
-        }
+        // if('agent' === pkg.name) {
+        //   cmdList.push('obfuscate:resource');
+        //   cmdList.push('obfuscate:vendor');
+        // }
+        cmdList.push('obfuscate:resource');
+        cmdList.push('obfuscate:vendor');
 
-        // cmdList.push('cache:deploy');
         cmdList.push('compress:project');
         cmdList.push('compress:project1');
       }
