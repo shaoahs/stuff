@@ -1,24 +1,24 @@
 {
   "imports": {
-    "pixi.js": "https://game.wllon.com/public/release/dependence/pixi/pixi.min.6.5.9.mjs",
-    "pixi-spine": "https://game.wllon.com/public/release/dependence/pixi/pixi-spine.3.0.2.mjs",
-    "mithril": "https://game.wllon.com/public/release/lib/mithril/app/main.1.0.0.1dbc0f7e1f615f73.js",
-    "tweenjs": "https://game.wllon.com/public/release/lib/tweenjs/app/main.1.0.0.744a66faf9a4872a.js",
-    "nuts": "https://game.wllon.com/public/release/lib/nuts/app/main.2.0.0.a7a17c95cd786fb3.js",
-    "apng-js": "https://game.wllon.com/public/release/lib/apng-js/app/main.1.0.0.6762d77704286a78.js",
-    "js-yaml": "https://game.wllon.com/public/release/lib/js-yaml/app/main.1.0.0.e463d9fd952017b2.js",
-    "foot": "https://game.wllon.com/public/release/lib/foot/app/main.1.0.0.feb2354ec06472e4.js",
-    "localforage": "https://game.wllon.com/public/release/lib/localforage/app/main.1.0.0.97b31a916c2e8cb8.js",
-    "scenes/loading": "https://game.wllon.com/public/release/scenes/loading/app/main.2.7.0.b7ed483ad09c9f6a.js",
-    "lib/player": "https://game.wllon.com/public/release/lib/player/app/main.0.9.0.68a83ef918250ee3.js",
-    "video/photos": "https://game.wllon.com/public/release/video/photos/app/main.2.5.6.3b597cfe6a9af7f5.js",
-    "video/domains": "https://game.wllon.com/public/release/video/domains/app/main.1.2.37.7354daff45867a7f.js",
-    "video/player": "https://game.wllon.com/public/release/video/player/app/main.1.2.0.06e37ce6e3169f6e.js",
-    "video/player2": "https://game.wllon.com/public/release/video/player/app/main.2.0.0.54974e0451f5c2d1.js"
+    "pixi.js": "/public/release/dependence/pixi/pixi.min.6.5.9.mjs",
+    "pixi-spine": "/public/release/dependence/pixi/pixi-spine.3.0.2.mjs",
+    "mithril": "/public/release/lib/mithril/app/main.1.0.0.1dbc0f7e1f615f73.js",
+    "tweenjs": "/public/release/lib/tweenjs/app/main.1.0.0.744a66faf9a4872a.js",
+    "nuts": "/public/release/lib/nuts/app/main.2.0.0.a7a17c95cd786fb3.js",
+    "apng-js": "/public/release/lib/apng-js/app/main.1.0.0.6762d77704286a78.js",
+    "js-yaml": "/public/release/lib/js-yaml/app/main.1.0.0.e463d9fd952017b2.js",
+    "foot": "/public/release/lib/foot/app/main.1.0.0.feb2354ec06472e4.js",
+    "localforage": "/public/release/lib/localforage/app/main.1.0.0.97b31a916c2e8cb8.js",
+    "scenes/loading": "/public/release/scenes/loading/app/main.2.7.0.b7ed483ad09c9f6a.js",
+    "lib/player": "/public/release/lib/player/app/main.0.9.0.68a83ef918250ee3.js",
+    "video/photos": "/public/release/video/photos/app/main.2.5.6.3b597cfe6a9af7f5.js",
+    "video/domains": "/public/release/video/domains/app/main.1.2.37.7354daff45867a7f.js",
+    "video/player": "/public/release/video/player/app/main.1.2.0.06e37ce6e3169f6e.js",
+    "video/player2": "/public/release/video/player/app/main.2.0.0.54974e0451f5c2d1.js"
   },
   "scopes": {
-    "https://game.wllon.com/public/release/scenes/loading/": {
-      "workspace": "https://game.wllon.com/public/release/scenes/loading"
+    "/public/release/scenes/loading/": {
+      "workspace": "/public/release/scenes/loading"
     }
   }
 }

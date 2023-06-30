@@ -14,6 +14,8 @@
   <style>
   .tmp{color:#fff;position:absolute;left:30%;top:30%;width:40%;height:40%}.cssload-logo{position:absolute;left:0;top:0;width:100%;height:100%;font-size:50px}.cssload-loader{position:absolute;left:calc(50% - 100px);top:calc(50% - 100px);width:200px;height:200px;border-radius:50%;-o-border-radius:50%;-ms-border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%;perspective:1500px}.cssload-inner{position:absolute;left:0;top:0;width:100%;height:100%;box-sizing:border-box;-o-box-sizing:border-box;-ms-box-sizing:border-box;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;border-radius:50%;-o-border-radius:50%;-ms-border-radius:50%;-webkit-border-radius:50%;-moz-border-radius:50%}.cssload-inner.cssload-one{left:0;top:0;animation:cssload-rotate-one 1.0s linear infinite;-o-animation:cssload-rotate-one 1.0s linear infinite;-ms-animation:cssload-rotate-one 1.0s linear infinite;-webkit-animation:cssload-rotate-one 1.0s linear infinite;-moz-animation:cssload-rotate-one 1.0s linear infinite;border-bottom:6px solid rgba(1,21,173,.7)}.cssload-inner.cssload-two{right:0;top:0;animation:cssload-rotate-two 1.2s linear infinite;-o-animation:cssload-rotate-two 1.2s linear infinite;-ms-animation:cssload-rotate-two 1.2s linear infinite;-webkit-animation:cssload-rotate-two 1.2s linear infinite;-moz-animation:cssload-rotate-two 1.2s linear infinite;border-right:6px solid rgba(1,19,156,.68)}.cssload-inner.cssload-three{right:0;bottom:0;animation:cssload-rotate-three 0.8s linear infinite;-o-animation:cssload-rotate-three 0.8s linear infinite;-ms-animation:cssload-rotate-three 0.8s linear infinite;-webkit-animation:cssload-rotate-three 0.8s linear infinite;-moz-animation:cssload-rotate-three 0.8s linear infinite;border-top:8px solid rgba(18,2,246,.68)}@keyframes cssload-rotate-one{0%{transform:rotateX(35deg) rotateY(-45deg) rotateZ(0)}100%{transform:rotateX(35deg) rotateY(-45deg) rotateZ(360deg)}}@-o-keyframes cssload-rotate-one{0%{-o-transform:rotateX(35deg) rotateY(-45deg) rotateZ(0)}100%{-o-transform:rotateX(35deg) rotateY(-45deg) rotateZ(360deg)}}@-ms-keyframes cssload-rotate-one{0%{-ms-transform:rotateX(35deg) rotateY(-45deg) rotateZ(0)}100%{-ms-transform:rotateX(35deg) rotateY(-45deg) rotateZ(360deg)}}@-webkit-keyframes cssload-rotate-one{0%{-webkit-transform:rotateX(35deg) rotateY(-45deg) rotateZ(0)}100%{-webkit-transform:rotateX(35deg) rotateY(-45deg) rotateZ(360deg)}}@-moz-keyframes cssload-rotate-one{0%{-moz-transform:rotateX(35deg) rotateY(-45deg) rotateZ(0)}100%{-moz-transform:rotateX(35deg) rotateY(-45deg) rotateZ(360deg)}}@keyframes cssload-rotate-two{0%{transform:rotateX(50deg) rotateY(10deg) rotateZ(0)}100%{transform:rotateX(50deg) rotateY(10deg) rotateZ(360deg)}}@-o-keyframes cssload-rotate-two{0%{-o-transform:rotateX(50deg) rotateY(10deg) rotateZ(0)}100%{-o-transform:rotateX(50deg) rotateY(10deg) rotateZ(360deg)}}@-ms-keyframes cssload-rotate-two{0%{-ms-transform:rotateX(50deg) rotateY(10deg) rotateZ(0)}100%{-ms-transform:rotateX(50deg) rotateY(10deg) rotateZ(360deg)}}@-webkit-keyframes cssload-rotate-two{0%{-webkit-transform:rotateX(50deg) rotateY(10deg) rotateZ(0)}100%{-webkit-transform:rotateX(50deg) rotateY(10deg) rotateZ(360deg)}}@-moz-keyframes cssload-rotate-two{0%{-moz-transform:rotateX(50deg) rotateY(10deg) rotateZ(0)}100%{-moz-transform:rotateX(50deg) rotateY(10deg) rotateZ(360deg)}}@keyframes cssload-rotate-three{0%{transform:rotateX(35deg) rotateY(55deg) rotateZ(0)}100%{transform:rotateX(35deg) rotateY(55deg) rotateZ(360deg)}}@-o-keyframes cssload-rotate-three{0%{-o-transform:rotateX(35deg) rotateY(55deg) rotateZ(0)}100%{-o-transform:rotateX(35deg) rotateY(55deg) rotateZ(360deg)}}@-ms-keyframes cssload-rotate-three{0%{-ms-transform:rotateX(35deg) rotateY(55deg) rotateZ(0)}100%{-ms-transform:rotateX(35deg) rotateY(55deg) rotateZ(360deg)}}@-webkit-keyframes cssload-rotate-three{0%{-webkit-transform:rotateX(35deg) rotateY(55deg) rotateZ(0)}100%{-webkit-transform:rotateX(35deg) rotateY(55deg) rotateZ(360deg)}}@-moz-keyframes cssload-rotate-three{0%{-moz-transform:rotateX(35deg) rotateY(55deg) rotateZ(0)}100%{-moz-transform:rotateX(35deg) rotateY(55deg) rotateZ(360deg)}}
   </style>
+
+  
   <script  crossorigin="anonymous">
     window.esmsInitOptions = {
     shimMode: true, // default false
@@ -25,11 +27,11 @@
     onerror (e) {  
       console.log('[shims] onerror', e);
     },
-    
-    resolve (id, parentUrl, resolve) {
-      console.log('[shims] resolve ', id);
-      resolve(id, parentUrl);
-    },
+
+    // resolve (id, parentUrl, resolve) {
+    //   console.log('[shims] resolve ', id, parentUrl);
+    //   resolve(id, parentUrl);
+    // },
 
     fetch (url, options) {
       let str = url;
@@ -53,12 +55,39 @@
     // onimport (url, options, parentUrl) {
     //   console.log('[shims] onimport', url, options, parentUrl);
     // }
-  }
+    }
   </script>
-  
+
+
   <script async src="/systemjs/es-module-shims.wasm.1.7.3.js"></script>
-  
-  <script type="importmap-shim" src="./config/import-map.importmap"></script>
+
+  <script type="importmap-shim">
+  {
+  "imports": {
+    "pixi.js": "https://game.wllon.com/public/release/dependence/pixi/pixi.min.6.5.9.mjs",
+    "pixi-spine": "https://game.wllon.com/public/release/dependence/pixi/pixi-spine.3.0.2.mjs",
+    "mithril": "https://game.wllon.com/public/release/lib/mithril/app/main.1.0.0.1dbc0f7e1f615f73.js",
+    "tweenjs": "https://game.wllon.com/public/release/lib/tweenjs/app/main.1.0.0.744a66faf9a4872a.js",
+    "nuts": "https://game.wllon.com/public/release/lib/nuts/app/main.2.0.0.a7a17c95cd786fb3.js",
+    "apng-js": "https://game.wllon.com/public/release/lib/apng-js/app/main.1.0.0.6762d77704286a78.js",
+    "js-yaml": "https://game.wllon.com/public/release/lib/js-yaml/app/main.1.0.0.e463d9fd952017b2.js",
+    "foot": "https://game.wllon.com/public/release/lib/foot/app/main.1.0.0.feb2354ec06472e4.js",
+    "localforage": "https://game.wllon.com/public/release/lib/localforage/app/main.1.0.0.97b31a916c2e8cb8.js",
+    "scenes/loading": "https://game.wllon.com/public/release/scenes/loading/app/main.2.7.0.b7ed483ad09c9f6a.js",
+    "lib/player": "https://game.wllon.com/public/release/lib/player/app/main.0.9.0.68a83ef918250ee3.js",
+    "video/photos": "https://game.wllon.com/public/release/video/photos/app/main.2.5.6.3b597cfe6a9af7f5.js",
+    "video/domains": "https://game.wllon.com/public/release/video/domains/app/main.1.2.37.7354daff45867a7f.js",
+    "video/player": "https://game.wllon.com/public/release/video/player/app/main.1.2.0.06e37ce6e3169f6e.js",
+    "video/player2": "https://game.wllon.com/public/release/video/player/app/main.2.0.0.54974e0451f5c2d1.js"
+  },
+  "scopes": {
+    "https://game.wllon.com/public/release/scenes/loading/": {
+      "workspace": "https://game.wllon.com/public/release/scenes/loading"
+    }
+  }
+}
+
+  </script>
 
 </head>
 <body bgColor="#000" style="height:100%;width:100%;overflow-x:hidden;overflow-y:visible">
@@ -74,7 +103,7 @@
   </div>
   <div id='root'></div>
   <script type="module-shim">
-    import "./app/main.9.0.0.73eacdf5b4b1c885.js";
+    import "./app/main.9.0.0.38df7012e96f1530.js";
   </script>
 </body>
 </html>
