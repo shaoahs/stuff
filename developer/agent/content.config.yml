@@ -23,7 +23,7 @@ template:
     format: es
     src: template/release.es.html
     dest: index.html
-version: 9.0.0
+version: 9.0.1
 author:
   name: astro
   email: www@astrocorp.com.tw
