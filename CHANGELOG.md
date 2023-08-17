@@ -6,7 +6,7 @@
 - [命令] 新增 convert , 圖檔合併用
 
 ### Changed
-- 
+- pixijs 更新到 7.x.x
 
 ### Fixed
 - 

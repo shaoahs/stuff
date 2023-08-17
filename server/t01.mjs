@@ -14,6 +14,7 @@ const logger = pino({
   }
 });
 
+console.log(uWS);
 const port = 9001;
 
 let streamList = [
@@ -75,8 +76,21 @@ app.any('/*', (res, req) => {
 
 
 
-
-
+let testLog = 2;
+const toHexString = (bytes) => {
+  let cnts = 32;
+  return Array.from(bytes, (byte) => {
+    cnts--;
+    let str = ('0' + (byte & 0xff).toString(16)).slice(-2);
+    if(cnts<0) {
+      cnts = 32;
+      str += '\n';
+      return str;
+    } else {
+      return str + ' ';
+    }
+  }).join('');
+};
 
 streamList.forEach((stream) => {
   try {
@@ -153,6 +167,10 @@ streamList.forEach((stream) => {
         } else {
           // console.log('[unknow]');
           // console.log(arr);
+          if(testLog > 0) {
+            console.log(toHexString(arr));
+            testLog--;
+          }
 
         }
         // logger.info(arr[0],arr[1],arr[2],arr[3],arr[4],arr[5],arr[6],arr[7],arr[8]);
