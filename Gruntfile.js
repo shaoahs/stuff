@@ -26,8 +26,8 @@ module.exports = function(grunt) {
   let isFramework = null;
   let pkg = {};
   let resConfig = {};
-  // let agentPath = 'project/agent';    // 除錯用
-  let agentPath = 'developer/agent';     // 遊戲專案測試用
+  let agentPath = 'project/agent';    // 除錯用
+  // let agentPath = 'developer/agent';     // 遊戲專案測試用
   let workspace = {
     basePath: 'project',
     hasConfig: false,
@@ -230,7 +230,7 @@ module.exports = function(grunt) {
           'app/**/*.{js,mjs}'
         ],
         resource: [
-          'systemjs/6.14.1/system.min.js'
+          'systemjs/6.14.2/system.min.js'
         ],
         output: 'config/cache.txt'
       }
