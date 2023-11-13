@@ -168,25 +168,25 @@ module.exports = function(grunt) {
       isFramework = 'yes';
     }
     if(grunt.public ){
-      if(grunt.public.cloneList){
+      if(grunt.public.cloneList) {
         workspace.public.cloneList = grunt.public.cloneList;
       }
-      if(grunt.public.cleanList){
+      if(grunt.public.cleanList) {
         workspace.public.cleanList = grunt.public.cleanList;
       }
-      if(grunt.public.replace && grunt.public.replace.src){
+      if(grunt.public.replace && grunt.public.replace.src) {
         workspace.public.replace.src = grunt.public.replace.src;
       }
       if(grunt.public.cmdList && Array.isArray(grunt.public.cmdList)){
         workspace.public.cmdList = grunt.public.cmdList;
       }
-      if(grunt.public.event){
+      if(grunt.public.event) {
         workspace.public.event = grunt.public.event;
       }
-      if(grunt.public.hasOwnProperty('useClean')){
+      if(grunt.public.hasOwnProperty('useClean')) {
         workspace.public.useClean = grunt.public.useClean;
       }
-      if(grunt.public.hasOwnProperty('skipHash')){
+      if(grunt.public.hasOwnProperty('skipHash')) {
         workspace.public.skipHash = grunt.public.skipHash;
       }
     }
@@ -655,7 +655,7 @@ module.exports = function(grunt) {
                 } else {
                   app = `debug/${pkg.output}.js`;
                 }
-                obj.app = app;
+                obj.app = `debug/${pkg.output}.js`; // app;
 
                 let baseURL = '';
                 if(!obj.baseURL) {
@@ -3064,7 +3064,7 @@ module.exports = function(grunt) {
           objList.push(obj);
        });
       }
-
+                                                                                 
       // 存檔
       let handle = fs.openSync(filename, 'w');
       grunt.log.writeln('save : ' + filename);
@@ -3468,6 +3468,95 @@ module.exports = function(grunt) {
     console.log('command : ' + cmd);
     cmdList.push(cmd);
     grunt.task.run(cmdList);
+  });
+
+  // bun build src/main.js --outdir ./debug --external nuts --external tweenjs --external pixi.js --external pixi-spine
+
+
+  grunt.registerTask('bun', 'bun', async function() {
+    let done = this.async();
+    let {createFilter, makeLegalIdentifier, dataToEsm } = await import('@rollup/pluginutils');
+
+    let cmdList = [];
+    cmdList.push('shell:default');
+    let jsconfig = {
+      "compilerOptions": {                     
+        "baseUrl": "./",
+        "paths": {},
+        "lib": ["ESNext"],
+        "module": "esnext",
+        "target": "es2020",
+        "moduleResolution": "bundler",
+        "moduleDetection": "force",
+        "allowImportingTsExtensions": true,
+        "noEmit": true,
+        "composite": true,
+        "strict": true,
+        "downlevelIteration": true,
+        "skipLibCheck": true,
+        "jsx": "preserve",
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        "allowJs": true,
+        "types": [
+          "bun-types" // add Bun global
+        ]
+      }
+    };
+
+    // create config
+    let filename = workspace.root + '/jsconfig.json';
+    let obj = workspace.set.config.paths;
+    let names = Object.getOwnPropertyNames(obj);
+
+    for(let i=0; i < names.length; i++) {
+      let name = names[i];
+      let value = obj[name];
+      value = value.replace(workspace.current + '/', './');
+      value = value + '*';
+      // console.log(name + '  ' + value);
+      jsconfig.compilerOptions.paths[name + '*'] = [value];
+    };
+
+    let buf = JSON.stringify(jsconfig, null, 2);
+    fs.writeFileSync(filename, buf, 'utf8');
+    if(!fs.existsSync(filename)) {
+    }
+
+    let buildConfig = {
+      entrypoints: [`./${workspace.set.package.main}`],
+      outdir: './debug',
+      external: [
+      ],
+      target: 'browser', // default
+      format: "esm",
+      sourcemap: "inline"
+    }
+
+
+    //buf = `bun build ${workspace.set.package.main} --outdir ./debug`;
+    if(workspace.set.build.externals) {
+      // let libs = '';
+      for(let i=0; i<workspace.set.build.externals.length; i++) {
+        let libName = workspace.set.build.externals[i];
+        // libs += ` --external ${libName}`;
+        buildConfig.external.push(libName);
+      }
+      // buf += libs;
+    }
+    let code = JSON.stringify(buildConfig, null, 2);
+
+    filename = workspace.root + '/build.js';
+    buf = 'let obj = await Bun.build(';
+    buf += code;
+    buf += ');\n';
+    buf += 'console.log(obj);\n';
+
+
+    fs.writeFileSync(filename, buf, 'utf8');
+    // grunt.task.run(cmdList);
+
+    done();
   });
 
   grunt.registerTask('default', '預設任務', function() {

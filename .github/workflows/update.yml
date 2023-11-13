@@ -13,7 +13,10 @@ jobs:
         run: |
           . stuff-env
           report "複製專案"
-      - uses: actions/checkout@v3
+      - name: Checkout Commit
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
       - name: 部署
         run: |
           mkdir -p /tmp/ramdisk/stuff/

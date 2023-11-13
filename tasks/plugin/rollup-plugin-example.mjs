@@ -17,7 +17,7 @@ export default function myExample (options = {}) {
       if(chunkInfo.name === 'lib') {
         console.log(chunkInfo);
       }
-
+  
       return null;
     },
 
