@@ -21,9 +21,9 @@ template:
   release:
     appInLibMap: true
     format: es
-    src: template/release.es.html
-    dest: index.html
-version: 9.2.1
+    src: template/release.json
+    dest: index.json
+version: 9.3.0
 author:
   name: astro
   email: www@astrocorp.com.tw

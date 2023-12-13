@@ -2550,10 +2550,11 @@ module.exports = function(grunt) {
           }
           // --bundleConfigAsCjs
           if(pkg.framework.custom) {
-            cmd += `rollup --silent --environment INCLUDE_DEPS,BUILD:${buildMode},TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>${workspace.build.env} -c <%= pkg.workspace %>/rollup.config.mjs`;
+            cmd += `rollup --silent --environment INCLUDE_DEPS,BUILD:${buildMode},TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:${pkg.workspace}${workspace.build.env} -c ${pkg.workspace}/rollup.config.mjs`;
           } else {
-            cmd += `rollup --silent --environment INCLUDE_DEPS,BUILD:${buildMode},TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:<%= pkg.workspace %>${workspace.build.env} -c builder/rollup/rollup.${pkg.template.format}.mjs`;
+            cmd += `rollup --silent --environment INCLUDE_DEPS,BUILD:${buildMode},TEMPLATE_VERSION:${pkg.templateVersion},WORKSPACE:${pkg.workspace}${workspace.build.env} -c builder/rollup/rollup.${pkg.template.format}.mjs`;
           }
+          console.log(cmd);
 
           return cmd;
         }
