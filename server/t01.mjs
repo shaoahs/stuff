@@ -266,7 +266,7 @@ streamList.forEach((stream) => {
         const arr = new Uint8Array(data);
         console.log('[recv.NAL]', arr);
 
-        if( arr[4] === 103 ) {
+        if( arr[0] === 103 ) {
           console.log('[recv.iframe] ');
 
           if (isFirstFrame) {
