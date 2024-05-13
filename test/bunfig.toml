@@ -1,0 +1,10 @@
+
+smol = true
+
+preload = ["./myPlugin.js"]
+
+[loader]
+".yml" = "json"
+
+[define]
+"process.env.zzzz" = "'xxxx'"
