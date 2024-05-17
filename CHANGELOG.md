@@ -4,9 +4,14 @@
 ### Added
 - [壓縮命令] 新增 mjs 與 wasm
 - [命令] 新增 convert , 圖檔合併用
+- [字形] 使用 MSDF
+- [數字] 使用 64 bit
+- [專案] 支援 mjs 與 wasm
+- [命令] 支援 bun
+- [資源] 支援 boml
 
 ### Changed
-- pixijs 更新到 7.x.x
+- pixijs 更新到 8.x.x
 
 ### Fixed
 - 

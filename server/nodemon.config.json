@@ -11,6 +11,7 @@
     "public/*",
     "schema/*",
     "systemjs/*",
+    "server/*",
     "tasks/*",
     "tools/*",
     "webogram/*",
