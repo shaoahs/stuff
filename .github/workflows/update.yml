@@ -20,7 +20,7 @@ jobs:
       - name: 部署
         run: |
           mkdir -p /tmp/ramdisk/stuff/
-          cp "$GITHUB_WORKSPACE/*" -Rf /tmp/ramdisk/stuff/
+          cp $GITHUB_WORKSPACE/* -Rf /tmp/ramdisk/stuff/
           cd /tmp/ramdisk/stuff/
           npm install
 
