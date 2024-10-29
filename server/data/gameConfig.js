@@ -1,8 +1,8 @@
 (function() {
   var fs = require('fs');
   var description = "說明";
-  // let filename = "developer/agent/test/data/gameList.txt";
-  let filename = "project/agent/test/data/gameList.txt";
+  let filename = "developer/agent/test/data/gameList.txt";
+  // let filename = "project/agent/test/data/gameList.txt";
   //----
   var gameConfigList = null;
   if(fs.existsSync(filename)) {

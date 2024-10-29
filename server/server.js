@@ -24,7 +24,8 @@ let corsOptions = {
     // 'https://34.80.49.231/',
     'http://ip-api.com/',
     'http://127.0.0.1:3000',
-    'wss://172.16.102.5:4301',
+    'http://127.0.0.1:3000',
+    'https://172.16.102.11',
     'http://172.16.65.127:3000',
     'http://127.0.0.1:4000'
   ],
@@ -60,20 +61,18 @@ const fastify = require('fastify')({
 //   // { /*inflateIfDeflated: true*/}
 // );
 fastify.register(require('@fastify/websocket'));
+
 fastify.register(require('fastify-socket.io'), {
   allowEIO3: true
 })
   .ready(()=>{
     logger.info('[init] socket.io');
     let io = fastify.io;
+    // console.log(fastify);
     //----
     let net = {};
     net.users = {};
 
-    /**
-     * 建立未登入的使用者（有連線的使用者清單）
-     * @param socket {Object} socket.io 網路物件
-     */
     function createUser(socket) {
       let command = require("./command/command.js");
       let user = {};
@@ -107,8 +106,6 @@ fastify.register(require('fastify-socket.io'), {
     //--------------
     io.of('/1.00.0').on('connection', net.eventConnect);
     io.of('/develop').on('connection', net.eventConnect);
-
-
   });
 
 

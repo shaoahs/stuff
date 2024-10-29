@@ -19,15 +19,15 @@ module.exports = function(grunt) {
     RELEASE:'release'
   };
   
-  console.log('[stuff version 7.13.3]');
+  console.log('[stuff version 7.13.6]');
 
   grunt.file.setBase(__dirname);
 
   let isFramework = null;
   let pkg = {};
   let resConfig = {};
-  let agentPath = 'project/agent';    // 除錯用
-  // let agentPath = 'developer/agent';     // 遊戲專案測試用
+  // let agentPath = 'project/agent';    // 除錯用
+  let agentPath = 'developer/agent';     // 遊戲專案測試用
   let workspace = {
     basePath: 'project',
     hasConfig: false,
